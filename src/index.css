@@ -22,7 +22,7 @@
 
 .lightTheme {
   --bg-color1: #fff;
-  --bg-color2: #f9fbfc;
+  --bg-color2: #e8ecee;
   --font-color1: #646363; 
   --font-color2: #181818; 
   --font-color3: #f9fbfc;
@@ -32,6 +32,4 @@
   --hover-color2: #646363;
 }
 
-:root {
-  --font-size: 16px;
-}
+
