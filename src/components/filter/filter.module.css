@@ -1,0 +1,21 @@
+
+
+.filter {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.filter input {
+  padding: 10px 20px;
+  width: 100%;
+  border: 1px solid var(--font-color1);
+  border-radius: 10px;
+  font-size: var(--font-size);
+  outline: none;
+}
+
+.filter input:focus {
+  box-shadow: 0 0 4px #aaa;
+}

@@ -5,7 +5,7 @@ import Main from './components/main/Main.jsx'
 
 export default function App() {
   return (
-    <div className='app'>
+    <div className='app lightTheme'>
       <Header />
       <Main />
     </div>

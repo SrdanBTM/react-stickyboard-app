@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .app {
@@ -10,4 +11,22 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.darkTheme {
+  --bg-color1: #181818;
+  --bg-color2: #0d0d0d;
+  --font-color1: #fff; 
+  --font-color2: #969696; 
+}
+
+.lightTheme {
+  --bg-color1: #fff;
+  --bg-color2: #f9fbfc;
+  --font-color1: #969696; 
+  --font-color2: #181818; 
+}
+
+:root {
+  --font-size: 16px;
 }
