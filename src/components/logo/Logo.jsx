@@ -7,7 +7,7 @@ export default function Logo() {
 
   return (
     <div className={styles.logo}>
-      <img src={`${BASE_URL}images/icon-logo.png`} alt="logo image" />
+      <img src={`${BASE_URL}images/icon-logo2.png`} alt="logo image" />
       <span>StickyBoard</span>
     </div>
   )

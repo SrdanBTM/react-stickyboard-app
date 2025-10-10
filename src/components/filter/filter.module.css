@@ -11,9 +11,11 @@
   padding: 10px 20px;
   width: 100%;
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 7px;
   font-size: var(--font-size);
   outline: none;
+  background-color: var(--bg-color1);
+  color: var(--font-color1);
 }
 
 .filter input:focus {
