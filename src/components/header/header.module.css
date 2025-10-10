@@ -2,6 +2,7 @@
 
 .header {
   background-color: var(--bg-color1);
+  border-bottom: 1px solid var(--border-color);
   width: 100%;
   height: 100px;
   display: flex;

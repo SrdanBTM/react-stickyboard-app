@@ -19,7 +19,7 @@
 
 .user:hover,
 .settings:hover {
-  background-color: #ddd;
+  background-color: var(--hover-color1);
   cursor: pointer;
 }
 

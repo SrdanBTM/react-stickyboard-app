@@ -1,6 +1,6 @@
 
 
-import styles from './user-settings.module.css'
+import styles from './userSettings.module.css'
 
 export default function UserSettings() {
 

@@ -16,15 +16,20 @@
 .darkTheme {
   --bg-color1: #181818;
   --bg-color2: #0d0d0d;
-  --font-color1: #fff; 
-  --font-color2: #969696; 
+  --font-color1: #969696; 
+  --font-color2: #fff; 
 }
 
 .lightTheme {
   --bg-color1: #fff;
   --bg-color2: #f9fbfc;
-  --font-color1: #969696; 
+  --font-color1: #646363; 
   --font-color2: #181818; 
+  --font-color3: #f9fbfc;
+  --font-color4: #aaa;
+  --border-color: #aaa;
+  --hover-color1: #ddd;
+  --hover-color2: #646363;
 }
 
 :root {

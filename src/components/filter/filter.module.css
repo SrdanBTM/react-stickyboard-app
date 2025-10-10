@@ -10,12 +10,12 @@
 .filter input {
   padding: 10px 20px;
   width: 100%;
-  border: 1px solid var(--font-color1);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   font-size: var(--font-size);
   outline: none;
 }
 
 .filter input:focus {
-  box-shadow: 0 0 4px #aaa;
+  box-shadow: 0 0 4px var(--border-color);
 }

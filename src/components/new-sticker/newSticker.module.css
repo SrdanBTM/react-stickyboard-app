@@ -1,0 +1,21 @@
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newSticker {
+  border: 1px solid var(--border-color);
+  width: 150px;
+  height: 150px;
+}
+
+.heading {
+  color: var(--font-color4);
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
