@@ -1,0 +1,15 @@
+
+
+.container p {
+  font-size: 14px;
+  padding: 5px 20px;
+  background-color: transparent;
+  border-radius: 3px;
+  color: var(--font-color2);
+}
+
+.container p:hover {
+  cursor: pointer;
+  background-color: var(--hover-color2);
+  color: var(--font-color3);
+}

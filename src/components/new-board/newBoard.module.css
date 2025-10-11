@@ -12,14 +12,6 @@
   margin-bottom: 20px;
 }
 
-.boardsList p {
-  font-size: 14px;
-  padding: 5px 20px;
-  background-color: transparent;
-  border-radius: 3px;
-  color: var(--font-color2);
-}
-
 .createNewBoard p:hover {
   cursor: pointer;
   background-color: var(--hover-color1);
@@ -34,8 +26,3 @@
   margin-top: 5px;
 }
 
-.boardsList p:hover {
-  cursor: pointer;
-  background-color: var(--hover-color2);
-  color: var(--font-color3);
-}
