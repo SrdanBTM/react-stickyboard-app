@@ -19,5 +19,5 @@
 }
 
 .filter input:focus {
-  box-shadow: 0 0 4px var(--border-color);
+  box-shadow: 0 2px 2px #555, 0 -2px 2px #555;
 }

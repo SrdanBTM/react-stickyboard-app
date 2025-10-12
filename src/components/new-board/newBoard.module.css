@@ -12,17 +12,4 @@
   margin-bottom: 20px;
 }
 
-.createNewBoard p:hover {
-  cursor: pointer;
-  background-color: var(--hover-color1);
-}
-
-.createNewBoard p {
-  font-size: 14px;
-  font-weight: bold;
-  color: var(--font-color1);
-  padding: 5px 0 5px 20px;
-  border-radius: 5px;
-  margin-top: 5px;
-}
 

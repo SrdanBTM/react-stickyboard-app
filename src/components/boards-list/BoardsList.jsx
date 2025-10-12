@@ -10,13 +10,13 @@ export default function BoardsList() {
 
   return (
     <div className={styles.container}>
-      {boards.map((boardName, index) => {
+      {boards.map((board, index) => {
         return (
           <p
             key={index}
 
           >
-            {boardName}
+            {board.boardName}
           </p>
         )
       })}

@@ -10,7 +10,7 @@ import { useState } from 'react'
 
 export default function App() {
 
-  const [boards, setBoards] = useState(['Development', 'Zdravlje', 'Razno'])
+  const [boards, setBoards] = useState([])
 
   return (
     <MainProvider value={{ boards, setBoards }}>

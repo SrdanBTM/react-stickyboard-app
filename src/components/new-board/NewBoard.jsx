@@ -2,6 +2,7 @@
 
 import styles from './newBoard.module.css'
 import BoardsList from '../boards-list/BoardsList.jsx'
+import CreateNewBoard from '../create-new-board/CreateNewBoard.jsx'
 
 export default function NewBoard() {
 
@@ -15,10 +16,8 @@ export default function NewBoard() {
         </div>
 
         <BoardsList />
-
-        <div className={styles.createNewBoard}>
-          <p>+ Create New Border</p>
-        </div>
+        <CreateNewBoard />
+        
       </div>
 
     </div>
