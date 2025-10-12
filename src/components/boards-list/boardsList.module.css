@@ -1,15 +1,28 @@
 
-
-.container p {
-  font-size: 14px;
+.boardName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 5px 20px;
-  background-color: transparent;
   border-radius: 3px;
+}
+
+.boardName:hover {
+  cursor: pointer;
+  background-color: var(--hover-color2);
+}
+
+.boardName p {
+  font-size: 14px;
+  background-color: transparent;
   color: var(--font-color2);
 }
 
-.container p:hover {
-  cursor: pointer;
-  background-color: var(--hover-color2);
+.boardName:hover p {
   color: var(--font-color3);
+}
+
+.boardName img {
+  width: 15px;
+  height: 15px;
 }
