@@ -41,7 +41,9 @@ export default function CreateNewBoard() {
           [
             ...prev,
             {
-              boardName: inputValue
+              boardName: inputValue,
+              isInput: false,
+              isFocused: false
             }
           ]
         )
