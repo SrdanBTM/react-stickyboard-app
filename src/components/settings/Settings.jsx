@@ -21,7 +21,7 @@ export default function Settings({ clickedElement }) {
         pointerEvents: showElement ? 'auto' : 'none'
       }}
     >
-      <li onClick={handleClickMode}>Change mode</li>
+      <li onClick={handleClickMode}>Change theme</li>
     </ul>
   )
 }

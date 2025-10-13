@@ -14,7 +14,7 @@
 .container li {
   padding: 10px 10px 10px 20px;
   list-style: none;
-  background-color: black;
+  background-color: var(--bg-color3);
   font-size: 14px;
   width: 100%;
 }
@@ -28,5 +28,5 @@
 }
 
 .container li:hover {
-  background-color: var(--bg-color2);
+  background-color: var(--hover-color3);
 }

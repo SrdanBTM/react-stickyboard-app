@@ -16,6 +16,7 @@
 .darkTheme {
   --bg-color1: #0d0d0d;
   --bg-color2: #181818;
+  --bg-color3: #000;
   --font-color1: #969696; 
   --font-color2: #eeeeee; 
   --font-color3: #1e1e1e;
@@ -23,11 +24,13 @@
   --border-color: #363636;
   --hover-color1: #333;
   --hover-color2: #a9a9a9;
+  --hover-color3: #222;
 }
 
 .lightTheme {
   --bg-color1: #fff;
   --bg-color2: #e8ecee;
+  --bg-color3: #fafafa;
   --font-color1: #646363; 
   --font-color2: #3b3b3b; 
   --font-color3: #f9fbfc;
@@ -35,6 +38,7 @@
   --border-color: #aaa;
   --hover-color1: #ddd;
   --hover-color2: #646363;
+  --hover-color3: #ddd;
 }
 
 
