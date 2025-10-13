@@ -6,7 +6,7 @@ import { MainContext } from '../../context-provider/ContextProvider.jsx'
 
 export default function BoardsList() {
 
-  const { boards, setBoards, setCurrentBoard } = useContext(MainContext)
+  const { boards, setBoards, setCurrentBoard, theme } = useContext(MainContext)
 
   const BASE_URL = import.meta.env.BASE_URL
 
@@ -16,13 +16,17 @@ export default function BoardsList() {
 
   const inputRef = useRef()
 
-  
+
   const editButton =
     <div
       className={styles.editButton}
       onClick={handleClickEdit}
     >
-      <img src={`${BASE_URL}images/icon-edit2.png`} alt="edit" />
+      <img src={
+        theme === 'darkTheme'
+          ? `${BASE_URL}images/icon-edit2.png`
+          : `${BASE_URL}images/icon-edit1.png`}
+        alt="edit" />
     </div>
 
 
@@ -85,7 +89,7 @@ export default function BoardsList() {
   }
 
 
-  
+
   return (
     <div>
       {boards.map((board, index) => {
