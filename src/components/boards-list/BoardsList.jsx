@@ -6,7 +6,7 @@ import { MainContext } from '../../context-provider/ContextProvider.jsx'
 
 export default function BoardsList() {
 
-  const { boards, setBoards } = useContext(MainContext)
+  const { boards, setBoards, setCurrentBoard } = useContext(MainContext)
 
   const BASE_URL = import.meta.env.BASE_URL
 
@@ -20,7 +20,7 @@ export default function BoardsList() {
   const editButton =
     <div
       className={styles.editButton}
-      onClick={handleClick}
+      onClick={handleClickEdit}
     >
       <img src={`${BASE_URL}images/icon-edit2.png`} alt="edit" />
     </div>
@@ -40,7 +40,7 @@ export default function BoardsList() {
     setIsMouseOver(false)
   }
 
-  function handleClick(e) {
+  function handleClickEdit(e) {
     const dataName = e.currentTarget.parentElement.getAttribute('data-name')
     setCurrentName(dataName)
     setBoards(prev => {
@@ -78,6 +78,12 @@ export default function BoardsList() {
     }
   }
 
+  function handleClickSelect(e) {
+    const selectedBoard = boards.find(board => board.boardName === e.currentTarget.getAttribute('data-name'))
+
+    setCurrentBoard(selectedBoard)
+  }
+
 
   
   return (
@@ -107,6 +113,7 @@ export default function BoardsList() {
                 onMouseOver={handleMouseOver}
                 onMouseLeave={handleMouseLeave}
                 data-name={board.boardName}
+                onClick={handleClickSelect}
               >
                 <p>{board.boardName}</p>
                 {isMouseOver && editButton}

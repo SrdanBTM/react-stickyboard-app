@@ -11,9 +11,10 @@ import { useState } from 'react'
 export default function App() {
 
   const [boards, setBoards] = useState([])
+  const [currentBoard, setCurrentBoard] = useState()
 
   return (
-    <MainProvider value={{ boards, setBoards }}>
+    <MainProvider value={{ boards, setBoards, currentBoard, setCurrentBoard }}>
       <div className='app darkTheme'>
         <Header />
         <Main />
