@@ -1,10 +1,17 @@
 
-
+import { useContext } from 'react'
+import { MainContext } from '../../context-provider/ContextProvider.jsx'
 import styles from './settings.module.css'
 
 export default function Settings({ clickedElement }) {
 
+  const { setTheme } = useContext(MainContext)
+
   const showElement = clickedElement.elementName === 'settings' && clickedElement.showSettings
+
+  function handleClickMode() {
+    setTheme(prev => prev === 'darkTheme' ? 'lightTheme' : 'darkTheme')
+  }
 
   return (
     <ul
@@ -14,7 +21,7 @@ export default function Settings({ clickedElement }) {
         pointerEvents: showElement ? 'auto' : 'none'
       }}
     >
-      <li>Change mode</li>
+      <li onClick={handleClickMode}>Change mode</li>
     </ul>
   )
 }

@@ -12,10 +12,19 @@ export default function App() {
 
   const [boards, setBoards] = useState([])
   const [currentBoard, setCurrentBoard] = useState()
+  const [theme, setTheme] = useState('darkTheme')
 
   return (
-    <MainProvider value={{ boards, setBoards, currentBoard, setCurrentBoard }}>
-      <div className='app darkTheme'>
+    <MainProvider
+      value={{
+        boards,
+        setBoards,
+        currentBoard,
+        setCurrentBoard,
+        theme,
+        setTheme
+      }}>
+      <div className={`app ${theme}`}>
         <Header />
         <Main />
       </div>
