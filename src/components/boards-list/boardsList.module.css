@@ -32,8 +32,15 @@
   color: var(--font-color3);
 }
 
-.editButton {
-  width: 50px;
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editButton,
+.dotsButton {
+  width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
@@ -41,12 +48,14 @@
   transition: all 0.1s ease;
 }
 
-.editButton img {
+.editButton img,
+.dotsButton img {
   width: 15px;
   height: 15px;
 }
 
-.editButton:hover {
+.editButton:hover,
+.dotsButton:hover {
   transform: scale(1.3);
 }
 

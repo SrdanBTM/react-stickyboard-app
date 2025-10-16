@@ -30,6 +30,19 @@ export default function BoardsList() {
     </div>
 
 
+  const dotsButton =
+    <div
+      className={styles.dotsButton}
+      onClick={handleClickDots}
+    >
+      <img src={
+        theme === 'darkTheme'
+          ? `${BASE_URL}images/icon-dots2.png`
+          : `${BASE_URL}images/icon-dots1.png`}
+        alt="edit" />
+    </div>
+
+
 
   useEffect(() => {
     inputRef.current && inputRef.current.focus()
@@ -44,9 +57,10 @@ export default function BoardsList() {
     setIsMouseOver(false)
   }
 
-  function handleClickEdit(e) {
-    const dataName = e.currentTarget.parentElement.getAttribute('data-name')
+  function handleClickEdit(e) { 
+    const dataName = e.currentTarget.parentElement.parentElement.getAttribute('data-name')
     setCurrentName(dataName)
+
     setBoards(prev => {
       return (
         prev.map(board => {
@@ -58,6 +72,10 @@ export default function BoardsList() {
         })
       )
     })
+  }
+
+  function handleClickDots() {
+    console.log('radi');
   }
 
   function handleChange(e) {
@@ -80,15 +98,21 @@ export default function BoardsList() {
     }
   }
 
+
+  useEffect(()=>{
+    console.log(boards);
+  },[boards])
+
+
   function handleClickSelect(e) {
     const selected = boards.find(board => board.boardName === e.currentTarget.getAttribute('data-name'))
     setCurrentBoard(selected)
   }
 
-  useEffect(()=>{
-    const lastBoard = boards[boards.length-1]
+  useEffect(() => {
+    const lastBoard = boards[boards.length - 1]
     setCurrentBoard(lastBoard)
-  },[boards.length])
+  }, [boards.length])
 
 
   return (
@@ -122,7 +146,11 @@ export default function BoardsList() {
                 style={{ border: currentBoard.boardName === board.boardName ? '1px solid var(--border-color)' : '' }}
               >
                 <p>{board.boardName}</p>
-                {isMouseOver && editButton}
+                <div className={styles.buttons}>
+                  {isMouseOver && editButton}
+                  {isMouseOver && dotsButton}
+                </div>
+
               </div>
             }
           </div>
