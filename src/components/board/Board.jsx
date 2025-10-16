@@ -5,23 +5,26 @@ import styles from './board.module.css'
 
 export default function Board() {
 
-  const { currentBoard } = useContext(MainContext)
-  console.log(currentBoard);
-  
+  const { boards, currentBoard } = useContext(MainContext)
+
+  const current = boards.find(board => board.boardName = currentBoard.boardName)
+
+
+
 
   return (
     <section className={styles.container}>
       <div className={styles.heading}>
-        <p>{currentBoard.boardName}</p>
+        <p>{current.boardName}</p>
       </div>
 
       <div className={styles.board}>
-        {currentBoard.stickers.map((sticker, index) => {
+        {current.stickers.map((sticker, index) => {
           return (
             <div
               key={index}
               className={styles.sticker}
-              style={{backgroundColor: sticker.color}}
+              style={{ backgroundColor: sticker.color }}
             >
               {index}
             </div>
