@@ -6,7 +6,7 @@ import { MainContext } from '../../context-provider/ContextProvider.jsx'
 
 export default function CreateNewBoard() {
 
-  const { setBoards } = useContext(MainContext)
+  const { boards, setBoards, boardTemplate, currentBoard, setCurrentBoard } = useContext(MainContext)
 
   const [isCreateBoard, setIsCreateBoard] = useState(false)
   const [inputValue, setInputValue] = useState('')
@@ -22,6 +22,8 @@ export default function CreateNewBoard() {
     value={inputValue}
   />
 
+  
+
 
   useEffect(() => {
     isCreateBoard === true && inputRef.current.focus()
@@ -32,6 +34,7 @@ export default function CreateNewBoard() {
     setIsCreateBoard(true)
   }
 
+
   function handleKeyDown(e) {
     if (e.key === 'Enter') {
       setIsCreateBoard(false)
@@ -41,9 +44,8 @@ export default function CreateNewBoard() {
           [
             ...prev,
             {
+              ...boardTemplate,
               boardName: inputValue,
-              isInput: false,
-              isFocused: false
             }
           ]
         )
