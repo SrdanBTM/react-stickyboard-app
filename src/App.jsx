@@ -10,9 +10,27 @@ import { useState } from 'react'
 
 export default function App() {
 
-  const [boards, setBoards] = useState([])
-  const [currentBoard, setCurrentBoard] = useState()
+  const boardTemplate = {
+    boardName: 'My Board',
+    isInput: false,
+    isFocused: false,
+    stickers: []
+  }
+
+  const stickerTemplate = {
+    heading: '',
+    content: '',
+    color: '',
+    boardName: '',
+    positionX: '',
+    positionY: ''
+  }
+
+
+  const [boards, setBoards] = useState([boardTemplate])
+  const [currentBoard, setCurrentBoard] = useState(boardTemplate)
   const [theme, setTheme] = useState('darkTheme')
+
 
   return (
     <MainProvider
@@ -22,7 +40,9 @@ export default function App() {
         currentBoard,
         setCurrentBoard,
         theme,
-        setTheme
+        setTheme,
+        boardTemplate,
+        stickerTemplate
       }}>
       <div className={`app ${theme}`}>
         <Header />
