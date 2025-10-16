@@ -6,7 +6,7 @@ import { MainContext } from '../../context-provider/ContextProvider.jsx'
 
 export default function CreateNewBoard() {
 
-  const { boards, setBoards, boardTemplate, currentBoard, setCurrentBoard } = useContext(MainContext)
+  const { setBoards, boardTemplate } = useContext(MainContext)
 
   const [isCreateBoard, setIsCreateBoard] = useState(false)
   const [inputValue, setInputValue] = useState('')
