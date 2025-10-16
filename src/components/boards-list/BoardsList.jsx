@@ -6,7 +6,7 @@ import { MainContext } from '../../context-provider/ContextProvider.jsx'
 
 export default function BoardsList() {
 
-  const { boards, setBoards, setCurrentBoard, theme } = useContext(MainContext)
+  const { boards, setBoards, currentBoard, setCurrentBoard, theme } = useContext(MainContext)
 
   const BASE_URL = import.meta.env.BASE_URL
 
@@ -77,17 +77,18 @@ export default function BoardsList() {
           })
         )
       })
-
-
     }
   }
 
   function handleClickSelect(e) {
-    const selectedBoard = boards.find(board => board.boardName === e.currentTarget.getAttribute('data-name'))
-
-    setCurrentBoard(selectedBoard)
+    const selected = boards.find(board => board.boardName === e.currentTarget.getAttribute('data-name'))
+    setCurrentBoard(selected)
   }
 
+  useEffect(()=>{
+    const lastBoard = boards[boards.length-1]
+    setCurrentBoard(lastBoard)
+  },[boards.length])
 
 
   return (
@@ -118,6 +119,7 @@ export default function BoardsList() {
                 onMouseLeave={handleMouseLeave}
                 data-name={board.boardName}
                 onClick={handleClickSelect}
+                style={{ border: currentBoard.boardName === board.boardName ? '1px solid var(--border-color)' : '' }}
               >
                 <p>{board.boardName}</p>
                 {isMouseOver && editButton}
