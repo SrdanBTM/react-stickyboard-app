@@ -25,6 +25,12 @@
   --hover-color1: #333;
   --hover-color2: #a9a9a9;
   --hover-color3: #222;
+  --sticker-color1: #2b2100;
+  --sticker-color2: #002c1d;
+  --sticker-color3: #3a0018;
+  --sticker-color4: #001e36;
+  --sticker-color5: #3a1b00;
+  --sticker-color6: #1d0036;
 }
 
 .lightTheme {
@@ -39,6 +45,12 @@
   --hover-color1: #ddd;
   --hover-color2: #646363;
   --hover-color3: #ddd;
+  --sticker-color1: #f6d96b;
+  --sticker-color2: #89f7c2;
+  --sticker-color3: #ffb7d9;
+  --sticker-color4: #91c8ff;
+  --sticker-color5: #ffc68a;
+  --sticker-color6: #d2b3ff;
 }
 
 
