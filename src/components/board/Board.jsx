@@ -7,7 +7,7 @@ export default function Board() {
 
   const { boards, currentBoard } = useContext(MainContext)
 
-  const current = boards.find(board => board.boardName = currentBoard.boardName)
+  const current = boards.find(board => board.boardName === currentBoard.boardName)
 
 
 
