@@ -1,6 +1,6 @@
 
 import { useContext } from 'react'
-import { MainContext } from '../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 import styles from './settings.module.css'
 
 export default function Settings({ clickedElement }) {

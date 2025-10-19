@@ -1,10 +1,10 @@
 
 
 import styles from './userSettingsButtons.module.css'
-import Settings from '../settings/Settings.jsx'
-import User from '../user/User.jsx'
+import Settings from './settings/Settings.jsx'
+import User from './user/User.jsx'
 import { useState, useContext } from 'react'
-import { MainContext } from '../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 
 export default function UserSettings() {

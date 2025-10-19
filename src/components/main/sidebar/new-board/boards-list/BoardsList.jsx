@@ -2,7 +2,7 @@
 
 import styles from './boardsList.module.css'
 import { useContext, useState, useEffect, useRef } from 'react'
-import { MainContext } from '../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 
 export default function BoardsList() {
 

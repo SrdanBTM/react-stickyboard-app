@@ -2,7 +2,7 @@
 
 import styles from './createNewBoard.module.css'
 import { useContext, useState, useRef, useEffect } from 'react'
-import { MainContext } from '../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 
 export default function CreateNewBoard() {
 

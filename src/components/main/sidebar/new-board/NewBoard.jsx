@@ -1,8 +1,8 @@
 
 
 import styles from './newBoard.module.css'
-import BoardsList from '../boards-list/BoardsList.jsx'
-import CreateNewBoard from '../create-new-board/CreateNewBoard.jsx'
+import BoardsList from './boards-list/BoardsList.jsx'
+import CreateNewBoard from './create-new-board/CreateNewBoard.jsx'
 
 export default function NewBoard() {
 
