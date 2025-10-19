@@ -22,13 +22,13 @@
   background-color: var(--hover-color2);
 }
 
-.boardName p {
+.boardName span {
   font-size: 14px;
   background-color: transparent;
   color: var(--font-color2);
 }
 
-.boardName:hover p {
+.boardName:hover span {
   color: var(--font-color3);
 }
 

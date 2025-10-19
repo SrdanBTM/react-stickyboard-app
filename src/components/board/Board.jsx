@@ -3,23 +3,21 @@ import { useContext } from 'react'
 import { MainContext } from '../../context-provider/ContextProvider.jsx'
 import styles from './board.module.css'
 
+
 export default function Board() {
 
-  const { boards, currentBoard } = useContext(MainContext)
-
-  const current = boards.find(board => board.boardName === currentBoard.boardName)
-
-
-
-
+  const { currentBoard } = useContext(MainContext)
+  console.log(currentBoard);
+  
+  
   return (
     <section className={styles.container}>
       <div className={styles.heading}>
-        <p>{current.boardName}</p>
+        <p>{currentBoard.boardName}</p>
       </div>
 
       <div className={styles.board}>
-        {current.stickers.map((sticker, index) => {
+        {currentBoard.stickers.map((sticker, index) => {
           return (
             <div
               key={index}

@@ -28,7 +28,7 @@ export default function App() {
 
 
   const [boards, setBoards] = useState([boardTemplate])
-  const [currentBoard, setCurrentBoard] = useState(boardTemplate)
+  const [currentBoard, setCurrentBoard] = useState(boards[0])
   const [theme, setTheme] = useState('darkTheme')
 
 

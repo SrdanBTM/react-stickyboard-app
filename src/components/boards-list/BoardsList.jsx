@@ -17,6 +17,8 @@ export default function BoardsList() {
   const inputRef = useRef()
 
 
+
+  // edit button element
   const editButton =
     <div
       className={styles.editButton}
@@ -29,7 +31,7 @@ export default function BoardsList() {
         alt="edit" />
     </div>
 
-
+  // dots button element
   const dotsButton =
     <div
       className={styles.dotsButton}
@@ -44,20 +46,29 @@ export default function BoardsList() {
 
 
 
+  // focus edited input
   useEffect(() => {
     inputRef.current && inputRef.current.focus()
   }, [boards])
 
 
-  function handleMouseOver() {
+
+  // setIsMouseOver(true)
+  function handleMouseOverSpan() {
     setIsMouseOver(true)
   }
 
-  function handleMouseLeave() {
+  // setIsMouseOver(false)
+  function handleMouseLeaveSpan() {
     setIsMouseOver(false)
   }
 
-  function handleClickEdit(e) { 
+
+
+  // click on edit => show input and focus
+  // take data-name
+  // if boardName === data-name => isFocuse:true, isInput:true
+  function handleClickEdit(e) {
     const dataName = e.currentTarget.parentElement.parentElement.getAttribute('data-name')
     setCurrentName(dataName)
 
@@ -67,52 +78,61 @@ export default function BoardsList() {
           return (
             board.boardName === dataName
               ? { ...board, isInput: true, isFocused: true }
-              : { ...board, isInput: false }
+              : { ...board, isInput: false, isFocused: false }
           )
         })
       )
     })
   }
 
-  function handleClickDots() {
-    console.log('radi');
-  }
 
-  function handleChange(e) {
+
+  // setInputValue(input value)
+  function handleChangeInput(e) {
     setInputValue(e.target.value)
   }
 
-  function handleKeyDown(e) {
+  // enter on input => isInput:false, boardName:inputValue state
+  function handleKeyDownInput(e) {
     if (e.key === 'Enter') {
+
       setBoards(prev => {
         return (
           prev.map(board => {
             return (
               board.boardName === currentName
                 ? { ...board, isInput: false, boardName: inputValue }
-                : { ...board }
+                : board
             )
           })
         )
       })
     }
+
+
   }
 
 
-  useEffect(()=>{
-    console.log(boards);
-  },[boards])
 
-
-  function handleClickSelect(e) {
+  // click on span => setCurrentBoard(this board)
+  function handleClickSpan(e) {
     const selected = boards.find(board => board.boardName === e.currentTarget.getAttribute('data-name'))
     setCurrentBoard(selected)
   }
 
+  // when add new board => setCurrentBoard(this board)
   useEffect(() => {
     const lastBoard = boards[boards.length - 1]
     setCurrentBoard(lastBoard)
-  }, [boards.length])
+  }, [boards])
+
+
+
+
+  function handleClickDots() {
+    console.log('radi');
+  }
+
 
 
   return (
@@ -127,9 +147,9 @@ export default function BoardsList() {
               ?
               <div
                 className={styles.input}
-                onChange={handleChange}
+                onChange={handleChangeInput}
                 value={inputValue}
-                onKeyDown={handleKeyDown}
+                onKeyDown={handleKeyDownInput}
               >
                 <input
                   type="text"
@@ -139,13 +159,13 @@ export default function BoardsList() {
               :
               <div
                 className={styles.boardName}
-                onMouseOver={handleMouseOver}
-                onMouseLeave={handleMouseLeave}
+                onMouseOver={handleMouseOverSpan}
+                onMouseLeave={handleMouseLeaveSpan}
                 data-name={board.boardName}
-                onClick={handleClickSelect}
+                onClick={handleClickSpan}
                 style={{ border: currentBoard.boardName === board.boardName ? '1px solid var(--border-color)' : '' }}
               >
-                <p>{board.boardName}</p>
+                <span>{board.boardName}</span>
                 <div className={styles.buttons}>
                   {isMouseOver && editButton}
                   {isMouseOver && dotsButton}
