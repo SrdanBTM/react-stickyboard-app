@@ -15,7 +15,7 @@ export default function BoardListSpan({
   handleMouseLeaveSpan
 }) {
 
-  const { currentBoard } = useContext(MainContext)
+  const { currentBoard, setBoards } = useContext(MainContext)
 
   function handleClickEdit(e) {
     const dataName = e.currentTarget.parentElement.parentElement.getAttribute('data-name')
