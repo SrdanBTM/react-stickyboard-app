@@ -4,7 +4,7 @@ import Header from './components/header/Header.jsx'
 import Main from './components/main/Main.jsx'
 import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 import { MainProvider } from './context-provider/ContextProvider.jsx'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 
 export default function App() {
@@ -13,12 +13,6 @@ export default function App() {
   const [currentBoard, setCurrentBoard] = useState(boards[0])
   const [theme, setTheme] = useState('darkTheme')
   const [currentName, setCurrentName] = useState()
-
-
-  useEffect(() => {
-    const lastBoard = boards[boards.length - 1]
-    setCurrentBoard(lastBoard)
-  }, [boards])
 
 
   return (

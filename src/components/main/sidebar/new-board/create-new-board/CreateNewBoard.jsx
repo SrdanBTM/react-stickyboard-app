@@ -1,61 +1,27 @@
 
 
 import styles from './createNewBoard.module.css'
-import { useContext, useState, useRef, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 import Span from './create-new-board-span/CreateNewBoardSpan.jsx'
 import Input from './create-new-board-input/CreateNewBoardInput.jsx'
 
+
 export default function CreateNewBoard() {
 
-  const { setBoards, boardTemplate } = useContext(MainContext)
-
+  const { boards, setCurrentBoard } = useContext(MainContext)
   const [isCreateBoard, setIsCreateBoard] = useState(false)
-  const [inputValue, setInputValue] = useState('')
 
 
+  useEffect(() => {
+    const lastBoard = boards[boards.length - 1]
+    setCurrentBoard(lastBoard)
+  }, [boards])
 
-  // used for conditionally render (input or span)
+
   function handleClick() {
     setIsCreateBoard(true)
   }
-
-
-  // focus on input
-  const inputRef = useRef()
-  useEffect(() => {
-    isCreateBoard === true && inputRef.current.focus()
-  }, [isCreateBoard])
-
-  
-  // update inputValue state with new input value
-  function handleChange(e) {
-    setInputValue(e.target.value)
-  }
-
-
-  // when key=enter => add new board template to boards
-  function handleKeyDown(e) {
-    if (e.key === 'Enter') {
-      setIsCreateBoard(false)
-
-      setBoards(prev => {
-        return (
-          [
-            ...prev,
-            {
-              ...boardTemplate,
-              boardName: inputValue,
-            }
-          ]
-        )
-      })
-
-      setInputValue('')
-    }
-  }
-
-
 
 
   return (
@@ -65,12 +31,11 @@ export default function CreateNewBoard() {
     >
       {isCreateBoard
         ? <Input
-          inputRef={inputRef}
-          inputValue={inputValue}
-          handleKeyDown={handleKeyDown}
-          handleChange={handleChange}
+          isCreateBoard={isCreateBoard}
+          setIsCreateBoard={setIsCreateBoard}
         />
-        : <Span />}
+        : <Span />
+      }
     </div>
   )
 }
