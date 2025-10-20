@@ -2,7 +2,7 @@
 
 import styles from './boardNameEdit.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../context-provider/ContextProvider'
+import { MainContext } from '../../../../../../../context-provider/ContextProvider'
 
 export default function BoardsListEdit({ handleClickEdit }) {
 

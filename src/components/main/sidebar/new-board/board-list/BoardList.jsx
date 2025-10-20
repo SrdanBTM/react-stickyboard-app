@@ -3,13 +3,12 @@
 import styles from './boardList.module.css'
 import { useContext, useState, useEffect, useRef } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
-import Edit from './board-name-edit/BoardNameEdit.jsx'
-import Dots from './board-name-dots/BoardNameDots.jsx'
 import Input from './board-list-input/BoardListInput.jsx'
+import Span from './board-list-span/BoardListSpan.jsx'
 
 export default function BoardsList() {
 
-  const { boards, setBoards, currentBoard, setCurrentBoard, theme } = useContext(MainContext)
+  const { boards, setBoards, currentBoard, setCurrentBoard } = useContext(MainContext)
 
 
   const [isMouseOver, setIsMouseOver] = useState(false)
@@ -39,25 +38,6 @@ export default function BoardsList() {
 
 
 
-  // click on edit => show input and focus
-  // take data-name
-  // if boardName === data-name => isFocuse:true, isInput:true
-  function handleClickEdit(e) {
-    const dataName = e.currentTarget.parentElement.parentElement.getAttribute('data-name')
-    setCurrentName(dataName)
-
-    setBoards(prev => {
-      return (
-        prev.map(board => {
-          return (
-            board.boardName === dataName
-              ? { ...board, isInput: true, isFocused: true }
-              : { ...board, isInput: false, isFocused: false }
-          )
-        })
-      )
-    })
-  }
 
 
 
@@ -103,10 +83,6 @@ export default function BoardsList() {
 
 
 
-  function handleClickDots() {
-    console.log('radi');
-  }
-
 
 
   return (
@@ -125,26 +101,15 @@ export default function BoardsList() {
                 handleChangeInput={handleChangeInput}
                 handleKeyDownInput={handleKeyDownInput}
               />
-              :
-              <div
-                className={styles.boardName}
-                onMouseOver={handleMouseOverSpan}
-                onMouseLeave={handleMouseLeaveSpan}
-                data-name={board.boardName}
-                onClick={handleClickSpan}
-                style={{ border: currentBoard.boardName === board.boardName ? '1px solid var(--border-color)' : '' }}
-              >
-                <span>{board.boardName}</span>
-                <div className={styles.buttons}>
-                  {isMouseOver &&
-                    <>
-                      <Edit handleClickEdit={handleClickEdit} />
-                      <Dots handleClickDots={handleClickDots} />
-                    </>
-                  }
-                </div>
-
-              </div>
+              : <Span
+                isMouseOver={isMouseOver}
+                setCurrentName={setCurrentName}
+                board={board}
+                currentBoard={currentBoard}
+                handleClickSpan={handleClickSpan}
+                handleMouseOverSpan={handleMouseOverSpan}
+                handleMouseLeaveSpan={handleMouseLeaveSpan}
+              />
             }
           </div>
         )

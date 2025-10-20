@@ -7,34 +7,3 @@
   height: 35px;
 }
 
-.boardName {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  padding: 0 0 0 20px;
-  border-radius: 3px;
-}
-
-.boardName:hover {
-  cursor: pointer;
-  background-color: var(--hover-color2);
-}
-
-.boardName span {
-  font-size: 14px;
-  background-color: transparent;
-  color: var(--font-color2);
-}
-
-.boardName:hover span {
-  color: var(--font-color3);
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
