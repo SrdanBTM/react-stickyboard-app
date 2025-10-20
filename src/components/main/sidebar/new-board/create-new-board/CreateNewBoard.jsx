@@ -3,6 +3,8 @@
 import styles from './createNewBoard.module.css'
 import { useContext, useState, useRef, useEffect } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+import Span from './create-new-board-span/CreateNewBoardSpan.jsx'
+import Input from './create-new-board-input/CreateNewBoardInput.jsx'
 
 export default function CreateNewBoard() {
 
@@ -11,30 +13,28 @@ export default function CreateNewBoard() {
   const [isCreateBoard, setIsCreateBoard] = useState(false)
   const [inputValue, setInputValue] = useState('')
 
-  const inputRef = useRef()
-
-  const paragraf = <p>+ Create New Border</p>
-  const input = <input
-    type='text'
-    onKeyDown={handleKeyDown}
-    ref={inputRef}
-    onChange={handleChange}
-    value={inputValue}
-  />
-
-  
 
 
-  useEffect(() => {
-    isCreateBoard === true && inputRef.current.focus()
-  }, [isCreateBoard])
-
-
+  // used for conditionally render (input or span)
   function handleClick() {
     setIsCreateBoard(true)
   }
 
 
+  // focus on input
+  const inputRef = useRef()
+  useEffect(() => {
+    isCreateBoard === true && inputRef.current.focus()
+  }, [isCreateBoard])
+
+  
+  // update inputValue state with new input value
+  function handleChange(e) {
+    setInputValue(e.target.value)
+  }
+
+
+  // when key=enter => add new board template to boards
   function handleKeyDown(e) {
     if (e.key === 'Enter') {
       setIsCreateBoard(false)
@@ -50,14 +50,12 @@ export default function CreateNewBoard() {
           ]
         )
       })
-  
+
       setInputValue('')
     }
   }
 
-  function handleChange(e) {
-    setInputValue(e.target.value)
-  }
+
 
 
   return (
@@ -65,7 +63,14 @@ export default function CreateNewBoard() {
       className={styles.container}
       onClick={handleClick}
     >
-      {isCreateBoard ? input : paragraf}
+      {isCreateBoard
+        ? <Input
+          inputRef={inputRef}
+          inputValue={inputValue}
+          handleKeyDown={handleKeyDown}
+          handleChange={handleChange}
+        />
+        : <Span />}
     </div>
   )
 }
