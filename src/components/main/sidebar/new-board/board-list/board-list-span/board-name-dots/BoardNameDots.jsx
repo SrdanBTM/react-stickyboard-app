@@ -4,17 +4,22 @@ import styles from './boardNameDots.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 
-export default function boardNameDots({ handleClickDots }) {
+
+export default function boardNameDots() {
 
   const { theme } = useContext(MainContext)
-
   const BASE_URL = import.meta.env.BASE_URL
+
+  
+  function handleClick() {
+    console.log('radi');
+  }
 
 
   return (
     <div
       className={styles.container}
-      onClick={handleClickDots}
+      onClick={handleClick}
     >
       <img src={
         theme === 'darkTheme'

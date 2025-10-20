@@ -1,22 +1,50 @@
 
 
-
 import styles from './boardListInput.module.css'
+import { useContext, useRef, useEffect, useState } from 'react'
+import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
 
-export default function BoardListInput({
-  board,
-  inputRef,
-  inputValue,
-  handleChangeInput,
-  handleKeyDownInput
-}) {
+
+export default function BoardListInput({ board }) {
+
+  const { boards, setBoards, currentName } = useContext(MainContext)
+  const [inputValue, setInputValue] = useState('')
+  const inputRef = useRef()
+
+  
+  useEffect(() => {
+    inputRef.current && inputRef.current.focus()
+  }, [boards])
+
+
+  function handleChange(e) {
+    setInputValue(e.target.value)
+  }
+
+
+  function handleKeyDown(e) {
+    if (e.key === 'Enter') {
+      setBoards(prev => {
+        return (
+          prev.map(board => {
+            return (
+              board.boardName === currentName
+                ? { ...board, isInput: false, boardName: inputValue }
+                : board
+            )
+          })
+        )
+      })
+    }
+  }
+  
 
   return (
     <div
       className={styles.container}
       value={inputValue}
-      onChange={handleChangeInput}
-      onKeyDown={handleKeyDownInput}
+      onChange={handleChange}
+      onKeyDown={handleKeyDown}
     >
       <input
         type="text"

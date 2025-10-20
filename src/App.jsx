@@ -2,10 +2,8 @@
 
 import Header from './components/header/Header.jsx'
 import Main from './components/main/Main.jsx'
-
 import { MainProvider } from './context-provider/ContextProvider.jsx'
-
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 export default function App() {
@@ -30,17 +28,23 @@ export default function App() {
   const [boards, setBoards] = useState([boardTemplate])
   const [currentBoard, setCurrentBoard] = useState(boards[0])
   const [theme, setTheme] = useState('darkTheme')
+  const [currentName, setCurrentName] = useState()
+
+
+  useEffect(() => {
+    const lastBoard = boards[boards.length - 1]
+    setCurrentBoard(lastBoard)
+  }, [boards])
 
 
   return (
     <MainProvider
       value={{
-        boards,
-        setBoards,
-        currentBoard,
-        setCurrentBoard,
-        theme,
-        setTheme,
+        boards, setBoards,
+        currentBoard, setCurrentBoard,
+        theme, setTheme,
+        currentName, setCurrentName,
+        
         boardTemplate,
         stickerTemplate
       }}>
