@@ -12,7 +12,7 @@ export default function BoardsListEdit({ handleClickEdit }) {
 
   return (
     <div
-      className={styles.edit}
+      className={styles.container}
       onClick={handleClickEdit}
     >
       <img src={

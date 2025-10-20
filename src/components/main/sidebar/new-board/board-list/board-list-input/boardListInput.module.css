@@ -3,11 +3,11 @@
 
 
 
-.input {
+.container {
   width: 100%;
 }
 
-.input input {
+.container input {
   width: 100%;
   height: 100%;
   color: var(--font-color2);
@@ -18,6 +18,6 @@
   border-radius: 3px;
 }
 
-.input input:focus {
+.container input:focus {
   box-shadow: 0 2px 2px #555, 0 -2px 2px #555;
 }

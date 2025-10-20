@@ -5,7 +5,7 @@ import Board from './board/Board.jsx'
 
 export default function Main() {
   return (
-    <main className={styles.main}>
+    <main className={styles.container}>
       <Sidebar />
       <Board />
     </main>

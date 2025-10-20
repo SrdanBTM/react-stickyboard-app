@@ -1,7 +1,7 @@
 
 
 
-.edit {
+.container {
   width: 30px;
   height: 30px;
   display: flex;
@@ -10,11 +10,11 @@
   transition: all 0.1s ease;
 }
 
-.edit img {
+.container img {
   width: 15px;
   height: 15px;
 }
 
-.edit:hover {
+.container:hover {
   transform: scale(1.3);
 }

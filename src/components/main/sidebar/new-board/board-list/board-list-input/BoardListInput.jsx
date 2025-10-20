@@ -7,7 +7,7 @@ export default function BoardListInput({ board, inputRef, inputValue, handleChan
 
   return (
     <div
-      className={styles.input}
+      className={styles.container}
       value={inputValue}
       onChange={handleChangeInput}
       onKeyDown={handleKeyDownInput}

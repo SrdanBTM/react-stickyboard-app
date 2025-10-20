@@ -1,14 +1,6 @@
 
 
-
-.editAndDots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.span {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,17 +10,25 @@
   border-radius: 3px;
 }
 
-.span:hover {
+.container:hover {
   cursor: pointer;
   background-color: var(--hover-color2);
 }
 
-.span span {
+.container span {
   font-size: 14px;
   background-color: transparent;
   color: var(--font-color2);
 }
 
-.span:hover span {
+.container:hover span {
   color: var(--font-color3);
+}
+
+
+
+.editAndDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

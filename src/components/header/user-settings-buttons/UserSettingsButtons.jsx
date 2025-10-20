@@ -51,7 +51,7 @@ export default function UserSettings() {
   }
 
   return (
-    <div className={styles.userSettings}>
+    <div className={styles.container}>
       <div className={styles.user} onClick={handleClickUser} >
         <img
           src={theme === 'darkTheme' ? icons.userDark : icons.userLight}

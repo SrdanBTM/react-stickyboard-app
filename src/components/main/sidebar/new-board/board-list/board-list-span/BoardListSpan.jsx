@@ -35,7 +35,7 @@ export default function BoardListSpan({ isMouseOver, setCurrentName, board, curr
 
   return (
     <div
-      className={styles.span}
+      className={styles.container}
       data-name={board.boardName}
       onClick={handleClickSpan}
       onMouseOver={handleMouseOverSpan}

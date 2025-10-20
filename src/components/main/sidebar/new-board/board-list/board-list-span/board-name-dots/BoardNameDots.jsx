@@ -13,7 +13,7 @@ export default function boardNameDots({ handleClickDots }) {
 
   return (
     <div
-      className={styles.dots}
+      className={styles.container}
       onClick={handleClickDots}
     >
       <img src={

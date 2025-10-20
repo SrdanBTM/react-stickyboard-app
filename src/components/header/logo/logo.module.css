@@ -1,17 +1,17 @@
 
 
-.logo {
+.container {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.logo img {
+.container img {
   width: 40px;
   margin-right: 5px;
 }
 
-.logo span {
+.container span {
   font-size: 20px;
   font-weight: bold;
   color: var(--font-color1);

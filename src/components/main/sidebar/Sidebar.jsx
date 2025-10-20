@@ -7,7 +7,7 @@ import NewSticker from './new-sticker/NewSticker.jsx'
 
 export default function Sidebar() {
   return (
-    <aside className={styles.sidebar}>
+    <aside className={styles.container}>
       <NewSticker />
       <div className={styles.border}></div>
       <NewBoard />
