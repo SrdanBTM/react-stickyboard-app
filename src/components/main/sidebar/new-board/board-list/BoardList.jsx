@@ -8,7 +8,7 @@ import Span from './board-list-span/BoardListSpan.jsx'
 
 export default function BoardsList() {
 
-  const { boards, setBoards, currentBoard, setCurrentBoard } = useContext(MainContext)
+  const { boards, setBoards, setCurrentBoard } = useContext(MainContext)
 
 
   const [isMouseOver, setIsMouseOver] = useState(false)
@@ -102,10 +102,9 @@ export default function BoardsList() {
                 handleKeyDownInput={handleKeyDownInput}
               />
               : <Span
-                isMouseOver={isMouseOver}
-                setCurrentName={setCurrentName}
                 board={board}
-                currentBoard={currentBoard}
+                setCurrentName={setCurrentName}
+                isMouseOver={isMouseOver}
                 handleClickSpan={handleClickSpan}
                 handleMouseOverSpan={handleMouseOverSpan}
                 handleMouseLeaveSpan={handleMouseLeaveSpan}

@@ -1,12 +1,21 @@
 
 
 import styles from './boardListSpan.module.css'
+import { useContext } from 'react'
+import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
 import Edit from './board-name-edit/BoardNameEdit.jsx'
 import Dots from './board-name-dots/BoardNameDots.jsx'
 
-export default function BoardListSpan({ isMouseOver, setCurrentName, board, currentBoard, handleClickSpan, handleMouseOverSpan, handleMouseLeaveSpan }) {
+export default function BoardListSpan({
+  isMouseOver,
+  setCurrentName,
+  board,
+  handleClickSpan,
+  handleMouseOverSpan,
+  handleMouseLeaveSpan
+}) {
 
-  
+  const { currentBoard } = useContext(MainContext)
 
   function handleClickEdit(e) {
     const dataName = e.currentTarget.parentElement.parentElement.getAttribute('data-name')

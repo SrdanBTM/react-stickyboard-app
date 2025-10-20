@@ -3,7 +3,13 @@
 
 import styles from './boardListInput.module.css'
 
-export default function BoardListInput({ board, inputRef, inputValue, handleChangeInput, handleKeyDownInput }) {
+export default function BoardListInput({
+  board,
+  inputRef,
+  inputValue,
+  handleChangeInput,
+  handleKeyDownInput
+}) {
 
   return (
     <div
