@@ -9,7 +9,7 @@ import Dots from './board-name-dots/BoardNameDots.jsx'
 
 export default function BoardListSpan({ board }) {
 
-  const { boards, currentBoard, setCurrentBoard } = useContext(MainContext)
+  const { currentBoardId, setCurrentBoardId } = useContext(MainContext)
   const [isMouseOver, setIsMouseOver] = useState(false)
 
 
@@ -22,19 +22,19 @@ export default function BoardListSpan({ board }) {
   }
 
   function handleClick(e) {
-    const selected = boards.find(board => board.boardName === e.currentTarget.getAttribute('data-name'))
-    setCurrentBoard(selected)
+    const dataId =  e.currentTarget.getAttribute('data-id')
+    setCurrentBoardId(dataId)
   }
 
 
   return (
     <div
       className={styles.container}
-      data-name={board.boardName}
+      data-id={board.boardId}
       onClick={handleClick}
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
-      style={{ border: currentBoard.boardName === board.boardName ? '1px solid var(--border-color)' : '' }}
+      style={{ border: board.boardId === currentBoardId ? '1px solid var(--border-color)' : '' }}
     >
       <span>{board.boardName}</span>
       <div className={styles.editAndDots}>

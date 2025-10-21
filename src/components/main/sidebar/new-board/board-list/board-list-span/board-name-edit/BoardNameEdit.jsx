@@ -5,26 +5,26 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider'
 
 
-export default function BoardsListEdit() {
+export default function BoardNameEdit() {
 
-  const { theme, setCurrentName, setBoards } = useContext(MainContext)
+  const { theme, setCurrentBoardId, setBoards } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
   function handleClick(e) {
-    const dataName = e.currentTarget.parentElement.parentElement.getAttribute('data-name')
-    setCurrentName(dataName)
+    const dataId = e.currentTarget.parentElement.parentElement.getAttribute('data-id')
     setBoards(prev => {
       return (
         prev.map(board => {
           return (
-            board.boardName === dataName
+            board.boardId === dataId
               ? { ...board, isInput: true, isFocused: true }
               : { ...board, isInput: false, isFocused: false }
           )
         })
       )
     })
+    setCurrentBoardId(dataId)
   }
 
 

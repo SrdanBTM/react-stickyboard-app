@@ -9,20 +9,20 @@ import { useState } from 'react'
 
 export default function App() {
 
-  const [boards, setBoards] = useState([boardTemplate])
-  const [currentBoard, setCurrentBoard] = useState(boards[0])
+  const id = crypto.randomUUID()
+
+  const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
   const [theme, setTheme] = useState('darkTheme')
-  const [currentName, setCurrentName] = useState()
+  const [currentBoardId, setCurrentBoardId] = useState(id)
 
 
   return (
     <MainProvider
       value={{
         boards, setBoards,
-        currentBoard, setCurrentBoard,
         theme, setTheme,
-        currentName, setCurrentName,
-        
+        currentBoardId, setCurrentBoardId,
+
         boardTemplate,
         stickerTemplate
       }}>

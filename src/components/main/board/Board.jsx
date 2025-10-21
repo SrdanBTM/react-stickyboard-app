@@ -6,14 +6,15 @@ import styles from './board.module.css'
 
 export default function Board() {
 
-  const { currentBoard } = useContext(MainContext)
-  console.log(currentBoard);
-  
-  
+  const { currentBoardId, boards } = useContext(MainContext)
+
+  const currentBoard = boards.find(board => board.boardId === currentBoardId)
+
+
   return (
     <section className={styles.container}>
       <div className={styles.heading}>
-        <p>{currentBoard.boardName}</p>
+        <span>{currentBoard.boardName}</span>
       </div>
 
       <div className={styles.board}>

@@ -17,7 +17,7 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.heading p {
+.heading span {
   color: var(--font-color4);
   font-weight: bold;
   font-size: 20px;

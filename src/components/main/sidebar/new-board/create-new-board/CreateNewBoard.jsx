@@ -9,14 +9,14 @@ import Input from './create-new-board-input/CreateNewBoardInput.jsx'
 
 export default function CreateNewBoard() {
 
-  const { boards, setCurrentBoard } = useContext(MainContext)
+  const { boards, setCurrentBoardId } = useContext(MainContext)
   const [isCreateBoard, setIsCreateBoard] = useState(false)
 
 
   useEffect(() => {
-    const lastBoard = boards[boards.length - 1]
-    setCurrentBoard(lastBoard)
-  }, [boards])
+    const lastBoardId = boards[boards.length - 1].boardId
+    setCurrentBoardId(lastBoardId)
+  }, [boards.length])
 
 
   function handleClick() {

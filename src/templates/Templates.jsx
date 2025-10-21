@@ -1,6 +1,7 @@
 
 
 export const boardTemplate = {
+  boardId: '',
   boardName: 'My Board',
   isInput: false,
   isFocused: false,
@@ -10,7 +11,7 @@ export const boardTemplate = {
 export const stickerTemplate = {
   heading: '',
   content: '',
-  color: '',
+  color: 'var(--sticker-color1)',
   boardName: '',
   positionX: '',
   positionY: ''

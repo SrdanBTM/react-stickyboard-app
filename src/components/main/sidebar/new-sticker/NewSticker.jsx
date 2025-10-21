@@ -1,26 +1,26 @@
 
 import styles from './newSticker.module.css'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 
 export default function NewSticker() {
 
-  const { setBoards, currentBoard, stickerTemplate } = useContext(MainContext)
+  const { boards, setBoards, currentBoardId, stickerTemplate } = useContext(MainContext)
 
+  const currentBoard = boards.find(board => board.boardId === currentBoardId)
 
 
   function handleMouseDown() {
     const sticker = {
       ...stickerTemplate,
-      boardName: currentBoard.boardName,
-      color: 'var(--sticker-color1)'
+      boardName: currentBoard.boardName
     }
 
     setBoards(prev => {
       return (
         prev.map(board => {
           return (
-            board.boardName === currentBoard.boardName
+            board.boardId === currentBoardId
               ? { ...board, stickers:[...board.stickers, sticker] }
               : board
           )
@@ -30,10 +30,11 @@ export default function NewSticker() {
 
   }
 
+  
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
-        <p>Stickers</p>
+        <span>Stickers</span>
       </div>
 
       <div

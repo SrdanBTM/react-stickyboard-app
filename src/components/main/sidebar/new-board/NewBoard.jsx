@@ -10,7 +10,7 @@ export default function NewBoard() {
       <div className={styles.newBoard}>
 
         <div className={styles.heading}>
-          <p>Boards</p>
+          <span>Boards</span>
         </div>
 
         <BoardList />

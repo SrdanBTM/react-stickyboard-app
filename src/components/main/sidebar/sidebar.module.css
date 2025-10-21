@@ -12,7 +12,7 @@
 }
 
 .border {
-  width: 190px;
+  width: 150px;
   height: 1px;
   border-bottom: 1px solid var(--border-color);
   margin: 50px 0;

@@ -7,7 +7,7 @@
 .newSticker {
   width: 150px;
   height: 150px;
-  background-color: #2b2100;
+  background-color: var(--sticker-color1);
   color: #ddd;
 }
 

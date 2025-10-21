@@ -7,7 +7,7 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function BoardListInput({ board }) {
 
-  const { boards, setBoards, currentName } = useContext(MainContext)
+  const { boards, setBoards, currentBoardId } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
   const inputRef = useRef()
 
@@ -28,7 +28,7 @@ export default function BoardListInput({ board }) {
         return (
           prev.map(board => {
             return (
-              board.boardName === currentName
+              board.boardId === currentBoardId
                 ? { ...board, isInput: false, boardName: inputValue }
                 : board
             )

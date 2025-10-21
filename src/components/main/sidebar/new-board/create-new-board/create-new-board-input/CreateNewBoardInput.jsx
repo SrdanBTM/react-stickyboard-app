@@ -24,7 +24,11 @@ export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard })
         return (
           [
             ...prev,
-            { ...boardTemplate, boardName: inputValue }
+            {
+              ...boardTemplate,
+              boardName: inputValue,
+              boardId: crypto.randomUUID()
+            }
           ]
         )
       })

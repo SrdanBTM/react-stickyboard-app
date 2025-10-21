@@ -19,7 +19,8 @@ export default function BoardsList() {
           <div className={styles.container} key={index}>
             {board.isInput
               ? <Input board={board} />
-              : <Span board={board} />}
+              : <Span board={board} />
+            }
           </div>
         )
       })}
