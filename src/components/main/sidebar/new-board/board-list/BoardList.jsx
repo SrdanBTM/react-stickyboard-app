@@ -26,8 +26,10 @@ export default function BoardsList() {
 
           >
             {board.isInput
-              ? <Input board={board} />
-              : <>
+              ?
+              <Input board={board} />
+              :
+              <>
                 <DeleteClose board={board} />
                 <Span board={board} />
               </>
