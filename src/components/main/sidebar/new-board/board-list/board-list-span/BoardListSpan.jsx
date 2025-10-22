@@ -40,8 +40,8 @@ export default function BoardListSpan({ board }) {
       <div className={styles.editAndDots}>
         {isMouseOver &&
           <>
-            <Edit />
-            <Dots />
+            <Edit boardId={board.boardId} />
+            <Dots boardId={board.boardId} />
           </>
         }
       </div>
