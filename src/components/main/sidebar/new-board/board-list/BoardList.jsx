@@ -5,21 +5,28 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 import Input from './board-list-input/BoardListInput.jsx'
 import Span from './board-list-span/BoardListSpan.jsx'
+import DeleteClose from './board-list-delete-close/BoardListDeleteClose.jsx'
 
 
 export default function BoardsList() {
 
   const { boards } = useContext(MainContext)
 
-
   return (
     <div>
       {boards.map((board, index) => {
         return (
-          <div className={styles.container} key={index}>
+          <div
+            className={styles.container}
+            key={index}
+            style={{ height: board.isDeleteShowed ? '70px' : '35px'}}
+          >
             {board.isInput
               ? <Input board={board} />
-              : <Span board={board} />
+              : <>
+                <DeleteClose board={board} />
+                <Span board={board} />
+              </>
             }
           </div>
         )
