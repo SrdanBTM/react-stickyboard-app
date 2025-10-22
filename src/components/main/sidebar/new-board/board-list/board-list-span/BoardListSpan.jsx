@@ -34,7 +34,6 @@ export default function BoardListSpan({ board }) {
       onClick={handleClick}
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
-      style={{ border: board.boardId === currentBoardId ? '1px solid var(--border-color)' : '' }}
     >
       <span>{board.boardName}</span>
       <div className={styles.editAndDots}>

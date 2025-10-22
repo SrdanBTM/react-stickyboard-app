@@ -6,6 +6,9 @@
   align-items: center;
   position: relative;
   height: 35px;
-  transition: height 0.2s ease;
+  transition: height 0.2s ease-out;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+
 }
 

@@ -10,7 +10,7 @@ import DeleteClose from './board-list-delete-close/BoardListDeleteClose.jsx'
 
 export default function BoardsList() {
 
-  const { boards } = useContext(MainContext)
+  const { boards, currentBoardId } = useContext(MainContext)
 
   return (
     <div>
@@ -19,7 +19,11 @@ export default function BoardsList() {
           <div
             className={styles.container}
             key={index}
-            style={{ height: board.isDeleteShowed ? '70px' : '35px'}}
+            style={{
+              height: board.isDeleteShowed ? '70px' : '37px',
+              border: board.boardId === currentBoardId ? '1px solid var(--border-color)' : ''
+            }}
+
           >
             {board.isInput
               ? <Input board={board} />

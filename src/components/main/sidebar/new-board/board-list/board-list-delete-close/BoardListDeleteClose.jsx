@@ -6,13 +6,20 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function BoardListDeleteClose({ board }) {
 
-  const isDeleteShowed = board.isDeleteShowed
+  const BASE_URL = import.meta.env.BASE_URL
+  
 
   return (
     <div
       className={styles.container}
     >
-      <span>Delete board</span>
+      <div className={styles.delete}>
+        <img src={`${BASE_URL}images/icon-delete1.png`} alt="delete" />
+      </div>
+
+      <div className={styles.close}>
+        <img src={`${BASE_URL}images/icon-close1.png`} alt="close" />
+      </div>
     </div>
   )
 }
