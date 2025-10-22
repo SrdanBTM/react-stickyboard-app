@@ -12,31 +12,35 @@ export default function BoardsList() {
 
   const { boards, currentBoardId } = useContext(MainContext)
 
+  console.log(boards);
+  
+
   return (
     <div>
-      {boards.map((board, index) => {
-        return (
-          <div
-            className={styles.container}
-            key={index}
-            style={{
-              height: board.isDeleteShowed ? '70px' : '37px',
-              border: board.boardId === currentBoardId ? '1px solid var(--border-color)' : ''
-            }}
+      {boards.length > 0
+        && boards.map((board, index) => {
+          return (
+            <div
+              className={styles.container}
+              key={index}
+              style={{
+                height: board.isDeleteShowed ? '70px' : '37px',
+                border: board.boardId === currentBoardId ? '1px solid var(--border-color)' : ''
+              }}
 
-          >
-            {board.isInput
-              ?
-              <Input board={board} />
-              :
-              <>
-                <DeleteClose board={board} />
-                <Span board={board} />
-              </>
-            }
-          </div>
-        )
-      })}
+            >
+              {board.isInput
+                ?
+                <Input board={board} />
+                :
+                <>
+                  <DeleteClose board={board} />
+                  <Span board={board} />
+                </>
+              }
+            </div>
+          )
+        })}
     </div>
   )
 }

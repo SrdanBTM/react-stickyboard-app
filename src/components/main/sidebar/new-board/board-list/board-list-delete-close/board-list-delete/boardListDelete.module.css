@@ -1,0 +1,26 @@
+
+
+
+
+.container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.container {
+  border-radius: 0 0 0 3px;
+}
+
+.container:hover {
+  background-color: rgb(112, 27, 27);
+}
+
+.container img {
+  width: 15px;
+  height: 15px;
+}

@@ -11,37 +11,3 @@
   left: 0;
 }
 
-
-.delete,
-.close {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.delete {
-  border-radius: 0 0 0 3px;
-}
-
-.delete:hover {
-  background-color: rgb(112, 27, 27);
-}
-
-.close {
-  border-radius: 0 0 3px 0;
-}
-
-.close:hover {
-  background-color:  rgb(39, 69, 88);
-}
-
-
-.delete img,
-.close img {
-  width: 15px;
-  height: 15px;
-}

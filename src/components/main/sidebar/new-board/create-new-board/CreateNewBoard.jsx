@@ -14,8 +14,10 @@ export default function CreateNewBoard() {
 
 
   useEffect(() => {
-    const lastBoardId = boards[boards.length - 1].boardId
-    setCurrentBoardId(lastBoardId)
+    if (boards.length > 0) {
+      const lastBoardId = boards[boards.length - 1].boardId
+      setCurrentBoardId(lastBoardId)
+    }
   }, [boards.length])
 
 
