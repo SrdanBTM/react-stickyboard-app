@@ -5,14 +5,24 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function boardNameDots() {
+export default function boardNameDots({ boardId }) {
 
-  const { theme } = useContext(MainContext)
+  const { setBoards, theme } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
 
-  
-  function handleClick() {
-    console.log('radi');
+
+
+
+  function handleClick(e) {
+    const dataId = e.currentTarget.getAttribute('data-id')
+    setBoards(prev => prev.map(board => {
+      return (
+        board.boardId === dataId
+          ? { ...board, isDeleteShowed: !board.isDeleteShowed }
+          : { ...board, isDeleteShowed: false }
+      )
+    })
+    )
   }
 
 
@@ -20,6 +30,7 @@ export default function boardNameDots() {
     <div
       className={styles.container}
       onClick={handleClick}
+      data-id={boardId}
     >
       <img src={
         theme === 'darkTheme'
