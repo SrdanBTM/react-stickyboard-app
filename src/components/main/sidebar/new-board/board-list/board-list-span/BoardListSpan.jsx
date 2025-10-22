@@ -22,7 +22,7 @@ export default function BoardListSpan({ board }) {
   }
 
   function handleClick(e) {
-    const dataId =  e.currentTarget.getAttribute('data-id')
+    const dataId = e.currentTarget.getAttribute('data-id')
     setCurrentBoardId(dataId)
   }
 
@@ -38,7 +38,7 @@ export default function BoardListSpan({ board }) {
     >
       <span>{board.boardName}</span>
       <div className={styles.editAndDots}>
-        {isMouseOver &&
+        {isMouseOver && !board.isDeleteShowed &&
           <>
             <Edit board={board} />
             <Dots board={board} />
