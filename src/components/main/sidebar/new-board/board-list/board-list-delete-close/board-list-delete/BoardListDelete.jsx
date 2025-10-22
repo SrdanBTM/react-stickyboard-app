@@ -8,26 +8,28 @@ import { MainContext } from '../../../../../../../context-provider/ContextProvid
 
 export default function BoardListDelete({ board }) {
 
-  const { boards, setBoards, setCurrentBoardId } = useContext(MainContext)
+  const { boards, setBoards, setCurrentBoardId, setIsDeleteBoardModalOpen } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
   function handleClick(e) {
     const dataId = e.currentTarget.getAttribute('data-id')
 
-    boards.length > 1
+    boards.length >= 1
       ? setCurrentBoardId(boards[0].boardId)
       : setCurrentBoardId(null)
 
     setBoards(prev => prev.map(board => {
       return (
         board.boardId === dataId
-          ? { ...board, isDeletedShowed: false }
+          ? { ...board, isDeleteShowed: false }
           : board
       )
     }))
 
-    setBoards(prev => prev.filter(board => board.boardId !== dataId && board))
+    board.stickers.length === 0
+      ? setBoards(prev => prev.filter(board => board.boardId !== dataId && board))
+      : setIsDeleteBoardModalOpen(true)
   }
 
 

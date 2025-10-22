@@ -15,6 +15,7 @@ export default function App() {
   const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
   const [theme, setTheme] = useState('darkTheme')
   const [currentBoardId, setCurrentBoardId] = useState(id)
+  const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
 
 
   return (
@@ -23,6 +24,7 @@ export default function App() {
         boards, setBoards,
         theme, setTheme,
         currentBoardId, setCurrentBoardId,
+        isDeleteBoardModalOpen, setIsDeleteBoardModalOpen,
 
         boardTemplate,
         stickerTemplate
@@ -30,7 +32,8 @@ export default function App() {
       <div className={`app ${theme}`}>
         <Header />
         <Main />
-        <DeleteBoardModal />
+        {isDeleteBoardModalOpen
+          && <DeleteBoardModal />}
       </div>
     </MainProvider>
 
