@@ -6,7 +6,7 @@ import { MainContext } from '../../../../../../../context-provider/ContextProvid
 
 export default function BoardListClose({ board }) {
 
-  const { setBoards } = useContext(MainContext)
+  const { setBoards, theme } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
@@ -28,7 +28,9 @@ export default function BoardListClose({ board }) {
       onClick={handleClick}
       data-id={board.boardId}
     >
-      <img src={`${BASE_URL}images/icon-close1.png`} alt="close" />
+      {theme === 'darkTheme'
+        ? <img src={`${BASE_URL}images/icon-close1.png`} alt="close" />
+        : <img src={`${BASE_URL}images/icon-close2.png`} alt="close" />}
     </div>
   )
 }

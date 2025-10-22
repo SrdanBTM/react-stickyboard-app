@@ -32,6 +32,8 @@
   --sticker-color4: #001e36;
   --sticker-color5: #3a1b00;
   --sticker-color6: #1d0036;
+  --boardlist-delete-color: #701b1b;
+  --boardlist-close-color: #274558;
 }
 
 .lightTheme {
@@ -52,6 +54,8 @@
   --sticker-color4: #91c8ff;
   --sticker-color5: #ffc68a;
   --sticker-color6: #d2b3ff;
+  --boardlist-delete-color: #dec2c2;
+  --boardlist-close-color: #bcd0dd;
 }
 
 

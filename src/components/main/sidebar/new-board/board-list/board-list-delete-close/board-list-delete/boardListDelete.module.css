@@ -17,7 +17,7 @@
 }
 
 .container:hover {
-  background-color: rgb(112, 27, 27);
+  background-color: var(--boardlist-delete-color);
 }
 
 .container img {

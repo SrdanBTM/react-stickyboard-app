@@ -8,7 +8,7 @@ import { MainContext } from '../../../../../../../context-provider/ContextProvid
 
 export default function BoardListDelete({ board }) {
 
-  const { boards, setBoards, setCurrentBoardId, setIsDeleteBoardModalOpen } = useContext(MainContext)
+  const { theme, boards, setBoards, setCurrentBoardId, setIsDeleteBoardModalOpen } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
@@ -39,7 +39,9 @@ export default function BoardListDelete({ board }) {
       onClick={handleClick}
       data-id={board.boardId}
     >
-      <img src={`${BASE_URL}images/icon-delete1.png`} alt="delete" />
+      {theme === 'darkTheme'
+      ? <img src={`${BASE_URL}images/icon-delete1.png`} alt="delete" />    
+      : <img src={`${BASE_URL}images/icon-delete2.png`} alt="delete" />}
     </div>
   )
 }
