@@ -1,6 +1,6 @@
 
 
-import styles from './boardNameDots.module.css'
+import styles from './boardNameDelete.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 

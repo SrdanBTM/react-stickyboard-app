@@ -4,7 +4,7 @@ import styles from './boardListSpan.module.css'
 import { useContext, useState } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
 import Edit from './board-name-edit/BoardNameEdit.jsx'
-import Dots from './board-name-dots/BoardNameDots.jsx'
+import Delete from './board-name-delete/BoardNameDelete.jsx'
 
 
 export default function BoardListSpan({ board }) {
@@ -41,7 +41,7 @@ export default function BoardListSpan({ board }) {
         {isMouseOver && !board.isDeleteShowed &&
           <>
             <Edit board={board} />
-            <Dots board={board} />
+            <Delete board={board} />
           </>
         }
       </div>
