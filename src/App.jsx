@@ -16,6 +16,8 @@ export default function App() {
   const [theme, setTheme] = useState('darkTheme')
   const [currentBoardId, setCurrentBoardId] = useState(id)
   const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
+  const [isStickerDrag, setIsStickerDrag] = useState(false)
+  const [draggedStickerPosition, setDraggedStickerPosition] = useState({ x: null, y: null })
 
 
   return (
@@ -25,6 +27,8 @@ export default function App() {
         theme, setTheme,
         currentBoardId, setCurrentBoardId,
         isDeleteBoardModalOpen, setIsDeleteBoardModalOpen,
+        isStickerDrag, setIsStickerDrag,
+        draggedStickerPosition, setDraggedStickerPosition,
 
         boardTemplate,
         stickerTemplate
