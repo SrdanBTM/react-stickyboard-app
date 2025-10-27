@@ -6,7 +6,7 @@ import styles from './board.module.css'
 
 export default function Board() {
 
-  const { currentBoardId, boards } = useContext(MainContext)
+  const { currentBoardId, boards, boardRef } = useContext(MainContext)
   let currentBoard = null
 
   if (boards.length > 0) {
@@ -22,14 +22,20 @@ export default function Board() {
         }
       </div>
 
-      <div className={styles.board}>
+      <div
+        className={styles.board}
+        ref={boardRef}>
         {currentBoard
           && currentBoard.stickers.map((sticker, index) => {
             return (
               <div
                 key={index}
                 className={styles.sticker}
-                style={{ backgroundColor: sticker.color }}
+                style={{ 
+                  backgroundColor: sticker.color,
+                  top: sticker.positionY,
+                  left: sticker.positionX
+                }}
               >
                 {index}
               </div>
