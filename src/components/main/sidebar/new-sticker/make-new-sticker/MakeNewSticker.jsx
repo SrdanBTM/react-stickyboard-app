@@ -33,6 +33,7 @@ export default function MakeNewSticker() {
     if (isStickerInBoard) {
       const stickerToAdd = {
         ...stickerTemplate,
+        stickerId: crypto.randomUUID(),
         positionX: stickerPositionInBoardLeft,
         positionY: stickerPositionInBoardTop
       }

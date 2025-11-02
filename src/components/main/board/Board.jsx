@@ -1,7 +1,8 @@
 
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 import styles from './board.module.css'
+import StickerOnBoard from './sticker-on-board/StickerOnBoard.jsx'
 
 
 export default function Board() {
@@ -28,17 +29,11 @@ export default function Board() {
         {currentBoard
           && currentBoard.stickers.map((sticker, index) => {
             return (
-              <div
+              <StickerOnBoard
                 key={index}
-                className={styles.sticker}
-                style={{ 
-                  backgroundColor: sticker.color,
-                  top: sticker.positionY,
-                  left: sticker.positionX
-                }}
-              >
-                {index}
-              </div>
+                sticker={sticker}
+                index={index}
+              />
             )
           })}
       </div>

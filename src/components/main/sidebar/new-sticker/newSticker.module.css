@@ -24,10 +24,6 @@
   0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
-.stack:hover {
-  cursor: pointer;
-}
-
 .remainingStickers {
   width: 100%;
   height: 100%;

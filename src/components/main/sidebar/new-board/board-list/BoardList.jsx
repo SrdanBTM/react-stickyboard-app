@@ -12,8 +12,6 @@ export default function BoardsList() {
 
   const { boards, currentBoardId } = useContext(MainContext)
 
-  console.log(boards);
-  
 
   return (
     <div>
