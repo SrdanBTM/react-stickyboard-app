@@ -1,0 +1,22 @@
+
+
+.container {
+  display: flex;
+  flex: 1;
+  height: 15px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.oneColor {
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  width: 15px;
+  height: 15px;
+}
+
+.oneColor:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 2px #fff;
+}
