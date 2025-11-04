@@ -3,6 +3,7 @@ import styles from './stickerOnBoard.module.css'
 import { motion } from 'framer-motion'
 import { useContext, useRef, useState, useEffect } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
+import StickerPin from './sticker-pin/StickerPin.jsx'
 import StickerTitle from './sticker-title/StickerTitle.jsx'
 import StickerNote from './sticker-note/StickerNote.jsx'
 
@@ -68,6 +69,8 @@ export default function StickerOnBoard({ sticker, index }) {
         x: sticker.positionX
       }}
     >
+      <StickerPin />
+
       <StickerTitle />
       <StickerNote />
     </motion.div>
