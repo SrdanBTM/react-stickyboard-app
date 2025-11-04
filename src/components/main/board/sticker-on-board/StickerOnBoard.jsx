@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useContext, useRef, useState, useEffect } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 import StickerTitle from './sticker-title/StickerTitle.jsx'
+import StickerNote from './sticker-note/StickerNote.jsx'
 
 
 export default function StickerOnBoard({ sticker, index }) {
@@ -68,6 +69,7 @@ export default function StickerOnBoard({ sticker, index }) {
       }}
     >
       <StickerTitle />
+      <StickerNote />
     </motion.div>
   )
 }
