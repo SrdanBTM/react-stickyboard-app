@@ -4,18 +4,23 @@
   width: 150px;
   height: 30px;
   position: absolute;
-  top: -25px;
+  top: -20px;
   left: 0;
   display: flex;
   align-self: center;
   justify-content: center;
   cursor: grab;
+  transition: transform 0.2s ease;
 }
 
 .image {
-  height: 40px;
-  width: 40px;
-  z-index: 0;
+  height: 30px;
+  width: 30px;
+  transition: transform 0.2s ease;
+}
+
+.container:hover .image{
+  transform: scale(1.1);
 }
 
 .image img {

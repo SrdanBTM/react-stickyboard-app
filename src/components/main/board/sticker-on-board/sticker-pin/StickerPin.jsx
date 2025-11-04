@@ -20,7 +20,7 @@ export default function StickerPin() {
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       className={styles.container}
-      style={{ top: isUnpined ? '-30px' : '' }}
+      style={{ transform: isUnpined ? 'translateY(-5px)' : '' }}
     >
       <div className={styles.image}>
         <img
