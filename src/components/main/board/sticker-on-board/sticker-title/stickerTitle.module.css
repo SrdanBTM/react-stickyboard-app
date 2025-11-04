@@ -5,8 +5,7 @@
   width: 100%;
 }
 
-.input input, 
-.span span {
+.container input {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -15,12 +14,7 @@
   color: #000;
   font-size: 14px;
   font-style: italic;
-}
-
-.span span {
   font-weight: 600;
+  background-color: rgba(0,0,0,0.05);
 }
 
-.input input {
-  background-color: rgba(0,0,0,0.1);
-}
