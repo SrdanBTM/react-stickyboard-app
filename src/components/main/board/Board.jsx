@@ -27,12 +27,11 @@ export default function Board() {
         className={styles.board}
         ref={boardRef}>
         {currentBoard
-          && currentBoard.stickers.map((sticker, index) => {
+          && currentBoard.stickers.map((sticker) => {
             return (
               <StickerOnBoard
-                key={index}
+                key={sticker.stickerId}
                 sticker={sticker}
-                index={index}
               />
             )
           })}

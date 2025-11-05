@@ -9,9 +9,9 @@ import StickerNote from './sticker-note/StickerNote.jsx'
 import ColorsPalette from './colors-palette/ColorsPalette.jsx'
 
 
-export default function StickerOnBoard({ sticker, index }) {
+export default function StickerOnBoard({ sticker }) {
 
-  const { boardRef, boards, setBoards, currentBoardId } = useContext(MainContext)
+  const { boardRef, setBoards, currentBoardId } = useContext(MainContext)
   const stickerRef = useRef()
   const [constraints, setConstraints] = useState()
 

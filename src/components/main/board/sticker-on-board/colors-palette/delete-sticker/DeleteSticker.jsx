@@ -24,10 +24,9 @@ export default function DeleteSticker({ stickerId }) {
         : board
       )
     }))
-
-
   }
 
+  
   return (
     <div
       className={styles.container}
