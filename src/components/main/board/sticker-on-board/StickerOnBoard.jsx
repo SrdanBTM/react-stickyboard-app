@@ -72,9 +72,9 @@ export default function StickerOnBoard({ sticker, index }) {
     >
       <StickerPin />
 
-      <StickerTitle />
-      <StickerNote />
-      <ColorsPalette />
+      <StickerTitle stickerId={sticker.stickerId} />
+      <StickerNote stickerId={sticker.stickerId} />
+      <ColorsPalette stickerId={sticker.stickerId} />
     </motion.div>
   )
 }
