@@ -16,7 +16,3 @@
   transition: all 0.1s ease;
 }
 
-.container img:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-}
