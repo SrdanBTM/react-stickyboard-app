@@ -11,8 +11,8 @@ export const boardTemplate = {
 
 export const stickerTemplate = {
   stickerId: '',
-  heading: '',
-  content: '',
+  title: '',
+  note: '',
   color: 'var(--sticker-color1)',
   boardName: '',
   positionX: '',
