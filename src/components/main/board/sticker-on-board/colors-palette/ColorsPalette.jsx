@@ -7,7 +7,7 @@ import DeleteSticker from './delete-sticker/DeleteSticker.jsx'
 import { useState } from 'react'
 
 
-export default function ColorsPalette() {
+export default function ColorsPalette({ stickerId }) {
 
   const [isMouseOver, setIsMouseOver] = useState(false)
 
@@ -26,14 +26,14 @@ export default function ColorsPalette() {
         className={styles.content}
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
-        style={{ transform: isMouseOver ? 'translateX(0px)' : '' }}
+        style={{ transform: isMouseOver ? 'translateX(0px)' : 'translateX(120px)' }}
       >
 
         {isMouseOver
-          ? <DeleteSticker />
+          ? <DeleteSticker stickerId={stickerId} />
           : <Dots />}
-          
-        <Colors />
+
+        <Colors stickerId={stickerId} />
 
       </div>
     </div>
