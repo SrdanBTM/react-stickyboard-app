@@ -6,7 +6,6 @@ import { useState } from 'react'
 export default function StickerNote() {
 
   const [textareaValue, setTextareaValue] = useState('')
-  const [isTextarea, setIsTextarea] = useState(true)
 
 
   function handleChange(e) {
@@ -17,31 +16,20 @@ export default function StickerNote() {
     setIsTextarea(true)
   }
 
-  
+
   return (
     <div
       className={styles.container}
       onDoubleClick={handleDoubleClick}
     >
-
-      {isTextarea
-
-        ? <div className={styles.textarea}>
-          <textarea
-            placeholder='Note...'
-            value={textareaValue}
-            onChange={handleChange}
-          >
-          </textarea>
-        </div>
-
-        : <div className={styles.span}>
-          <span>
-            {textareaValue}
-          </span>
-        </div>
-      }
-
+      <div className={styles.textarea}>
+        <textarea
+          placeholder='Note...'
+          value={textareaValue}
+          onChange={handleChange}
+        >
+        </textarea>
+      </div>
     </div>
   )
 }
