@@ -1,6 +1,6 @@
 
 import styles from './stickerOnBoard.module.css'
-import { motion } from 'framer-motion'
+import { motion, useDragControls } from 'framer-motion'
 import { useContext, useRef, useState, useEffect } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 import StickerPin from './sticker-pin/StickerPin.jsx'
@@ -14,12 +14,14 @@ export default function StickerOnBoard({ sticker }) {
   const { boardRef, setBoards, currentBoardId } = useContext(MainContext)
   const stickerRef = useRef()
   const [constraints, setConstraints] = useState()
+  const dragControl = useDragControls()
 
 
   useEffect(() => {
     setConstraints(boardRef)
   }, [boardRef])
 
+  
 
   function handleDragEnd() {
     const dataId = stickerRef.current.getAttribute('data-id')
@@ -59,6 +61,8 @@ export default function StickerOnBoard({ sticker }) {
       data-id={sticker.stickerId}
       className={styles.container}
       drag
+      dragListener={false}
+      dragControls={dragControl}
       dragMomentum={false}
       dragConstraints={constraints}
       dragElastic={0}
@@ -70,7 +74,7 @@ export default function StickerOnBoard({ sticker }) {
         x: sticker.positionX
       }}
     >
-      <StickerPin />
+      <StickerPin dragControl={dragControl} />
 
       <StickerTitle stickerId={sticker.stickerId} />
       <StickerNote stickerId={sticker.stickerId} />
