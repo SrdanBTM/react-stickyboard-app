@@ -11,6 +11,7 @@
   justify-content: center;
   cursor: grab;
   transition: transform 0.1s ease;
+  user-select: none;
 }
 
 .image {
