@@ -9,7 +9,7 @@ export default function Settings({ clickedElement }) {
 
   const showElement = clickedElement.elementName === 'settings' && clickedElement.showSettings
 
-  function handleClickMode() {
+  function handleClick() {
     setTheme(prev => prev === 'darkTheme' ? 'lightTheme' : 'darkTheme')
   }
 
@@ -21,7 +21,7 @@ export default function Settings({ clickedElement }) {
         pointerEvents: showElement ? 'auto' : 'none'
       }}
     >
-      <li onClick={handleClickMode}>Change theme</li>
+      <li onClick={handleClick}>Change theme</li>
     </ul>
   )
 }
