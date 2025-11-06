@@ -1,17 +1,14 @@
 
 
+import { useState } from 'react'
 import styles from './userSettingsButtons.module.css'
 import Settings from './settings/Settings.jsx'
+import SettingsIcon from './settings-icon/SettingsIcon.jsx'
 import User from './user/User.jsx'
-import { useState, useContext } from 'react'
-import { MainContext } from '../../../context-provider/ContextProvider.jsx'
+import UserIcon from './user-icon/UserIcon.jsx'
 
 
 export default function UserSettings() {
-
-  const BASE_URL = import.meta.env.BASE_URL
-
-  const { theme } = useContext(MainContext)
 
   const [clickedElement, setClickedElement] = useState({
     elementName: null,
@@ -19,13 +16,7 @@ export default function UserSettings() {
     showSettings: false
   })
 
-  const icons = {
-    userDark: `${BASE_URL}images/icon-user2.png`,
-    userLight: `${BASE_URL}images/icon-user1.png`,
-    settingsDark: `${BASE_URL}images/icon-settings2.png`,
-    settingsLight: `${BASE_URL}images/icon-settings1.png`
-  }
-
+  
   function handleClickUser() {
     setClickedElement(prev => {
       return (
@@ -53,21 +44,13 @@ export default function UserSettings() {
   return (
     <div className={styles.container}>
       <div className={styles.user} onClick={handleClickUser} >
-        <img
-          src={theme === 'darkTheme' ? icons.userDark : icons.userLight}
-          alt="user icon" />
-        <User
-          clickedElement={clickedElement}
-        />
+        <UserIcon />
+        <User clickedElement={clickedElement} />
       </div>
 
       <div className={styles.settings} onClick={handleClickSettings}>
-        <img
-          src={theme === 'darkTheme' ? icons.settingsDark : icons.settingsLight}
-          alt="settings icon" />
-        <Settings
-          clickedElement={clickedElement}
-        />
+        <SettingsIcon />
+        <Settings clickedElement={clickedElement} />
       </div>
     </div>
   )
