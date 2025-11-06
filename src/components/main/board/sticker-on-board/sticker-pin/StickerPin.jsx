@@ -1,11 +1,15 @@
 
 import styles from './stickerPin.module.css'
-import { useState } from 'react'
+import { useState, useContext, useRef } from 'react'
+import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+
 
 export default function StickerPin() {
 
   const BASE_URL = import.meta.env.BASE_URL
   const [isUnpined, setIsUnpined] = useState(false)
+  const { theme } = useContext(MainContext)
+
 
   function handleMouseDown() {
     setIsUnpined(true)
@@ -14,6 +18,8 @@ export default function StickerPin() {
   function handleMouseUp() {
     setIsUnpined(false)
   }
+
+
 
   return (
     <div
@@ -24,9 +30,15 @@ export default function StickerPin() {
     >
       <div className={styles.image}>
         <img
-          src={isUnpined
-            ? `${BASE_URL}images/icon-pin2.png`
-            : `${BASE_URL}images/icon-pin1.png`}
+          src={
+            isUnpined
+              ? theme === 'lightTheme'
+                ? `${BASE_URL}images/icon-pin4.png`
+                : `${BASE_URL}images/icon-pin6.png`
+              : theme === 'lightTheme'
+                ? `${BASE_URL}images/icon-pin3.png`
+                : `${BASE_URL}images/icon-pin5.png`
+          }
           alt="pin icon" />
       </div>
     </div>

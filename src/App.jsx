@@ -13,7 +13,7 @@ export default function App() {
   const id = crypto.randomUUID()
 
   const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
-  const [theme, setTheme] = useState('lightTheme')
+  const [theme, setTheme] = useState('darkTheme')
   const [currentBoardId, setCurrentBoardId] = useState(id)
   const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
 

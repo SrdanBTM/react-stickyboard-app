@@ -1,12 +1,11 @@
 
 
 .container {
-  width: 15px;
-  height: 15px;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 3px 5px;
   transition: all 0.1s ease;
 }
 

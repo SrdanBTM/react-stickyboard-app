@@ -22,7 +22,9 @@
   --font-color2: #eeeeee; 
   --font-color3: #1e1e1e;
   --font-color4: #666;
+  --font-color5: #999;
   --border-color: #363636;
+  --border-color2: #555;
   --hover-color1: #333;
   --hover-color2: #a9a9a9;
   --hover-color3: #222;
@@ -44,7 +46,9 @@
   --font-color2: #3b3b3b; 
   --font-color3: #f9fbfc;
   --font-color4: #919191;
+  --font-color5: #111;
   --border-color: #aaa;
+  --border-color2: #777;
   --hover-color1: #ddd;
   --hover-color2: #646363;
   --hover-color3: #ddd;
@@ -57,5 +61,4 @@
   --boardlist-delete-color: #dec2c2;
   --boardlist-close-color: #bcd0dd;
 }
-
 

@@ -10,11 +10,11 @@
   background-color: transparent;
   border: none;
   outline: none;
-  padding: 5px;
-  color: #000;
+  padding: 10px;
+  color: var(--font-color5);
   font-size: 14px;
   font-style: italic;
   font-weight: 600;
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0,0,0,0.1);
 }
 

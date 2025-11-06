@@ -26,7 +26,7 @@ export default function ColorsPalette({ stickerId }) {
         className={styles.content}
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
-        style={{ transform: isMouseOver ? 'translateX(0px)' : 'translateX(120px)' }}
+        style={{ transform: isMouseOver ? 'translateX(0px)' : 'translateX(210px)' }}
       >
 
         {isMouseOver
