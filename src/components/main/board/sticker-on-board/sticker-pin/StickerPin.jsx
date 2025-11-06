@@ -4,15 +4,16 @@ import { useState, useContext, useRef } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function StickerPin() {
+export default function StickerPin({ dragControl }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const [isUnpined, setIsUnpined] = useState(false)
   const { theme } = useContext(MainContext)
 
 
-  function handleMouseDown() {
+  function handleMouseDown(e) {
     setIsUnpined(true)
+    dragControl.start(e)
   }
 
   function handleMouseUp() {
