@@ -1,5 +1,7 @@
 
-import styles from './user.module.css'
+
+import styles from './userMenu.module.css'
+
 
 export default function User({ clickedElement }) {
 

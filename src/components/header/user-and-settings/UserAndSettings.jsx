@@ -1,10 +1,10 @@
 
 
 import { useState } from 'react'
-import styles from './userSettingsButtons.module.css'
-import Settings from './settings/Settings.jsx'
+import styles from './userAndSettings.module.css'
+import SettingsMenu from './settings-menu/SettingsMenu.jsx'
 import SettingsIcon from './settings-icon/SettingsIcon.jsx'
-import User from './user/User.jsx'
+import UserMenu from './user-menu/UserMenu.jsx'
 import UserIcon from './user-icon/UserIcon.jsx'
 
 
@@ -16,7 +16,7 @@ export default function UserSettings() {
     showSettings: false
   })
 
-  
+
   function handleClickUser() {
     setClickedElement(prev => {
       return (
@@ -45,12 +45,12 @@ export default function UserSettings() {
     <div className={styles.container}>
       <div className={styles.user} onClick={handleClickUser} >
         <UserIcon />
-        <User clickedElement={clickedElement} />
+        <UserMenu clickedElement={clickedElement} />
       </div>
 
       <div className={styles.settings} onClick={handleClickSettings}>
         <SettingsIcon />
-        <Settings clickedElement={clickedElement} />
+        <SettingsMenu clickedElement={clickedElement} />
       </div>
     </div>
   )
