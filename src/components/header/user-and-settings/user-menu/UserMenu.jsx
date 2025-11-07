@@ -1,23 +1,26 @@
 
 
+import { div } from 'framer-motion/client'
 import styles from './userMenu.module.css'
 
 
-export default function User({ clickedElement }) {
+export default function User({ userMenuRef, clickedElement }) {
 
   const showElement = clickedElement.elementName === 'user' && clickedElement.showUser
 
   return (
-    <ul
+    <div
       className={styles.container}
-      style={{ 
+      style={{
         opacity: showElement ? 1 : 0,
         pointerEvents: showElement ? 'auto' : 'none'
       }}
     >
-      <li>Change account</li>
-      <li>Add acocunt</li>
-      <li>Log out</li>
-    </ul>
+      <ul ref={userMenuRef}>
+        <li>Change account</li>
+        <li>Add acocunt</li>
+        <li>Log out</li>
+      </ul>
+    </div>
   )
 }

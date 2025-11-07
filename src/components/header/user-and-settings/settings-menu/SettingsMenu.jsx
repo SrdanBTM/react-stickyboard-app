@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 import styles from './settingsMenu.module.css'
 
-export default function Settings({ clickedElement }) {
+export default function Settings({ settingsMenuRef, clickedElement }) {
 
   const { setTheme } = useContext(MainContext)
 
@@ -15,14 +15,17 @@ export default function Settings({ clickedElement }) {
   }
 
   return (
-    <ul
+    <div
       className={styles.container}
       style={{
         opacity: showElement ? 1 : 0,
         pointerEvents: showElement ? 'auto' : 'none'
       }}
     >
-      <li onClick={handleClick}>Change theme</li>
-    </ul>
+      <ul ref={settingsMenuRef}>
+        <li onClick={handleClick}>Change theme</li>
+      </ul>
+    </div>
+
   )
 }

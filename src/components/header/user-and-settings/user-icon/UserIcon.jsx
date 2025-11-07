@@ -4,14 +4,17 @@ import styles from './userIcon.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 
-export default function UserIcon() {
+export default function UserIcon({ userIconRef }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const { theme } = useContext(MainContext)
 
-  
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      ref={userIconRef}
+    >
       <img
         src={theme === 'darkTheme'
           ? `${BASE_URL}images/icon-user2.png`
