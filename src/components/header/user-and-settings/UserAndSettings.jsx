@@ -14,9 +14,7 @@ export default function UserAndSettings() {
   const { clickedElementOnApp } = useContext(MainContext)
 
   const settingsIconRef = useRef()
-  const settingsMenuRef = useRef()
   const userIconRef = useRef()
-  const userMenuRef = useRef()
 
   const initClickedElement = {
     elementName: null,
@@ -29,8 +27,6 @@ export default function UserAndSettings() {
   useEffect(()=>{
     if (clickedElementOnApp !== settingsIconRef.current
       && clickedElementOnApp !== userIconRef.current
-      && clickedElementOnApp.parentElement !== settingsMenuRef.current
-      && clickedElementOnApp.parentElement !== userMenuRef.current
     ) {
       setClickedElement(initClickedElement)
     }
@@ -47,7 +43,6 @@ export default function UserAndSettings() {
         />
         <UserMenu
           clickedElement={clickedElement}
-          userMenuRef={userMenuRef}
         />
       </div>
 
@@ -60,7 +55,6 @@ export default function UserAndSettings() {
           setClickedElement={setClickedElement}
           clickedElement={clickedElement}
           initClickedElement={initClickedElement}
-          settingsMenuRef={settingsMenuRef}
         />
       </div>
 

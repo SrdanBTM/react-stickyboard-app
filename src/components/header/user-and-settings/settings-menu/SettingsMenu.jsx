@@ -5,12 +5,7 @@ import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 import styles from './settingsMenu.module.css'
 
 
-export default function SettingsMenu({
-  setClickedElement,
-  clickedElement,
-  initClickedElement,
-  settingsMenuRef
-}) {
+export default function SettingsMenu({ setClickedElement, clickedElement, initClickedElement }) {
 
   const { setTheme } = useContext(MainContext)
 
@@ -32,7 +27,7 @@ export default function SettingsMenu({
         pointerEvents: showElement ? 'auto' : 'none'
       }}
     >
-      <ul ref={settingsMenuRef}>
+      <ul>
         <li onClick={handleClick}>Change theme</li>
       </ul>
     </div>

@@ -3,7 +3,7 @@
 import styles from './userMenu.module.css'
 
 
-export default function UserMenu({ clickedElement, userMenuRef }) {
+export default function UserMenu({ clickedElement }) {
 
   const showElement = clickedElement.elementName === 'user' && clickedElement.showUser
 
@@ -15,7 +15,7 @@ export default function UserMenu({ clickedElement, userMenuRef }) {
         pointerEvents: showElement ? 'auto' : 'none'
       }}
     >
-      <ul ref={userMenuRef}>
+      <ul>
         <li>Change account</li>
         <li>Add acocunt</li>
         <li>Log out</li>
