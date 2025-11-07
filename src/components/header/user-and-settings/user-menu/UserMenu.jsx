@@ -1,10 +1,9 @@
 
 
-import { div } from 'framer-motion/client'
 import styles from './userMenu.module.css'
 
 
-export default function User({ userMenuRef, clickedElement }) {
+export default function UserMenu({ clickedElement, userMenuRef }) {
 
   const showElement = clickedElement.elementName === 'user' && clickedElement.showUser
 

@@ -4,16 +4,32 @@ import styles from './userIcon.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 
-export default function UserIcon({ userIconRef }) {
+
+export default function UserIcon({ setClickedElement, userIconRef }) {
 
   const BASE_URL = import.meta.env.BASE_URL
-  const { theme } = useContext(MainContext)
+  const { theme, clickedElementOnApp } = useContext(MainContext)
+
+
+
+  function handleClick(e) {
+    setClickedElement(prev => {
+      return (
+        {
+          elementName: 'user',
+          showUser: !prev.showUser,
+          showSettings: false
+        }
+      )
+    })
+  }
 
 
   return (
     <div
       className={styles.container}
       ref={userIconRef}
+      onClick={handleClick}
     >
       <img
         src={theme === 'darkTheme'

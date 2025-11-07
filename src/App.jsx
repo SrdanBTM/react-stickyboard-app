@@ -16,8 +16,15 @@ export default function App() {
   const [theme, setTheme] = useState('darkTheme')
   const [currentBoardId, setCurrentBoardId] = useState(id)
   const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
+  const [clickedElementOnApp, setClickedElementOnApp] = useState(null) 
 
   const boardRef = useRef()
+  const appRef = useRef()
+
+
+  function handleClick(e) {
+    setClickedElementOnApp(e.target)
+  }
 
 
   return (
@@ -27,13 +34,12 @@ export default function App() {
         theme, setTheme,
         currentBoardId, setCurrentBoardId,
         isDeleteBoardModalOpen, setIsDeleteBoardModalOpen,
-
         boardTemplate,
         stickerTemplate,
-
-        boardRef
+        boardRef,
+        clickedElementOnApp
       }}>
-      <div className={`app ${theme}`}>
+      <div className={`app ${theme}`} ref={appRef} onClick={handleClick}>
         <Header />
         <Main />
         {isDeleteBoardModalOpen
