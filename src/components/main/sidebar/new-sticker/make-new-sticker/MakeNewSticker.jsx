@@ -11,9 +11,12 @@ export default function MakeNewSticker() {
   const [key, setKey] = useState(0)
   const { boardRef, setBoards, stickerTemplate, currentBoardId } = useContext(MainContext)
   const stickerRef = useRef()
+  const [isStickerDragged, setIsStickerDragged] = useState(false)
 
 
   function handleDragEnd() {
+    setIsStickerDragged(false)
+
     const stickerPosition = stickerRef.current.getBoundingClientRect()
     const boardPosition = boardRef.current.getBoundingClientRect()
 
@@ -52,12 +55,22 @@ export default function MakeNewSticker() {
   }
 
 
+  function handleDragStart() {
+    setIsStickerDragged(true)
+  }
+
+
   return (
     <motion.div
       key={key}
       className={styles.container}
+      style={{
+        width: isStickerDragged ? '250px' : '',
+        height: isStickerDragged ? '250px' : ''
+      }}
       drag
       dragMomentum={false}
+      onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
       ref={stickerRef}
     >
