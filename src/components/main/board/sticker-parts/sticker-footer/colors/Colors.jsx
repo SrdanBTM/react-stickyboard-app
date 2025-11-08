@@ -4,7 +4,7 @@ import styles from './colors.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx';
 
-export default function Colors({ stickerId }) {
+export default function Colors({ mappedSticker }) {
 
   const { setBoards, currentBoardId } = useContext(MainContext)
 
@@ -49,7 +49,7 @@ export default function Colors({ stickerId }) {
             className={styles.oneColor}
             style={{ backgroundColor: `${color}` }}
             onClick={(e) => handleClick(e, color)}
-            data-id={stickerId}
+            data-id={mappedSticker.stickerId}
           >
           </div>
         )

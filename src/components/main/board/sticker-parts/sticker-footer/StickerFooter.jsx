@@ -8,7 +8,7 @@ import DeleteSticker from './delete-sticker/DeleteSticker.jsx'
 import { useState } from 'react'
 
 
-export default function StickerFooter({ stickerId }) {
+export default function StickerFooter({ mappedSticker }) {
 
   const [isMouseOver, setIsMouseOver] = useState(false)
 
@@ -30,13 +30,13 @@ export default function StickerFooter({ stickerId }) {
         style={{ transform: isMouseOver ? 'translateX(-200px)' : 'translateX(0px)' }}
       >
 
-        <BoardName stickerId={stickerId} />
+        <BoardName mappedSticker={mappedSticker} />
 
         {isMouseOver
-          ? <DeleteSticker stickerId={stickerId} />
+          ? <DeleteSticker mappedSticker={mappedSticker} />
           : <Dots />}
 
-        <Colors stickerId={stickerId} />
+        <Colors mappedSticker={mappedSticker} />
 
       </div>
     </div>

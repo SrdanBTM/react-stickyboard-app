@@ -6,13 +6,12 @@ import { useContext, useEffect } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function BoardName({ stickerId }) {
+export default function BoardName({ mappedSticker }) {
 
   const { boards, setBoards, currentBoardId } = useContext(MainContext)
 
   const currentBoard = boards.find(board => board.boardId === currentBoardId)
   const currentBoardName = currentBoard.boardName
-  const currentSticker = currentBoard.stickers.find(sticker => sticker.stickerId === stickerId)
   
   
   useEffect(() => {
@@ -23,7 +22,7 @@ export default function BoardName({ stickerId }) {
             ...board,
             stickers: board.stickers.map(sticker => {
               return (
-                sticker.stickerId === stickerId
+                sticker.stickerId === mappedSticker.stickerId
                   ? {
                     ...sticker,
                     boardName: currentBoardName
@@ -40,7 +39,7 @@ export default function BoardName({ stickerId }) {
 
   return (
     <div className={styles.container}>
-      <span>{currentSticker.boardName}</span>
+      <span>{mappedSticker.boardName}</span>
     </div>
   )
 }

@@ -1,17 +1,16 @@
 
 
 import styles from './filter.module.css'
-import { useContext, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 export default function Filter() {
 
-  const { boards } = useContext(MainContext)
-  const [inputValue, setInputValue] = useState('')
-
+  const { filterInputValue, setFilterInputValue , setIsFilterBoard} = useContext(MainContext)
 
   function handleChange(e) {
-    setInputValue(e.target.value)
+    setFilterInputValue(e.target.value)
+    setIsFilterBoard(true)
   }
 
 
@@ -21,7 +20,7 @@ export default function Filter() {
         type="text"
         placeholder='Find a sticker by title...'
         onChange={handleChange}
-        value={inputValue}
+        value={filterInputValue}
       />
     </div>
   )

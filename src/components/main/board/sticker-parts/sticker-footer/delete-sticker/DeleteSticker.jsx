@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function DeleteSticker({ stickerId }) {
+export default function DeleteSticker({ mappedSticker }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const { setBoards, currentBoardId, theme } = useContext(MainContext)
@@ -30,7 +30,7 @@ export default function DeleteSticker({ stickerId }) {
   return (
     <div
       className={styles.container}
-      data-id={stickerId}
+      data-id={mappedSticker.stickerId}
       onClick={handleClick}
     >
       <img

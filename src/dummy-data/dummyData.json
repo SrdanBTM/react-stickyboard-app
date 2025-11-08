@@ -1,0 +1,175 @@
+
+
+[
+  {
+    "boardId": "b1",
+    "boardName": "Daily Tasks",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "stickers": [
+      {
+        "stickerId": "s1",
+        "title": "Buy groceries",
+        "note": "Milk, bread, fruits, coffee",
+        "color": "var(--sticker-color1)",
+        "boardName": "Daily Tasks",
+        "positionX": 120,
+        "positionY": 80
+      },
+      {
+        "stickerId": "s2",
+        "title": "Clean desk",
+        "note": "Organize cables and documents",
+        "color": "var(--sticker-color3)",
+        "boardName": "Daily Tasks",
+        "positionX": 340,
+        "positionY": 200
+      },
+      {
+        "stickerId": "s3",
+        "title": "Laundry",
+        "note": "Don’t forget towels",
+        "color": "var(--sticker-color5)",
+        "boardName": "Daily Tasks",
+        "positionX": 220,
+        "positionY": 380
+      }
+    ]
+  },
+  {
+    "boardId": "b2",
+    "boardName": "Work Projects",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "stickers": [
+      {
+        "stickerId": "s4",
+        "title": "React portfolio",
+        "note": "Add dark mode and deployment link",
+        "color": "var(--sticker-color2)",
+        "boardName": "Work Projects",
+        "positionX": 180,
+        "positionY": 100
+      },
+      {
+        "stickerId": "s5",
+        "title": "StickyBoard app",
+        "note": "Fix drag constraints and theme switch",
+        "color": "var(--sticker-color4)",
+        "boardName": "Work Projects",
+        "positionX": 420,
+        "positionY": 280
+      }
+    ]
+  },
+  {
+    "boardId": "b3",
+    "boardName": "Ideas",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "stickers": [
+      {
+        "stickerId": "s6",
+        "title": "App for kids",
+        "note": "Simple drawing app with stickers",
+        "color": "var(--sticker-color1)",
+        "boardName": "Ideas",
+        "positionX": 260,
+        "positionY": 150
+      },
+      {
+        "stickerId": "s7",
+        "title": "Budget tracker",
+        "note": "React + LocalStorage, minimal UI",
+        "color": "var(--sticker-color3)",
+        "boardName": "Ideas",
+        "positionX": 480,
+        "positionY": 340
+      },
+      {
+        "stickerId": "s8",
+        "title": "Smart notes",
+        "note": "Tags, colors, search by title",
+        "color": "var(--sticker-color5)",
+        "boardName": "Ideas",
+        "positionX": 160,
+        "positionY": 420
+      }
+    ]
+  },
+  {
+    "boardId": "b4",
+    "boardName": "Learning",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "stickers": [
+      {
+        "stickerId": "s9",
+        "title": "React Hooks",
+        "note": "Practice useState and useEffect with small examples",
+        "color": "var(--sticker-color2)",
+        "boardName": "Learning",
+        "positionX": 140,
+        "positionY": 90
+      },
+      {
+        "stickerId": "s10",
+        "title": "Next.js basics",
+        "note": "Learn routing and SSR concepts",
+        "color": "var(--sticker-color4)",
+        "boardName": "Learning",
+        "positionX": 380,
+        "positionY": 260
+      },
+      {
+        "stickerId": "s11",
+        "title": "React Native",
+        "note": "Test app on emulator",
+        "color": "var(--sticker-color1)",
+        "boardName": "Learning",
+        "positionX": 240,
+        "positionY": 390
+      }
+    ]
+  },
+  {
+    "boardId": "b5",
+    "boardName": "Personal Goals",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "stickers": [
+      {
+        "stickerId": "s12",
+        "title": "Exercise",
+        "note": "Stretch daily for 15 minutes",
+        "color": "var(--sticker-color5)",
+        "boardName": "Personal Goals",
+        "positionX": 200,
+        "positionY": 120
+      },
+      {
+        "stickerId": "s13",
+        "title": "Read book",
+        "note": "Finish 'The Kite Runner'",
+        "color": "var(--sticker-color3)",
+        "boardName": "Personal Goals",
+        "positionX": 360,
+        "positionY": 260
+      },
+      {
+        "stickerId": "s14",
+        "title": "Sleep early",
+        "note": "Try before 23:00",
+        "color": "var(--sticker-color2)",
+        "boardName": "Personal Goals",
+        "positionX": 460,
+        "positionY": 400
+      }
+    ]
+  }
+]

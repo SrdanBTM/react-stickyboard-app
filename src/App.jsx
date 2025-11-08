@@ -7,20 +7,29 @@ import DeleteBoardModal from './components/modals/delete-board-modal/DeleteBoard
 import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 import { MainProvider } from './context-provider/ContextProvider.jsx'
 import { useState, useRef, useEffect } from 'react'
+import dummyData from './dummy-data/dummyData.json'
 
 
 export default function App() {
 
+
   const id = crypto.randomUUID()
 
-  const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
+  // const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
+  const [boards, setBoards] = useState(dummyData)
+  
   const [theme, setTheme] = useState('darkTheme')
-  const [currentBoardId, setCurrentBoardId] = useState(id)
+
+  // const [currentBoardId, setCurrentBoardId] = useState(id)
+  const [currentBoardId, setCurrentBoardId] = useState(boards[0].boardId)
+
   const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
   const [clickedElementOnApp, setClickedElementOnApp] = useState(null)
   const [isClickedOutsideBoardList, setIsClickedOutsideBoardList] = useState(false)
   const [isClickedOutsideNewBoard, setIsClickedOutsideNewBoard] = useState(false)
   const [isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings] = useState(false)
+  const [isFilterBoard, setIsFilterBoard] = useState(false) 
+  const [filterInputValue, setFilterInputValue] = useState('')
 
   const boardRef = useRef()
 
@@ -43,7 +52,9 @@ export default function App() {
         clickedElementOnApp, setClickedElementOnApp,
         isClickedOutsideBoardList, setIsClickedOutsideBoardList,
         isClickedOutsideNewBoard, setIsClickedOutsideNewBoard,
-        isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings
+        isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings,
+        isFilterBoard, setIsFilterBoard,
+        filterInputValue, setFilterInputValue
       }}>
       <div className={`app ${theme}`} onClick={handleClick}>
         <ClickOutsideElement />

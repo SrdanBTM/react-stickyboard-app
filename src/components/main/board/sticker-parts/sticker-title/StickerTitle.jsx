@@ -5,12 +5,10 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function StickerTitle({ stickerId }) {
+export default function StickerTitle({ mappedSticker }) {
 
   const { setBoards, boards, currentBoardId } = useContext(MainContext)
 
-  const currentBoard = boards.find(board => board.boardId === currentBoardId)
-  const currentSticker = currentBoard.stickers.find(sticker => sticker.stickerId === stickerId)
 
 
   function handleChange(e) {
@@ -21,7 +19,7 @@ export default function StickerTitle({ stickerId }) {
             ...board,
             stickers: board.stickers.map(sticker => {
               return (
-                sticker.stickerId === stickerId
+                sticker.stickerId === mappedSticker.stickerId
                   ? {
                     ...sticker,
                     title: e.target.value
@@ -41,7 +39,7 @@ export default function StickerTitle({ stickerId }) {
       <input
         type="text"
         placeholder="Title..."
-        value={currentSticker.title}
+        value={mappedSticker.title}
         onChange={handleChange}
       />
     </div>

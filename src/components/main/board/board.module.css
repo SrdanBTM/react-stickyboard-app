@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   user-select: none;
-
 }
 
 .heading {
@@ -30,6 +29,14 @@
   height: 100%;
   background-color: var(--bg-color2);
   position: relative;
+}
+
+.filterBoard {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color2);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
