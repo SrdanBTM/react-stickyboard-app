@@ -18,7 +18,7 @@ export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard })
 
 
   function handleKeyDown(e) {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && inputValue.length > 0) {
       setIsCreateBoard(false)
       setBoards(prev => {
         return (
@@ -32,7 +32,6 @@ export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard })
           ]
         )
       })
-      setInputValue('')
     }
   }
 

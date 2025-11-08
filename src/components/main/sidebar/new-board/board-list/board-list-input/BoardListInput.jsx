@@ -23,7 +23,7 @@ export default function BoardListInput({ board }) {
 
 
   function handleKeyDown(e) {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && inputValue.length > 0) {
       setBoards(prev => {
         return (
           prev.map(board => {
