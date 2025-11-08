@@ -11,10 +11,8 @@ import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 export default function UserAndSettings() {
 
-  const { clickedElementOnApp } = useContext(MainContext)
+  const { isClickedOutsideUserAndSettings } = useContext(MainContext)
 
-  const settingsIconRef = useRef()
-  const userIconRef = useRef()
 
   const initClickedElement = {
     elementName: null,
@@ -24,37 +22,26 @@ export default function UserAndSettings() {
   const [clickedElement, setClickedElement] = useState(initClickedElement)
 
 
-  useEffect(()=>{
-    if (clickedElementOnApp !== settingsIconRef.current
-      && clickedElementOnApp !== userIconRef.current
-    ) {
+  useEffect(() => {
+    if (isClickedOutsideUserAndSettings) {
       setClickedElement(initClickedElement)
     }
-  },[clickedElementOnApp])
+  }, [isClickedOutsideUserAndSettings])
 
 
   return (
     <div className={styles.container}>
 
       <div className={styles.user}>
-        <UserIcon
-          setClickedElement={setClickedElement}
-          userIconRef={userIconRef}
-        />
-        <UserMenu
-          clickedElement={clickedElement}
-        />
+        <UserIcon setClickedElement={setClickedElement} />
+        <UserMenu clickedElement={clickedElement} />
       </div>
 
       <div className={styles.settings}>
-        <SettingsIcon
-          setClickedElement={setClickedElement}
-          settingsIconRef={settingsIconRef}
-        />
+        <SettingsIcon setClickedElement={setClickedElement} />
         <SettingsMenu
           setClickedElement={setClickedElement}
           clickedElement={clickedElement}
-          initClickedElement={initClickedElement}
         />
       </div>
 

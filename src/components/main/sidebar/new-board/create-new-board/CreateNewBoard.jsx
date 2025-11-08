@@ -9,7 +9,7 @@ import Input from './create-new-board-input/CreateNewBoardInput.jsx'
 
 export default function CreateNewBoard() {
 
-  const { boards, setCurrentBoardId } = useContext(MainContext)
+  const { boards, setCurrentBoardId, isClickedOutsideNewBoard } = useContext(MainContext)
   const [isCreateBoard, setIsCreateBoard] = useState(false)
 
 
@@ -31,7 +31,7 @@ export default function CreateNewBoard() {
       className={styles.container}
       onClick={handleClick}
     >
-      {isCreateBoard
+      {isCreateBoard && !isClickedOutsideNewBoard
         ? <Input
           isCreateBoard={isCreateBoard}
           setIsCreateBoard={setIsCreateBoard}

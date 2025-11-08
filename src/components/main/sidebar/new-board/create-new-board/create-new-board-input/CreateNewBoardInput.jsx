@@ -50,6 +50,7 @@ export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard })
       ref={inputRef}
       onKeyDown={handleKeyDown}
       onChange={handleChange}
+      data-id={'createNewBoardInput'}
     />
   )
 }

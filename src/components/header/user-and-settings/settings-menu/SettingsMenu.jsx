@@ -5,7 +5,7 @@ import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 import styles from './settingsMenu.module.css'
 
 
-export default function SettingsMenu({ setClickedElement, clickedElement, initClickedElement }) {
+export default function SettingsMenu({ clickedElement }) {
 
   const { setTheme } = useContext(MainContext)
 
@@ -14,20 +14,18 @@ export default function SettingsMenu({ setClickedElement, clickedElement, initCl
 
   function handleClick() {
     setTheme(prev => prev === 'darkTheme' ? 'lightTheme' : 'darkTheme')
-    setClickedElement(initClickedElement)
   }
 
 
   return (
     <div
       className={styles.container}
-      onClick={e => e.stopPropagation()}
       style={{
         opacity: showElement ? 1 : 0,
         pointerEvents: showElement ? 'auto' : 'none'
       }}
     >
-      <ul>
+      <ul data-id={'settingsMenu'}>
         <li onClick={handleClick}>Change theme</li>
       </ul>
     </div>

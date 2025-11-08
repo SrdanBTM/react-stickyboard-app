@@ -1,11 +1,12 @@
 
 
+import ClickOutsideElement from './click-outside-element/ClickOutsideElement.jsx'
 import Header from './components/header/Header.jsx'
 import Main from './components/main/Main.jsx'
 import DeleteBoardModal from './components/modals/delete-board-modal/DeleteBoardModal.jsx'
 import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 import { MainProvider } from './context-provider/ContextProvider.jsx'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 
 export default function App() {
@@ -16,10 +17,12 @@ export default function App() {
   const [theme, setTheme] = useState('darkTheme')
   const [currentBoardId, setCurrentBoardId] = useState(id)
   const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
-  const [clickedElementOnApp, setClickedElementOnApp] = useState(null) 
+  const [clickedElementOnApp, setClickedElementOnApp] = useState(null)
+  const [isClickedOutsideBoardList, setIsClickedOutsideBoardList] = useState(false)
+  const [isClickedOutsideNewBoard, setIsClickedOutsideNewBoard] = useState(false)
+  const [isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings] = useState(false)
 
   const boardRef = useRef()
-  const appRef = useRef()
 
 
   function handleClick(e) {
@@ -37,15 +40,19 @@ export default function App() {
         boardTemplate,
         stickerTemplate,
         boardRef,
-        clickedElementOnApp
+        clickedElementOnApp, setClickedElementOnApp,
+        isClickedOutsideBoardList, setIsClickedOutsideBoardList,
+        isClickedOutsideNewBoard, setIsClickedOutsideNewBoard,
+        isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings
       }}>
-      <div className={`app ${theme}`} ref={appRef} onClick={handleClick}>
+      <div className={`app ${theme}`} onClick={handleClick}>
+        <ClickOutsideElement />
+      
         <Header />
         <Main />
-        {isDeleteBoardModalOpen
-          && <DeleteBoardModal />}
+
+        {isDeleteBoardModalOpen && <DeleteBoardModal />}
       </div>
     </MainProvider>
-
   )
 }

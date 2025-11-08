@@ -5,16 +5,13 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 
 
-export default function SettingsIcon({ setClickedElement, settingsIconRef }) {
+export default function SettingsIcon({ setClickedElement }) {
 
   const BASE_URL = import.meta.env.BASE_URL
-  const { theme, clickedElementOnApp } = useContext(MainContext)
-
+  const { theme } = useContext(MainContext)
 
 
   function handleClick(e) {
-    console.log('radi');
-    
     setClickedElement(prev => {
       return (
         {
@@ -30,8 +27,8 @@ export default function SettingsIcon({ setClickedElement, settingsIconRef }) {
   return (
     <div
       className={styles.container}
-      ref={settingsIconRef}
       onClick={handleClick}
+      data-id={'settingsIcon'}
     >
       <img
         src={theme === 'darkTheme'

@@ -12,19 +12,19 @@ export default function BoardNameEdit() {
 
 
   function handleClick(e) {
-    const dataId = e.currentTarget.parentElement.parentElement.getAttribute('data-id')
+    const dataIdBoard = e.currentTarget.parentElement.parentElement.getAttribute('data-id')
     setBoards(prev => {
       return (
         prev.map(board => {
           return (
-            board.boardId === dataId
+            board.boardId === dataIdBoard
               ? { ...board, isInput: true, isFocused: true }
               : { ...board, isInput: false, isFocused: false }
           )
         })
       )
     })
-    setCurrentBoardId(dataId)
+    setCurrentBoardId(dataIdBoard)
   }
 
 
@@ -37,7 +37,9 @@ export default function BoardNameEdit() {
         theme === 'darkTheme'
           ? `${BASE_URL}images/icon-edit2.png`
           : `${BASE_URL}images/icon-edit1.png`}
-        alt="edit" />
+        alt="edit"
+        data-id={'boardNameEdit'}
+        />
     </div>
   )
 }

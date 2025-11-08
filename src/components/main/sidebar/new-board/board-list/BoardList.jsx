@@ -10,7 +10,7 @@ import DeleteClose from './board-list-delete-close/BoardListDeleteClose.jsx'
 
 export default function BoardsList() {
 
-  const { boards, currentBoardId } = useContext(MainContext)
+  const { boards, currentBoardId, isClickedOutsideBoardList } = useContext(MainContext)
 
 
   return (
@@ -27,7 +27,7 @@ export default function BoardsList() {
               }}
 
             >
-              {board.isInput
+              {board.isInput && !isClickedOutsideBoardList
                 ?
                 <Input board={board} />
                 :

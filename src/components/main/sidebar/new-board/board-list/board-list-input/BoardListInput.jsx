@@ -49,6 +49,7 @@ export default function BoardListInput({ board }) {
       <input
         type="text"
         ref={board.isFocused ? inputRef : null}
+        data-id={'boardListInput'}
       />
     </div>
   )
