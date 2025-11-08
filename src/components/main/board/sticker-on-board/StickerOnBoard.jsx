@@ -6,7 +6,7 @@ import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 import StickerPin from './sticker-pin/StickerPin.jsx'
 import StickerTitle from './sticker-title/StickerTitle.jsx'
 import StickerNote from './sticker-note/StickerNote.jsx'
-import ColorsPalette from './colors-palette/ColorsPalette.jsx'
+import StickerFooter from './sticker-footer/StickerFooter.jsx'
 
 
 export default function StickerOnBoard({ sticker }) {
@@ -78,7 +78,7 @@ export default function StickerOnBoard({ sticker }) {
 
       <StickerTitle stickerId={sticker.stickerId} />
       <StickerNote stickerId={sticker.stickerId} />
-      <ColorsPalette stickerId={sticker.stickerId} />
+      <StickerFooter stickerId={sticker.stickerId} />
     </motion.div>
   )
 }

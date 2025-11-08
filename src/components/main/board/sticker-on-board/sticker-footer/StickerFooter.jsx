@@ -1,13 +1,13 @@
 
 
-import styles from './colorsPalette.module.css'
+import styles from './stickerFooter.module.css'
 import Colors from './colors/Colors.jsx'
 import Dots from './dots/Dots.jsx'
 import DeleteSticker from './delete-sticker/DeleteSticker.jsx'
 import { useState } from 'react'
 
 
-export default function ColorsPalette({ stickerId }) {
+export default function StickerFooter({ stickerId }) {
 
   const [isMouseOver, setIsMouseOver] = useState(false)
 
