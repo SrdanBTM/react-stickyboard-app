@@ -8,12 +8,12 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function BoardName({ mappedSticker }) {
 
-  const { boards, setBoards, currentBoardId } = useContext(MainContext)
+  const { boards, setBoards, currentBoardId, isFilterBoard } = useContext(MainContext)
 
   const currentBoard = boards.find(board => board.boardId === currentBoardId)
   const currentBoardName = currentBoard.boardName
-  
-  
+
+
   useEffect(() => {
     setBoards(prev => prev.map(board => {
       return (
@@ -39,7 +39,8 @@ export default function BoardName({ mappedSticker }) {
 
   return (
     <div className={styles.container}>
-      <span>{mappedSticker.boardName}</span>
+      {isFilterBoard
+        && <span>{mappedSticker.boardName}</span>}
     </div>
   )
 }
