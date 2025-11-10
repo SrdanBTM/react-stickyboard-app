@@ -22,7 +22,7 @@ export default function BoardsList() {
               className={styles.container}
               key={index}
               style={{
-                height: board.isDeleteShowed ? '70px' : '37px',
+                height: board.isDeleteShowed ? '80px' : '37px',
                 border: board.boardId === currentBoardId ? '1px solid var(--border-color)' : ''
               }}
 
