@@ -21,22 +21,41 @@ export default function Colors({ mappedSticker }) {
   function handleClick(e, color) {
     const currentSickerId = e.currentTarget.getAttribute('data-id')
 
-    setBoards(prev => prev.map(board => {
-      return (
-        board.boardId === currentBoardId
-          ? {
+    if (currentBoardId) {
+      setBoards(prev => prev.map(board => {
+        return (
+          board.boardId === currentBoardId
+            ? {
+              ...board,
+              stickers: board.stickers.map((sticker => {
+                return (
+                  sticker.stickerId === currentSickerId
+                    ? { ...sticker, color: color }
+                    : sticker
+                )
+              }))
+            }
+            : board
+        )
+      }))
+    } else {
+      setBoards(prev => prev.map(board => {
+        const hasSticker = board.stickers.some(sticker => sticker.stickerId === currentSickerId)
+
+        if (hasSticker) {
+          return {
             ...board,
-            stickers: board.stickers.map((sticker => {
-              return (
-                sticker.stickerId === currentSickerId
-                  ? { ...sticker, color: color }
-                  : sticker
-              )
-            }))
+            stickers: board.stickers.map(sticker =>
+              sticker.stickerId === currentSickerId
+                ? { ...sticker, color: color }
+                : sticker
+            )
           }
-          : board
-      )
-    }))
+        }
+
+        return board
+      }))
+    }
   }
 
 
