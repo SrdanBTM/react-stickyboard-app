@@ -6,11 +6,12 @@ import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 export default function Filter() {
 
-  const { filterInputValue, setFilterInputValue , setIsFilterBoard} = useContext(MainContext)
+  const { filterInputValue, setFilterInputValue, setIsFilterBoard, setCurrentBoardId } = useContext(MainContext)
 
   function handleChange(e) {
     setFilterInputValue(e.target.value)
     setIsFilterBoard(true)
+    setCurrentBoardId(null)
   }
 
 

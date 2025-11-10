@@ -11,29 +11,32 @@ export default function BoardName({ mappedSticker }) {
   const { boards, setBoards, currentBoardId, isFilterBoard } = useContext(MainContext)
 
   const currentBoard = boards.find(board => board.boardId === currentBoardId)
-  const currentBoardName = currentBoard.boardName
+  let currentBoardName = null
+  if (currentBoardId) {
+    currentBoardName = currentBoard.boardName
+  }
 
 
   useEffect(() => {
-    setBoards(prev => prev.map(board => {
-      return (
-        board.boardId === currentBoardId
-          ? {
-            ...board,
-            stickers: board.stickers.map(sticker => {
-              return (
-                sticker.stickerId === mappedSticker.stickerId
-                  ? {
-                    ...sticker,
-                    boardName: currentBoardName
-                  }
-                  : sticker
-              )
-            })
-          }
-          : board
-      )
-    }))
+      setBoards(prev => prev.map(board => {
+        return (
+          board.boardId === currentBoardId
+            ? {
+              ...board,
+              stickers: board.stickers.map(sticker => {
+                return (
+                  sticker.stickerId === mappedSticker.stickerId
+                    ? {
+                      ...sticker,
+                      boardName: currentBoardName
+                    }
+                    : sticker
+                )
+              })
+            }
+            : board
+        )
+      }))
   }, [currentBoardName])
 
 
