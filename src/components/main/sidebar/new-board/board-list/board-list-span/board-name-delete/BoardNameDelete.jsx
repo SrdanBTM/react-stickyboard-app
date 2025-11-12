@@ -7,21 +7,18 @@ import { MainContext } from '../../../../../../../context-provider/ContextProvid
 
 export default function boardNameDots({ board }) {
 
-  const { setBoards, theme } = useContext(MainContext)
+  const { updateAllBoards, setBoards, theme } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
 
   function handleClick(e) {
-    const dataId = e.currentTarget.getAttribute('data-id')
-    setBoards(prev => prev.map(board => {
-      return (
-        board.boardId === dataId
-          ? { ...board, isDeleteShowed: !board.isDeleteShowed }
-          : { ...board, isDeleteShowed: false }
-      )
-    })
-    )
+    const currentBoardId = e.currentTarget.getAttribute('data-id')
+    const propertyTernaryPair = [
+      { keyTrue: 'isDeleteShowed', valueTrue: !board.isDeleteShowed },
+      { keyFalse: 'isDeleteShowed', valueFalse: false }
+    ]
+    updateAllBoards(setBoards, currentBoardId, propertyTernaryPair)
   }
 
 
@@ -31,7 +28,7 @@ export default function boardNameDots({ board }) {
       onClick={handleClick}
       data-id={board.boardId}
     >
-      {}
+      { }
       <img src={
         theme === 'darkTheme'
           ? `${BASE_URL}images/icon-delete2.png`

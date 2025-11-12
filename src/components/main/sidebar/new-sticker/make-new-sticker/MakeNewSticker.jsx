@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 export default function MakeNewSticker() {
 
   const [key, setKey] = useState(0)
-  const { boardRef, setBoards, stickerTemplate, currentBoardId } = useContext(MainContext)
+  const { addSticker, boardRef, setBoards, stickerTemplate, currentBoardId } = useContext(MainContext)
   const stickerRef = useRef()
   const [isStickerDragged, setIsStickerDragged] = useState(false)
 
@@ -27,30 +27,19 @@ export default function MakeNewSticker() {
 
 
     let isStickerInBoard = false
-    if (stickerPositionInBoardLeft >= 0 && stickerPositionInBoardTop >= 0 
-      && stickerPositionInBoardRight >= 0 && stickerPositionInBoardBottom >= 0 ) {
-        isStickerInBoard = true
-      }
-      
-
-    if (isStickerInBoard) {
-      const stickerToAdd = {
-        ...stickerTemplate,
-        stickerId: crypto.randomUUID(),
-        positionX: stickerPositionInBoardLeft,
-        positionY: stickerPositionInBoardTop
-      }
-
-      setBoards(prev => prev.map(board => {
-        return (
-          board.boardId === currentBoardId
-            ? { ...board, stickers: [...board.stickers, stickerToAdd] }
-            : board
-        )
-      }))
+    if (stickerPositionInBoardLeft >= 0 && stickerPositionInBoardTop >= 0
+      && stickerPositionInBoardRight >= 0 && stickerPositionInBoardBottom >= 0) {
+      isStickerInBoard = true
     }
 
-    
+
+    if (isStickerInBoard) {
+      const positionXValue = stickerPositionInBoardLeft
+      const positionYValue = stickerPositionInBoardTop
+      addSticker(setBoards, currentBoardId, stickerTemplate, positionXValue, positionYValue)
+    }
+
+
     setKey(prev => prev + 1)
   }
 

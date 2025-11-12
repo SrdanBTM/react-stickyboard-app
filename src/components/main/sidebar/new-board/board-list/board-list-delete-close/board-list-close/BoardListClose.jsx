@@ -6,20 +6,14 @@ import { MainContext } from '../../../../../../../context-provider/ContextProvid
 
 export default function BoardListClose({ board }) {
 
-  const { setBoards, theme } = useContext(MainContext)
+  const { setBoards, theme, updateBoard } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
   function handleClick(e) {
-    const dataId = e.currentTarget.getAttribute('data-id')
-    setBoards(prev => prev.map(board => {
-      return (
-        board.boardId === dataId
-          ? { ...board, isDeleteShowed: false }
-          : board
-      )
-    }))
-
+    const currentBoardId = e.currentTarget.getAttribute('data-id')
+    const propertyToUpdate = { key: 'isDeleteShowed', value: false }
+    updateBoard(setBoards, currentBoardId, propertyToUpdate)
   }
 
   return (

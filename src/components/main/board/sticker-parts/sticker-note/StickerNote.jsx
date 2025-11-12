@@ -6,29 +6,13 @@ import { MainContext } from '../../../../../context-provider/ContextProvider.jsx
 
 export default function StickerNote({ mappedSticker }) {
 
-  const { setBoards, boards, currentBoardId } = useContext(MainContext)
+  const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
 
 
   function handleChange(e) {
-    setBoards(prev => prev.map(board => {
-      return (
-        board.boardId === currentBoardId
-          ? {
-            ...board,
-            stickers: board.stickers.map(sticker => {
-              return (
-                sticker.stickerId === mappedSticker.stickerId
-                  ? {
-                    ...sticker,
-                    note: e.target.value
-                  }
-                  : sticker
-              )
-            })
-          }
-          : board
-      )
-    }))
+    const currentStickerId = mappedSticker.stickerId
+    const propertyToUpdate = { key: 'note', value: e.target.value }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
   }
 
 

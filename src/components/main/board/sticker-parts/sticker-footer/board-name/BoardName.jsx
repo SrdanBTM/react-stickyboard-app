@@ -8,37 +8,7 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function BoardName({ mappedSticker }) {
 
-  const { boards, setBoards, currentBoardId, isFilterBoard } = useContext(MainContext)
-
-  const currentBoard = boards.find(board => board.boardId === currentBoardId)
-  let currentBoardName = null
-  if (currentBoardId) {
-    currentBoardName = currentBoard.boardName
-  }
-
-
-  useEffect(() => {
-      setBoards(prev => prev.map(board => {
-        return (
-          board.boardId === currentBoardId
-            ? {
-              ...board,
-              stickers: board.stickers.map(sticker => {
-                return (
-                  sticker.stickerId === mappedSticker.stickerId
-                    ? {
-                      ...sticker,
-                      boardName: currentBoardName
-                    }
-                    : sticker
-                )
-              })
-            }
-            : board
-        )
-      }))
-  }, [currentBoardName])
-
+  const { isFilterBoard } = useContext(MainContext)
 
   return (
     <div className={styles.container}>

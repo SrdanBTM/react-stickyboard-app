@@ -7,24 +7,17 @@ import { MainContext } from '../../../../../../../context-provider/ContextProvid
 
 export default function BoardNameEdit() {
 
-  const { theme, setCurrentBoardId, setBoards } = useContext(MainContext)
+  const { updateAllBoards, theme, setCurrentBoardId, setBoards } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
   function handleClick(e) {
-    const dataIdBoard = e.currentTarget.parentElement.parentElement.getAttribute('data-id')
-    setBoards(prev => {
-      return (
-        prev.map(board => {
-          return (
-            board.boardId === dataIdBoard
-              ? { ...board, isInput: true, isFocused: true }
-              : { ...board, isInput: false, isFocused: false }
-          )
-        })
-      )
-    })
-    setCurrentBoardId(dataIdBoard)
+    const currentBoardId = e.currentTarget.parentElement.parentElement.getAttribute('data-id')
+    const propertyTernaryPair1 = [{keyTrue: 'isInput', valueTrue: true}, {keyFalse: 'isInput', valueFalse: false}]
+    const propertyTernaryPair2 = [{keyTrue: 'isFocused', valueTrue: true}, {keyFalse: 'isFocused', valueFalse: false}]
+    updateAllBoards(setBoards, currentBoardId, propertyTernaryPair1)
+    updateAllBoards(setBoards, currentBoardId, propertyTernaryPair2)
+    setCurrentBoardId(currentBoardId)
   }
 
 

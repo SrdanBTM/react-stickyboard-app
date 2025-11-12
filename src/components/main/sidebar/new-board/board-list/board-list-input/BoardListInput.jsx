@@ -7,11 +7,11 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function BoardListInput({ board }) {
 
-  const { boards, setBoards, currentBoardId } = useContext(MainContext)
+  const { updateAllStickers, updateBoard, boards, setBoards, currentBoardId } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
   const inputRef = useRef()
 
-  
+
   useEffect(() => {
     inputRef.current && inputRef.current.focus()
   }, [boards])
@@ -24,20 +24,14 @@ export default function BoardListInput({ board }) {
 
   function handleKeyDown(e) {
     if (e.key === 'Enter' && inputValue.length > 0) {
-      setBoards(prev => {
-        return (
-          prev.map(board => {
-            return (
-              board.boardId === currentBoardId
-                ? { ...board, isInput: false, boardName: inputValue }
-                : board
-            )
-          })
-        )
-      })
+      const propertyToUpdate1 = { key: 'isInput', value: false }
+      const propertyToUpdate2 = { key: 'boardName', value: inputValue }
+      updateBoard(setBoards, currentBoardId, propertyToUpdate1)
+      updateBoard(setBoards, currentBoardId, propertyToUpdate2)
+      updateAllStickers(setBoards, currentBoardId, propertyToUpdate2)
     }
   }
-  
+
 
   return (
     <div

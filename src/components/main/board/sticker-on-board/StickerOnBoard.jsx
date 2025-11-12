@@ -11,7 +11,7 @@ import StickerFooter from '../sticker-parts/sticker-footer/StickerFooter.jsx'
 
 export default function StickerOnBoard({ mappedSticker }) {
 
-  const { boardRef, setBoards, currentBoardId } = useContext(MainContext)
+  const { boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
   const stickerRef = useRef()
   const [constraints, setConstraints] = useState()
   const dragControl = useDragControls()
@@ -24,35 +24,17 @@ export default function StickerOnBoard({ mappedSticker }) {
   
 
   function handleDragEnd() {
-    const dataId = stickerRef.current.getAttribute('data-id')
+    const currentStickerId = stickerRef.current.getAttribute('data-id')
     const stickerPosition = stickerRef.current.getBoundingClientRect()
     const boardPosition = boardRef.current.getBoundingClientRect()
 
     const stickerPositionLeft = stickerPosition.left - boardPosition.left
     const stickerPositionTop = stickerPosition.top - boardPosition.top
 
-    setBoards(prev => prev.map(board => {
-      return (
-        board.boardId === currentBoardId
-          ? {
-            ...board,
-            stickers:
-              board.stickers.map(sticker => {
-                return (
-                  sticker.stickerId === dataId
-                    ? {
-                      ...sticker,
-                      positionX: stickerPositionLeft,
-                      positionY: stickerPositionTop
-                    }
-                    : sticker
-                )
-              })
-          }
-          : board
-      )
-    })
-    )
+    const propertyToUpdate1 = { key: 'positionX', value: stickerPositionLeft}
+    const propertyToUpdate2 = { key: 'positionY', value: stickerPositionTop}
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
   }
 
 

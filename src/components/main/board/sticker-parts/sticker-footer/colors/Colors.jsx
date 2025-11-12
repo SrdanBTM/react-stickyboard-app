@@ -4,9 +4,10 @@ import styles from './colors.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx';
 
+
 export default function Colors({ mappedSticker }) {
 
-  const { setBoards, currentBoardId } = useContext(MainContext)
+  const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
 
   const colors = [
     'var(--sticker-color1)',
@@ -19,44 +20,12 @@ export default function Colors({ mappedSticker }) {
 
 
   function handleClick(e, color) {
-    const currentSickerId = e.currentTarget.getAttribute('data-id')
-
-    if (currentBoardId) {
-      setBoards(prev => prev.map(board => {
-        return (
-          board.boardId === currentBoardId
-            ? {
-              ...board,
-              stickers: board.stickers.map((sticker => {
-                return (
-                  sticker.stickerId === currentSickerId
-                    ? { ...sticker, color: color }
-                    : sticker
-                )
-              }))
-            }
-            : board
-        )
-      }))
-    } else {
-      setBoards(prev => prev.map(board => {
-        const hasSticker = board.stickers.some(sticker => sticker.stickerId === currentSickerId)
-
-        if (hasSticker) {
-          return {
-            ...board,
-            stickers: board.stickers.map(sticker =>
-              sticker.stickerId === currentSickerId
-                ? { ...sticker, color: color }
-                : sticker
-            )
-          }
-        }
-
-        return board
-      }))
-    }
+    const currentStickerId = e.currentTarget.getAttribute('data-id')
+    const propertyToUpdate = { key: 'color', value: color }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
   }
+
+
 
 
   return (

@@ -8,6 +8,7 @@ import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 import { MainProvider } from './context-provider/ContextProvider.jsx'
 import { useState, useRef, useEffect } from 'react'
 import dummyData from './dummy-data/dummyData.json'
+import { updateSticker, updateAllStickers, addSticker, deleteSticker, addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-functions/HelperFunctions.jsx'
 
 
 export default function App() {
@@ -17,7 +18,7 @@ export default function App() {
 
   // const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
   const [boards, setBoards] = useState(dummyData)
-  
+
   const [theme, setTheme] = useState('darkTheme')
 
   // const [currentBoardId, setCurrentBoardId] = useState(id)
@@ -28,7 +29,7 @@ export default function App() {
   const [isClickedOutsideBoardList, setIsClickedOutsideBoardList] = useState(false)
   const [isClickedOutsideNewBoard, setIsClickedOutsideNewBoard] = useState(false)
   const [isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings] = useState(false)
-  const [isFilterBoard, setIsFilterBoard] = useState(false) 
+  const [isFilterBoard, setIsFilterBoard] = useState(false)
   const [filterInputValue, setFilterInputValue] = useState('')
 
   const boardRef = useRef()
@@ -54,11 +55,19 @@ export default function App() {
         isClickedOutsideNewBoard, setIsClickedOutsideNewBoard,
         isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings,
         isFilterBoard, setIsFilterBoard,
-        filterInputValue, setFilterInputValue
+        filterInputValue, setFilterInputValue,
+        updateSticker,
+        updateAllStickers,
+        addSticker,
+        deleteSticker,
+        addBoard,
+        updateBoard,
+        updateAllBoards,
+        deleteBoard
       }}>
       <div className={`app ${theme}`} onClick={handleClick}>
         <ClickOutsideElement />
-      
+
         <Header />
         <Main />
 

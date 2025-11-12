@@ -7,7 +7,7 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard }) {
 
-  const { setBoards, boardTemplate, setIsFilterBoard, setFilterInputValue } = useContext(MainContext)
+  const { addBoard, setBoards, boardTemplate, setIsFilterBoard, setFilterInputValue } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
   const inputRef = useRef()
 
@@ -22,18 +22,9 @@ export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard })
       setIsFilterBoard(false)
       setFilterInputValue('')
       setIsCreateBoard(false)
-      setBoards(prev => {
-        return (
-          [
-            ...prev,
-            {
-              ...boardTemplate,
-              boardName: inputValue,
-              boardId: crypto.randomUUID()
-            }
-          ]
-        )
-      })
+
+      const boardNameValue = inputValue
+      addBoard(setBoards, boardTemplate, boardNameValue)
     }
   }
 
