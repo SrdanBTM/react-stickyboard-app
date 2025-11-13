@@ -70,10 +70,11 @@ export function updateAllStickers(setBoards, currentBoardId, propertyToUpdate) {
 
 
 // ADD STICKER
-export function addSticker(setBoards, currentBoardId, stickerTemplate, positionXValue, positionYValue) {
+export function addSticker(setBoards, currentBoardId, stickerTemplate, boardName, positionXValue, positionYValue) {
   const stickerToAdd = {
     ...stickerTemplate,
     stickerId: crypto.randomUUID(),
+    boardName: boardName,
     positionX: positionXValue,
     positionY: positionYValue
   }

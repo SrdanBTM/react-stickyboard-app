@@ -1,7 +1,7 @@
 
 
 import styles from './makeNewSticker.module.css'
-import { useContext, useRef, useState } from 'react'
+import { useContext, useRef, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 import { motion } from 'framer-motion'
 
@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 export default function MakeNewSticker() {
 
   const [key, setKey] = useState(0)
-  const { addSticker, boardRef, setBoards, stickerTemplate, currentBoardId } = useContext(MainContext)
+  const { boards, addSticker, boardRef, setBoards, stickerTemplate, currentBoardId } = useContext(MainContext)
   const stickerRef = useRef()
   const [isStickerDragged, setIsStickerDragged] = useState(false)
 
@@ -20,11 +20,12 @@ export default function MakeNewSticker() {
     const stickerPosition = stickerRef.current.getBoundingClientRect()
     const boardPosition = boardRef.current.getBoundingClientRect()
 
+    const currentBoard = boards.find(board => board.boardId === currentBoardId)
+
     const stickerPositionInBoardLeft = stickerPosition.left - boardPosition.left
     const stickerPositionInBoardTop = stickerPosition.top - boardPosition.top
     const stickerPositionInBoardRight = boardPosition.right - stickerPosition.right
     const stickerPositionInBoardBottom = boardPosition.bottom - stickerPosition.bottom
-
 
     let isStickerInBoard = false
     if (stickerPositionInBoardLeft >= 0 && stickerPositionInBoardTop >= 0
@@ -32,13 +33,12 @@ export default function MakeNewSticker() {
       isStickerInBoard = true
     }
 
-
     if (isStickerInBoard) {
+      const boardName = currentBoard.boardName
       const positionXValue = stickerPositionInBoardLeft
       const positionYValue = stickerPositionInBoardTop
-      addSticker(setBoards, currentBoardId, stickerTemplate, positionXValue, positionYValue)
+      addSticker(setBoards, currentBoardId, stickerTemplate, boardName, positionXValue, positionYValue)
     }
-
 
     setKey(prev => prev + 1)
   }
