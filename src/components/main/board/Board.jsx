@@ -3,7 +3,7 @@ import { useContext, useEffect } from 'react'
 import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 import styles from './board.module.css'
 import StickerOnBoard from './sticker-on-board/StickerOnBoard.jsx'
-import FilteredStickerOnBoard from './filtered-sticker-on-board/FilteredStickerOnBoard.jsx'
+import SearchedStickerOnBoard from './searched-sticker-on-board/SearchedStickerOnBoard.jsx'
 
 
 export default function Board() {
@@ -35,7 +35,7 @@ export default function Board() {
         ? <div className={styles.filterBoard} ref={boardRef}>
           {filteredStickers.map(sticker => {
             return (
-              <FilteredStickerOnBoard
+              <SearchedStickerOnBoard
                 key={sticker.stickerId}
                 mappedSticker={sticker}
               />

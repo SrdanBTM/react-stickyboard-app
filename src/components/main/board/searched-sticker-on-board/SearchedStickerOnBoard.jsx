@@ -1,14 +1,14 @@
 
 
 
-import styles from './filteredStickerOnBoard.module.css'
+import styles from './searchedStickerOnBoard.module.css'
 import { useRef} from 'react'
 import StickerTitle from '../sticker-parts/sticker-title/StickerTitle.jsx'
 import StickerNote from '../sticker-parts/sticker-note/StickerNote.jsx'
 import StickerFooter from '../sticker-parts/sticker-footer/StickerFooter.jsx'
 
 
-export default function FilteredStickerOnBoard({ mappedSticker }) {
+export default function SearchedStickerOnBoard({ mappedSticker }) {
 
   const stickerRef = useRef()
 
