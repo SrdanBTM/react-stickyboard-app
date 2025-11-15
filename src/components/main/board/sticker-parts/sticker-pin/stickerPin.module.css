@@ -17,7 +17,7 @@
 .image {
   height: 35px;
   width: 35px;
-  transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
 
 .container:hover .image{

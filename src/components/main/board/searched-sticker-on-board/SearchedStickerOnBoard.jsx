@@ -3,7 +3,7 @@
 
 import styles from './searchedStickerOnBoard.module.css'
 import { useRef} from 'react'
-import StickerTitle from '../sticker-parts/sticker-title/StickerTitle.jsx'
+import StickerHeader from '../sticker-parts/sticker-header/StickerHeader.jsx'
 import StickerNote from '../sticker-parts/sticker-note/StickerNote.jsx'
 import StickerFooter from '../sticker-parts/sticker-footer/StickerFooter.jsx'
 
@@ -21,7 +21,7 @@ export default function SearchedStickerOnBoard({ mappedSticker }) {
         backgroundColor: mappedSticker.color
       }}
     >
-      <StickerTitle mappedSticker={mappedSticker} />
+      <StickerHeader mappedSticker={mappedSticker} />
       <StickerNote mappedSticker={mappedSticker} />
       <StickerFooter mappedSticker={mappedSticker} />
     </div>
