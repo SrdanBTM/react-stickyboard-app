@@ -47,13 +47,12 @@ export default function Board() {
           {currentBoard
             && currentBoard.stickers.map(sticker => {
               return (
-                <>
+                <div key={sticker.stickerId}>
                   <StickerOnBoard
-                    key={sticker.stickerId}
                     mappedSticker={sticker}
                   />
                   <PinedStickers />
-                </>
+                </div>
               )
             })}
         </div>
