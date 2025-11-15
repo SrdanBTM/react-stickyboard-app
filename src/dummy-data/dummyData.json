@@ -5,6 +5,7 @@
     "isInput": false,
     "isFocused": false,
     "isDeleteShowed": false,
+    "checkedStickers": [],
     "stickers": [
       {
         "stickerId": "s1",
@@ -44,6 +45,7 @@
     "isInput": false,
     "isFocused": false,
     "isDeleteShowed": false,
+    "checkedStickers": [],
     "stickers": [
       {
         "stickerId": "s4",
@@ -73,6 +75,7 @@
     "isInput": false,
     "isFocused": false,
     "isDeleteShowed": false,
+    "checkedStickers": [],
     "stickers": [
       {
         "stickerId": "s6",
@@ -112,6 +115,7 @@
     "isInput": false,
     "isFocused": false,
     "isDeleteShowed": false,
+    "checkedStickers": [],
     "stickers": [
       {
         "stickerId": "s9",
@@ -151,6 +155,7 @@
     "isInput": false,
     "isFocused": false,
     "isDeleteShowed": false,
+    "checkedStickers": [],
     "stickers": [
       {
         "stickerId": "s12",

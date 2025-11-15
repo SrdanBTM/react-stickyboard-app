@@ -6,7 +6,8 @@ export const boardTemplate = {
   isInput: false,
   isFocused: false,
   isDeleteShowed: false,
-  stickers: []
+  stickers: [],
+  checkedStickers: []
 }
 
 export const stickerTemplate = {
