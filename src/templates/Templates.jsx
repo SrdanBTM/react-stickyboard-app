@@ -16,7 +16,8 @@ export const stickerTemplate = {
   color: 'var(--sticker-color1)',
   boardName: '',
   positionX: '',
-  positionY: ''
+  positionY: '',
+  checked: false
 }
 
 
