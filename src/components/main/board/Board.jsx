@@ -4,7 +4,7 @@ import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 import styles from './board.module.css'
 import StickerOnBoard from './sticker-on-board/StickerOnBoard.jsx'
 import SearchedStickerOnBoard from './searched-sticker-on-board/SearchedStickerOnBoard.jsx'
-import PinedStickers from './pined-stickers/PinedStickers.jsx'
+import CheckedStickers from './checked-stickers/CheckedStickers.jsx'
 
 
 export default function Board() {
@@ -51,7 +51,7 @@ export default function Board() {
                   <StickerOnBoard
                     mappedSticker={sticker}
                   />
-                  <PinedStickers />
+                  <CheckedStickers />
                 </div>
               )
             })}
