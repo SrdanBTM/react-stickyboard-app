@@ -4,6 +4,7 @@ import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 import styles from './board.module.css'
 import StickerOnBoard from './sticker-on-board/StickerOnBoard.jsx'
 import SearchedStickerOnBoard from './searched-sticker-on-board/SearchedStickerOnBoard.jsx'
+import PinedStickers from './pined-stickers/PinedStickers.jsx'
 
 
 export default function Board() {
@@ -20,7 +21,7 @@ export default function Board() {
     filteredStickers = []
   }
 
-  
+
   return (
     <section className={styles.container}>
 
@@ -46,10 +47,13 @@ export default function Board() {
           {currentBoard
             && currentBoard.stickers.map(sticker => {
               return (
-                <StickerOnBoard
-                  key={sticker.stickerId}
-                  mappedSticker={sticker}
-                />
+                <>
+                  <StickerOnBoard
+                    key={sticker.stickerId}
+                    mappedSticker={sticker}
+                  />
+                  <PinedStickers />
+                </>
               )
             })}
         </div>

@@ -1,0 +1,11 @@
+
+
+.container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  border-left: 1px solid var(--border-color);
+  background-color: var(--bg-color1);
+}
