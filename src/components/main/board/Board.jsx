@@ -4,7 +4,6 @@ import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 import styles from './board.module.css'
 import StickerOnBoard from './sticker-on-board/StickerOnBoard.jsx'
 import SearchedStickerOnBoard from './searched-sticker-on-board/SearchedStickerOnBoard.jsx'
-import CheckedStickers from './checked-stickers/CheckedStickers.jsx'
 
 
 export default function Board() {
@@ -47,12 +46,10 @@ export default function Board() {
           {currentBoard
             && currentBoard.stickers.map(sticker => {
               return (
-                <div key={sticker.stickerId}>
-                  <StickerOnBoard
-                    mappedSticker={sticker}
-                  />
-                  <CheckedStickers />
-                </div>
+                <StickerOnBoard
+                  key={sticker.stickerId}
+                  mappedSticker={sticker}
+                />
               )
             })}
         </div>
