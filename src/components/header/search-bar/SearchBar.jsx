@@ -1,10 +1,10 @@
 
 
-import styles from './filter.module.css'
+import styles from './searchBar.module.css'
 import { useContext, useEffect } from 'react'
 import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
-export default function Filter() {
+export default function SearchBar() {
 
   const { filterInputValue, setFilterInputValue, setIsFilterBoard, setCurrentBoardId } = useContext(MainContext)
 
