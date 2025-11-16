@@ -32,6 +32,7 @@ export default function App() {
   const [isFilterBoard, setIsFilterBoard] = useState(false)
   const [filterInputValue, setFilterInputValue] = useState('')
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
+  const [checkedStickerId, setCheckedStickerId] = useState(null)
 
   const boardRef = useRef()
 
@@ -58,6 +59,7 @@ export default function App() {
         isFilterBoard, setIsFilterBoard,
         filterInputValue, setFilterInputValue,
         checkedOrderCounter, setCheckedOrderCounter,
+        checkedStickerId, setCheckedStickerId,
         updateSticker,
         updateAllStickers,
         addSticker,

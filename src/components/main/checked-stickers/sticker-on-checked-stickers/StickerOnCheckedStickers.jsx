@@ -67,10 +67,12 @@ export default function StickerOnCheckedStickers({ topPosition, mappedSticker, s
       style={{
         top: topPosition,
         backgroundColor: mappedSticker.color,
-        zIndex: isMouseDown ? 1 : 0,
-        width: isDragged ? '250px' : '',
-        height: isDragged ? '250px' : ''
+        zIndex: isMouseDown ? 1 : 0
       }}
+      animate={{
+        scale: isDragged ? 1.65 : 1 
+      }}
+
       ref={stickerRef}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}

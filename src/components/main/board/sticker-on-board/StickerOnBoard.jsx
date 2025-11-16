@@ -11,7 +11,7 @@ import StickerFooter from '../sticker-parts/sticker-footer/StickerFooter.jsx'
 
 export default function StickerOnBoard({ mappedSticker }) {
 
-  const { boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
+  const { checkedStickerId, boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
   const stickerRef = useRef()
   const [constraints, setConstraints] = useState()
   const dragControl = useDragControls()
@@ -21,7 +21,7 @@ export default function StickerOnBoard({ mappedSticker }) {
     setConstraints(boardRef)
   }, [boardRef])
 
-  
+
 
   function handleDragEnd() {
     const currentStickerId = stickerRef.current.getAttribute('data-id')
@@ -31,8 +31,8 @@ export default function StickerOnBoard({ mappedSticker }) {
     const stickerPositionLeft = stickerPosition.left - boardPosition.left
     const stickerPositionTop = stickerPosition.top - boardPosition.top
 
-    const propertyToUpdate1 = { key: 'positionX', value: stickerPositionLeft}
-    const propertyToUpdate2 = { key: 'positionY', value: stickerPositionTop}
+    const propertyToUpdate1 = { key: 'positionX', value: stickerPositionLeft }
+    const propertyToUpdate2 = { key: 'positionY', value: stickerPositionTop }
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
   }
@@ -54,6 +54,13 @@ export default function StickerOnBoard({ mappedSticker }) {
         backgroundColor: mappedSticker.color,
         y: mappedSticker.positionY,
         x: mappedSticker.positionX
+      }}
+      animate={{
+        scale: checkedStickerId === mappedSticker.stickerId ? 0.6 : 1
+      }}
+      transition={{
+        duration: 0.1,
+        ease: 'easeOut'
       }}
     >
       <StickerPin dragControl={dragControl} />
