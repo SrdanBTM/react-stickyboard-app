@@ -25,7 +25,7 @@ export default function StickerCheck({ mappedSticker }) {
       const currentStickerId = mappedSticker.stickerId
       const propertyToUpdate = { key: 'checked', value: isChecked }
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
-    }, 500)
+    }, 300)
   }, [isChecked])
 
 
