@@ -27,17 +27,12 @@ export default function MakeNewSticker() {
     const stickerPositionInBoardRight = boardPosition.right - stickerPosition.right
     const stickerPositionInBoardBottom = boardPosition.bottom - stickerPosition.bottom
 
-    let isStickerInBoard = false
     if (stickerPositionInBoardLeft >= 0 && stickerPositionInBoardTop >= 0
       && stickerPositionInBoardRight >= 0 && stickerPositionInBoardBottom >= 0) {
-      isStickerInBoard = true
-    }
-
-    if (isStickerInBoard) {
-      const boardName = currentBoard.boardName
-      const positionXValue = stickerPositionInBoardLeft
-      const positionYValue = stickerPositionInBoardTop
-      addSticker(setBoards, currentBoardId, stickerTemplate, boardName, positionXValue, positionYValue)
+        const boardName = currentBoard.boardName
+        const positionXValue = stickerPositionInBoardLeft
+        const positionYValue = stickerPositionInBoardTop
+        addSticker(setBoards, currentBoardId, stickerTemplate, boardName, positionXValue, positionYValue)
     }
 
     setKey(prev => prev + 1)
