@@ -44,14 +44,16 @@ export default function Board() {
         </div>
         : <div className={styles.board} ref={boardRef}>
           {currentBoard
-            && currentBoard.stickers.map(sticker => {
-              return (
-                <StickerOnBoard
-                  key={sticker.stickerId}
-                  mappedSticker={sticker}
-                />
-              )
-            })}
+            && currentBoard.stickers
+              .filter(sticker => !sticker.checked)
+              .map(sticker => {
+                return (
+                  <StickerOnBoard
+                    key={sticker.stickerId}
+                    mappedSticker={sticker}
+                  />
+                )
+              })}
         </div>
       }
 

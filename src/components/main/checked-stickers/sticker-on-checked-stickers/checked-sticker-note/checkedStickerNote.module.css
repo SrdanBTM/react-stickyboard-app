@@ -1,0 +1,14 @@
+
+
+
+.container {
+  width: 100%;
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  color: var(--font-color6);
+  overflow: hidden;
+}
+
+
+

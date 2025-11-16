@@ -16,15 +16,17 @@ export default function StickerCheck({ mappedSticker }) {
 
 
   function handleClick() {
-    setIsChecked(prev => !prev)
+    setIsChecked(true)
   }
 
 
-  useEffect(()=>{
-    const currentStickerId = mappedSticker.stickerId
-    const propertyToUpdate = {key: 'checked', value: isChecked}
-    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
-  },[isChecked])
+  useEffect(() => {
+    setTimeout(() => {
+      const currentStickerId = mappedSticker.stickerId
+      const propertyToUpdate = { key: 'checked', value: isChecked }
+      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
+    }, 500)
+  }, [isChecked])
 
 
   return (
