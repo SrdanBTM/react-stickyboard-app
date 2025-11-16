@@ -17,7 +17,8 @@ export const stickerTemplate = {
   boardName: '',
   positionX: '',
   positionY: '',
-  checked: false
+  checked: false,
+  checkedOrder: null
 }
 
 

@@ -14,7 +14,8 @@
         "boardName": "Daily Tasks",
         "positionX": 120,
         "positionY": 80,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       },
       {
         "stickerId": "s2",
@@ -24,7 +25,8 @@
         "boardName": "Daily Tasks",
         "positionX": 340,
         "positionY": 200,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       },
       {
         "stickerId": "s3",
@@ -34,7 +36,8 @@
         "boardName": "Daily Tasks",
         "positionX": 220,
         "positionY": 380,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       }
     ]
   },
@@ -53,7 +56,8 @@
         "boardName": "Work Projects",
         "positionX": 180,
         "positionY": 100,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       },
       {
         "stickerId": "s5",
@@ -63,7 +67,8 @@
         "boardName": "Work Projects",
         "positionX": 420,
         "positionY": 280,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       }
     ]
   },
@@ -82,7 +87,8 @@
         "boardName": "Ideas",
         "positionX": 260,
         "positionY": 150,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       },
       {
         "stickerId": "s7",
@@ -92,7 +98,8 @@
         "boardName": "Ideas",
         "positionX": 480,
         "positionY": 340,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       },
       {
         "stickerId": "s8",
@@ -102,7 +109,8 @@
         "boardName": "Ideas",
         "positionX": 160,
         "positionY": 420,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       }
     ]
   },
@@ -121,7 +129,8 @@
         "boardName": "Learning",
         "positionX": 140,
         "positionY": 90,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       },
       {
         "stickerId": "s10",
@@ -131,7 +140,8 @@
         "boardName": "Learning",
         "positionX": 380,
         "positionY": 260,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       },
       {
         "stickerId": "s11",
@@ -141,7 +151,8 @@
         "boardName": "Learning",
         "positionX": 240,
         "positionY": 390,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       }
     ]
   },
@@ -160,7 +171,8 @@
         "boardName": "Personal Goals",
         "positionX": 200,
         "positionY": 120,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       },
       {
         "stickerId": "s13",
@@ -170,7 +182,8 @@
         "boardName": "Personal Goals",
         "positionX": 360,
         "positionY": 260,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       },
       {
         "stickerId": "s14",
@@ -180,7 +193,8 @@
         "boardName": "Personal Goals",
         "positionX": 460,
         "positionY": 400,
-        "checked": false
+        "checked": false,
+        "checkedOrder": null
       }
     ]
   }
