@@ -23,6 +23,7 @@ export default function CheckedStickers() {
       {currentBoard
         && currentBoard.stickers
           .filter(sticker => sticker.checked)
+          .sort((sticker1, sticker2) => sticker1.checkedOrder - sticker2.checkedOrder)
           .map((sticker, index) => {
             return (
               <StickerOnCheckedStickers

@@ -31,6 +31,7 @@ export default function App() {
   const [isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings] = useState(false)
   const [isFilterBoard, setIsFilterBoard] = useState(false)
   const [filterInputValue, setFilterInputValue] = useState('')
+  const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
 
   const boardRef = useRef()
 
@@ -56,6 +57,7 @@ export default function App() {
         isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings,
         isFilterBoard, setIsFilterBoard,
         filterInputValue, setFilterInputValue,
+        checkedOrderCounter, setCheckedOrderCounter,
         updateSticker,
         updateAllStickers,
         addSticker,

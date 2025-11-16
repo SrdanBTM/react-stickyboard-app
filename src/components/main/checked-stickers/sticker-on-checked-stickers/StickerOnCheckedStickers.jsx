@@ -50,9 +50,11 @@ export default function StickerOnCheckedStickers({ topPosition, mappedSticker, s
       const propertyToUpdate1 = { key: 'checked', value: false }
       const propertyToUpdate2 = { key: 'positionX', value: stickerPositionInBoardLeft }
       const propertyToUpdate3 = { key: 'positionY', value: stickerPositionInBoardTop }
+      const propertyToUpdate4 = { key: 'checkedOrder', value: null }
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate3)
+      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate4)
     } else {
       setRandomUUID(crypto.randomUUID())
     }
