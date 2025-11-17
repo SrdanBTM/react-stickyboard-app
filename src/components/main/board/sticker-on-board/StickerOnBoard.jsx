@@ -59,7 +59,7 @@ export default function StickerOnBoard({ mappedSticker }) {
         scale: checkedStickerId === mappedSticker.stickerId ? 0.6 : 1
       }}
       transition={{
-        duration: 0.1,
+        duration: 0.5,
         ease: 'easeOut'
       }}
     >
