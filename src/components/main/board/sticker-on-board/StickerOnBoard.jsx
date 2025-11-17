@@ -56,7 +56,7 @@ export default function StickerOnBoard({ mappedSticker }) {
         x: mappedSticker.positionX
       }}
       animate={{
-        scale: checkedStickerId === mappedSticker.stickerId ? 0.6 : 1
+        scale: checkedStickerId === mappedSticker.stickerId ? 0 : 1
       }}
       transition={{
         duration: 0.5,

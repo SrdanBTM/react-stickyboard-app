@@ -30,7 +30,7 @@ export default function StickerCheck({ mappedSticker }) {
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
       setCheckedStickerId(null)
-    }, 500)
+    }, 200)
   }, [isChecked])
 
 
