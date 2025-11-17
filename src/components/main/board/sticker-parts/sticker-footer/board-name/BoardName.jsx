@@ -8,11 +8,11 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function BoardName({ mappedSticker }) {
 
-  const { isFilterBoard } = useContext(MainContext)
+  const { isSearchResultBoard } = useContext(MainContext)
 
   return (
     <div className={styles.container}>
-      {isFilterBoard
+      {isSearchResultBoard
         && <span>{mappedSticker.boardName}</span>}
     </div>
   )

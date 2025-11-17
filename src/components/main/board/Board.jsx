@@ -8,15 +8,15 @@ import SearchedStickerOnBoard from './searched-sticker-on-board/SearchedStickerO
 
 export default function Board() {
 
-  const { currentBoardId, boards, boardRef, isFilterBoard, filterInputValue } = useContext(MainContext)
+  const { currentBoardId, boards, boardRef, isSearchResultBoard, searchValue } = useContext(MainContext)
   let currentBoard = null
   if (boards.length > 0) {
     currentBoard = boards.find(board => board.boardId === currentBoardId)
   }
 
   const allStickers = boards.flatMap(board => board.stickers)
-  let filteredStickers = allStickers.filter(sticker => sticker.title.toLowerCase().includes(filterInputValue.toLowerCase()))
-  if (filterInputValue.length === 0) {
+  let filteredStickers = allStickers.filter(sticker => sticker.title.toLowerCase().includes(searchValue.toLowerCase()))
+  if (searchValue.length === 0) {
     filteredStickers = []
   }
 
@@ -25,13 +25,13 @@ export default function Board() {
     <section className={styles.container}>
 
       <div className={styles.heading}>
-        {isFilterBoard
+        {isSearchResultBoard
           ? <span>Search results</span>
           : currentBoard && <span>{currentBoard.boardName}</span>
         }
       </div>
 
-      {isFilterBoard
+      {isSearchResultBoard
         ? <div className={styles.filterBoard} ref={boardRef}>
           {filteredStickers.map(sticker => {
             return (

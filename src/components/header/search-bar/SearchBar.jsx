@@ -6,11 +6,11 @@ import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 export default function SearchBar() {
 
-  const { filterInputValue, setFilterInputValue, setIsFilterBoard, setCurrentBoardId } = useContext(MainContext)
+  const { searchValue, setSearchValue, setIsSearchResultBoard, setCurrentBoardId } = useContext(MainContext)
 
   function handleChange(e) {
-    setFilterInputValue(e.target.value)
-    setIsFilterBoard(true)
+    setSearchValue(e.target.value)
+    setIsSearchResultBoard(true)
     setCurrentBoardId(null)
   }
 
@@ -21,7 +21,7 @@ export default function SearchBar() {
         type="text"
         placeholder='Find a sticker by title...'
         onChange={handleChange}
-        value={filterInputValue}
+        value={searchValue}
       />
     </div>
   )
