@@ -1,6 +1,6 @@
 
 
-import styles from './stickerOnCheckedStickers.module.css'
+import styles from './stickerOnCheckedStickersPanel.module.css'
 import CheckedStickerTitle from './checked-sticker-title/CheckedStickerTitle.jsx'
 import CheckedStickerNote from './checked-sticker-note/CheckedStickerNote.jsx'
 import { useState, useContext, useRef } from 'react'
@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 
 
-export default function StickerOnCheckedStickers({ topPosition, mappedSticker, setRandomUUID }) {
+export default function StickerOnCheckedStickersPanel({ topPosition, mappedSticker, setRandomUUID }) {
 
   const [isMouseDown, setIsMouseDown] = useState(false)
   const { updateSticker, boardRef, currentBoardId, setBoards, boards } = useContext(MainContext)

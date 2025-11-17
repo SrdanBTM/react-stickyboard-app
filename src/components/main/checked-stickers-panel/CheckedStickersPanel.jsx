@@ -1,12 +1,12 @@
 
 
-import styles from './checkedStickers.module.css'
-import StickerOnCheckedStickers from './sticker-on-checked-stickers/StickerOnCheckedStickers.jsx'
+import styles from './checkedStickersPanel.module.css'
+import StickerOnCheckedStickersPanel from './sticker-on-checked-stickers-panel/StickerOnCheckedStickersPanel.jsx'
 import { useContext, useState } from 'react'
 import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 
-export default function CheckedStickers() {
+export default function CheckedStickersPanel() {
 
   const { boards, currentBoardId } = useContext(MainContext)
   const [randomUUID, setRandomUUID] = useState(crypto.randomUUID())
@@ -26,7 +26,7 @@ export default function CheckedStickers() {
           .sort((sticker1, sticker2) => sticker1.checkedOrder - sticker2.checkedOrder)
           .map((sticker, index) => {
             return (
-              <StickerOnCheckedStickers
+              <StickerOnCheckedStickersPanel
                 key={sticker.stickerId + randomUUID}
                 topPosition={20 + index * 40}
                 mappedSticker={sticker}
