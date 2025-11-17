@@ -70,8 +70,14 @@ export default function StickerOnCheckedStickers({ topPosition, mappedSticker, s
         zIndex: isMouseDown ? 1 : 0
       }}
       animate={{
-        scale: isDragged ? 1.65 : 1 
+        width: isDragged ? '250px' : '',
+        height: isDragged ? '250px' : ''
       }}
+      transition={{
+        duration: 0.2,
+        ease: 'linear'
+      }}
+
 
       ref={stickerRef}
       onMouseDown={handleMouseDown}
@@ -81,8 +87,8 @@ export default function StickerOnCheckedStickers({ topPosition, mappedSticker, s
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     >
-      <CheckedStickerTitle mappedSticker={mappedSticker} />
-      <CheckedStickerNote mappedSticker={mappedSticker} />
+      <CheckedStickerTitle mappedSticker={mappedSticker} isDragged={isDragged} />
+      <CheckedStickerNote mappedSticker={mappedSticker} isDragged={isDragged} />
     </motion.div>
   )
 }
