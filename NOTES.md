@@ -40,9 +40,6 @@
 
 
 
-  - izmijeniti checked-sticker => checked-panel
-    
-
 
 
   - searchbar
