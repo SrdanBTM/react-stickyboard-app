@@ -69,9 +69,13 @@ export default function StickerOnCheckedStickersPanel({ topPosition, mappedStick
         backgroundColor: mappedSticker.color,
         zIndex: isMouseDown ? 1 : 0
       }}
+      initial={{
+        opacity: 0
+      }}
       animate={{
         width: isDragged ? '250px' : '',
-        height: isDragged ? '250px' : ''
+        height: isDragged ? '250px' : '',
+        opacity: 1
       }}
       transition={{
         duration: 0.2,
