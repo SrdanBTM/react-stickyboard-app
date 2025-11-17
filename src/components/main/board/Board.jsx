@@ -14,11 +14,12 @@ export default function Board() {
     currentBoard = boards.find(board => board.boardId === currentBoardId)
   }
 
-  const allStickers = boards.flatMap(board => board.stickers)
-  let filteredStickers = allStickers.filter(sticker => sticker.title.toLowerCase().includes(searchValue.toLowerCase()))
-  if (searchValue.length === 0) {
-    filteredStickers = []
-  }
+  const filteredStickers =
+    searchValue.length === 0
+      ? []
+      : boards.flatMap(board => board.stickers)
+        .filter(sticker => !sticker.checked)
+        .filter(sticker => sticker.title.toLowerCase().includes(searchValue.toLowerCase()))
 
 
   return (

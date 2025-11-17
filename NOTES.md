@@ -43,7 +43,6 @@
 
 
   - searchbar
-    - ne treba prikazivati cekirane stikere na boardu
     - ne treba prikazivati checked-panel
     
 
