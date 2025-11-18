@@ -50,9 +50,10 @@ export default function MakeNewSticker() {
       className={styles.container}
       style={{
         width: isStickerDragged ? '250px' : '',
-        height: isStickerDragged ? '250px' : ''
+        height: isStickerDragged ? '250px' : '',
+        cursor: boardRef.current ? 'grab' : 'auto' 
       }}
-      drag
+      drag={boardRef.current ? true : false}
       dragMomentum={false}
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
