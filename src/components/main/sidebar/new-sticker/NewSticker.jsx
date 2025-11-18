@@ -5,7 +5,6 @@ import MakeNewSticker from './make-new-sticker/MakeNewSticker.jsx'
 
 
 export default function NewSticker() {
-
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
@@ -14,7 +13,7 @@ export default function NewSticker() {
 
       <div className={styles.stack}>
         <div className={styles.remainingStickers}></div>
-        <MakeNewSticker />
+         <MakeNewSticker />
       </div>
     </div>
   )
