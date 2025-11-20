@@ -18,7 +18,8 @@ export const stickerTemplate = {
   positionX: '',
   positionY: '',
   checked: false,
-  checkedOrder: null
+  checkedOrder: null,
+  zIndex: 0
 }
 
 

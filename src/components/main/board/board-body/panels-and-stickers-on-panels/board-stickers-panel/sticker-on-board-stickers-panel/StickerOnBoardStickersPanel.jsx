@@ -11,7 +11,7 @@ import BoardStickerFooter from '../../../sticker-parts/board-sticker-parts/board
 
 export default function StickerOnBoard({ mappedSticker }) {
 
-  const { checkedStickerId, boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
+  const { updateAllStickers, checkedStickerId, boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
   const stickerRef = useRef()
   const [constraints, setConstraints] = useState()
   const dragControl = useDragControls()
@@ -37,6 +37,15 @@ export default function StickerOnBoard({ mappedSticker }) {
   }
 
 
+  function handleMouseDown() {
+    const propertyToUpdate1 = {key: 'zIndex', value: 0}
+    updateAllStickers(setBoards, currentBoardId, propertyToUpdate1)
+    const propertyToUpdate2 = {key: 'zIndex', value: 1}
+    const currentStickerId = mappedSticker.stickerId
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
+  }
+
+
   return (
     <motion.div
       data-id={mappedSticker.stickerId}
@@ -48,11 +57,13 @@ export default function StickerOnBoard({ mappedSticker }) {
       dragConstraints={constraints}
       dragElastic={0}
       onDragEnd={handleDragEnd}
+      onMouseDown={handleMouseDown}
       ref={stickerRef}
       style={{
         backgroundColor: mappedSticker.color,
         y: mappedSticker.positionY,
-        x: mappedSticker.positionX
+        x: mappedSticker.positionX,
+        zIndex: mappedSticker.zIndex
       }}
       animate={{
         scale: checkedStickerId === mappedSticker.stickerId ? 0 : 1
