@@ -1,0 +1,20 @@
+
+
+.container {
+  height: 100%;
+  margin-left: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container span {
+  font-size: 14px;
+  color: var(--font-color5);
+  cursor: pointer;
+}
+
+.container span:hover {
+  color: red;
+}
+
