@@ -24,7 +24,7 @@ export default function DeleteSticker({ mappedSticker }) {
       onClick={handleClick}
     >
       <img
-        src={`${BASE_URL}${theme === 'lightTheme' ? 'images/icon-delete3.png' : 'images/icon-delete4.png'}`}
+        src={`${BASE_URL}${theme === 'lightTheme' ? 'images/icon-delete5.png' : 'images/icon-delete5.png'}`}
         alt="delete sticker" />
     </div>
   )
