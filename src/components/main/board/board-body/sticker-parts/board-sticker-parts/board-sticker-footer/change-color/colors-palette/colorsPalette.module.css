@@ -2,11 +2,8 @@
 
 .container {
   display: flex;
-  flex: 1;
-  height: 15px;
   align-items: center;
-  justify-content: end;
-  padding-left: 70px;
+  justify-content: space-around;
 }
 
 .oneColor {

@@ -1,8 +1,8 @@
 
 
-import styles from './colors.module.css'
+import styles from './colorsPalette.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx';
+import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx';
 
 
 export default function Colors({ mappedSticker }) {

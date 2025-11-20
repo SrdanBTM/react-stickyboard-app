@@ -1,6 +1,6 @@
 
 
-import styles from './colorPaletteIcon.module.css'
+import styles from './colorsPaletteIcon.module.css'
 
 
 export default function ColorPaletteIcon() {
