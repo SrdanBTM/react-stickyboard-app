@@ -3,6 +3,7 @@
 import styles from './stickerOnCheckedStickersPanel.module.css'
 import CheckedStickerTitle from '../../../sticker-parts/checked-sticker-parts/checked-sticker-title/CheckedStickerTitle.jsx'
 import CheckedStickerNote from '../../../sticker-parts/checked-sticker-parts/checked-sticker-note/CheckedStickerNote.jsx'
+import CheckedStickerCheck from '../../../sticker-parts/checked-sticker-parts/checked-sticker-check/CheckedStickerCheck.jsx'
 import { useState, useContext, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
@@ -93,6 +94,7 @@ export default function StickerOnCheckedStickersPanel({ topPosition, mappedStick
     >
       <CheckedStickerTitle mappedSticker={mappedSticker} isDragged={isDragged} />
       <CheckedStickerNote mappedSticker={mappedSticker} isDragged={isDragged} />
+      <CheckedStickerCheck />
     </motion.div>
   )
 }
