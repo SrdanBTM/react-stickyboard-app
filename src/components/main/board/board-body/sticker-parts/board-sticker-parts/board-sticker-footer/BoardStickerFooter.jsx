@@ -1,16 +1,18 @@
 
 
-import styles from './stickerFooter.module.css'
+import styles from './boardStickerFooter.module.css'
 import ChangeColor from './change-color/ChangeColor.jsx'
 import BoardName from './board-name/BoardName.jsx'
-import DeleteSticker from './delete-sticker/DeleteSticker.jsx'
+import Delete from './delete/Delete.jsx'
+
 
 
 export default function StickerFooter({ mappedSticker }) {
   return (
     <div className={styles.container}>
       {/* <BoardName mappedSticker={mappedSticker} /> */}
-      <ChangeColor mappedSticker={mappedSticker}/>
+      <Delete mappedSticker={mappedSticker} />
+      <ChangeColor mappedSticker={mappedSticker} />
     </div>
   )
 }
