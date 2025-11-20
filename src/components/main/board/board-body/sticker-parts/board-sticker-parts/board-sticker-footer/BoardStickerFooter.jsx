@@ -2,7 +2,7 @@
 
 import styles from './stickerFooter.module.css'
 import Colors from './colors/Colors.jsx'
-import Dots from './dots/Dots.jsx'
+import ColorPaletteIcon from './color-palette-icon/ColorPaletteIcon.jsx'
 import BoardName from './board-name/BoardName.jsx'
 import DeleteSticker from './delete-sticker/DeleteSticker.jsx'
 import { useState } from 'react'
@@ -34,7 +34,7 @@ export default function StickerFooter({ mappedSticker }) {
 
         {isMouseOver
           ? <DeleteSticker mappedSticker={mappedSticker} />
-          : <Dots />}
+          : <ColorPaletteIcon />}
 
         <Colors mappedSticker={mappedSticker} />
 
