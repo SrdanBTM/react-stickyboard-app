@@ -23,7 +23,8 @@ export default function StickerOnBoard({ mappedSticker }) {
 
 
   function handleDragEnd() {
-    const currentStickerId = stickerRef.current.getAttribute('data-id')
+    const currentStickerId = mappedSticker.stickerId
+    
     const stickerPosition = stickerRef.current.getBoundingClientRect()
     const boardPosition = boardRef.current.getBoundingClientRect()
 
@@ -48,7 +49,6 @@ export default function StickerOnBoard({ mappedSticker }) {
 
   return (
     <motion.div
-      data-id={mappedSticker.stickerId}
       className={styles.container}
       drag
       dragListener={false}
