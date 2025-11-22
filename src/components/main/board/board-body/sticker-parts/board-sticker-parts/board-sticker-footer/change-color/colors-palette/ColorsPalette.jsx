@@ -1,6 +1,7 @@
 
 
 import styles from './colorsPalette.module.css'
+import { motion } from 'framer-motion'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx';
 
@@ -29,7 +30,9 @@ export default function Colors({ mappedSticker }) {
 
 
   return (
-    <div className={styles.container}>
+    <motion.div
+      className={styles.container}
+    >
       {colors.map((color, index) => {
         return (
           <div
@@ -42,7 +45,7 @@ export default function Colors({ mappedSticker }) {
           </div>
         )
       })}
-    </div>
+    </motion.div>
 
   )
 }

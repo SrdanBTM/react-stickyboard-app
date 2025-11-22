@@ -4,7 +4,7 @@ import styles from './delete.module.css'
 import DeleteIcon from './delete-icon/DeleteIcon.jsx'
 import DeleteButton from './delete-button/DeleteButton.jsx'
 import { motion } from 'framer-motion'
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
 
 
@@ -22,6 +22,8 @@ export default function Delete({ mappedSticker }) {
   function handleMouseOut() {
     setIsMouseOver(false)
   }
+
+
 
 
   return (

@@ -33,6 +33,7 @@ export default function ChangeColor({ mappedSticker }) {
         transform: isMouseOver ? 'translateX(0px)' : 'translateX(210px)',
         zIndex: isMouseOver ? '1' : '0'
       }}
+
     >
       <ColorsPaletteIcon />
       <ColorsPalette mappedSticker={mappedSticker} />

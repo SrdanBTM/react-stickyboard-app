@@ -6,7 +6,6 @@ import BoardName from './board-name/BoardName.jsx'
 import Delete from './delete/Delete.jsx'
 
 
-
 export default function StickerFooter({ mappedSticker }) {
   return (
     <div className={styles.container}>
