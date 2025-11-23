@@ -1,4 +1,6 @@
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -63,4 +65,78 @@
   --boardlist-delete-color: #dec2c2;
   --boardlist-close-color: #bcd0dd;
 }
+
+
+
+
+
+
+
+/* react day picker */
+
+.rdp-day {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--font-color1);
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding-bottom: 2px;
+}
+
+.rdp-day:hover {
+  background-color: var(--hover-color1);
+}
+
+.rdp-month {
+  padding: 5px 20px;
+  background-color:#0d0d0d;
+  width: 100%;
+  height: 250px;
+}
+
+.rdp-month_caption {
+  height: 30px;
+}
+
+.rdp-weekday {
+  font-size: 11px;
+} 
+
+.rdp-caption_label {
+  padding: 10px;
+  height: 26px;
+  font-size: 14px;
+}
+
+.rdp-nav {
+  height: 40px;
+  height: 26px;
+  margin-top: 5px;
+}
+
+.rdp-button_previous {
+  width: 30px;
+}
+
+.rdp-button_next {
+  width: 30px;
+  margin-right: 20px;
+}
+
+.rdp-chevron {
+  fill: var(--font-color2);
+  width: 16px;
+}
+
+.rdp-chevron:hover {
+  transform: scale(1.3);
+  transition: transform 0.1s ease;
+}
+
+
+
+
+
 
