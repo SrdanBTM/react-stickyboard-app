@@ -1,9 +1,6 @@
 
 
 import styles from './addDateElement.module.css'
-import { DayPicker } from 'react-day-picker'
-import 'react-day-picker/dist/style.css'
-
 
 
 export default function AddDateElement() {
@@ -20,8 +17,6 @@ export default function AddDateElement() {
         <button className={styles.saveButton}>SAVE</button>
         <button className={styles.closeButton}>CLOSE</button>
       </div>
-
-      {/* <DayPicker /> */}
     </div>
   )
 }
