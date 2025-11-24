@@ -1,11 +1,11 @@
 
 
-import styles from './addDate.module.css'
+import styles from './boardStickerAddDate.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function AddDate({ mappedSticker }) {
+export default function BoardStickerAddDate({ mappedSticker }) {
 
   const { isAddDateOpen, setIsAddDateOpen } = useContext(MainContext)
 
