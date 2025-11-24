@@ -33,7 +33,7 @@ export default function App() {
   const [searchValue, setSearchValue] = useState('')
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
-  const [isAddDateOpen, setIsAddDateOpen] = useState(false)
+  const [isAddDateOpen, setIsAddDateOpen] = useState(null)
 
   const boardRef = useRef()
 

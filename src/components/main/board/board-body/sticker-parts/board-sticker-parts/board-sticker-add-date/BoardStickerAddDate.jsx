@@ -11,12 +11,12 @@ export default function BoardStickerAddDate({ mappedSticker }) {
 
 
   function handleClickSave() {
-    setIsAddDateOpen(false)
+    setIsAddDateOpen(null)
   }
 
 
   function handleClickClose() {
-    setIsAddDateOpen(false)
+    setIsAddDateOpen(null)
   }
 
 
