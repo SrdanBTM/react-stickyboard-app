@@ -1,19 +1,29 @@
-
-
-
 .container {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 250px;
-  min-height: 215px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  /* background-color: var(--bg-color1); */
-  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  background-color: var(--sticker-color5);
 }
+
+.content {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+
 
 .inputs {
   width: 150px;
@@ -32,12 +42,11 @@
   padding: 5px 10px;
   background-color: transparent;
   border: 1px solid var(--border-color);
-  border-radius: 7px;
+  border-radius: 5px;
   font-size: 14px;
   outline: none;
   color: var(--font-color1);
   margin-bottom: 10px;
-
 }
 
 .inputs input:focus {
@@ -48,8 +57,8 @@
 
 
 
-.container span {
-  margin-bottom: 10px;
+.content span {
+  margin: 20px 0;
   font-size: 14px;
 }
 
@@ -60,17 +69,18 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-top: 10px;
 }
 
 .closeButton,
 .saveButton {
   width: 70px;
-  padding: 5px 0;
-  background-color: var(--bg-color2);
-  border-radius: 3px;
+  padding: 7px 0;
+  background-color: var(--bg-color1);
+  border-radius: 5px;
   color: var(--font-color1);
   border: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .closeButton:hover,
