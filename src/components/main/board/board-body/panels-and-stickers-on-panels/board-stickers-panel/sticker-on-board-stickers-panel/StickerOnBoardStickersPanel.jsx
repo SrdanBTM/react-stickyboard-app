@@ -7,6 +7,7 @@ import BoardStickerPin from '../../../sticker-parts/board-sticker-parts/board-st
 import BoardStickerHeader from '../../../sticker-parts/board-sticker-parts/board-sticker-header/BoardStickerHeader.jsx'
 import BoardStickerNote from '../../../sticker-parts/board-sticker-parts/board-sticker-note/BoardStickerNote.jsx'
 import BoardStickerFooter from '../../../sticker-parts/board-sticker-parts/board-sticker-footer/BoardStickerFooter.jsx'
+import AddDate from '../../../sticker-parts/board-sticker-parts/board-sticker-modals/add-date/AddDate.jsx'
 
 
 export default function StickerOnBoard({ mappedSticker }) {
@@ -24,7 +25,7 @@ export default function StickerOnBoard({ mappedSticker }) {
 
   function handleDragEnd() {
     const currentStickerId = mappedSticker.stickerId
-    
+
     const stickerPosition = stickerRef.current.getBoundingClientRect()
     const boardPosition = boardRef.current.getBoundingClientRect()
 
@@ -39,9 +40,9 @@ export default function StickerOnBoard({ mappedSticker }) {
 
 
   function handleMouseDown() {
-    const propertyToUpdate1 = {key: 'zIndex', value: 0}
+    const propertyToUpdate1 = { key: 'zIndex', value: 0 }
     updateAllStickers(setBoards, currentBoardId, propertyToUpdate1)
-    const propertyToUpdate2 = {key: 'zIndex', value: 1}
+    const propertyToUpdate2 = { key: 'zIndex', value: 1 }
     const currentStickerId = mappedSticker.stickerId
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
   }
@@ -78,6 +79,9 @@ export default function StickerOnBoard({ mappedSticker }) {
       <BoardStickerHeader mappedSticker={mappedSticker} />
       <BoardStickerNote mappedSticker={mappedSticker} />
       <BoardStickerFooter mappedSticker={mappedSticker} />
+
+      <AddDate mappedSticker={mappedSticker} />
+
     </motion.div>
   )
 }
