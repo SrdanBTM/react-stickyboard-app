@@ -3,21 +3,17 @@
 import styles from './boardStickerAddDateTime.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import Inputs from './inputs/Inputs.jsx'
+import EnteredValue from './entered-value/EnteredValue.jsx'
+import Buttons from './buttons/Buttons.jsx'
 
 
 export default function BoardStickerAddDateTime({ mappedSticker }) {
 
-  const { isAddDateOpen, setIsAddDateOpen } = useContext(MainContext)
+  const { isAddDateOpen } = useContext(MainContext)
 
 
-  function handleClickSave() {
-    setIsAddDateOpen(null)
-  }
 
-
-  function handleClickClose() {
-    setIsAddDateOpen(null)
-  }
 
 
   return (
@@ -30,28 +26,11 @@ export default function BoardStickerAddDateTime({ mappedSticker }) {
       }}
     >
       <div className={styles.content}>
-        <div className={styles.inputs}>
-          <input type="text" placeholder='Write date' />
-          <input type="text" placeholder='Write time' />
-        </div>
-
-        <span>22.11.2025  |  Saturday  |  10:31</span>
-
-        <div className={styles.buttons}>
-          <button
-            className={styles.saveButton}
-            onClick={handleClickSave}
-          >
-            SAVE
-          </button>
-
-          <button
-            className={styles.closeButton}
-            onClick={handleClickClose}
-          >
-            CLOSE
-          </button>
-        </div>
+        <Inputs />
+        <br/>
+        <EnteredValue />
+        <br/>
+        <Buttons />
       </div>
     </div>
   )
