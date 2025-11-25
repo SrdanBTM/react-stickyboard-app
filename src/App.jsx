@@ -34,6 +34,8 @@ export default function App() {
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
   const [isAddDateOpen, setIsAddDateOpen] = useState(null)
+  const [isInputDateValid, setIsInputDateValid] = useState(false)
+  const [isInputTimeValid, setIsInputTimeValid] = useState(false)
 
   const boardRef = useRef()
 
@@ -62,6 +64,8 @@ export default function App() {
         checkedOrderCounter, setCheckedOrderCounter,
         checkedStickerId, setCheckedStickerId,
         isAddDateOpen, setIsAddDateOpen,
+        isInputDateValid, setIsInputDateValid,
+        isInputTimeValid, setIsInputTimeValid,
         updateSticker,
         updateAllStickers,
         addSticker,

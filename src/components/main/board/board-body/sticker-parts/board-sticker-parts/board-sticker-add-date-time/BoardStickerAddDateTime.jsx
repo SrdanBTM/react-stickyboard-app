@@ -13,9 +13,6 @@ export default function BoardStickerAddDateTime({ mappedSticker }) {
   const { isAddDateOpen } = useContext(MainContext)
 
 
-
-
-
   return (
     <div
       className={styles.container}
