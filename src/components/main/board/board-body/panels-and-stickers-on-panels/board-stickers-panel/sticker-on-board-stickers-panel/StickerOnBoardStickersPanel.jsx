@@ -7,7 +7,7 @@ import BoardStickerPin from '../../../sticker-parts/board-sticker-parts/board-st
 import BoardStickerHeader from '../../../sticker-parts/board-sticker-parts/board-sticker-header/BoardStickerHeader.jsx'
 import BoardStickerNote from '../../../sticker-parts/board-sticker-parts/board-sticker-note/BoardStickerNote.jsx'
 import BoardStickerFooter from '../../../sticker-parts/board-sticker-parts/board-sticker-footer/BoardStickerFooter.jsx'
-import BoardStickerAddDate from '../../../sticker-parts/board-sticker-parts/board-sticker-add-date/BoardStickerAddDate.jsx'
+import BoardStickerAddDateTime from '../../../sticker-parts/board-sticker-parts/board-sticker-add-date-time/BoardStickerAddDateTime.jsx'
 
 
 export default function StickerOnBoard({ mappedSticker }) {
@@ -80,7 +80,7 @@ export default function StickerOnBoard({ mappedSticker }) {
       <BoardStickerNote mappedSticker={mappedSticker} />
       <BoardStickerFooter mappedSticker={mappedSticker} />
 
-      <BoardStickerAddDate mappedSticker={mappedSticker} />
+      <BoardStickerAddDateTime mappedSticker={mappedSticker} />
 
     </motion.div>
   )
