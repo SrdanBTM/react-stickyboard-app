@@ -19,7 +19,10 @@ export const stickerTemplate = {
   positionY: '',
   checked: false,
   checkedOrder: null,
-  zIndex: 0
+  zIndex: 0,
+  scheduledDate: '',
+  scheduletTime: '',
+  scheduledDayInWeek: ''
 }
 
 
