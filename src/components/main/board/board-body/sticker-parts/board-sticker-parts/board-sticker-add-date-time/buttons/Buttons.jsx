@@ -7,7 +7,7 @@ import { MainContext } from '../../../../../../../../context-provider/ContextPro
 
 export default function Buttons() {
 
-  const { setIsAddDateOpen } = useContext(MainContext)
+  const { setIsAddDateOpen, setValidatedValueDate, setValidatedValueTime, setInputValueDate, setInputValueTime } = useContext(MainContext)
 
 
   function handleClickSave() {
@@ -17,6 +17,10 @@ export default function Buttons() {
 
   function handleClickClose() {
     setIsAddDateOpen(null)
+    setValidatedValueDate('init')
+    setValidatedValueTime('init')
+    setInputValueDate('')
+    setInputValueTime('')
   }
 
 

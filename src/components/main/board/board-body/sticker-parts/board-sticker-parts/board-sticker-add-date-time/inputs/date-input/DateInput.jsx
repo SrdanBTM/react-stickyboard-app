@@ -7,10 +7,12 @@ import { MainContext } from '../../../../../../../../../context-provider/Context
 
 export default function DateInput() {
 
-  const { setValidatedValueDate } = useContext(MainContext)
+  const { setValidatedValueDate, inputValueDate, setInputValueDate  } = useContext(MainContext)
 
   
   function handleChangeDate(e) {
+    setInputValueDate(e.currentTarget.value)
+    
     if (e.currentTarget.value.length === 10) {
       const validatedValue = dateValidation(e.currentTarget.value)
       setValidatedValueDate(validatedValue)
@@ -54,6 +56,7 @@ export default function DateInput() {
         placeholder='dd.mm.yyyy'
         maxLength={10}
         onChange={handleChangeDate}
+        value={inputValueDate}
       />
     </div>
   )

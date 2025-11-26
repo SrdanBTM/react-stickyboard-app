@@ -36,6 +36,8 @@ export default function App() {
   const [isAddDateOpen, setIsAddDateOpen] = useState(null)
   const [validatedValueDate, setValidatedValueDate] = useState('init')
   const [validatedValueTime, setValidatedValueTime] = useState('init')
+  const [inputValueDate, setInputValueDate] = useState('')
+  const [inputValueTime, setInputValueTime] = useState('')
 
   const boardRef = useRef()
 
@@ -66,6 +68,8 @@ export default function App() {
         isAddDateOpen, setIsAddDateOpen,
         validatedValueDate, setValidatedValueDate,
         validatedValueTime, setValidatedValueTime,
+        inputValueDate, setInputValueDate,
+        inputValueTime, setInputValueTime,
         updateSticker,
         updateAllStickers,
         addSticker,

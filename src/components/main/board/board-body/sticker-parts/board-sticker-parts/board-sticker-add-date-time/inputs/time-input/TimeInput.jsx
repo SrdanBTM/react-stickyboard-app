@@ -7,10 +7,12 @@ import { MainContext } from '../../../../../../../../../context-provider/Context
 
 export default function TimeInput() {
 
-  const { setValidatedValueTime } = useContext(MainContext)
+  const { setValidatedValueTime, inputValueTime, setInputValueTime } = useContext(MainContext)
 
 
   function handleChangeTime(e) {
+    setInputValueTime(e.currentTarget.value)
+
     if (e.currentTarget.value.length === 5) {
       const validatedValue = timeValidation(e.currentTarget.value)
       setValidatedValueTime(validatedValue)
@@ -46,6 +48,7 @@ export default function TimeInput() {
         placeholder='hh:mm'
         maxLength={5}
         onChange={handleChangeTime}
+        value={inputValueTime}
       />
     </div>
   )
