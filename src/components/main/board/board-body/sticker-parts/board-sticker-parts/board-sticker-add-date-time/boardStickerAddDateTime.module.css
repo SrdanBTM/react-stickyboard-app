@@ -6,19 +6,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 250px;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
   z-index: 0;
   background-color: var(--sticker-color5);
 }
 
 .content {
   width: 100%;
-  height: 250px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
