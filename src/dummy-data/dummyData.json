@@ -15,7 +15,11 @@
         "positionX": 120,
         "positionY": 80,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "zIndex": 0,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       },
       {
         "stickerId": "s2",
@@ -26,7 +30,10 @@
         "positionX": 340,
         "positionY": 200,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       },
       {
         "stickerId": "s3",
@@ -37,7 +44,10 @@
         "positionX": 220,
         "positionY": 380,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       }
     ]
   },
@@ -57,7 +67,10 @@
         "positionX": 180,
         "positionY": 100,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       },
       {
         "stickerId": "s5",
@@ -68,7 +81,10 @@
         "positionX": 420,
         "positionY": 280,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       }
     ]
   },
@@ -88,7 +104,10 @@
         "positionX": 260,
         "positionY": 150,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       },
       {
         "stickerId": "s7",
@@ -99,7 +118,10 @@
         "positionX": 480,
         "positionY": 340,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       },
       {
         "stickerId": "s8",
@@ -110,7 +132,10 @@
         "positionX": 160,
         "positionY": 420,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       }
     ]
   },
@@ -130,7 +155,10 @@
         "positionX": 140,
         "positionY": 90,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       },
       {
         "stickerId": "s10",
@@ -141,7 +169,10 @@
         "positionX": 380,
         "positionY": 260,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       },
       {
         "stickerId": "s11",
@@ -152,7 +183,10 @@
         "positionX": 240,
         "positionY": 390,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       }
     ]
   },
@@ -172,7 +206,10 @@
         "positionX": 200,
         "positionY": 120,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       },
       {
         "stickerId": "s13",
@@ -183,7 +220,10 @@
         "positionX": 360,
         "positionY": 260,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       },
       {
         "stickerId": "s14",
@@ -194,7 +234,10 @@
         "positionX": 460,
         "positionY": 400,
         "checked": false,
-        "checkedOrder": null
+        "checkedOrder": null,
+        "scheduledDate": "",
+        "scheduletTime": "",
+        "scheduledDayInWeek": ""
       }
     ]
   }
