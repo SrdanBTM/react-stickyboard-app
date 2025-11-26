@@ -7,12 +7,12 @@ import { MainContext } from '../../../../../../../../../context-provider/Context
 
 export default function DateInput() {
 
-  const { setValidatedValueDate, inputValueDate, setInputValueDate  } = useContext(MainContext)
+  const { setDayInWeek, setValidatedValueDate, inputValueDate, setInputValueDate  } = useContext(MainContext)
 
   
   function handleChangeDate(e) {
     setInputValueDate(e.currentTarget.value)
-    
+
     if (e.currentTarget.value.length === 10) {
       const validatedValue = dateValidation(e.currentTarget.value)
       setValidatedValueDate(validatedValue)
@@ -43,6 +43,11 @@ export default function DateInput() {
     if (monthString.length > 2 || month < 1 || month > 12) return false
     if (yearString.length !== 4 || year < currentYear || year > currentYear + 5) return false
 
+
+    const dayInWeekNumber = new Date(year, month - 1, day).getDay()
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    const dayInWeek = days[dayInWeekNumber]
+    setDayInWeek(dayInWeek)
 
     return value
   }
