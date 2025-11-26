@@ -7,27 +7,3 @@
   align-items: center;
 }
 
-
-input {
-  width: 150px;
-  height: 30px;
-  padding: 5px 10px;
-  background-color: transparent;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  font-size: 14px;
-  outline: none;
-  color: var(--font-color1);
-  margin-top: 10px;
-}
-
-input:focus {
-  box-shadow: 0 2px 2px #555, 0 -2px 2px #555;
-}
-
-label {
-  font-size: 14px;
-  margin-right: 5px;
-  color: var(--font-color4);
-  font-weight: 500;
-}
