@@ -26,7 +26,7 @@ export default function Buttons() {
         className={styles.saveButton}
         onClick={handleClickSave}
       >
-        SAVE
+        Save
       </button>
 
       <button
