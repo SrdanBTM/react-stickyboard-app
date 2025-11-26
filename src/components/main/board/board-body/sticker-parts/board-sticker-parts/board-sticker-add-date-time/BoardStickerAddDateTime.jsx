@@ -25,7 +25,7 @@ export default function BoardStickerAddDateTime({ mappedSticker }) {
       <div className={styles.content}>
         <Inputs />
         <Message />
-        <Buttons />
+        <Buttons mappedSticker={mappedSticker} />
       </div>
     </div>
   )
