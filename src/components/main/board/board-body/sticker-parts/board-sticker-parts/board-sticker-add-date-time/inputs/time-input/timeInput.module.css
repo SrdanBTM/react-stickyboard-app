@@ -1,7 +1,8 @@
 
 
 
-input {
+
+.container input {
   width: 150px;
   height: 30px;
   padding: 5px 10px;
@@ -14,11 +15,11 @@ input {
   margin-top: 10px;
 }
 
-input:focus {
+.container input:focus {
   box-shadow: 0 2px 2px #555, 0 -2px 2px #555;
 }
 
-label {
+.container label {
   font-size: 14px;
   margin-right: 5px;
   color: var(--font-color4);

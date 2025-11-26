@@ -7,7 +7,7 @@ import { MainContext } from '../../../../../../../../../context-provider/Context
 
 export default function TimeInput() {
 
-  const { setValidatedValueDate, setValidatedValueTime } = useContext(MainContext)
+  const { setValidatedValueTime } = useContext(MainContext)
 
 
   function handleChangeTime(e) {
@@ -39,7 +39,7 @@ export default function TimeInput() {
 
 
   return (
-    <div>
+    <div className={styles.container}>
       <label>Time : </label>
       <input
         type="text"

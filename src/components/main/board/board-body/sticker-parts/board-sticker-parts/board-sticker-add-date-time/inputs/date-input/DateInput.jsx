@@ -1,13 +1,13 @@
 
 
 import styles from './dateInput.module.css'
-import { useContext, useState, useEffect } from 'react'
+import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
 
 
 export default function DateInput() {
 
-  const { setValidatedValueDate, setValidatedValueTime } = useContext(MainContext)
+  const { setValidatedValueDate } = useContext(MainContext)
 
   
   function handleChangeDate(e) {
@@ -47,7 +47,7 @@ export default function DateInput() {
 
 
   return (
-    <div>
+    <div className={styles.container}>
       <label>Date : </label>
       <input
         type="text"
