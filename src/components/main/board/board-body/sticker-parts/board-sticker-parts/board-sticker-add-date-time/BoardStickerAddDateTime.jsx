@@ -4,7 +4,7 @@ import styles from './boardStickerAddDateTime.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 import Inputs from './inputs/Inputs.jsx'
-import EnteredValue from './entered-value/EnteredValue.jsx'
+import Message from './message/Message.jsx'
 import Buttons from './buttons/Buttons.jsx'
 
 
@@ -24,9 +24,7 @@ export default function BoardStickerAddDateTime({ mappedSticker }) {
     >
       <div className={styles.content}>
         <Inputs />
-        <br/>
-        <EnteredValue />
-        <br/>
+        <Message />
         <Buttons />
       </div>
     </div>
