@@ -7,11 +7,13 @@ import { MainContext } from '../../../../../../../../context-provider/ContextPro
 
 export default function Inputs() {
 
-  const { setIsInputDateValid, setIsInputTimeValid } = useContext(MainContext)
+  const { setValidatedValueDate, setValidatedValueTime } = useContext(MainContext)
 
 
 
-  function dateValidation(dateParts) {
+  function dateValidation(value) {
+
+    const dateParts = value.trim().split('.')
     if (dateParts.length !== 3) return false
 
 
@@ -31,15 +33,17 @@ export default function Inputs() {
     if (yearString.length !== 4 || year < currentYear || year > currentYear + 5) return false
 
 
-    return true
+    return value
   }
 
 
-  function timeValidation(timeParts) {
-    if (timeParts.lengt !== 2) return false
+  function timeValidation(value) {
+
+    const timeParts = value.split(':')
+    if (timeParts.length !== 2) return false
 
     const [hoursString, minutesString] = timeParts
-    if(!/^\d+$/.test(hoursString) || !/^\d+$/.test(minutesString)) return false
+    if (!/^\d+$/.test(hoursString) || !/^\d+$/.test(minutesString)) return false
 
     const hours = parseInt(hoursString)
     const minutes = parseInt(minutesString)
@@ -47,45 +51,53 @@ export default function Inputs() {
     if (hours < 0 || hours > 23) return false
     if (minutes < 0 || minutes > 59) return false
 
-    return true
+    return value
   }
 
 
 
-  function handleBlurDate(e) {
-    if (e.currentTarget.value) {
-      const dateParts = e.currentTarget.value.trim().split('.')
-      const isValid = dateValidation(dateParts)
-      setIsInputDateValid(isValid)
-    }
-  }
-
-  function handleBlurTime(e) {
-    if (e.currentTarget.value) {
-      const timeParts = e.currentTarget.value.split(':')
-      const isValid = timeValidation(timeParts)
-      setIsInputTimeValid(isValid)
+  function handleChangeDate(e) {
+    if (e.currentTarget.value.length === 10) {
+      const validatedValue = dateValidation(e.currentTarget.value)
+      setValidatedValueDate(validatedValue)
+    } else {
+      setValidatedValueDate('init')
     }
   }
 
 
-
+  function handleChangeTime(e) {
+    if (e.currentTarget.value.length === 5) {
+      const validatedValue = timeValidation(e.currentTarget.value)
+      setValidatedValueTime(validatedValue)
+    } else {
+      setValidatedValueTime('init')
+    }
+  }
 
 
 
   return (
     <div className={styles.container}>
-      <input
-        type="text"
-        placeholder='Write date'
-        onBlur={handleBlurDate}
-      />
+      <div>
+        <label>Date : </label>
+        <input
+          type="text"
+          placeholder='dd.mm.yyyy'
+          maxLength={10}
+          onChange={handleChangeDate}
+        />
+      </div>
 
-      <input
-        type="text"
-        placeholder='Write time'
-        onBlur={handleBlurTime}
-      />
+      <div>
+        <label>Time : </label>
+        <input
+          type="text"
+          placeholder='hh:mm'
+          maxLength={5}
+          onChange={handleChangeTime}
+        />
+      </div>
     </div>
   )
 }
