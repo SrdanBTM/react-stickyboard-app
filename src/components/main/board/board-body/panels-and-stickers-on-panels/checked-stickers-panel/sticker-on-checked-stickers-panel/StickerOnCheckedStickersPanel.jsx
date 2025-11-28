@@ -11,8 +11,8 @@ import { MainContext } from '../../../../../../../context-provider/ContextProvid
 
 export default function StickerOnCheckedStickersPanel({ topPosition, mappedSticker, setRandomUUID }) {
 
+  const { boardRef, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
   const [isMouseDown, setIsMouseDown] = useState(false)
-  const { updateSticker, boardRef, currentBoardId, setBoards, boards } = useContext(MainContext)
   const stickerRef = useRef()
   const [isDragged, setIsDragged] = useState(false)
 
@@ -93,8 +93,8 @@ export default function StickerOnCheckedStickersPanel({ topPosition, mappedStick
       onDragEnd={handleDragEnd}
     >
       <CheckedStickerTitle mappedSticker={mappedSticker} isDragged={isDragged} />
-      <CheckedStickerNote mappedSticker={mappedSticker} isDragged={isDragged} />
       <CheckedStickerCheck />
+      <CheckedStickerNote mappedSticker={mappedSticker} isDragged={isDragged} />
     </motion.div>
   )
 }
