@@ -17,9 +17,12 @@
         "checked": false,
         "checkedOrder": null,
         "zIndex": 0,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       },
       {
         "stickerId": "s2",
@@ -31,9 +34,13 @@
         "positionY": 200,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       },
       {
         "stickerId": "s3",
@@ -45,9 +52,13 @@
         "positionY": 380,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       }
     ]
   },
@@ -68,9 +79,13 @@
         "positionY": 100,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       },
       {
         "stickerId": "s5",
@@ -82,9 +97,13 @@
         "positionY": 280,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       }
     ]
   },
@@ -105,9 +124,13 @@
         "positionY": 150,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       },
       {
         "stickerId": "s7",
@@ -119,9 +142,13 @@
         "positionY": 340,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       },
       {
         "stickerId": "s8",
@@ -133,9 +160,13 @@
         "positionY": 420,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       }
     ]
   },
@@ -156,9 +187,13 @@
         "positionY": 90,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       },
       {
         "stickerId": "s10",
@@ -170,9 +205,13 @@
         "positionY": 260,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       },
       {
         "stickerId": "s11",
@@ -184,9 +223,13 @@
         "positionY": 390,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       }
     ]
   },
@@ -207,9 +250,13 @@
         "positionY": 120,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       },
       {
         "stickerId": "s13",
@@ -221,9 +268,13 @@
         "positionY": 260,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       },
       {
         "stickerId": "s14",
@@ -235,9 +286,13 @@
         "positionY": 400,
         "checked": false,
         "checkedOrder": null,
-        "scheduledDate": "",
-        "scheduletTime": "",
-        "scheduledDayInWeek": ""
+        "zIndex": 0,
+        "dateInput": null,
+        "timeInput": null,
+        "date": null,
+        "time": null,
+        "dayinWeek": null,
+        "isDateTimeValid": null
       }
     ]
   }
