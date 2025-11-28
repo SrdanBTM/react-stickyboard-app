@@ -1,27 +1,30 @@
 
 
 import styles from './dateInput.module.css'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function DateInput() {
+export default function DateInput({ mappedSticker }) {
 
-  const { setDayInWeek, setValidatedValueDate, inputValueDate, setInputValueDate  } = useContext(MainContext)
+  const { currentBoardId, setBoards, updateSticker } = useContext(MainContext)
+  const [inputValue, setInputValue] = useState('')
 
-  
+
+  useEffect(() => {
+    setInputValue(mappedSticker.date ? mappedSticker.date : '')
+  }, [mappedSticker.isAddDateTimeOpened])
+
+
   function handleChangeDate(e) {
-    setInputValueDate(e.currentTarget.value)
+    setInputValue(e.currentTarget.value)
 
-    if (e.currentTarget.value.length === 10) {
-      const validatedValue = dateValidation(e.currentTarget.value)
-      setValidatedValueDate(validatedValue)
-    } else {
-      setValidatedValueDate('init')
-    }
+    const currentStickerId = mappedSticker.stickerId
+    const propertyToUpdate = { key: 'isDateTimeValid', value: null }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
   }
 
-  
+
   function dateValidation(value) {
 
     const dateParts = value.trim().split('.')
@@ -43,14 +46,22 @@ export default function DateInput() {
     if (monthString.length > 2 || month < 1 || month > 12) return false
     if (yearString.length !== 4 || year < currentYear || year > currentYear + 5) return false
 
-
-    const dayInWeekNumber = new Date(year, month - 1, day).getDay()
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    const dayInWeek = days[dayInWeekNumber]
-    setDayInWeek(dayInWeek)
-
-    return value
+    return true
   }
+
+
+  useEffect(() => {
+    const isValid = dateValidation(inputValue)
+    const currentStickerId = mappedSticker.stickerId
+
+    const propertyToUpdate = { key: 'dateInput', value: isValid ? inputValue : null }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
+
+    if (inputValue === 0) {
+      const propertyToUpdate = { key: 'isDateTimeValid', value: null }
+      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
+    }
+  }, [inputValue])
 
 
   return (
@@ -61,7 +72,7 @@ export default function DateInput() {
         placeholder='dd.mm.yyyy'
         maxLength={10}
         onChange={handleChangeDate}
-        value={inputValueDate}
+        value={inputValue}
       />
     </div>
   )

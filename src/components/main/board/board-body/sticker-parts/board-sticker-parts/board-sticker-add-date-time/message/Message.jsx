@@ -5,32 +5,30 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function Message() {
+export default function Message({ mappedSticker }) {
 
-  const { validatedValueDate, validatedValueTime, dayInWeek } = useContext(MainContext)
+  const { } = useContext(MainContext)
 
 
-  const invalidFormatMessage = 'Invalid date or time format.'
-  let confirmMessage = null
+  let message = ''
+  if (mappedSticker.isDateValid && mappedSticker.isTimeValid) {
+    message = `${mappedSticker.dateInput} | ${mappedSticker.dayInWeek} | ${mappedSticker.timeInput}`
 
-  if (validatedValueDate && validatedValueDate !== 'init' 
-    && validatedValueTime && validatedValueTime !== 'init' ) {
-
-    confirmMessage = validatedValueDate !== false
-      && validatedValueTime !== false
-      && `${validatedValueDate} | ${dayInWeek} | ${validatedValueTime}`
+  } else if (mappedSticker.isDateTimeValid === false) {
+    message = 'Invalid date or time format.'
   }
-
 
 
   return (
     <div
       className={styles.container}
       style={{
-        color: !validatedValueDate || !validatedValueTime ? '#9d0000' : 'var(--font-color1)'
+        color: mappedSticker.isDateTimeValid === false ? '#9d0000' : 'var(--font-color1)'
       }}
     >
-      <span>{!validatedValueDate || !validatedValueTime ? invalidFormatMessage : confirmMessage}</span>
+      <span>{message}</span>
     </div>
   )
 }
+
+
