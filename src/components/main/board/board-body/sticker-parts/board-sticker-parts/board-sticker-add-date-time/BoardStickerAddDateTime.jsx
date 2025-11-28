@@ -1,8 +1,6 @@
 
 
 import styles from './boardStickerAddDateTime.module.css'
-import { useContext } from 'react'
-import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 import Inputs from './inputs/Inputs.jsx'
 import Message from './message/Message.jsx'
 import Buttons from './buttons/Buttons.jsx'
@@ -10,21 +8,18 @@ import Buttons from './buttons/Buttons.jsx'
 
 export default function BoardStickerAddDateTime({ mappedSticker }) {
 
-  const { isAddDateOpen } = useContext(MainContext)
-
-
   return (
     <div
       className={styles.container}
       style={{
-        transform: isAddDateOpen === mappedSticker.stickerId ? 'scale(1)' : 'scale(0)',
+        transform: mappedSticker.isAddDateTimeOpened ? 'scale(1)' : 'scale(0)',
         transition: 'transform 0.3s ease',
         backgroundColor: mappedSticker.color
       }}
     >
       <div className={styles.content}>
-        <Inputs />
-        <Message />
+        <Inputs mappedSticker={mappedSticker} />
+        <Message mappedSticker={mappedSticker} />
         <Buttons mappedSticker={mappedSticker} />
       </div>
     </div>
