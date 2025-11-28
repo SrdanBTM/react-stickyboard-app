@@ -1,14 +1,16 @@
 
 
+
 .container {
-  width: 190px;
+  width: 230px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 .closeButton,
-.saveButton {
+.saveButton,
+.deleteButton {
   width: 70px;
   padding: 6px 0;
   background-color: var(--bg-color1);
@@ -19,7 +21,8 @@
 }
 
 .closeButton:hover,
-.saveButton:hover {
+.saveButton:hover,
+.deleteButton:hover {
   cursor: pointer;
   box-shadow: 0 0 4px #666;
 }
@@ -32,14 +35,25 @@
   background-color: rgb(15, 39, 7);
 }
 
-.closeButton:focus {
-  background-color: rgb(15, 34, 57);
+.deleteButton:hover {
+  background-color: rgb(55, 9, 9);
+}
+
+.closeButton,
+.saveButton,
+.deleteButton {
   box-shadow: 0 0 4px #666;
   outline: none;
 }
 
+.closeButton:focus {
+  background-color: rgb(15, 34, 57);
+}
+
 .saveButton:focus {
   background-color: rgb(15, 39, 7);
-  box-shadow: 0 0 4px #666;
-  outline: none;
+}
+
+.deleteButton:focus {
+  background-color: rgb(55, 9, 9);
 }
