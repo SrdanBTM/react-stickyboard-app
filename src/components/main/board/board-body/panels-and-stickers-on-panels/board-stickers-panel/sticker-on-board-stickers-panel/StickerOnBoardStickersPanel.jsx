@@ -8,11 +8,12 @@ import BoardStickerHeader from '../../../sticker-parts/board-sticker-parts/board
 import BoardStickerNote from '../../../sticker-parts/board-sticker-parts/board-sticker-note/BoardStickerNote.jsx'
 import BoardStickerFooter from '../../../sticker-parts/board-sticker-parts/board-sticker-footer/BoardStickerFooter.jsx'
 import BoardStickerAddDateTime from '../../../sticker-parts/board-sticker-parts/board-sticker-add-date-time/BoardStickerAddDateTime.jsx'
+import BoardStickerDateTime from '../../../sticker-parts/board-sticker-parts/board-sticker-date-time/BoardStickerDateTime.jsx'
 
 
 export default function StickerOnBoard({ mappedSticker }) {
 
-  const { updateAllStickers, checkedStickerId, boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
+  const { boards, updateAllStickers, checkedStickerId, boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
   const stickerRef = useRef()
   const [constraints, setConstraints] = useState()
   const dragControl = useDragControls()
@@ -75,11 +76,10 @@ export default function StickerOnBoard({ mappedSticker }) {
       }}
     >
       <BoardStickerPin dragControl={dragControl} />
-
+      {mappedSticker.date && mappedSticker.time && <BoardStickerDateTime mappedSticker={mappedSticker} />}
       <BoardStickerHeader mappedSticker={mappedSticker} />
       <BoardStickerNote mappedSticker={mappedSticker} />
       <BoardStickerFooter mappedSticker={mappedSticker} />
-
       <BoardStickerAddDateTime mappedSticker={mappedSticker} />
 
     </motion.div>
