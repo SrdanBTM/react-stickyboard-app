@@ -7,11 +7,13 @@ import { MainContext } from '../../../../../../../../context-provider/ContextPro
 export default function AddDateIcon({ mappedSticker }) {
 
   const BASE_URL = import.meta.env.BASE_URL
-  const { setIsAddDateOpen } = useContext(MainContext)
+  const { setBoards, updateSticker, currentBoardId } = useContext(MainContext)
+  const currentStickerId = mappedSticker.stickerId
 
 
   function handleClick() {
-    setIsAddDateOpen(mappedSticker.stickerId)
+    const propertyToUpdate = {key: 'isAddDateTimeOpened', value: true}
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
   }
 
 
