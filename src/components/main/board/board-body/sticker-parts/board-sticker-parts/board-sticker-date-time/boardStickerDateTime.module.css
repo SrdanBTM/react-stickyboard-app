@@ -1,0 +1,17 @@
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+  background-color: rgba(0,0,0,0.3);
+  padding: 10px 10px 7px 10px;
+}
+
+.container span {
+  font-size: 14px;
+  color: var(--font-color4);
+  font-style: italic;
+}
