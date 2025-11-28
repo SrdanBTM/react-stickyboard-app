@@ -18,7 +18,10 @@ export default function StickerNote({ mappedSticker }) {
 
   return (
     <div
-      className={styles.container}
+      className={`
+        ${styles.container} 
+        ${mappedSticker.date && mappedSticker.time ? styles.dateTime : styles.noDateTime}
+        `}
     >
       <div className={styles.textarea}>
         <textarea

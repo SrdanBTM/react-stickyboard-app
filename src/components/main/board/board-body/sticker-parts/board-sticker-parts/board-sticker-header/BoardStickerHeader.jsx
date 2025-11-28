@@ -7,7 +7,10 @@ import StickerCheck from './sticker-check/StickerCheck.jsx'
 
 export default function StickerHeader({ mappedSticker }) {
   return (
-    <div className={styles.container}>
+    <div className={`
+      ${styles.container} 
+      ${mappedSticker.date && mappedSticker.time ? styles.dateTime : styles.noDateTime}
+      `}>
       <StickerTitle mappedSticker={mappedSticker} />
       <StickerCheck mappedSticker={mappedSticker} />
     </div>

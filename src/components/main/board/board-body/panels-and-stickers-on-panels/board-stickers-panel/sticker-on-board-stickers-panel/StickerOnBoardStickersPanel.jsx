@@ -76,8 +76,8 @@ export default function StickerOnBoard({ mappedSticker }) {
       }}
     >
       <BoardStickerPin dragControl={dragControl} />
-      {mappedSticker.date && mappedSticker.time && <BoardStickerDateTime mappedSticker={mappedSticker} />}
       <BoardStickerHeader mappedSticker={mappedSticker} />
+      {mappedSticker.date && mappedSticker.time && <BoardStickerDateTime mappedSticker={mappedSticker} />}
       <BoardStickerNote mappedSticker={mappedSticker} />
       <BoardStickerFooter mappedSticker={mappedSticker} />
       <BoardStickerAddDateTime mappedSticker={mappedSticker} />
