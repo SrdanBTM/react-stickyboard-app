@@ -20,9 +20,13 @@ export const stickerTemplate = {
   checked: false,
   checkedOrder: null,
   zIndex: 0,
-  scheduledDate: '',
-  scheduletTime: '',
-  scheduledDayInWeek: ''
+  dateInput: null,
+  timeInput: null,
+  date: null,
+  time: null,
+  dayinWeek: null,
+  isDateTimeValid: null,
+  isAddDateTimeOpened: false
 }
 
 
