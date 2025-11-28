@@ -33,12 +33,6 @@ export default function App() {
   const [searchValue, setSearchValue] = useState('')
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
-  const [isAddDateOpen, setIsAddDateOpen] = useState(null)
-  const [validatedValueDate, setValidatedValueDate] = useState('init')
-  const [validatedValueTime, setValidatedValueTime] = useState('init')
-  const [dayInWeek, setDayInWeek] = useState(null)
-  const [inputValueDate, setInputValueDate] = useState('')
-  const [inputValueTime, setInputValueTime] = useState('')
 
 
   const boardRef = useRef()
@@ -67,12 +61,6 @@ export default function App() {
         searchValue, setSearchValue,
         checkedOrderCounter, setCheckedOrderCounter,
         checkedStickerId, setCheckedStickerId,
-        isAddDateOpen, setIsAddDateOpen,
-        validatedValueDate, setValidatedValueDate,
-        validatedValueTime, setValidatedValueTime,
-        inputValueDate, setInputValueDate,
-        inputValueTime, setInputValueTime,
-        dayInWeek, setDayInWeek,
         updateSticker,
         updateAllStickers,
         addSticker,
