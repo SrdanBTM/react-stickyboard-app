@@ -1,13 +1,13 @@
 
 
 import styles from './message.module.css'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
 
 
 export default function Message({ mappedSticker }) {
 
-  const { } = useContext(MainContext)
+  const { isAddDateTimeOpened } = useContext(MainContext)
 
 
   let message = ''
@@ -17,6 +17,10 @@ export default function Message({ mappedSticker }) {
   } else if (mappedSticker.isDateTimeValid === false) {
     message = 'Invalid date or time format.'
   }
+
+  useEffect(() => {
+    message = ''
+  }, [isAddDateTimeOpened])
 
 
   return (
