@@ -7,8 +7,10 @@ import BoardStickerPin from '../../../sticker-parts/board-sticker-parts/board-st
 import BoardStickerHeader from '../../../sticker-parts/board-sticker-parts/board-sticker-header/BoardStickerHeader.jsx'
 import BoardStickerNote from '../../../sticker-parts/board-sticker-parts/board-sticker-note/BoardStickerNote.jsx'
 import BoardStickerFooter from '../../../sticker-parts/board-sticker-parts/board-sticker-footer/BoardStickerFooter.jsx'
-import BoardStickerAddDateTime from '../../../sticker-parts/board-sticker-parts/board-sticker-add-date-time/BoardStickerAddDateTime.jsx'
 import BoardStickerDateTime from '../../../sticker-parts/board-sticker-parts/board-sticker-date-time/BoardStickerDateTime.jsx'
+import BoardStickerAddDateTime from '../../../sticker-parts/board-sticker-parts/board-sticker-add-date-time/BoardStickerAddDateTime.jsx'
+import BoardStickerDelete from '../../../sticker-parts/board-sticker-parts/board-sticker-delete/BoardStickerDelete.jsx'
+import BoardStickerChangeColor from '../../../sticker-parts/board-sticker-parts/board-sticker-change-color/BoardStickerChangeColor.jsx'
 
 
 export default function StickerOnBoard({ mappedSticker }) {
@@ -81,6 +83,8 @@ export default function StickerOnBoard({ mappedSticker }) {
       <BoardStickerNote mappedSticker={mappedSticker} />
       <BoardStickerFooter mappedSticker={mappedSticker} />
       <BoardStickerAddDateTime mappedSticker={mappedSticker} />
+      <BoardStickerChangeColor mappedSticker={mappedSticker} />
+      <BoardStickerDelete mappedSticker={mappedSticker} />
 
     </motion.div>
   )

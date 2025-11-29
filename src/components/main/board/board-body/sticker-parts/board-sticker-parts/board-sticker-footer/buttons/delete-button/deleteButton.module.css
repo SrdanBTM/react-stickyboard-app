@@ -1,0 +1,23 @@
+
+
+.container {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.container img {
+  width: 20px;
+  height: 20px;
+}
+
+.container:hover {
+  transform: scale(1.2);
+}

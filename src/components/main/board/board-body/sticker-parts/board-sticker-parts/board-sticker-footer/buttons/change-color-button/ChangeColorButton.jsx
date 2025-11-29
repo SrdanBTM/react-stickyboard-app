@@ -1,11 +1,12 @@
 
 
-import styles from './addDateButton.module.css'
+
+import styles from './changeColorButton.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function AddDateIcon({ mappedSticker }) {
+export default function ChangeColorButton({ mappedSticker }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const { setBoards, updateSticker, currentBoardId } = useContext(MainContext)
@@ -13,19 +14,17 @@ export default function AddDateIcon({ mappedSticker }) {
 
 
   function handleClick() {
-    const propertyToUpdate = {key: 'isAddDateTimeOpened', value: true}
+    const propertyToUpdate = { key: 'isChangeColorOpen', value: true }
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
   }
 
 
   return (
-    <div
+    <button
       className={styles.container}
       onClick={handleClick}
     >
-      <div className={styles.image}>
-        <img src={`${BASE_URL}images/icon-date2.png`} alt="add date" />
-      </div>
-    </div>
+      <img src={`${BASE_URL}images/icon-palette1.png`} alt="change color" />
+    </button>
   )
 }

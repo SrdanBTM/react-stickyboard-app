@@ -1,19 +1,15 @@
 
 
 import styles from './boardStickerFooter.module.css'
-import ChangeColor from './change-color/ChangeColor.jsx'
+import Buttons from './buttons/Buttons.jsx'
 import BoardName from './board-name/BoardName.jsx'
-import Delete from './delete/Delete.jsx'
-import AddDateButton from './add-date-button/AddDateButton.jsx'
 
 
-export default function StickerFooter({ mappedSticker }) {
+export default function BoardStickerFooter({ mappedSticker }) {
   return (
     <div className={styles.container}>
       {/* <BoardName mappedSticker={mappedSticker} /> */}
-      <Delete mappedSticker={mappedSticker} />
-      <AddDateButton mappedSticker={mappedSticker} />
-      <ChangeColor mappedSticker={mappedSticker} />
+      <Buttons mappedSticker={mappedSticker} />
     </div>
   )
 }

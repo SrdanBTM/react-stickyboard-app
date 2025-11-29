@@ -3,7 +3,7 @@
 import styles from './colorsPalette.module.css'
 import { motion } from 'framer-motion'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx';
+import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
 
 
 export default function Colors({ mappedSticker }) {
