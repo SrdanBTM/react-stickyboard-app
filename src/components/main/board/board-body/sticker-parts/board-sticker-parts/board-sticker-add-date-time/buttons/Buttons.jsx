@@ -8,10 +8,13 @@ import DeleteButton from './delete-button/DeleteButton.jsx'
 
 export default function Buttons({ mappedSticker }) {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ width: mappedSticker.isDateTimeValid ? '220px' : '150px' }}
+    >
       <SaveButton mappedSticker={mappedSticker} />
       <BackButton mappedSticker={mappedSticker} />
-      <DeleteButton mappedSticker={mappedSticker} />
+      {mappedSticker.isDateTimeValid && <DeleteButton mappedSticker={mappedSticker} />}
     </div>
   )
 }
