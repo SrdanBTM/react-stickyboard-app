@@ -7,7 +7,7 @@ import { MainContext } from '../../../../../../../../context-provider/ContextPro
 
 export default function Message({ mappedSticker }) {
 
-  const { isAddDateTimeOpened } = useContext(MainContext)
+  const { isAddDateTimeOpen } = useContext(MainContext)
 
 
   let message = ''
@@ -20,7 +20,7 @@ export default function Message({ mappedSticker }) {
 
   useEffect(() => {
     message = ''
-  }, [isAddDateTimeOpened])
+  }, [isAddDateTimeOpen])
 
 
   return (

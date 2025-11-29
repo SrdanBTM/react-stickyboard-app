@@ -13,7 +13,7 @@ export default function BackButton({ mappedSticker }) {
 
 
   function handleClick() {
-    const propertyToUpdate = { key: 'isAddDateTimeOpened', value: false }
+    const propertyToUpdate = { key: 'isAddDateTimeOpen', value: false }
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
   }
 

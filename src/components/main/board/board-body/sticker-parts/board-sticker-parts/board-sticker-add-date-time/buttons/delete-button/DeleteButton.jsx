@@ -19,7 +19,7 @@ export default function DeleteButton({ mappedSticker }) {
     const propertyToUpdate4 = { key: 'date', value: null }
     const propertyToUpdate5 = { key: 'time', value: null }
     const propertyToUpdate6 = { key: 'dayInWeek', value: null }
-    const propertyToUpdate7 = { key: 'isAddDateTimeOpened', value: false }
+    const propertyToUpdate7 = { key: 'isAddDateTimeOpen', value: false }
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate3)

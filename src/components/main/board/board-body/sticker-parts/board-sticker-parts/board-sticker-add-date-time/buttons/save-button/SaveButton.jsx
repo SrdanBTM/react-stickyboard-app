@@ -28,7 +28,7 @@ export default function SaveButton({ mappedSticker }) {
       const propertyToUpdate2 = { key: 'date', value: mappedSticker.dateInput }
       const propertyToUpdate3 = { key: 'time', value: mappedSticker.timeInput }
       const propertyToUpdate4 = { key: 'dayInWeek', value: dayInWeek }
-      const propertyToUpdate5 = { key: 'isAddDateTimeOpened', value: false }
+      const propertyToUpdate5 = { key: 'isAddDateTimeOpen', value: false }
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate3)

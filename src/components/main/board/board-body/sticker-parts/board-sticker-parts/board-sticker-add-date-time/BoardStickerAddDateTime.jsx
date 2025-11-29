@@ -12,7 +12,7 @@ export default function BoardStickerAddDateTime({ mappedSticker }) {
     <div
       className={styles.container}
       style={{
-        transform: mappedSticker.isAddDateTimeOpened ? 'scale(1)' : 'scale(0)',
+        transform: mappedSticker.isAddDateTimeOpen ? 'scale(1)' : 'scale(0)',
         transition: 'transform 0.3s ease',
         backgroundColor: mappedSticker.color
       }}

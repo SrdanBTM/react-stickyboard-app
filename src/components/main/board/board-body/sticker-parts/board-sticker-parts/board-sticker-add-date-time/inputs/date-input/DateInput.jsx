@@ -13,7 +13,7 @@ export default function DateInput({ mappedSticker }) {
 
   useEffect(() => {
     setInputValue(mappedSticker.date ? mappedSticker.date : '')
-  }, [mappedSticker.isAddDateTimeOpened])
+  }, [mappedSticker.isAddDateTimeOpen])
 
 
   function handleChangeDate(e) {
