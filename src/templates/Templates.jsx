@@ -26,7 +26,9 @@ export const stickerTemplate = {
   time: null,
   dayinWeek: null,
   isDateTimeValid: null,
-  isAddDateTimeOpened: false
+  isAddDateTimeOpen: false,
+  isDeleteOpen: false,
+  isChangeColorOpen: false
 }
 
 

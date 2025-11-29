@@ -22,7 +22,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       },
       {
         "stickerId": "s2",
@@ -40,7 +43,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       },
       {
         "stickerId": "s3",
@@ -58,7 +64,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       }
     ]
   },
@@ -85,7 +94,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       },
       {
         "stickerId": "s5",
@@ -103,7 +115,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       }
     ]
   },
@@ -130,7 +145,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       },
       {
         "stickerId": "s7",
@@ -148,7 +166,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       },
       {
         "stickerId": "s8",
@@ -166,7 +187,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       }
     ]
   },
@@ -193,7 +217,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       },
       {
         "stickerId": "s10",
@@ -211,7 +238,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       },
       {
         "stickerId": "s11",
@@ -229,7 +259,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       }
     ]
   },
@@ -256,7 +289,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       },
       {
         "stickerId": "s13",
@@ -274,7 +310,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       },
       {
         "stickerId": "s14",
@@ -292,7 +331,10 @@
         "date": null,
         "time": null,
         "dayinWeek": null,
-        "isDateTimeValid": null
+        "isDateTimeValid": null,
+        "isAddDateTimeOpen": false,
+        "isDeleteOpen": false,
+        "isChangeColorOpen": false
       }
     ]
   }
