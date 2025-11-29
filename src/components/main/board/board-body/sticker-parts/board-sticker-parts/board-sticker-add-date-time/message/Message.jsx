@@ -15,7 +15,7 @@ export default function Message({ mappedSticker }) {
     message = `${mappedSticker.dateInput} | ${mappedSticker.dayInWeek} | ${mappedSticker.timeInput}`
 
   } else if (mappedSticker.isDateTimeValid === false) {
-    message = 'Invalid date or time format.'
+    message = 'Invalid date or time value.'
   }
 
   useEffect(() => {
