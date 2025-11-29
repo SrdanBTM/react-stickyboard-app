@@ -41,10 +41,17 @@ export default function DateInput({ mappedSticker }) {
 
     const daysInEnteredMonth = new Date(year, month, 0).getDate()
     const currentYear = new Date().getFullYear()
+    const currentMonth = new Date().getMonth() + 1
+    const currentDay = new Date().getDate()
 
     if (dayString.length > 2 || day < 1 || day > daysInEnteredMonth) return false
     if (monthString.length > 2 || month < 1 || month > 12) return false
-    if (yearString.length !== 4 || year < currentYear || year > currentYear + 5) return false
+    if (yearString.length !== 4) return false
+
+    if (year < currentYear || year > currentYear + 10) return false
+    if (year === currentYear && month < currentMonth) return false
+    if (year === currentYear && month <= currentMonth && day < currentDay) return false
+
 
     return true
   }
