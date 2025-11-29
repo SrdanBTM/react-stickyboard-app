@@ -2,58 +2,9 @@
 
 
 .container {
-  width: 230px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.closeButton,
-.saveButton,
-.deleteButton {
-  width: 70px;
-  padding: 6px 0;
-  background-color: var(--bg-color1);
-  border-radius: 5px;
-  color: var(--font-color1);
-  border: none;
-  font-size: 14px;
-}
-
-.closeButton:hover,
-.saveButton:hover,
-.deleteButton:hover {
-  cursor: pointer;
-  box-shadow: 0 0 4px #666;
-}
-
-.closeButton:hover {
-  background-color: rgb(15, 34, 57);
-}
-
-.saveButton:hover {
-  background-color: rgb(15, 39, 7);
-}
-
-.deleteButton:hover {
-  background-color: rgb(55, 9, 9);
-}
-
-.closeButton,
-.saveButton,
-.deleteButton {
-  box-shadow: 0 0 4px #666;
-  outline: none;
-}
-
-.closeButton:focus {
-  background-color: rgb(15, 34, 57);
-}
-
-.saveButton:focus {
-  background-color: rgb(15, 39, 7);
-}
-
-.deleteButton:focus {
-  background-color: rgb(55, 9, 9);
-}
