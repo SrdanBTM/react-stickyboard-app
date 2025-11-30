@@ -1,18 +1,20 @@
 
 
 
+
 .container {
-  width: 40px;
-  height: 40px;
+  flex: 1;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   cursor: pointer;
   background-color: transparent;
   border: none;
   outline: none;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.3s ease;
+  position: relative;
+  background-color: rgba(0,0,0,0.35);
 }
 
 .container img {
@@ -22,6 +24,5 @@
 
 .container:hover,
 .container:focus {
-  box-shadow: inset 0 0 4px #555;
-  background-color: rgb(55, 9, 9);
+  background-color: rgba(0,0,0,0.1);
 }

@@ -1,15 +1,15 @@
 
 
-import styles from './deleteButton.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
+import BoardStickerModalButton from '../../../board-sticker-modal-button/BoardStickerModalButton.jsx'
 
 
-export default function DeleteButton({ mappedSticker }) {
+export default function ClearDateButton({ mappedSticker }) {
+
 
   const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
-  const BASE_URL = import.meta.env.BASE_URL
 
 
   function handleClick() {
@@ -30,12 +30,15 @@ export default function DeleteButton({ mappedSticker }) {
   }
 
 
-  return (
-    <button
-      className={styles.container}
-      onClick={handleClick}
-    >
-      <img src={`${BASE_URL}images/icon-delete5.png`} alt="save" />
-    </button>
-  )
+  const props = {
+    handleClick: handleClick,
+    imgPath: 'images/icon-clear3.png',
+    imgAlt: 'clear',
+    title: 'Clear',
+    mappedSticker: mappedSticker
+  }
+
+
+  return <BoardStickerModalButton props={props}  />
+
 }

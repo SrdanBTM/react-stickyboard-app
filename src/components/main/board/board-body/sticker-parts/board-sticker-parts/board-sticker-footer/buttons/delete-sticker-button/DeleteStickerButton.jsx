@@ -1,14 +1,13 @@
 
 
 
-import styles from './deleteButton.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
+import BoardStickerFooterButton from '../../../board-sticker-footer-button/BoardStickerFooterButton.jsx'
 
 
-export default function DeleteButton({ mappedSticker }) {
+export default function DeleteStickerButton({ mappedSticker }) {
 
-  const BASE_URL = import.meta.env.BASE_URL
   const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
 
@@ -19,12 +18,12 @@ export default function DeleteButton({ mappedSticker }) {
   }
 
 
-  return (
-    <button
-      className={styles.container}
-      onClick={handleClick}
-    >
-      <img src={`${BASE_URL}images/icon-delete5.png`} alt="delete" />
-    </button>
-  )
+  const props = {
+    handleClick: handleClick,
+    imgPath: 'images/icon-delete5.png',
+    imgAlt: 'delete'
+  }
+
+
+  return <BoardStickerFooterButton props={props} />
 }

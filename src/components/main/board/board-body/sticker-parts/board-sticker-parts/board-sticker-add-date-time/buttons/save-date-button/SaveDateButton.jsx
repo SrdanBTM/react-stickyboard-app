@@ -1,15 +1,14 @@
 
 
-import styles from './saveButton.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
+import BoardStickerModalButton from '../../../board-sticker-modal-button/BoardStickerModalButton.jsx'
 
 
-export default function SaveButton({ mappedSticker }) {
+export default function SaveDateButton({ mappedSticker }) {
 
   const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
-  const BASE_URL = import.meta.env.BASE_URL
 
 
   function findDayInWeek(dateInput) {
@@ -41,12 +40,14 @@ export default function SaveButton({ mappedSticker }) {
   }
 
 
-  return (
-    <button
-      className={styles.container}
-      onClick={handleClick}
-    >
-      <img src={`${BASE_URL}images/icon-save1.png`} alt="save" />
-    </button>
-  )
+  const props = {
+    handleClick: handleClick,
+    imgPath: 'images/icon-save1.png',
+    imgAlt: 'save',
+    title: 'Save',
+    mappedSticker: mappedSticker
+  }
+
+
+  return <BoardStickerModalButton props={props} />
 }

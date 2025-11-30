@@ -1,15 +1,14 @@
 
 
-import styles from './backButton.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
+import BoardStickerFooterButton from '../../../board-sticker-footer-button/BoardStickerFooterButton.jsx'
 
 
 export default function BackButton({ mappedSticker }) {
 
   const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
-  const BASE_URL = import.meta.env.BASE_URL
 
 
   function handleClick() {
@@ -18,12 +17,12 @@ export default function BackButton({ mappedSticker }) {
   }
 
 
-  return (
-    <button
-      className={styles.container}
-      onClick={handleClick}
-    >
-      <img src={`${BASE_URL}images/icon-back1.png`} alt="save" />
-    </button>
-  )
+  const props = {
+    handleClick: handleClick,
+    imgPath: 'images/icon-back1.png',
+    imgAlt: 'back'
+  }
+
+
+  return <BoardStickerFooterButton props={props} />
 }
