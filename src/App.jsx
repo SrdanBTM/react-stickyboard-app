@@ -8,7 +8,8 @@ import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 import { MainProvider } from './context-provider/ContextProvider.jsx'
 import { useState, useRef, useEffect } from 'react'
 import dummyData from './dummy-data/dummyData.json'
-import { updateSticker, updateAllStickers, addSticker, deleteSticker, addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-functions/HelperFunctions.jsx'
+import { updateSticker, updateAllStickers, addSticker, deleteSticker, } from './helper-functions/HelperFunctionsHandleSticker.jsx'
+import { addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function App() {
@@ -46,13 +47,18 @@ export default function App() {
   return (
     <MainProvider
       value={{
+        // templates
+        boardTemplate,
+        stickerTemplate,
+
+        // refs
+        boardRef,
+
+        // states
         boards, setBoards,
         theme, setTheme,
         currentBoardId, setCurrentBoardId,
         isDeleteBoardModalOpen, setIsDeleteBoardModalOpen,
-        boardTemplate,
-        stickerTemplate,
-        boardRef,
         clickedElementOnApp, setClickedElementOnApp,
         isClickedOutsideBoardList, setIsClickedOutsideBoardList,
         isClickedOutsideNewBoard, setIsClickedOutsideNewBoard,
@@ -61,14 +67,19 @@ export default function App() {
         searchValue, setSearchValue,
         checkedOrderCounter, setCheckedOrderCounter,
         checkedStickerId, setCheckedStickerId,
+
+        //helper functions handle sticker
         updateSticker,
         updateAllStickers,
         addSticker,
         deleteSticker,
+
+        //helper functions handle board
         addBoard,
         updateBoard,
         updateAllBoards,
         deleteBoard
+        
       }}>
       <div className={`app ${theme}`} onClick={handleClick}>
         <ClickOutsideElement />
