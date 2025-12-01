@@ -26,8 +26,14 @@ export default function ChangeColorButton({ mappedSticker }) {
   return (
     <BoardStickerFooterButtonWraper>
       <button onClick={handleClick}>
-        <img src={`${BASE_URL}images/icon-palette1.png`} alt='change color' />
+        {mappedSticker.isChangeColorModalOpen
+          ? <img src={`${BASE_URL}images/icon-close6.png`} alt='close' />
+          : <img src={`${BASE_URL}images/icon-palette1.png`} alt='change color' />
+        }
       </button>
     </BoardStickerFooterButtonWraper>
   )
 }
+
+
+

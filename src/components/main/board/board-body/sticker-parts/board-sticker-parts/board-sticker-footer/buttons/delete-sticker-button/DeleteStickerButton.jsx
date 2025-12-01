@@ -22,11 +22,14 @@ export default function DeleteStickerButton({ mappedSticker }) {
     }
   }
 
-  
+
   return (
     <BoardStickerFooterButtonWraper>
       <button onClick={handleClick}>
-        <img src={`${BASE_URL}images/icon-delete5.png`} alt='delete' />
+        {mappedSticker.isDeleteModalOpen
+          ? <img src={`${BASE_URL}images/icon-close6.png`} alt='close' />
+          : <img src={`${BASE_URL}images/icon-delete5.png`} alt='delete' />
+        }
       </button>
     </BoardStickerFooterButtonWraper>
   )

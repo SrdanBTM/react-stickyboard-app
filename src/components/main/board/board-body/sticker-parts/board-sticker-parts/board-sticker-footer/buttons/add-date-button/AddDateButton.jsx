@@ -9,8 +9,8 @@ export default function AddDateIcon({ mappedSticker }) {
 
   const { closeCurrentStickerModal, closeAllStickerModals, openCurrentStickerModal, setBoards, updateSticker, currentBoardId, BoardStickerFooterButtonWraper } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
-  
-  
+
+
   function handleClick() {
     const currentModal = 'isAddDateTimeModalOpen'
     const currentStickerId = mappedSticker.stickerId
@@ -26,7 +26,10 @@ export default function AddDateIcon({ mappedSticker }) {
   return (
     <BoardStickerFooterButtonWraper>
       <button onClick={handleClick}>
-        <img src={`${BASE_URL}images/icon-date2.png`} alt='add date' />
+        {mappedSticker.isAddDateTimeModalOpen
+          ? <img src={`${BASE_URL}images/icon-close6.png`} alt='close' />
+          : <img src={`${BASE_URL}images/icon-date2.png`} alt='add date' />
+        }
       </button>
     </BoardStickerFooterButtonWraper>
   )
