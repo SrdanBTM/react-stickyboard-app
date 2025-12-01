@@ -12,9 +12,8 @@
   background-color: transparent;
   border: none;
   outline: none;
-  transition: background-color 0.3s ease;
   position: relative;
-  background-color: rgba(0,0,0,0.35);
+
 }
 
 .container button {
@@ -27,18 +26,17 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid transparent;
-  transition: border 0.3s ease;
 }
 
 .container img {
   width: 20px;
   height: 20px;
+  transition: transform 0.1s ease;
 }
 
-.container:hover,
-.container:focus {
-  background-color: rgba(0,0,0,0.1);
+.container:hover img,
+.container:focus img {
+  transform: scale(1.3);
 }
 
 
