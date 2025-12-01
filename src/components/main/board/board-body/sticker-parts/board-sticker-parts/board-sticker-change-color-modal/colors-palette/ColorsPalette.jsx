@@ -8,7 +8,7 @@ import { MainContext } from '../../../../../../../../context-provider/ContextPro
 
 export default function Colors({ mappedSticker }) {
 
-  const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { closeCurrentStickerModal, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
 
   const colors = [
     'var(--sticker-color1)',
@@ -23,7 +23,9 @@ export default function Colors({ mappedSticker }) {
   function handleClick(e, color) {
     const currentStickerId = e.currentTarget.getAttribute('data-id')
     const propertyToUpdate = { key: 'color', value: color }
+    const currentModal = 'isChangeColorModalOpen'
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
+    closeCurrentStickerModal(updateSticker, setBoards, currentBoardId, currentStickerId, currentModal)
   }
 
 

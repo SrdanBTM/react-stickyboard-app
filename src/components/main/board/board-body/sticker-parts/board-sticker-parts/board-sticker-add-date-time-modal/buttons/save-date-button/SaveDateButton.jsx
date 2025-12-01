@@ -6,7 +6,7 @@ import { MainContext } from '../../../../../../../../../context-provider/Context
 
 export default function SaveDateButton({ mappedSticker }) {
 
-  const { updateSticker, setBoards, currentBoardId, BoardStickerModalButtonWraper } = useContext(MainContext)
+  const { closeCurrentStickerModal, updateSticker, setBoards, currentBoardId, BoardStickerModalButtonWraper } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
   const BASE_URL = import.meta.env.BASE_URL
 
@@ -23,16 +23,16 @@ export default function SaveDateButton({ mappedSticker }) {
   function handleClick() {
     if (mappedSticker.dateInput && mappedSticker.timeInput) {
       const dayInWeek = findDayInWeek(mappedSticker.dateInput)
+      const currentModal = 'isAddDateTimeModalOpen'
       const propertyToUpdate1 = { key: 'isDateTimeValid', value: true }
       const propertyToUpdate2 = { key: 'date', value: mappedSticker.dateInput }
       const propertyToUpdate3 = { key: 'time', value: mappedSticker.timeInput }
       const propertyToUpdate4 = { key: 'dayInWeek', value: dayInWeek }
-      const propertyToUpdate5 = { key: 'isAddDateTimeModalOpen', value: false }
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate3)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate4)
-      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate5)
+      closeCurrentStickerModal(updateSticker, setBoards, currentBoardId, currentStickerId, currentModal)
     } else {
       const propertyToUpdate1 = { key: 'isDateTimeValid', value: false }
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
