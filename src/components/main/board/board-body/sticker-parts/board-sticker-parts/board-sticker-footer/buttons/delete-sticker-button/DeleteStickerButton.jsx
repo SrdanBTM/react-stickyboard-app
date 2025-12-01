@@ -3,27 +3,26 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
-import BoardStickerFooterButton from '../../../board-sticker-footer-button/BoardStickerFooterButton.jsx'
 
 
 export default function DeleteStickerButton({ mappedSticker }) {
 
-  const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
-  const currentStickerId = mappedSticker.stickerId
+  const { updateSticker, setBoards, currentBoardId, BoardStickerFooterButtonWraper, handleStickerModal } = useContext(MainContext)
+  const BASE_URL = import.meta.env.BASE_URL
 
 
-  function handleClick(e) {
-    const propertyToUpdate = { key: 'isDeleteOpen', value: true }
-    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
+  function handleClick() {
+    const currentStickerId = mappedSticker.stickerId
+    const currentModal = 'isDeleteModalOpen'
+    handleStickerModal(updateSticker, setBoards, currentBoardId, currentStickerId, currentModal, mappedSticker)
   }
 
-
-  const props = {
-    handleClick: handleClick,
-    imgPath: 'images/icon-delete5.png',
-    imgAlt: 'delete'
-  }
-
-
-  return <BoardStickerFooterButton props={props} />
+  
+  return (
+    <BoardStickerFooterButtonWraper>
+      <button onClick={handleClick}>
+        <img src={`${BASE_URL}images/icon-delete5.png`} alt='delete' />
+      </button>
+    </BoardStickerFooterButtonWraper>
+  )
 }
