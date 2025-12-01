@@ -1,0 +1,45 @@
+
+
+
+
+.container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  position: relative;
+  background-color: rgba(0,0,0,0.35);
+}
+
+.container button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.container img {
+  width: 20px;
+  height: 20px;
+}
+
+.container:hover,
+.container:focus {
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+
