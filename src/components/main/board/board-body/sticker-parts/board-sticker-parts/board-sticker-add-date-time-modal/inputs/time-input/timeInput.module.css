@@ -1,0 +1,29 @@
+
+
+
+
+.container input {
+  width: 150px;
+  height: 30px;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  color: var(--font-color1);
+  margin-top: 10px;
+  box-shadow: 0 0 2px rgba(255,255,255,0.2);
+  transition: border 0.3s ease;
+}
+
+.container input:focus {
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.container label {
+  font-size: 14px;
+  margin-right: 5px;
+  color: var(--font-color4);
+  font-weight: 500;
+}
