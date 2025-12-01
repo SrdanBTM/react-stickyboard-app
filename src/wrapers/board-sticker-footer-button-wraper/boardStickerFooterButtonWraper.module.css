@@ -13,7 +13,8 @@
   border: none;
   outline: none;
   position: relative;
-
+  border-bottom: 2px solid transparent;
+  transition: border 0.2s ease;
 }
 
 .container button {
@@ -26,17 +27,17 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
 }
 
 .container img {
   width: 20px;
   height: 20px;
-  transition: transform 0.1s ease;
 }
 
-.container:hover img,
-.container:focus img {
-  transform: scale(1.3);
+.container:hover,
+.container:focus {
+  border-bottom: 2px solid rgba(255,255,255,0.2);
 }
 
 
