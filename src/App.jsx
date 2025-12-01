@@ -10,6 +10,10 @@ import { useState, useRef, useEffect } from 'react'
 import dummyData from './dummy-data/dummyData.json'
 import { updateSticker, updateAllStickers, addSticker, deleteSticker, } from './helper-functions/HelperFunctionsHandleSticker.jsx'
 import { addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-functions/HelperFunctionsHandleBoard.jsx'
+import BoardStickerFooterButtonWraper from './wrapers/board-sticker-footer-button-wraper/BoardStickerFooterButtonWraper.jsx'
+import BoardStickerModalButtonWraper from './wrapers/board-sticker-modal-button-wraper/BoardStickerModalButtonWraper.jsx'
+import BoardStickerModalWraper from './wrapers/board-sticker-modal-wraper/BoardStickerModalWraper.jsx'
+import { handleStickerModal } from './helper-functions/HelperFunctionsHandleStickerModal.jsx'
 
 
 export default function App() {
@@ -74,12 +78,21 @@ export default function App() {
         addSticker,
         deleteSticker,
 
+        //helper functions handle sticker modal
+        handleStickerModal,
+
         //helper functions handle board
         addBoard,
         updateBoard,
         updateAllBoards,
-        deleteBoard
-        
+        deleteBoard,
+
+        //wrapers
+        BoardStickerFooterButtonWraper,
+        BoardStickerModalButtonWraper,
+        BoardStickerModalWraper
+
+
       }}>
       <div className={`app ${theme}`} onClick={handleClick}>
         <ClickOutsideElement />
