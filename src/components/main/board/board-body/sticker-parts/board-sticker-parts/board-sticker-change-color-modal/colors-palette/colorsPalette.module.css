@@ -4,20 +4,24 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
+  width: 180px;
+  height: 120px;
 }
 
 .oneColor {
   cursor: pointer;
-  box-shadow: 0 0 1px var(--border-color2);
-  width: 17px;
-  height: 17px;
-  margin: 2px;
+  box-shadow: 0 0 2px rgba(255,255,255,0.2);
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: 1px solid transparent;
 }
 
 .oneColor:hover {
-  transform: scale(1.3);
+  transform: scale(1.15);
   border-radius: 3px;
   box-shadow: none;
-  border: 1px solid var(--border-color2);
-  transition: transform 0.1s ease;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: border 0.3s ease;
 }
