@@ -7,14 +7,19 @@ import { MainContext } from '../../../../../../../../../context-provider/Context
 
 export default function ChangeColorButton({ mappedSticker }) {
 
-  const { setBoards, updateSticker, currentBoardId, BoardStickerFooterButtonWraper, handleStickerModal } = useContext(MainContext)
+  const { closeCurrentStickerModal, closeAllStickerModals, openCurrentStickerModal, setBoards, updateSticker, currentBoardId, BoardStickerFooterButtonWraper } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
   function handleClick() {
-    const currentStickerId = mappedSticker.stickerId
     const currentModal = 'isChangeColorModalOpen'
-    handleStickerModal(updateSticker, setBoards, currentBoardId, currentStickerId, currentModal, mappedSticker)
+    const currentStickerId = mappedSticker.stickerId
+    if (mappedSticker.isChangeColorModalOpen) {
+      closeCurrentStickerModal(updateSticker, setBoards, currentBoardId, currentStickerId, currentModal)
+    } else {
+      closeAllStickerModals(updateSticker, setBoards, currentBoardId, currentStickerId)
+      openCurrentStickerModal(updateSticker, setBoards, currentBoardId, currentStickerId, currentModal)
+    }
   }
 
 

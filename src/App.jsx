@@ -13,7 +13,7 @@ import { addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-fu
 import BoardStickerFooterButtonWraper from './wrapers/board-sticker-footer-button-wraper/BoardStickerFooterButtonWraper.jsx'
 import BoardStickerModalButtonWraper from './wrapers/board-sticker-modal-button-wraper/BoardStickerModalButtonWraper.jsx'
 import BoardStickerModalWraper from './wrapers/board-sticker-modal-wraper/BoardStickerModalWraper.jsx'
-import { handleStickerModal } from './helper-functions/HelperFunctionsHandleStickerModal.jsx'
+import { closeCurrentStickerModal, openCurrentStickerModal, closeAllStickerModals } from './helper-functions/HelperFunctionsHandleStickerModal.jsx'
 
 
 export default function App() {
@@ -79,7 +79,9 @@ export default function App() {
         deleteSticker,
 
         //helper functions handle sticker modal
-        handleStickerModal,
+        closeCurrentStickerModal,
+        openCurrentStickerModal,
+        closeAllStickerModals,
 
         //helper functions handle board
         addBoard,
