@@ -23,9 +23,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       },
       {
         "stickerId": "s2",
@@ -44,9 +44,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       },
       {
         "stickerId": "s3",
@@ -65,9 +65,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       }
     ]
   },
@@ -95,9 +95,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       },
       {
         "stickerId": "s5",
@@ -116,9 +116,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       }
     ]
   },
@@ -146,9 +146,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       },
       {
         "stickerId": "s7",
@@ -167,9 +167,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       },
       {
         "stickerId": "s8",
@@ -188,9 +188,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       }
     ]
   },
@@ -218,9 +218,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       },
       {
         "stickerId": "s10",
@@ -239,9 +239,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       },
       {
         "stickerId": "s11",
@@ -260,9 +260,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       }
     ]
   },
@@ -290,9 +290,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       },
       {
         "stickerId": "s13",
@@ -311,9 +311,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       },
       {
         "stickerId": "s14",
@@ -332,9 +332,9 @@
         "time": null,
         "dayinWeek": null,
         "isDateTimeValid": null,
-        "isAddDateTimeOpen": false,
-        "isDeleteOpen": false,
-        "isChangeColorOpen": false
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false
       }
     ]
   }
