@@ -7,8 +7,6 @@ import { MainContext } from '../../../../../../../../context-provider/ContextPro
 
 export default function Message({ mappedSticker }) {
 
-  const { isAddDateTimeOpen } = useContext(MainContext)
-
 
   let message = ''
   if (mappedSticker.isDateValid && mappedSticker.isTimeValid) {
@@ -17,10 +15,6 @@ export default function Message({ mappedSticker }) {
   } else if (mappedSticker.isDateTimeValid === false) {
     message = 'Invalid date or time value.'
   }
-
-  useEffect(() => {
-    message = ''
-  }, [isAddDateTimeOpen])
 
 
   return (
