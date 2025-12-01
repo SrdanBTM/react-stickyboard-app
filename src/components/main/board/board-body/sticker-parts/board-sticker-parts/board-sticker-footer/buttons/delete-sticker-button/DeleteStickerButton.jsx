@@ -9,11 +9,11 @@ export default function DeleteStickerButton({ mappedSticker }) {
 
   const { closeCurrentStickerModal, closeAllStickerModals, openCurrentStickerModal, updateSticker, setBoards, currentBoardId, BoardStickerFooterButtonWraper } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
+  const currentModal = 'isDeleteModalOpen'
+  const currentStickerId = mappedSticker.stickerId
 
 
   function handleClick() {
-    const currentModal = 'isDeleteModalOpen'
-    const currentStickerId = mappedSticker.stickerId
     if (mappedSticker.isDeleteModalOpen) {
       closeCurrentStickerModal(updateSticker, setBoards, currentBoardId, currentStickerId, currentModal)
     } else {
@@ -24,7 +24,10 @@ export default function DeleteStickerButton({ mappedSticker }) {
 
 
   return (
-    <BoardStickerFooterButtonWraper>
+    <BoardStickerFooterButtonWraper
+      currentModal={currentModal}
+      mappedSticker={mappedSticker}
+    >
       <button onClick={handleClick}>
         {mappedSticker.isDeleteModalOpen
           ? <img src={`${BASE_URL}images/icon-close6.png`} alt='close' />
