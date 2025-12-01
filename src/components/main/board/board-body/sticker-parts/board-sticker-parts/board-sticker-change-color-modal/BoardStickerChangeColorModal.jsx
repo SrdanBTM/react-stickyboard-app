@@ -1,6 +1,5 @@
 
 
-import styles from './boardStickerChangeColorModal.module.css'
 import ColorsPalette from './colors-palette/ColorsPalette.jsx'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
@@ -15,7 +14,7 @@ export default function BoardStickerChangeColorModal({ mappedSticker }) {
     <BoardStickerModalWraper
       mappedSticker={mappedSticker}
     >
-      <div className={styles.content}>
+      <div>
         <ColorsPalette mappedSticker={mappedSticker} />
       </div>
     </BoardStickerModalWraper>

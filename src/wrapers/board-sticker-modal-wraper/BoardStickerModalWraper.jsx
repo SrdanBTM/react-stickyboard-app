@@ -13,7 +13,9 @@ export default function BoardStickerModalWraper({ children, mappedSticker }) {
         backgroundColor: mappedSticker.color
       }}
     >
-      {children}
+      <div className={styles.content}>
+        {children}
+      </div>
     </div>
   )
 }
