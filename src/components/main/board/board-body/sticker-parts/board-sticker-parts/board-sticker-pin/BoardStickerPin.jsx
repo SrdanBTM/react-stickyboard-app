@@ -1,7 +1,8 @@
 
+
 import styles from './boardStickerPin.module.css'
 import { useState, useContext, useRef } from 'react'
-import { MainContext } from '../../../../../../../context-provider/ContextProvider'
+import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 
 
 export default function StickerPin({ dragControl }) {
