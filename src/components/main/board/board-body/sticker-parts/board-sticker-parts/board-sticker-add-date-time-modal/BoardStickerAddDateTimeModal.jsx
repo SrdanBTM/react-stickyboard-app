@@ -1,0 +1,27 @@
+
+
+import styles from './boardStickerAddDateTimeModal.module.css'
+import Inputs from './inputs/Inputs.jsx'
+import Message from './message/Message.jsx'
+import Buttons from './buttons/Buttons.jsx'
+import { useContext } from 'react'
+import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+
+
+export default function BoardStickerAddDateTimeModal({ mappedSticker }) {
+
+  const { BoardStickerModalWraper } = useContext(MainContext)
+
+
+  return (
+    <BoardStickerModalWraper
+      mappedSticker={mappedSticker}
+    >
+      <div className={styles.content}>
+        <Inputs mappedSticker={mappedSticker} />
+        <Message mappedSticker={mappedSticker} />
+        <Buttons mappedSticker={mappedSticker} />
+      </div>
+    </BoardStickerModalWraper>
+  )
+}
