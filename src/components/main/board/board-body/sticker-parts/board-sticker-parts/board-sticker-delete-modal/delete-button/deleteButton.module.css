@@ -1,0 +1,24 @@
+
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container span {
+  font-size: 14px;
+  color: var(--font-color5);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.1s ease;
+}
+
+.container span:hover {
+  box-shadow: inset 0 0 4px #555;
+  background-color: rgb(55, 9, 9);
+}
+
+
