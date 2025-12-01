@@ -14,11 +14,14 @@
   padding: 10px;
   border-radius: 10px;
   transition: background-color 0.1s ease;
+  box-shadow: 0 0 2px rgba(255,255,255,0.2);
+  border: 1px solid transparent;
 }
 
-.container span:hover {
-  box-shadow: inset 0 0 4px #555;
+.container span:hover,
+.container span:focus {
   background-color: rgb(55, 9, 9);
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 
