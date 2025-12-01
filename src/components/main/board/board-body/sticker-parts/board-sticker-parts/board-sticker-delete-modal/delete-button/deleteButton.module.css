@@ -12,10 +12,10 @@
   color: var(--font-color5);
   cursor: pointer;
   padding: 10px;
-  border-radius: 10px;
-  transition: background-color 0.1s ease;
+  border-radius: 5px;
   box-shadow: 0 0 2px rgba(255,255,255,0.2);
   border: 1px solid transparent;
+  transition: background-color 0.1s ease, border 0.3s ease;
 }
 
 .container span:hover,
