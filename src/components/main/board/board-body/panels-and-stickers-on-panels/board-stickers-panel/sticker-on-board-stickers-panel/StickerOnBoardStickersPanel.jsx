@@ -8,9 +8,9 @@ import BoardStickerHeader from '../../../sticker-parts/board-sticker-parts/board
 import BoardStickerNote from '../../../sticker-parts/board-sticker-parts/board-sticker-note/BoardStickerNote.jsx'
 import BoardStickerFooter from '../../../sticker-parts/board-sticker-parts/board-sticker-footer/BoardStickerFooter.jsx'
 import BoardStickerDateTime from '../../../sticker-parts/board-sticker-parts/board-sticker-date-time/BoardStickerDateTime.jsx'
-import BoardStickerAddDateTime from '../../../sticker-parts/board-sticker-parts/board-sticker-add-date-time/BoardStickerAddDateTime.jsx'
-import BoardStickerDelete from '../../../sticker-parts/board-sticker-parts/board-sticker-delete/BoardStickerDelete.jsx'
-import BoardStickerChangeColor from '../../../sticker-parts/board-sticker-parts/board-sticker-change-color/BoardStickerChangeColor.jsx'
+import BoardStickerAddDateTimeModal from '../../../sticker-parts/board-sticker-parts/board-sticker-add-date-time-modal/BoardStickerAddDateTimeModal.jsx'
+import BoardStickerDeleteModal from '../../../sticker-parts/board-sticker-parts/board-sticker-delete-modal/BoardStickerDeleteModal.jsx'
+import BoardStickerChangeColorModal from '../../../sticker-parts/board-sticker-parts/board-sticker-change-color-modal/BoardStickerChangeColorModal.jsx'
 
 
 export default function StickerOnBoard({ mappedSticker }) {
@@ -82,9 +82,9 @@ export default function StickerOnBoard({ mappedSticker }) {
       {mappedSticker.date && mappedSticker.time && <BoardStickerDateTime mappedSticker={mappedSticker} />}
       <BoardStickerNote mappedSticker={mappedSticker} />
       <BoardStickerFooter mappedSticker={mappedSticker} />
-      <BoardStickerAddDateTime mappedSticker={mappedSticker} />
-      <BoardStickerChangeColor mappedSticker={mappedSticker} />
-      <BoardStickerDelete mappedSticker={mappedSticker} />
+      {mappedSticker.isDeleteModalOpen && <BoardStickerDeleteModal mappedSticker={mappedSticker} />}
+      {mappedSticker.isAddDateTimeModalOpen && <BoardStickerAddDateTimeModal mappedSticker={mappedSticker} />}
+      {mappedSticker.isChangeColorModalOpen && <BoardStickerChangeColorModal mappedSticker={mappedSticker} />}
 
     </motion.div>
   )
