@@ -3,7 +3,6 @@
 
 
 import styles from './deleteButton.module.css'
-import { motion } from 'framer-motion'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
 
@@ -16,18 +15,14 @@ export default function Delete({ mappedSticker }) {
 
 
   function handleClick(e) {
-    const currentStickerId = e.currentTarget.getAttribute('data-id')
+    const currentStickerId = mappedSticker.stickerId
     deleteSticker(setBoards, currentBoardId, currentStickerId)
   }
 
 
   return (
-    <motion.div
-      className={`${styles.container}`}
-      data-id={mappedSticker.stickerId}
-      onClick={handleClick}
-    >
-      <span>DELETE STICKER</span>
-    </motion.div>
+    <div className={styles.container}>
+      <span onClick={handleClick}>DELETE STICKER</span>
+    </div>
   )
 }
