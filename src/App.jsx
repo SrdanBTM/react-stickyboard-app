@@ -38,6 +38,7 @@ export default function App() {
   const [searchValue, setSearchValue] = useState('')
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
+  const [isCheckedStickersPanelShow, setIsCheckedStickersPanelShow] = useState(false)
 
 
   const boardRef = useRef()
@@ -71,6 +72,7 @@ export default function App() {
         searchValue, setSearchValue,
         checkedOrderCounter, setCheckedOrderCounter,
         checkedStickerId, setCheckedStickerId,
+        isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
 
         //helper functions handle sticker
         updateSticker,
@@ -96,7 +98,7 @@ export default function App() {
 
 
       }}>
-      <div className={`app ${theme}`} onClick={handleClick}>
+      <div className={`app ${theme}`} onClick={handleClick} style={{overflow: 'hidden'}}>
         <ClickOutsideElement />
 
         <Header />
