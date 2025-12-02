@@ -5,7 +5,7 @@ import { useState, useContext, useRef } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function StickerPin({ dragControl }) {
+export default function StickerPin({ dragControl, mappedSticker }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const [isUnpined, setIsUnpined] = useState(false)
@@ -28,7 +28,9 @@ export default function StickerPin({ dragControl }) {
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       className={styles.container}
-      style={{ transform: isUnpined ? 'translateY(-5px)' : '' }}
+      style={{
+        transform: isUnpined ? 'translateY(-5px)' : ''
+      }}
     >
       <div className={styles.image}>
         <img

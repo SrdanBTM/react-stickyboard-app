@@ -38,6 +38,9 @@ export default function StickerCheck({ mappedSticker }) {
     <div
       className={styles.container}
       onClick={handleClick}
+      style={{
+        opacity: mappedSticker.isHover ? 1 : 0
+      }}
     >
       <img src={isChecked ? checked : unchecked} alt="check sticker" />
     </div>

@@ -20,7 +20,8 @@ export default function StickerNote({ mappedSticker }) {
     <div
       className={`
         ${styles.container} 
-        ${mappedSticker.date && mappedSticker.time ? styles.dateTime : styles.noDateTime}
+        ${mappedSticker.date && mappedSticker.time && mappedSticker.isHover? styles.shadowTopBottom : ''}
+        ${!mappedSticker.date && !mappedSticker.time && mappedSticker.isHover? styles.shadowBottom : ''}
         `}
     >
       <div className={styles.textarea}>

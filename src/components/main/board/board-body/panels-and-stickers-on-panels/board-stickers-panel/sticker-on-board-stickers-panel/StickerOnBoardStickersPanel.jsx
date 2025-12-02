@@ -19,6 +19,7 @@ export default function StickerOnBoard({ mappedSticker }) {
   const stickerRef = useRef()
   const [constraints, setConstraints] = useState()
   const dragControl = useDragControls()
+  const currentStickerId = mappedSticker.stickerId
 
 
   useEffect(() => {
@@ -27,8 +28,6 @@ export default function StickerOnBoard({ mappedSticker }) {
 
 
   function handleDragEnd() {
-    const currentStickerId = mappedSticker.stickerId
-
     const stickerPosition = stickerRef.current.getBoundingClientRect()
     const boardPosition = boardRef.current.getBoundingClientRect()
 
@@ -46,13 +45,25 @@ export default function StickerOnBoard({ mappedSticker }) {
     const propertyToUpdate1 = { key: 'zIndex', value: 0 }
     updateAllStickers(setBoards, currentBoardId, propertyToUpdate1)
     const propertyToUpdate2 = { key: 'zIndex', value: 1 }
-    const currentStickerId = mappedSticker.stickerId
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
+  }
+
+
+  function handleMouseOver() {
+    const propertyToUpdate = { key: 'isHover', value: true }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
+  }
+
+  function handleMouseLeave() {
+    const propertyToUpdate = { key: 'isHover', value: false }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
   }
 
 
   return (
     <motion.div
+      onMouseOver={handleMouseOver}
+      onMouseLeave={handleMouseLeave}
       className={styles.container}
       drag
       dragListener={false}
@@ -77,7 +88,7 @@ export default function StickerOnBoard({ mappedSticker }) {
         ease: 'easeOut'
       }}
     >
-      <BoardStickerPin dragControl={dragControl} />
+      <BoardStickerPin dragControl={dragControl} mappedSticker={mappedSticker}/>
       <BoardStickerHeader mappedSticker={mappedSticker} />
       {mappedSticker.date && mappedSticker.time && <BoardStickerDateTime mappedSticker={mappedSticker} />}
       <BoardStickerNote mappedSticker={mappedSticker} />
