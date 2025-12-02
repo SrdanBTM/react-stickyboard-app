@@ -39,6 +39,7 @@
   --sticker-color6: #1d0036;
   --boardlist-delete-color: #701b1b;
   --boardlist-close-color: #274558;
+  --border-app: rgba(255,255,255,0.1);
 }
 
 .lightTheme {
