@@ -29,7 +29,7 @@ export default function SettingsMenu({ clickedElement }) {
     >
       <ul data-id={'settingsMenu'}>
         <li onClick={handleClickChangeTheme}>{theme === 'darkTheme' ? 'Set Light Theme' : 'Set Dark Theme'}</li>
-        <li onClick={handleClickHideCheckedStickersPanel}>{isCheckedStickersPanelShow ? 'Hide Checked Stickers Panel' : 'Show Checked Stickers Panel'}</li>
+        <li onClick={handleClickHideCheckedStickersPanel}>{isCheckedStickersPanelShow ? 'Hide Checked Stickers' : 'Show Checked Stickers'}</li>
       </ul>
     </div>
 
