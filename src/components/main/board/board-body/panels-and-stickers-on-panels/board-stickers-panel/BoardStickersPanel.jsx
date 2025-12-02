@@ -5,6 +5,7 @@ import styles from './boardStickersPanel.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
 import StickerOnBoardStickersPanel from './sticker-on-board-stickers-panel/StickerOnBoardStickersPanel.jsx'
+import CheckedStickersPanel from '../checked-stickers-panel/CheckedStickersPanel.jsx'
 
 
 export default function BoardStickersPanel() {
@@ -33,6 +34,8 @@ export default function BoardStickersPanel() {
               />
             )
           })}
+
+      <CheckedStickersPanel />
     </div>
   )
 }
