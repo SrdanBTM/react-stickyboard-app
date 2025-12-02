@@ -10,7 +10,12 @@ export default function BoardStickerFooter({ mappedSticker }) {
     <div 
       className={styles.container} 
       style={{
-        opacity: mappedSticker.isHover ? 1 : 0
+        opacity: mappedSticker.isHover 
+        || mappedSticker.isAddDateTimeModalOpen 
+        || mappedSticker.isChangeColorModalOpen 
+        || mappedSticker.isDeleteModalOpen 
+        ? 1 : 0,
+        backgroundColor: mappedSticker.color
       }}
       >
       {/* <BoardName mappedSticker={mappedSticker} /> */}
