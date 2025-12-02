@@ -2,7 +2,7 @@
 
 
 .container {
-  position: relative;
+  position: absolute;
   width: 200px;
   height: 100%;
   border-left: 1px solid var(--border-app);
@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
+  transition: right 0.3s ease;
 }
 
 

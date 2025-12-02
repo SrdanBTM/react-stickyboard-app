@@ -9,7 +9,7 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function CheckedStickersPanel() {
 
-  const { boards, currentBoardId } = useContext(MainContext)
+  const { boards, currentBoardId, isCheckedStickersPanelShow } = useContext(MainContext)
   const [randomUUID, setRandomUUID] = useState(crypto.randomUUID())
 
   let currentBoard = null
@@ -21,6 +21,9 @@ export default function CheckedStickersPanel() {
   return (
     <div
       className={styles.container}
+      style={{
+        right: isCheckedStickersPanelShow ? '0' : '-200px'
+      }}
     >
       {currentBoard
         && currentBoard.stickers
