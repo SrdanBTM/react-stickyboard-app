@@ -28,7 +28,8 @@ export const stickerTemplate = {
   isDateTimeValid: null,
   isAddDateTimeModalOpen: false,
   isDeleteModalOpen: false,
-  isChangeColorModalOpen: false
+  isChangeColorModalOpen: false,
+  isHover: false
 }
 
 
