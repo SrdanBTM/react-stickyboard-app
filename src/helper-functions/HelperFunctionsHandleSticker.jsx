@@ -126,4 +126,12 @@ export function deleteSticker(setBoards, currentBoardId, currentStickerId) {
 
 
 
+// DELETE ALL CHECKED STICKERS
+export function deleteAllCheckedStickers(setBoards) {
+  setBoards(prev => prev.map(board => ({
+    ...board,
+    stickers: board.stickers.filter(sticker => sticker.checked === false)
+  })))
+}
+
 
