@@ -18,7 +18,7 @@ export default function DeleteAllCheckedStickersModal() {
       <div className={styles.content}>
 
         <div className={styles.message}>
-          <p>Are you want to delete all checked stickers in all boards?</p>
+          <p>Are you sure you want to delete all checked stickers on all boards?</p>
         </div>
 
         <div className={styles.buttons}>
