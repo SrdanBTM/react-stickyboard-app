@@ -7,7 +7,7 @@ import styles from './settingsMenu.module.css'
 
 export default function SettingsMenu({ clickedElement }) {
 
-  const { theme, setTheme, isCheckedStickersPanelShow, setIsCheckedStickersPanelShow, } = useContext(MainContext)
+  const { setBoards, theme, setTheme, isCheckedStickersPanelShow, setIsCheckedStickersPanelShow, setIsDeleteAllCheckedStickersModalOpen } = useContext(MainContext)
   const showElement = clickedElement.elementName === 'settings' && clickedElement.showSettings
 
   function handleClickChangeTheme() {
@@ -16,6 +16,10 @@ export default function SettingsMenu({ clickedElement }) {
 
   function handleClickHideCheckedStickersPanel() {
     setIsCheckedStickersPanelShow(prev => !prev)
+  }
+
+  function handleClickDeleteAllCheckedStickers() {
+    setIsDeleteAllCheckedStickersModalOpen(true)
   }
 
 
@@ -28,8 +32,9 @@ export default function SettingsMenu({ clickedElement }) {
       }}
     >
       <ul data-id={'settingsMenu'}>
-        <li onClick={handleClickChangeTheme}>{theme === 'darkTheme' ? 'Set Light Theme' : 'Set Dark Theme'}</li>
         <li onClick={handleClickHideCheckedStickersPanel}>{isCheckedStickersPanelShow ? 'Hide Checked Stickers' : 'Show Checked Stickers'}</li>
+        <li onClick={handleClickDeleteAllCheckedStickers}>Delete All Checked Stickers</li>
+        <li onClick={handleClickChangeTheme}>{theme === 'darkTheme' ? 'Set Light Theme' : 'Set Dark Theme'}</li>
       </ul>
     </div>
 
