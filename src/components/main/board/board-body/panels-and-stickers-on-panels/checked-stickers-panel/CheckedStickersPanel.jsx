@@ -2,8 +2,10 @@
 
 
 import styles from './checkedStickersPanel.module.css'
-import StickerOnCheckedStickersPanel from './sticker-on-checked-stickers-panel/StickerOnCheckedStickersPanel.jsx'
+import CheckedStickersPanelCheckedStickers from './checked-stickers-panel-checked-stickers/CheckedStickersPanelCheckedStickers.jsx'
 import CheckedStickersPanelHoverTitle from './checked-stickers-panel-hover-title/CheckedStickersPanelHoverTitle.jsx'
+import CheckedStickersPanelHeader from './checked-stickers-panel-header/CheckedStickersPanelHeader.jsx'
+import CheckedStickersPanelMessage from './checked-stickers-panel-message/CheckedStickersPanelMessage.jsx'
 import { useContext, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
 
@@ -11,7 +13,6 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 export default function CheckedStickersPanel() {
 
   const { boards, currentBoardId, isCheckedStickersPanelShow } = useContext(MainContext)
-  const [randomUUID, setRandomUUID] = useState(crypto.randomUUID())
   const [isHoverTitleShow, setIsHoverTitleShow] = useState(true)
   const [isCheckedStickersPanelHover, setIsCheckedStickersPanelHover] = useState(false)
 
@@ -23,7 +24,7 @@ export default function CheckedStickersPanel() {
 
   const filteredAndSortedCheckedStickers =
     currentBoard && currentBoard.stickers
-      .filter(sticker => sticker.checked)
+      .filter(sticker => sticker.isChecked)
       .sort((sticker1, sticker2) => sticker1.checkedOrder - sticker2.checkedOrder)
 
 
@@ -58,16 +59,11 @@ export default function CheckedStickersPanel() {
         right: isCheckedStickersPanelShow || isCheckedStickersPanelHover ? '0' : '-200px'
       }}
     >
-      {filteredAndSortedCheckedStickers.map((sticker, index) => {
-        return (
-          <StickerOnCheckedStickersPanel
-            key={sticker.stickerId + randomUUID}
-            topPosition={20 + index * 40}
-            mappedSticker={sticker}
-            setRandomUUID={setRandomUUID}
-          />
-        )
-      })}
+      <CheckedStickersPanelHeader />
+      
+      {currentBoard.isThereCheckedSticker
+        ? <CheckedStickersPanelCheckedStickers filteredAndSortedCheckedStickers={filteredAndSortedCheckedStickers} />
+        : <CheckedStickersPanelMessage />}
 
       {!isCheckedStickersPanelShow && isHoverTitleShow && <CheckedStickersPanelHoverTitle />}
 
