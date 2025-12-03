@@ -6,6 +6,7 @@ export const boardTemplate = {
   isInput: false,
   isFocused: false,
   isDeleteShowed: false,
+  isThereCheckedSticker: false,
   stickers: []
 }
 
@@ -17,7 +18,7 @@ export const stickerTemplate = {
   boardName: '',
   positionX: '',
   positionY: '',
-  checked: false,
+  isChecked: false,
   checkedOrder: null,
   zIndex: 0,
   dateInput: null,
