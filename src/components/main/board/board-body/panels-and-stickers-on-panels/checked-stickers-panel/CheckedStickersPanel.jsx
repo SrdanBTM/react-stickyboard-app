@@ -24,7 +24,7 @@ export default function CheckedStickersPanel() {
 
   const filteredAndSortedCheckedStickers =
     currentBoard && currentBoard.stickers
-      .filter(sticker => sticker.isChecked)
+      .filter(sticker => sticker.checked)
       .sort((sticker1, sticker2) => sticker1.checkedOrder - sticker2.checkedOrder)
 
 
