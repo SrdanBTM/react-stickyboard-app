@@ -4,11 +4,12 @@ import ClickOutsideElement from './click-outside-element/ClickOutsideElement.jsx
 import Header from './components/header/Header.jsx'
 import Main from './components/main/Main.jsx'
 import DeleteBoardModal from './components/modals/delete-board-modal/DeleteBoardModal.jsx'
+import DeleteAllCheckedStickersModal from './components/modals/delete-all-checked-stickers-modal/DeleteAllCheckedStickersModal.jsx'
 import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 import { MainProvider } from './context-provider/ContextProvider.jsx'
 import { useState, useRef, useEffect } from 'react'
 import dummyData from './dummy-data/dummyData.json'
-import { updateSticker, updateAllStickers, addSticker, deleteSticker, } from './helper-functions/HelperFunctionsHandleSticker.jsx'
+import { updateSticker, updateAllStickers, addSticker, deleteSticker, deleteAllCheckedStickers } from './helper-functions/HelperFunctionsHandleSticker.jsx'
 import { addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-functions/HelperFunctionsHandleBoard.jsx'
 import BoardStickerFooterButtonWraper from './wrapers/board-sticker-footer-button-wraper/BoardStickerFooterButtonWraper.jsx'
 import BoardStickerModalButtonWraper from './wrapers/board-sticker-modal-button-wraper/BoardStickerModalButtonWraper.jsx'
@@ -30,6 +31,7 @@ export default function App() {
   const [currentBoardId, setCurrentBoardId] = useState(boards[0].boardId)
 
   const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
+  const [isDeleteAllCheckedStickersModalOpen, setIsDeleteAllCheckedStickersModalOpen] = useState(false)
   const [clickedElementOnApp, setClickedElementOnApp] = useState(null)
   const [isClickedOutsideBoardList, setIsClickedOutsideBoardList] = useState(false)
   const [isClickedOutsideNewBoard, setIsClickedOutsideNewBoard] = useState(false)
@@ -64,6 +66,7 @@ export default function App() {
         theme, setTheme,
         currentBoardId, setCurrentBoardId,
         isDeleteBoardModalOpen, setIsDeleteBoardModalOpen,
+        isDeleteAllCheckedStickersModalOpen, setIsDeleteAllCheckedStickersModalOpen,
         clickedElementOnApp, setClickedElementOnApp,
         isClickedOutsideBoardList, setIsClickedOutsideBoardList,
         isClickedOutsideNewBoard, setIsClickedOutsideNewBoard,
@@ -79,6 +82,7 @@ export default function App() {
         updateAllStickers,
         addSticker,
         deleteSticker,
+        deleteAllCheckedStickers,
 
         //helper functions handle sticker modal
         closeCurrentStickerModal,
@@ -98,13 +102,14 @@ export default function App() {
 
 
       }}>
-      <div className={`app ${theme}`} onClick={handleClick} style={{overflow: 'hidden'}}>
+      <div className={`app ${theme}`} onClick={handleClick} style={{ overflow: 'hidden' }}>
         <ClickOutsideElement />
 
         <Header />
         <Main />
 
         {isDeleteBoardModalOpen && <DeleteBoardModal />}
+        {isDeleteAllCheckedStickersModalOpen && <DeleteAllCheckedStickersModal />}
       </div>
     </MainProvider>
   )
