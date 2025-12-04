@@ -3,9 +3,15 @@
 import styles from './checkedStickersPanelHoverTitle.module.css'
 
 
-export default function CheckedStickersPanelHoverTitle() {
+export default function CheckedStickersPanelHoverTitle({ isHoverTitleShow, isCheckedStickersPanelShow }) {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        left: isHoverTitleShow && !isCheckedStickersPanelShow ? '-120px' : '-80px',
+        opacity: isHoverTitleShow && !isCheckedStickersPanelShow ? 1 : 0,
+      }}
+    >
       <span>Show checked stickers</span>
     </div>
   )

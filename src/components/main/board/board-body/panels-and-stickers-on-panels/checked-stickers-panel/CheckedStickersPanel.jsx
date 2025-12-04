@@ -79,7 +79,10 @@ export default function CheckedStickersPanel() {
         ? <CheckedStickersPanelCheckedStickers filteredAndSortedCheckedStickers={filteredAndSortedCheckedStickers} />
         : <CheckedStickersPanelMessage />}
 
-      {!isCheckedStickersPanelShow && isHoverTitleShow && <CheckedStickersPanelHoverTitle />}
+      <CheckedStickersPanelHoverTitle
+        isHoverTitleShow={isHoverTitleShow}
+        isCheckedStickersPanelShow={isCheckedStickersPanelShow}
+      />
 
     </div>
   )
