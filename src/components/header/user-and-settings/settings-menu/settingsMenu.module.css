@@ -2,7 +2,7 @@
 
 .container {
   position: absolute;
-  top: 80px;
+  top: 60px;
   right: -80px;
   color: var(--font-color1);
   border-radius: 5px;
@@ -10,7 +10,6 @@
   transition: opacity 0.2s ease;
   width: 220px;
   z-index: 2;
-
 }
 
 .container li {
