@@ -1,0 +1,14 @@
+
+
+.container {
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container span {
+  color: var(--font-color4);
+  font-size: 14px;
+}
