@@ -11,14 +11,10 @@ import { MainContext } from '../../../../../../../context-provider/ContextProvid
 
 export default function StickerOnCheckedStickersPanel({ topPosition, mappedSticker, setRandomUUID }) {
 
-  const { boards, updateBoard, boardRef, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { boardRef, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
   const [isMouseDown, setIsMouseDown] = useState(false)
   const stickerRef = useRef()
   const [isDragged, setIsDragged] = useState(false)
-
-
-  const currentBoard = boards.boardId === currentBoardId
-  const isCheckedStickersInCurrentBoard = currentBoard.stickers && currentBoard.stickers.some(sticker => sticker.isChecked)
 
 
   function handleMouseDown() {
@@ -61,17 +57,11 @@ export default function StickerOnCheckedStickersPanel({ topPosition, mappedStick
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate3)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate4)
 
-      if (!isCheckedStickersInCurrentBoard) {
-        const propertyToUpdate = { key: 'isThereCheckedSticker', value: false }
-        updateBoard(setBoards, currentBoardId, propertyToUpdate)
-      }
     } else {
       setRandomUUID(crypto.randomUUID())
     }
+
   }
-
-
-
 
 
   return (

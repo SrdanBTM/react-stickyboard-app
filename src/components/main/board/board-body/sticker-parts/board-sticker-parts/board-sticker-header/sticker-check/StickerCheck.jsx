@@ -8,7 +8,7 @@ export default function StickerCheck({ mappedSticker }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const [isChecked, setIsChecked] = useState(false)
-  const { boards, updateBoard, checkedStickerId, setCheckedStickerId, checkedOrderCounter, setCheckedOrderCounter, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { setCheckedStickerId, checkedOrderCounter, setCheckedOrderCounter, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
 
 
   const checked = `${BASE_URL}images/checked3.png`
@@ -31,11 +31,6 @@ export default function StickerCheck({ mappedSticker }) {
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
       setCheckedStickerId(null)
     }, 200)
-
-    if (isChecked) {
-      const propertyToUpdate = { key: 'isThereCheckedSticker', value: true }
-      updateBoard(setBoards, currentBoardId, propertyToUpdate)
-    }
   }, [isChecked])
 
 

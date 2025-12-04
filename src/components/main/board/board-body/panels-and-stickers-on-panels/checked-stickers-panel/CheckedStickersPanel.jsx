@@ -12,15 +12,18 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function CheckedStickersPanel() {
 
-  const { boards, currentBoardId, isCheckedStickersPanelShow } = useContext(MainContext)
+  const { updateBoard, boards, setBoards, currentBoardId, isCheckedStickersPanelShow } = useContext(MainContext)
   const [isHoverTitleShow, setIsHoverTitleShow] = useState(true)
   const [isCheckedStickersPanelHover, setIsCheckedStickersPanelHover] = useState(false)
+  const [randomUUID, setRandomUUID] = useState(crypto.randomUUID())
 
 
   let currentBoard = null
   if (boards.length > 0) {
     currentBoard = boards.find(board => board.boardId === currentBoardId)
   }
+
+  const isCheckedStickersInCurrentBoard = currentBoard.stickers && currentBoard.stickers.some(sticker => sticker.checked)
 
   const filteredAndSortedCheckedStickers =
     currentBoard && currentBoard.stickers
@@ -50,6 +53,17 @@ export default function CheckedStickersPanel() {
   }
 
 
+  useEffect(() => {
+    if (isCheckedStickersInCurrentBoard) {
+      const propertyToUpdate = { key: 'isThereCheckedSticker', value: true }
+      updateBoard(setBoards, currentBoardId, propertyToUpdate)
+    } else {
+      const propertyToUpdate = { key: 'isThereCheckedSticker', value: false }
+      updateBoard(setBoards, currentBoardId, propertyToUpdate)
+    }
+  }, [isCheckedStickersInCurrentBoard])
+
+
   return (
     <div
       className={styles.container}
@@ -60,7 +74,7 @@ export default function CheckedStickersPanel() {
       }}
     >
       <CheckedStickersPanelHeader />
-      
+
       {currentBoard.isThereCheckedSticker
         ? <CheckedStickersPanelCheckedStickers filteredAndSortedCheckedStickers={filteredAndSortedCheckedStickers} />
         : <CheckedStickersPanelMessage />}

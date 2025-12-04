@@ -10,6 +10,7 @@ export default function CheckedStickersPanelCheckedStickers({ filteredAndSortedC
 
   const [randomUUID, setRandomUUID] = useState(crypto.randomUUID())
 
+
   return (
     <div className={styles.container}>
       {filteredAndSortedCheckedStickers.map((sticker, index) => {
