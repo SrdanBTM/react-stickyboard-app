@@ -43,6 +43,7 @@ export default function App() {
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
   const [isCheckedStickersPanelShow, setIsCheckedStickersPanelShow] = useState(false)
+  const [isFilterDatedMenuShow, setIsFilterDatedMenuShow] = useState(false)
 
 
   const boardRef = useRef()
@@ -79,6 +80,7 @@ export default function App() {
         checkedOrderCounter, setCheckedOrderCounter,
         checkedStickerId, setCheckedStickerId,
         isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
+        isFilterDatedMenuShow, setIsFilterDatedMenuShow,
 
         //helper functions handle sticker
         updateSticker,
