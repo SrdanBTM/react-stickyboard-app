@@ -23,14 +23,17 @@ export default function App() {
 
   const id = crypto.randomUUID()
 
+  const filterDatedListTitle = ['Next 3 days', 'Next 10 days', 'Next 30 days']
+  
+
   // const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
   const [boards, setBoards] = useState(dummyData)
-
-  const [theme, setTheme] = useState('darkTheme')
-
+  
   // const [currentBoardId, setCurrentBoardId] = useState(id)
   const [currentBoardId, setCurrentBoardId] = useState(boards[0].boardId)
 
+  
+  const [theme, setTheme] = useState('darkTheme')
   const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
   const [isDeleteAllCheckedStickersModalOpen, setIsDeleteAllCheckedStickersModalOpen] = useState(false)
   const [isMessageNoCheckedStickersToDeleteModalOpen, setIsMessageNoCheckedStickersToDeleteModalOpen] = useState(false)
@@ -44,6 +47,7 @@ export default function App() {
   const [checkedStickerId, setCheckedStickerId] = useState(null)
   const [isCheckedStickersPanelShow, setIsCheckedStickersPanelShow] = useState(false)
   const [isFilterDatedMenuShow, setIsFilterDatedMenuShow] = useState(false)
+  const [filterDatedTitle, setFilterDatedTitle] = useState(filterDatedListTitle[0])
 
 
   const boardRef = useRef()
@@ -81,6 +85,7 @@ export default function App() {
         checkedStickerId, setCheckedStickerId,
         isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
         isFilterDatedMenuShow, setIsFilterDatedMenuShow,
+        filterDatedTitle, setFilterDatedTitle,
 
         //helper functions handle sticker
         updateSticker,
@@ -103,8 +108,10 @@ export default function App() {
         //wrapers
         BoardStickerFooterButtonWraper,
         BoardStickerModalButtonWraper,
-        BoardStickerModalWraper
+        BoardStickerModalWraper,
 
+        //arrays
+        filterDatedListTitle
 
       }}>
       <div className={`app ${theme}`} onClick={handleClick} style={{ overflow: 'hidden' }}>
