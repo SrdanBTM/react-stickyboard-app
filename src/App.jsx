@@ -5,6 +5,7 @@ import Header from './components/header/Header.jsx'
 import Main from './components/main/Main.jsx'
 import DeleteBoardModal from './components/modals/delete-board-modal/DeleteBoardModal.jsx'
 import DeleteAllCheckedStickersModal from './components/modals/delete-all-checked-stickers-modal/DeleteAllCheckedStickersModal.jsx'
+import MessageNoCheckedStickerToDeleteModal from './components/modals/message-no-checked-stickers-to-delete-modal/MessageNoCheckedStickersToDeleteModal.jsx'
 import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 import { MainProvider } from './context-provider/ContextProvider.jsx'
 import { useState, useRef, useEffect } from 'react'
@@ -32,6 +33,7 @@ export default function App() {
 
   const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
   const [isDeleteAllCheckedStickersModalOpen, setIsDeleteAllCheckedStickersModalOpen] = useState(false)
+  const [isMessageNoCheckedStickersToDeleteModalOpen, setIsMessageNoCheckedStickersToDeleteModalOpen] = useState(false)
   const [clickedElementOnApp, setClickedElementOnApp] = useState(null)
   const [isClickedOutsideBoardList, setIsClickedOutsideBoardList] = useState(false)
   const [isClickedOutsideNewBoard, setIsClickedOutsideNewBoard] = useState(false)
@@ -67,6 +69,7 @@ export default function App() {
         currentBoardId, setCurrentBoardId,
         isDeleteBoardModalOpen, setIsDeleteBoardModalOpen,
         isDeleteAllCheckedStickersModalOpen, setIsDeleteAllCheckedStickersModalOpen,
+        isMessageNoCheckedStickersToDeleteModalOpen, setIsMessageNoCheckedStickersToDeleteModalOpen,
         clickedElementOnApp, setClickedElementOnApp,
         isClickedOutsideBoardList, setIsClickedOutsideBoardList,
         isClickedOutsideNewBoard, setIsClickedOutsideNewBoard,
@@ -110,6 +113,7 @@ export default function App() {
 
         {isDeleteBoardModalOpen && <DeleteBoardModal />}
         {isDeleteAllCheckedStickersModalOpen && <DeleteAllCheckedStickersModal />}
+        {isMessageNoCheckedStickersToDeleteModalOpen && <MessageNoCheckedStickerToDeleteModal />}
       </div>
     </MainProvider>
   )
