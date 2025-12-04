@@ -1,19 +1,16 @@
 
 
 import styles from './showDated.module.css'
-import DatedMenuIcon from '../dated-menu-icon/DatedMenuIcon.jsx'
-import DatedMenu from '../dated-menu/DatedMenu.jsx'
+import DatedMenuIcon from './dated-menu-icon/DatedMenuIcon.jsx'
+import DatedMenu from './dated-menu/DatedMenu.jsx'
+import DatedButton from './dated-button/DatedButton.jsx'
 
 
 export default function ShowDated() {
   return (
     <div className={styles.container}>
-      <button>
-        Dated - Next 3 Days
-      </button>
-
+      <DatedButton />
       <DatedMenuIcon />
-
       <DatedMenu />
     </div>
   )
