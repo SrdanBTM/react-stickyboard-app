@@ -42,6 +42,7 @@ export default function App() {
   const [isClickedOutsideNewBoard, setIsClickedOutsideNewBoard] = useState(false)
   const [isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings] = useState(false)
   const [isSearchResultBoard, setIsSearchResultBoard] = useState(false)
+  const [isFilterResultBoard, setIsFilterResultBoard] = useState(false)
   const [searchValue, setSearchValue] = useState('')
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
@@ -80,6 +81,7 @@ export default function App() {
         isClickedOutsideNewBoard, setIsClickedOutsideNewBoard,
         isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings,
         isSearchResultBoard, setIsSearchResultBoard,
+        isFilterResultBoard, setIsFilterResultBoard,
         searchValue, setSearchValue,
         checkedOrderCounter, setCheckedOrderCounter,
         checkedStickerId, setCheckedStickerId,
