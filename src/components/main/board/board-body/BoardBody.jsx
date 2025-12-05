@@ -10,18 +10,13 @@ import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 
 export default function BoardBody() {
 
-  const { isSearchResultBoard } = useContext(MainContext)
+  const { isSearchResultBoard, isFilterResultBoard } = useContext(MainContext)
 
   return (
     <div className={styles.container}>
-      {isSearchResultBoard
-        ?
-        <SearchedStickersPanel />
-        :
-        <BoardStickersPanel />
-      }
-
-      {/* <FilteredStickersPanel /> */}
+      {!isSearchResultBoard && !isFilterResultBoard && <BoardStickersPanel />}
+      {isSearchResultBoard && <SearchedStickersPanel />}
+      {isFilterResultBoard && <FilteredStickersPanel />}
     </div>
   )
 }
