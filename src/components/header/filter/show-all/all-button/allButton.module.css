@@ -1,0 +1,26 @@
+
+
+.container {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.container button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: none;
+  color: var(--font-color1);
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px -2px rgba(255,255,255,0.4);
+  transition: border 0.3s ease;
+}
+
+.container button:hover,
+.container button:focus {
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 5px;
+}
