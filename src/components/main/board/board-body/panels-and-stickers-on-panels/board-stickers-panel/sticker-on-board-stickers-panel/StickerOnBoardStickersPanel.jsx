@@ -78,7 +78,8 @@ export default function StickerOnBoard({ mappedSticker }) {
         backgroundColor: mappedSticker.color,
         y: mappedSticker.positionY,
         x: mappedSticker.positionX,
-        zIndex: mappedSticker.zIndex
+        zIndex: mappedSticker.zIndex,
+        position: 'absolute'
       }}
       animate={{
         scale: checkedStickerId === mappedSticker.stickerId ? 0 : 1
