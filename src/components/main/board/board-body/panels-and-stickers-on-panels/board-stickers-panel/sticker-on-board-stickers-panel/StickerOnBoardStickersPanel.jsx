@@ -1,5 +1,5 @@
 
-import styles from './stickerOnBoardStickersPanel.module.css'
+
 import { motion, useDragControls } from 'framer-motion'
 import { useContext, useRef, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
@@ -11,11 +11,12 @@ import BoardStickerDateTime from '../../../sticker-parts/board-sticker-parts/boa
 import BoardStickerAddDateTimeModal from '../../../sticker-parts/board-sticker-parts/board-sticker-add-date-time-modal/BoardStickerAddDateTimeModal.jsx'
 import BoardStickerDeleteModal from '../../../sticker-parts/board-sticker-parts/board-sticker-delete-modal/BoardStickerDeleteModal.jsx'
 import BoardStickerChangeColorModal from '../../../sticker-parts/board-sticker-parts/board-sticker-change-color-modal/BoardStickerChangeColorModal.jsx'
+import StickerOnPanelWrapper from '../../../../../../../wrapers/sticker-on-panel-wrapper/StickerOnPanelWrapper.jsx'
 
 
 export default function StickerOnBoard({ mappedSticker }) {
 
-  const { boards, updateAllStickers, checkedStickerId, boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
+  const { updateAllStickers, checkedStickerId, boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
   const stickerRef = useRef()
   const [constraints, setConstraints] = useState()
   const dragControl = useDragControls()
@@ -64,7 +65,6 @@ export default function StickerOnBoard({ mappedSticker }) {
     <motion.div
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
-      className={styles.container}
       drag
       dragListener={false}
       dragControls={dragControl}
@@ -88,15 +88,21 @@ export default function StickerOnBoard({ mappedSticker }) {
         ease: 'easeOut'
       }}
     >
-      <BoardStickerPin dragControl={dragControl} mappedSticker={mappedSticker}/>
-      <BoardStickerHeader mappedSticker={mappedSticker} />
-      {mappedSticker.date && mappedSticker.time && <BoardStickerDateTime mappedSticker={mappedSticker} />}
-      <BoardStickerNote mappedSticker={mappedSticker} />
-      <BoardStickerFooter mappedSticker={mappedSticker} />
-      {mappedSticker.isDeleteModalOpen && <BoardStickerDeleteModal mappedSticker={mappedSticker} />}
-      {mappedSticker.isAddDateTimeModalOpen && <BoardStickerAddDateTimeModal mappedSticker={mappedSticker} />}
-      {mappedSticker.isChangeColorModalOpen && <BoardStickerChangeColorModal mappedSticker={mappedSticker} />}
 
-    </motion.div>
+      <StickerOnPanelWrapper mappedSticker={mappedSticker} variant='board'>
+
+        <BoardStickerPin dragControl={dragControl} mappedSticker={mappedSticker} />
+        <BoardStickerHeader mappedSticker={mappedSticker} />
+        {mappedSticker.date && mappedSticker.time && <BoardStickerDateTime mappedSticker={mappedSticker} />}
+        <BoardStickerNote mappedSticker={mappedSticker} />
+        <BoardStickerFooter mappedSticker={mappedSticker} />
+        {mappedSticker.isDeleteModalOpen && <BoardStickerDeleteModal mappedSticker={mappedSticker} />}
+        {mappedSticker.isAddDateTimeModalOpen && <BoardStickerAddDateTimeModal mappedSticker={mappedSticker} />}
+        {mappedSticker.isChangeColorModalOpen && <BoardStickerChangeColorModal mappedSticker={mappedSticker} />}
+
+      </StickerOnPanelWrapper>
+
+    </motion.div >
+
   )
 }
