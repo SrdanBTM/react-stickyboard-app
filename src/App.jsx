@@ -1,11 +1,5 @@
 
 
-import ClickOutsideElement from './click-outside-element/ClickOutsideElement.jsx'
-import Header from './components/header/Header.jsx'
-import Main from './components/main/Main.jsx'
-import DeleteBoardModal from './components/modals/modals/app-modals/DeleteBoardModal.jsx'
-import DeleteAllCheckedStickersModal from './components/modals/modals/app-modals/DeleteAllCheckedStickersModal.jsx'
-import MessageNoCheckedStickerToDeleteModal from './components/modals/modals/app-modals/MessageNoCheckedStickersToDeleteModal.jsx'
 import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 import { MainProvider } from './context-provider/ContextProvider.jsx'
 import { useState, useRef, useEffect } from 'react'
@@ -13,6 +7,15 @@ import dummyData from './dummy-data/dummyData.json'
 import { updateSticker, updateAllStickers, addSticker, deleteSticker, deleteAllCheckedStickers } from './helper-functions/HelperFunctionsHandleSticker.jsx'
 import { addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-functions/HelperFunctionsHandleBoard.jsx'
 import { closeCurrentStickerModal, openCurrentStickerModal, closeAllStickerModals } from './helper-functions/HelperFunctionsHandleStickerModal.jsx'
+
+
+// components
+import ClickOutsideElement from './click-outside-element/ClickOutsideElement.jsx'
+import Main from './components/main/Main.jsx'
+import Header from './components/header/Header.jsx'
+import DeleteBoardModal from './components/modals/modals/app-modals/DeleteBoardModal.jsx'
+import DeleteAllCheckedStickersModal from './components/modals/modals/app-modals/DeleteAllCheckedStickersModal.jsx'
+import MessageNoCheckedStickerToDeleteModal from './components/modals/modals/app-modals/MessageNoCheckedStickersToDeleteModal.jsx'
 
 
 export default function App() {
