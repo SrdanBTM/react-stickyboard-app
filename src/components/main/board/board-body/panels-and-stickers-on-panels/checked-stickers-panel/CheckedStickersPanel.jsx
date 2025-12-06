@@ -23,12 +23,18 @@ export default function CheckedStickersPanel() {
     currentBoard = boards.find(board => board.boardId === currentBoardId)
   }
 
-  const isCheckedStickersInCurrentBoard = currentBoard.stickers && currentBoard.stickers.some(sticker => sticker.checked)
 
-  const filteredAndSortedCheckedStickers =
-    currentBoard && currentBoard.stickers
+  const isCheckedStickersInCurrentBoard = currentBoard
+    ? currentBoard.stickers.some(sticker => sticker.checked)
+    : false
+
+
+  const filteredAndSortedCheckedStickers = currentBoard
+    ? currentBoard.stickers
       .filter(sticker => sticker.checked)
-      .sort((sticker1, sticker2) => sticker1.checkedOrder - sticker2.checkedOrder)
+      .sort((a, b) => a.checkedOrder - b.checkedOrder)
+    : []
+
 
 
   useEffect(() => {
@@ -75,7 +81,7 @@ export default function CheckedStickersPanel() {
     >
       <CheckedStickersPanelHeader />
 
-      {currentBoard.isThereCheckedSticker
+      {currentBoardId && currentBoard.isThereCheckedSticker
         ? <CheckedStickersPanelCheckedStickers filteredAndSortedCheckedStickers={filteredAndSortedCheckedStickers} />
         : <CheckedStickersPanelMessage />}
 

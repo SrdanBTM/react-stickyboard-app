@@ -15,13 +15,15 @@ export default function BoardStickersPanel() {
     ? boards.find(board => board.boardId === currentBoardId)
     : null
 
-  const currentBoardStickers = currentBoard && currentBoard.stickers.filter(sticker => !sticker.checked)
+  const currentBoardStickers = currentBoard
+    ? currentBoard.stickers.filter(sticker => !sticker.checked)
+    : []
 
 
   return (
     <StickersPanelWrapper variant='board'>
 
-      {currentBoardStickers.map(sticker => (
+      {currentBoardId && currentBoardStickers.map(sticker => (
         <StickerOnBoardStickersPanel
           key={sticker.stickerId}
           mappedSticker={sticker}

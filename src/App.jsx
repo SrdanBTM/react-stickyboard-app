@@ -18,15 +18,16 @@ import { closeCurrentStickerModal, openCurrentStickerModal, closeAllStickerModal
 export default function App() {
 
   const filterDatedListTitle = ['Next 3 days', 'Next 10 days', 'Next 30 days']
-  
+
   // const id = crypto.randomUUID()
   // const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
   const [boards, setBoards] = useState(dummyData)
-  
-  // const [currentBoardId, setCurrentBoardId] = useState(id)
-  const [currentBoardId, setCurrentBoardId] = useState(boards[0].boardId)
 
-  
+  // const [currentBoardId, setCurrentBoardId] = useState(id)
+  const currentBoardIdInit = boards.length > 0 ? boards[0].boardId : null
+  const [currentBoardId, setCurrentBoardId] = useState(currentBoardIdInit)
+
+
   const [theme, setTheme] = useState('darkTheme')
   const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
   const [isDeleteAllCheckedStickersModalOpen, setIsDeleteAllCheckedStickersModalOpen] = useState(false)
