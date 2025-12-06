@@ -1,30 +1,28 @@
 
 
-
-
-import styles from './messageNoCheckedStickersToDeleteModal.module.css'
 import Ok from './ok/Ok.jsx'
-import { useContext } from 'react'
-import { MainContext } from '../../../context-provider/ContextProvider.jsx'
+import MainModalWrapper from '../../../wrappers/main-modal-wrapper/MainModalWrapper.jsx'
+import MainModalContentWrapper from '../../../wrappers/main-modal-content-wrapper/MainModalContentWrapper.jsx'
+import MainModalMessages from '../main-modal-messages/MainModalMessages.jsx'
+import MainModalButtonsWrapper from '../../../wrappers/main-modal-buttons-wrapper/MainModalButtonsWrapper.jsx'
+
 
 
 export default function MessageNoCheckedStickersToDeleteModal() {
 
-  const { boards, currentBoardId } = useContext(MainContext)
+  const messages = ['There are no checked stickers to delete.']
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
+    <MainModalWrapper>
+      <MainModalContentWrapper>
 
-        <div className={styles.message}>
-          <p>There are no checked stickers to delete.</p>
-        </div>
+        <MainModalMessages messages={messages} />
 
-        <div className={styles.buttons}>
+        <MainModalButtonsWrapper>
           <Ok />
-        </div>
-        
-      </div>
-    </div>
+        </MainModalButtonsWrapper>
+
+      </MainModalContentWrapper>
+    </MainModalWrapper>
   )
 }
