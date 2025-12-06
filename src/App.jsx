@@ -12,20 +12,14 @@ import { useState, useRef, useEffect } from 'react'
 import dummyData from './dummy-data/dummyData.json'
 import { updateSticker, updateAllStickers, addSticker, deleteSticker, deleteAllCheckedStickers } from './helper-functions/HelperFunctionsHandleSticker.jsx'
 import { addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-functions/HelperFunctionsHandleBoard.jsx'
-import BoardStickerFooterButtonWraper from './wrapers/board-sticker-footer-button-wraper/BoardStickerFooterButtonWraper.jsx'
-import BoardStickerModalButtonWraper from './wrapers/board-sticker-modal-button-wraper/BoardStickerModalButtonWraper.jsx'
-import BoardStickerModalWraper from './wrapers/board-sticker-modal-wraper/BoardStickerModalWraper.jsx'
 import { closeCurrentStickerModal, openCurrentStickerModal, closeAllStickerModals } from './helper-functions/HelperFunctionsHandleStickerModal.jsx'
 
 
 export default function App() {
 
-
-  const id = crypto.randomUUID()
-
   const filterDatedListTitle = ['Next 3 days', 'Next 10 days', 'Next 30 days']
   
-
+  // const id = crypto.randomUUID()
   // const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
   const [boards, setBoards] = useState(dummyData)
   
@@ -106,11 +100,6 @@ export default function App() {
         updateBoard,
         updateAllBoards,
         deleteBoard,
-
-        //wrapers
-        BoardStickerFooterButtonWraper,
-        BoardStickerModalButtonWraper,
-        BoardStickerModalWraper,
 
         //arrays
         filterDatedListTitle
