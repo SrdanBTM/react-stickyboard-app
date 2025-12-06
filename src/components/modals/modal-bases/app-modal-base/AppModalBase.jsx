@@ -1,9 +1,9 @@
 
 
-import styles from './mainModal.module.css'
+import styles from './appModalBase.module.css'
 
 
-export default function MainModal({ messages, buttons }) {
+export default function AppModalBase({ messages, buttons }) {
   return (
     <div className={styles.container}>
       <div className={styles.content}>

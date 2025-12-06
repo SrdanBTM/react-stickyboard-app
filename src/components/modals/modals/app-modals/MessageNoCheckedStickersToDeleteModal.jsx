@@ -1,8 +1,8 @@
 
 
-import MainModal from '../main-modal/MainModal.jsx'
+import AppModalBase from '../../modal-bases/app-modal-base/AppModalBase.jsx'
 import { useContext } from 'react'
-import { MainContext } from '../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 
 
 export default function MessageNoCheckedStickersToDeleteModal() {
@@ -23,7 +23,7 @@ export default function MessageNoCheckedStickersToDeleteModal() {
 
 
   return (
-    <MainModal
+    <AppModalBase
       messages={messages}
       buttons={buttons}
     />
