@@ -1,28 +1,32 @@
 
 
-import Ok from './ok/Ok.jsx'
-import MainModalWrapper from '../../../wrappers/main-modal-wrapper/MainModalWrapper.jsx'
-import MainModalContentWrapper from '../../../wrappers/main-modal-content-wrapper/MainModalContentWrapper.jsx'
-import MainModalMessages from '../main-modal-messages/MainModalMessages.jsx'
-import MainModalButtonsWrapper from '../../../wrappers/main-modal-buttons-wrapper/MainModalButtonsWrapper.jsx'
-
+import MainModal from '../main-modal/MainModal.jsx'
+import { useContext } from 'react'
+import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 
 export default function MessageNoCheckedStickersToDeleteModal() {
 
+  const { setIsMessageNoCheckedStickersToDeleteModalOpen } = useContext(MainContext)
+
+
   const messages = ['There are no checked stickers to delete.']
 
+  const buttons = [
+    { title: 'Ok', onClick: handleOk }
+  ]
+
+
+  function handleOk() {
+    setIsMessageNoCheckedStickersToDeleteModalOpen(false)
+  }
+
+
   return (
-    <MainModalWrapper>
-      <MainModalContentWrapper>
+    <MainModal
+      messages={messages}
+      buttons={buttons}
+    />
 
-        <MainModalMessages messages={messages} />
-
-        <MainModalButtonsWrapper>
-          <Ok />
-        </MainModalButtonsWrapper>
-
-      </MainModalContentWrapper>
-    </MainModalWrapper>
   )
 }

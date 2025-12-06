@@ -1,29 +1,38 @@
 
 
-import Delete from './delete/Delete.jsx'
-import Close from './close/Close.jsx'
-import MainModalWrapper from '../../../wrappers/main-modal-wrapper/MainModalWrapper.jsx'
-import MainModalContentWrapper from '../../../wrappers/main-modal-content-wrapper/MainModalContentWrapper.jsx'
-import MainModalMessages from '../main-modal-messages/MainModalMessages.jsx'
-import MainModalButtonsWrapper from '../../../wrappers/main-modal-buttons-wrapper/MainModalButtonsWrapper.jsx'
+import MainModal from '../main-modal/MainModal.jsx'
+import { useContext } from 'react'
+import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 
 export default function DeleteAllCheckedStickersModal() {
 
+  const { setIsDeleteAllCheckedStickersModalOpen, deleteAllCheckedStickers, setBoards } = useContext(MainContext)
+
+
   const messages = ['Are you sure you want to delete all checked stickers on all boards?']
 
+  const buttons = [
+    { title: 'Delete', onClick: handleDelete },
+    { title: 'Close', onClick: handleClose }
+  ]
+
+
+  function handleDelete() {
+    setIsDeleteAllCheckedStickersModalOpen(false)
+    deleteAllCheckedStickers(setBoards)
+  }
+
+  function handleClose() {
+    setIsDeleteAllCheckedStickersModalOpen(false)
+  }
+
+
   return (
-    <MainModalWrapper>
-      <MainModalContentWrapper>
+    <MainModal
+      messages={messages}
+      buttons={buttons}
+    />
 
-        <MainModalMessages messages={messages} />
-
-        <MainModalButtonsWrapper>
-          <Delete />
-          <Close />
-        </MainModalButtonsWrapper>
-
-      </MainModalContentWrapper>
-    </MainModalWrapper>
   )
 }

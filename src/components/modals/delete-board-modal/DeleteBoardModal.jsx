@@ -1,19 +1,15 @@
 
 
-import Delete from './delete/Delete.jsx'
-import Close from './close/Close.jsx'
+import MainModal from '../main-modal/MainModal.jsx'
 import { useContext } from 'react'
 import { MainContext } from '../../../context-provider/ContextProvider.jsx'
-import MainModalWrapper from '../../../wrappers/main-modal-wrapper/MainModalWrapper.jsx'
-import MainModalContentWrapper from '../../../wrappers/main-modal-content-wrapper/MainModalContentWrapper.jsx'
-import MainModalMessages from '../main-modal-messages/MainModalMessages.jsx'
-import MainModalButtonsWrapper from '../../../wrappers/main-modal-buttons-wrapper/MainModalButtonsWrapper.jsx'
 
 
-export default function DeleteBoardModal() {
+export default function DeleteAllCheckedStickersModal() {
 
-  const { boards, currentBoardId } = useContext(MainContext)
+  const { boards, currentBoardId, setIsDeleteBoardModalOpen, setBoards, setCurrentBoardId } = useContext(MainContext)
   const currentBoard = boards.find(board => board.boardId === currentBoardId)
+
 
   const messages = [
     `The selected board has ${currentBoard.stickers.length} ${''} ${currentBoard.stickers.length === 1 ? 'sticker.' : 'stickers.'}`,
@@ -21,18 +17,45 @@ export default function DeleteBoardModal() {
     'Do you want to continue?'
   ]
 
+  const buttons = [
+    { title: 'Delete', onClick: handleDelete },
+    { title: 'Close', onClick: handleClose }
+  ]
+
+
+  function handleDelete() {
+    setIsDeleteBoardModalOpen(false)
+    setBoards(prev => {
+      const filtered = prev.filter(board => board.boardId !== currentBoardId)
+
+      if (filtered.length > 0) {
+        setCurrentBoardId(filtered[filtered.length - 1].boardId)
+      } else {
+        setCurrentBoardId(null)
+      }
+
+      return filtered
+    })
+  }
+
+
+  function handleClose() {
+    setIsDeleteBoardModalOpen(false)
+    setBoards(prev => prev.map(board => {
+      return (
+        board.boardId === currentBoardId
+          ? { ...board, isDeleteShowed: false }
+          : board
+      )
+    }))
+  }
+
+
   return (
-    <MainModalWrapper>
-      <MainModalContentWrapper>
+    <MainModal
+      messages={messages}
+      buttons={buttons}
+    />
 
-        <MainModalMessages messages={messages} />
-
-        <MainModalButtonsWrapper>
-          <Delete />
-          <Close />
-        </MainModalButtonsWrapper>
-
-      </MainModalContentWrapper>
-    </MainModalWrapper>
   )
 }
