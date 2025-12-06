@@ -3,11 +3,12 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
+import BoardStickerFooterButtonWraper from '../../../../../../../../../wrapers/board-sticker-footer-button-wraper/BoardStickerFooterButtonWraper.jsx'
 
 
 export default function ChangeColorButton({ mappedSticker }) {
 
-  const { closeCurrentStickerModal, closeAllStickerModals, openCurrentStickerModal, setBoards, updateSticker, currentBoardId, BoardStickerFooterButtonWraper } = useContext(MainContext)
+  const { closeCurrentStickerModal, closeAllStickerModals, openCurrentStickerModal, setBoards, updateSticker, currentBoardId } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
   const currentModal = 'isChangeColorModalOpen'
   const currentStickerId = mappedSticker.stickerId

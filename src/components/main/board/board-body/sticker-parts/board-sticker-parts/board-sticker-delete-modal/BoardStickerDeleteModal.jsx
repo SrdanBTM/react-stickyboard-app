@@ -2,14 +2,10 @@
 
 import DeleteButton from './delete-button/DeleteButton.jsx'
 import DeleteTitle from './delete-title/DeleteTitle.jsx'
-import { useContext } from 'react'
-import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import BoardStickerModalWraper from '../../../../../../../wrapers/board-sticker-modal-wraper/BoardStickerModalWraper.jsx'
 
 
 export default function BoardStickerDeleteModal({ mappedSticker }) {
-
-  const { BoardStickerModalWraper } = useContext(MainContext)
-
 
   return (
     <BoardStickerModalWraper

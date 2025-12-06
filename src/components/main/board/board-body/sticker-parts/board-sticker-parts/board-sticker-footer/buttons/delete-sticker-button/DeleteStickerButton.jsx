@@ -3,11 +3,12 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
+import BoardStickerFooterButtonWraper from '../../../../../../../../../wrapers/board-sticker-footer-button-wraper/BoardStickerFooterButtonWraper.jsx'
 
 
 export default function DeleteStickerButton({ mappedSticker }) {
 
-  const { closeCurrentStickerModal, closeAllStickerModals, openCurrentStickerModal, updateSticker, setBoards, currentBoardId, BoardStickerFooterButtonWraper } = useContext(MainContext)
+  const { closeCurrentStickerModal, closeAllStickerModals, openCurrentStickerModal, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
   const BASE_URL = import.meta.env.BASE_URL
   const currentModal = 'isDeleteModalOpen'
   const currentStickerId = mappedSticker.stickerId
