@@ -4,13 +4,13 @@ import AddDateTitle from './add-date-title/AddDateTitle.jsx'
 import Inputs from './inputs/Inputs.jsx'
 import Message from './message/Message.jsx'
 import Buttons from './buttons/Buttons.jsx'
-import BoardStickerModalWraper from '../../../../../../../wrapers/board-sticker-modal-wraper/BoardStickerModalWraper.jsx'
+import BoardStickerModalWrapper from '../../../../../../../wrappers/board-sticker-modal-wrapper/BoardStickerModalWrapper.jsx'
 
 
 export default function BoardStickerAddDateTimeModal({ mappedSticker }) {
 
   return (
-    <BoardStickerModalWraper
+    <BoardStickerModalWrapper
       mappedSticker={mappedSticker}
     >
       <div>
@@ -19,6 +19,6 @@ export default function BoardStickerAddDateTimeModal({ mappedSticker }) {
         <Message mappedSticker={mappedSticker} />
         <Buttons mappedSticker={mappedSticker} />
       </div>
-    </BoardStickerModalWraper>
+    </BoardStickerModalWrapper>
   )
 }

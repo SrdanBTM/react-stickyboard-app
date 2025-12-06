@@ -2,7 +2,7 @@
 
 import ColorsTitle from './colors-title/ColorsTitle.jsx'
 import ColorsPalette from './colors-palette/ColorsPalette.jsx'
-import BoardStickerModalWraper from '../../../../../../../wrapers/board-sticker-modal-wraper/BoardStickerModalWraper.jsx'
+import BoardStickerModalWrapper from '../../../../../../../wrappers/board-sticker-modal-wrapper/BoardStickerModalWrapper.jsx'
 
 
 export default function BoardStickerChangeColorModal({ mappedSticker }) {
@@ -10,14 +10,14 @@ export default function BoardStickerChangeColorModal({ mappedSticker }) {
 
 
   return (
-    <BoardStickerModalWraper
+    <BoardStickerModalWrapper
       mappedSticker={mappedSticker}
     >
       <div>
         <ColorsTitle />
         <ColorsPalette mappedSticker={mappedSticker} />
       </div>
-    </BoardStickerModalWraper>
+    </BoardStickerModalWrapper>
   )
 }
 

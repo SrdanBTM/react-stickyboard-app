@@ -2,7 +2,7 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
-import StickersPanelWrapper from '../../../../../../wrapers/stickers-panel-wrapper/StickersPanelWrapper.jsx'
+import StickersPanelWrapper from '../../../../../../wrappers/stickers-panel-wrapper/StickersPanelWrapper.jsx'
 import StickerOnFilteredStickersPanel from './sticker-on-filtered-stickers-panel/StickerOnFilteredStickersPanel.jsx'
 
 

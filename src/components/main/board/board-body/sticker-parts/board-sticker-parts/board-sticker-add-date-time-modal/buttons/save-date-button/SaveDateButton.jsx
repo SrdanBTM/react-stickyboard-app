@@ -2,7 +2,7 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
-import BoardStickerModalButtonWraper from '../../../../../../../../../wrapers/board-sticker-modal-button-wraper/BoardStickerModalButtonWraper.jsx'
+import BoardStickerModalButtonWrapper from '../../../../../../../../../wrappers/board-sticker-modal-button-wrapper/BoardStickerModalButtonWrapper.jsx'
 
 
 export default function SaveDateButton({ mappedSticker }) {
@@ -42,11 +42,11 @@ export default function SaveDateButton({ mappedSticker }) {
 
 
   return (
-    <BoardStickerModalButtonWraper>
+    <BoardStickerModalButtonWrapper>
       <button onClick={handleClick}>
         <img src={`${BASE_URL}images/icon-save1.png`} alt='save' />
         <span>Save</span>
       </button>
-    </BoardStickerModalButtonWraper>
+    </BoardStickerModalButtonWrapper>
   )
 }

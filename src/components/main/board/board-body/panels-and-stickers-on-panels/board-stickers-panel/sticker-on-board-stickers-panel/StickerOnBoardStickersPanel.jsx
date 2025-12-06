@@ -11,7 +11,7 @@ import BoardStickerDateTime from '../../../sticker-parts/board-sticker-parts/boa
 import BoardStickerAddDateTimeModal from '../../../sticker-parts/board-sticker-parts/board-sticker-add-date-time-modal/BoardStickerAddDateTimeModal.jsx'
 import BoardStickerDeleteModal from '../../../sticker-parts/board-sticker-parts/board-sticker-delete-modal/BoardStickerDeleteModal.jsx'
 import BoardStickerChangeColorModal from '../../../sticker-parts/board-sticker-parts/board-sticker-change-color-modal/BoardStickerChangeColorModal.jsx'
-import StickerOnPanelWrapper from '../../../../../../../wrapers/sticker-on-panel-wrapper/StickerOnPanelWrapper.jsx'
+import StickerOnPanelWrapper from '../../../../../../../wrappers/sticker-on-panel-wrapper/StickerOnPanelWrapper.jsx'
 
 
 export default function StickerOnBoard({ mappedSticker }) {

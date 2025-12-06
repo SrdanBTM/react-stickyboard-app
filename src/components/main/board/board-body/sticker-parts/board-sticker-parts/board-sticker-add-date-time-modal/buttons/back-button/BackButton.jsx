@@ -2,7 +2,7 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
-import BoardStickerModalButtonWraper from '../../../../../../../../../wrapers/board-sticker-modal-button-wraper/BoardStickerModalButtonWraper.jsx'
+import BoardStickerModalButtonWrapper from '../../../../../../../../../wrappers/board-sticker-modal-button-wrapper/BoardStickerModalButtonWrapper.jsx'
 
 
 export default function BackButton({ mappedSticker }) {
@@ -19,11 +19,11 @@ export default function BackButton({ mappedSticker }) {
 
 
   return (
-    <BoardStickerModalButtonWraper>
+    <BoardStickerModalButtonWrapper>
       <button onClick={handleClick}>
         <img src={`${BASE_URL}images/icon-back1.png`} alt='back' />
         <span>Back</span>
       </button>
-    </BoardStickerModalButtonWraper>
+    </BoardStickerModalButtonWrapper>
   )
 }

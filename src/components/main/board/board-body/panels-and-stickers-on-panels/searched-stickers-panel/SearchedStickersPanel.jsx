@@ -3,7 +3,7 @@
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
 import StickerOnSearchedStickersPanel from './sticker-on-searched-stickerst-panel/StickerOnSearchedStickersPanel.jsx'
-import StickersPanelWrapper from '../../../../../../wrapers/stickers-panel-wrapper/StickersPanelWrapper.jsx'
+import StickersPanelWrapper from '../../../../../../wrappers/stickers-panel-wrapper/StickersPanelWrapper.jsx'
 
 
 export default function SearchedStickersPanel() {

@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
 import StickerOnBoardStickersPanel from './sticker-on-board-stickers-panel/StickerOnBoardStickersPanel.jsx'
 import CheckedStickersPanel from '../checked-stickers-panel/CheckedStickersPanel.jsx'
-import StickersPanelWrapper from '../../../../../../wrapers/stickers-panel-wrapper/StickersPanelWrapper.jsx'
+import StickersPanelWrapper from '../../../../../../wrappers/stickers-panel-wrapper/StickersPanelWrapper.jsx'
 
 
 export default function BoardStickersPanel() {

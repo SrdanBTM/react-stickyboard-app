@@ -1,9 +1,9 @@
 
 
-import styles from './boardStickerFooterButtonWraper.module.css'
+import styles from './boardStickerFooterButtonWrapper.module.css'
 
 
-export default function BoardStickerFooterButtonWraper({ children, currentModal, mappedSticker }) {
+export default function BoardStickerFooterButtonWrapper({ children, currentModal, mappedSticker }) {
 
   return (
     <div

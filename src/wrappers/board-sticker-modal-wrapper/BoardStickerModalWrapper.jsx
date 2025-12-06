@@ -1,9 +1,9 @@
 
 
-import styles from './boardStickerModalWraper.module.css'
+import styles from './boardStickerModalWrapper.module.css'
 
 
-export default function BoardStickerModalWraper({ children, mappedSticker }) {
+export default function BoardStickerModalWrapper({ children, mappedSticker }) {
 
 
   return (

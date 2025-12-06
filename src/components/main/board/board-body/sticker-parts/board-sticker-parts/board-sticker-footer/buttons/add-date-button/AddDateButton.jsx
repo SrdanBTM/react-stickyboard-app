@@ -3,7 +3,7 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../../context-provider/ContextProvider.jsx'
-import BoardStickerFooterButtonWraper from '../../../../../../../../../wrapers/board-sticker-footer-button-wraper/BoardStickerFooterButtonWraper.jsx'
+import BoardStickerFooterButtonWrapper from '../../../../../../../../../wrappers/board-sticker-footer-button-wrapper/BoardStickerFooterButtonWrapper.jsx'
 
 
 export default function AddDateIcon({ mappedSticker }) {
@@ -25,7 +25,7 @@ export default function AddDateIcon({ mappedSticker }) {
 
 
   return (
-    <BoardStickerFooterButtonWraper
+    <BoardStickerFooterButtonWrapper
       currentModal={currentModal}
       mappedSticker={mappedSticker}
     >
@@ -35,6 +35,6 @@ export default function AddDateIcon({ mappedSticker }) {
           : <img src={`${BASE_URL}images/icon-date2.png`} alt='add date' />
         }
       </button>
-    </BoardStickerFooterButtonWraper>
+    </BoardStickerFooterButtonWrapper>
   )
 }
