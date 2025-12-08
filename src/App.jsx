@@ -13,9 +13,9 @@ import { closeCurrentStickerModal, openCurrentStickerModal, closeAllStickerModal
 import ClickOutsideElement from './click-outside-element/ClickOutsideElement.jsx'
 import Main from './components/main/Main.jsx'
 import Header from './components/header/Header.jsx'
-import DeleteBoardModal from './components/modals/modals/app-modals/DeleteBoardModal.jsx'
-import DeleteAllCheckedStickersModal from './components/modals/modals/app-modals/DeleteAllCheckedStickersModal.jsx'
-import MessageNoCheckedStickerToDeleteModal from './components/modals/modals/app-modals/MessageNoCheckedStickersToDeleteModal.jsx'
+import DeleteBoardModal from './components/app-modals/app-modals/DeleteBoardModal.jsx'
+import DeleteAllCheckedStickersModal from './components/app-modals/app-modals/DeleteAllCheckedStickersModal.jsx'
+import MessageNoCheckedStickerToDeleteModal from './components/app-modals/app-modals/MessageNoCheckedStickersToDeleteModal.jsx'
 
 
 export default function App() {

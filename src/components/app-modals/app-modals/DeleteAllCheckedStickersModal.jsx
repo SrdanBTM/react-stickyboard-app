@@ -1,8 +1,8 @@
 
 
-import AppModalBase from '../../modal-bases/app-modal-base/AppModalBase.jsx'
+import AppModalBase from '../app-modal-base/AppModalBase.jsx'
 import { useContext } from 'react'
-import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 
 export default function DeleteAllCheckedStickersModal() {
