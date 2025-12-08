@@ -7,7 +7,7 @@ import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 
 export default function BoardHeader() {
 
-  const { isSearchResultBoard, currentBoardId, boards } = useContext(MainContext)
+  const { currentBoardPanel, currentBoardId, boards } = useContext(MainContext)
 
   const currentBoard =
   boards.length > 0
@@ -17,7 +17,7 @@ export default function BoardHeader() {
 
   return (
     <div className={styles.container}>
-      {isSearchResultBoard
+      {currentBoardPanel === 'search'
         ? <span>Search results</span>
         : currentBoard && <span>{currentBoard.boardName}</span>
       }

@@ -7,7 +7,7 @@ import { MainContext } from '../../../../../../context-provider/ContextProvider.
 
 export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard }) {
 
-  const { addBoard, setBoards, boardTemplate, setIsSearchResultBoard, setSearchValue } = useContext(MainContext)
+  const { addBoard, setBoards, boardTemplate, setSearchValue } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
   const inputRef = useRef()
 
@@ -19,7 +19,6 @@ export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard })
 
   function handleKeyDown(e) {
     if (e.key === 'Enter' && inputValue.length > 0) {
-      setIsSearchResultBoard(false)
       setSearchValue('')
       setIsCreateBoard(false)
 

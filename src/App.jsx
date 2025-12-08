@@ -39,14 +39,13 @@ export default function App() {
   const [isClickedOutsideBoardList, setIsClickedOutsideBoardList] = useState(false)
   const [isClickedOutsideNewBoard, setIsClickedOutsideNewBoard] = useState(false)
   const [isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings] = useState(false)
-  const [isSearchResultBoard, setIsSearchResultBoard] = useState(false)
-  const [isFilterResultBoard, setIsFilterResultBoard] = useState(false)
   const [searchValue, setSearchValue] = useState('')
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
   const [isCheckedStickersPanelShow, setIsCheckedStickersPanelShow] = useState(false)
   const [isFilterDatedMenuShow, setIsFilterDatedMenuShow] = useState(false)
   const [filterDatedTitle, setFilterDatedTitle] = useState(filterDatedListTitle[0])
+  const [currentBoardPanel, setCurrentBoardPanel] = useState('board')
 
 
   const boardRef = useRef()
@@ -78,14 +77,13 @@ export default function App() {
         isClickedOutsideBoardList, setIsClickedOutsideBoardList,
         isClickedOutsideNewBoard, setIsClickedOutsideNewBoard,
         isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings,
-        isSearchResultBoard, setIsSearchResultBoard,
-        isFilterResultBoard, setIsFilterResultBoard,
         searchValue, setSearchValue,
         checkedOrderCounter, setCheckedOrderCounter,
         checkedStickerId, setCheckedStickerId,
         isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
         isFilterDatedMenuShow, setIsFilterDatedMenuShow,
         filterDatedTitle, setFilterDatedTitle,
+        currentBoardPanel, setCurrentBoardPanel,
 
         //helper functions handle sticker
         updateSticker,

@@ -6,7 +6,7 @@ import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 
 export default function SearchBar() {
 
-  const { updateAllStickers, setBoards, searchValue, setSearchValue, setIsSearchResultBoard, setIsFilterResultBoard, setCurrentBoardId, currentBoardId } = useContext(MainContext)
+  const { setCurrentBoardPanel, updateAllStickers, setBoards, searchValue, setSearchValue, setCurrentBoardId, currentBoardId } = useContext(MainContext)
 
   function handleChange(e) {
     const propertyToUpdate1 = { key: 'isAddDateTimeModalOpen', value: false }
@@ -17,9 +17,9 @@ export default function SearchBar() {
     updateAllStickers(setBoards, currentBoardId, propertyToUpdate3)
 
     setSearchValue(e.target.value)
-    setIsSearchResultBoard(true)
-    setIsFilterResultBoard(false)
     setCurrentBoardId(null)
+
+    setCurrentBoardPanel('search')
   }
 
 
