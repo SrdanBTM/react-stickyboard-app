@@ -2,7 +2,7 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
-import BoardStickerModalButtonWrapper from '../../../../../../../../wrappers/board-sticker-modal-button-wrapper/BoardStickerModalButtonWrapper.jsx'
+import ModalButtonWrapper from '../../../../main-panels-sticker-wrappers/modal-button-wrapper/ModalButtonWrapper.jsx'
 
 
 export default function ClearDateButton({ mappedSticker }) {
@@ -32,7 +32,7 @@ export default function ClearDateButton({ mappedSticker }) {
 
 
   return (
-    <BoardStickerModalButtonWrapper>
+    <ModalButtonWrapper>
       <button
         onClick={handleClick}
         style={{
@@ -43,7 +43,7 @@ export default function ClearDateButton({ mappedSticker }) {
         <img src={`${BASE_URL}images/icon-clear3.png`} alt='clear' />
         <span>Clear</span>
       </button>
-    </BoardStickerModalButtonWrapper>
+    </ModalButtonWrapper>
   )
 
 }

@@ -3,7 +3,7 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
-import BoardStickerFooterButtonWrapper from '../../../../../../../../wrappers/board-sticker-footer-button-wrapper/BoardStickerFooterButtonWrapper.jsx'
+import FooterButtonWrapper from '../../../../main-panels-sticker-wrappers/footer-button-wrapper/FooterButtonWrapper.jsx'
 
 
 export default function DeleteStickerButton({ mappedSticker }) {
@@ -25,7 +25,7 @@ export default function DeleteStickerButton({ mappedSticker }) {
 
 
   return (
-    <BoardStickerFooterButtonWrapper
+    <FooterButtonWrapper
       currentModal={currentModal}
       mappedSticker={mappedSticker}
     >
@@ -35,6 +35,6 @@ export default function DeleteStickerButton({ mappedSticker }) {
           : <img src={`${BASE_URL}images/icon-delete5.png`} alt='delete' />
         }
       </button>
-    </BoardStickerFooterButtonWrapper>
+    </FooterButtonWrapper>
   )
 }
