@@ -7,6 +7,7 @@ import { useState, useRef } from 'react'
 import { MainProvider } from './context-provider/ContextProvider.jsx'
 import ClickOutsideElementProvider from './providers/ClickOutsideElementProvider.jsx'
 import AppModalsProvider from './providers/AppModalsProvider.jsx'
+import ThemeProvider from './providers/ThemeProvider.jsx'
 
 
 // components
@@ -40,7 +41,7 @@ export default function App() {
   const [currentBoardId, setCurrentBoardId] = useState(currentBoardIdInit)
 
 
-  const [theme, setTheme] = useState('darkTheme')
+
   const [searchValue, setSearchValue] = useState('')
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
@@ -54,56 +55,57 @@ export default function App() {
 
 
   return (
-    <AppModalsProvider>
-      <ClickOutsideElementProvider>
-        <MainProvider
-          value={{
-            // templates
-            boardTemplate,
-            stickerTemplate,
+    <ThemeProvider>
+      <AppModalsProvider>
+        <ClickOutsideElementProvider>
+          <MainProvider
+            value={{
+              // templates
+              boardTemplate,
+              stickerTemplate,
 
-            // refs
-            boardRef,
+              // refs
+              boardRef,
 
-            // states
-            boards, setBoards,
-            theme, setTheme,
-            currentBoardId, setCurrentBoardId,
-            searchValue, setSearchValue,
-            checkedOrderCounter, setCheckedOrderCounter,
-            checkedStickerId, setCheckedStickerId,
-            isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
-            isFilterDatedMenuShow, setIsFilterDatedMenuShow,
-            filterDatedTitle, setFilterDatedTitle,
-            currentBoardPanel, setCurrentBoardPanel,
+              // states
+              boards, setBoards,
+              currentBoardId, setCurrentBoardId,
+              searchValue, setSearchValue,
+              checkedOrderCounter, setCheckedOrderCounter,
+              checkedStickerId, setCheckedStickerId,
+              isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
+              isFilterDatedMenuShow, setIsFilterDatedMenuShow,
+              filterDatedTitle, setFilterDatedTitle,
+              currentBoardPanel, setCurrentBoardPanel,
 
-            //helper functions handle sticker
-            updateSticker,
-            updateAllStickers,
-            addSticker,
-            deleteSticker,
-            deleteAllCheckedStickers,
+              //helper functions handle sticker
+              updateSticker,
+              updateAllStickers,
+              addSticker,
+              deleteSticker,
+              deleteAllCheckedStickers,
 
-            //helper functions handle sticker modal
-            closeCurrentStickerModal,
-            openCurrentStickerModal,
-            closeAllStickerModals,
+              //helper functions handle sticker modal
+              closeCurrentStickerModal,
+              openCurrentStickerModal,
+              closeAllStickerModals,
 
-            //helper functions handle board
-            addBoard,
-            updateBoard,
-            updateAllBoards,
-            deleteBoard,
+              //helper functions handle board
+              addBoard,
+              updateBoard,
+              updateAllBoards,
+              deleteBoard,
 
-            //arrays
-            filterDatedListTitle
+              //arrays
+              filterDatedListTitle
 
-          }}>
+            }}>
 
-          <AppContent />
+            <AppContent />
 
-        </MainProvider>
-      </ClickOutsideElementProvider>
-    </AppModalsProvider>
+          </MainProvider>
+        </ClickOutsideElementProvider>
+      </AppModalsProvider>
+    </ThemeProvider>
   )
 }
