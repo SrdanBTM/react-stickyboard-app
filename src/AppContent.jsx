@@ -3,9 +3,9 @@
 import Header from './components/header/Header.jsx'
 import Main from './components/main/Main.jsx'
 import { useContext } from 'react'
-import { MainContext } from './context-provider/ContextProvider.jsx'
 import { ClickOutsideElementContext } from './contexts/ClickOutsideElementContext.jsx'
 import { AppModalsContext } from './contexts/AppModalsContext.jsx'
+import { ThemeContext } from './contexts/ThemeContext.jsx'
 import DeleteBoardModal from './components/app-modals/app-modals/DeleteBoardModal.jsx'
 import DeleteAllCheckedStickersModal from './components/app-modals/app-modals/DeleteAllCheckedStickersModal.jsx'
 import MessageNoCheckedStickerToDeleteModal from './components/app-modals/app-modals/MessageNoCheckedStickersToDeleteModal.jsx'
@@ -13,10 +13,10 @@ import MessageNoCheckedStickerToDeleteModal from './components/app-modals/app-mo
 
 export default function AppContent() {
 
-  const { theme } = useContext(MainContext)
   const { setClickedElementOnApp } = useContext(ClickOutsideElementContext)
   const { openedAppModal } = useContext(AppModalsContext)
-
+  const { theme } = useContext(ThemeContext)
+  
 
   function handleClick(e) {
     setClickedElementOnApp(e.target)

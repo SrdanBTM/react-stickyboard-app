@@ -3,11 +3,13 @@
 import styles from './boardNameDelete.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { ThemeContext } from '../../../../../../../contexts/ThemeContext.jsx'
 
 
 export default function boardNameDots({ board }) {
 
-  const { updateAllBoards, setBoards, theme } = useContext(MainContext)
+  const { updateAllBoards, setBoards } = useContext(MainContext)
+  const { theme } = useContext(ThemeContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 

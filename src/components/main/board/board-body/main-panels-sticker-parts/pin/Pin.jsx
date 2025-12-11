@@ -1,15 +1,15 @@
 
 
 import styles from './pin.module.css'
-import { useState, useContext, useRef } from 'react'
-import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
+import { useState, useContext } from 'react'
+import { ThemeContext } from '../../../../../../contexts/ThemeContext.jsx'
 
 
 export default function Pin({ dragControl, mappedSticker }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const [isUnpined, setIsUnpined] = useState(false)
-  const { theme } = useContext(MainContext)
+  const { theme } = useContext(ThemeContext)
 
 
   function handleMouseDown(e) {

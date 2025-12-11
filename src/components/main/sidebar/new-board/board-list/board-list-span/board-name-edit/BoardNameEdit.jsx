@@ -3,11 +3,13 @@
 import styles from './boardNameEdit.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider'
+import { ThemeContext } from '../../../../../../../contexts/ThemeContext'
 
 
 export default function BoardNameEdit() {
 
-  const { updateAllBoards, theme, setCurrentBoardId, setBoards } = useContext(MainContext)
+  const { updateAllBoards, setCurrentBoardId, setBoards } = useContext(MainContext)
+  const { theme } = useContext(ThemeContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 

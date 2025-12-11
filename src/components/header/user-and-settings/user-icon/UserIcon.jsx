@@ -1,14 +1,14 @@
 
 
 import styles from './userIcon.module.css'
-import { useContext, useEffect } from 'react'
-import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
+import { useContext } from 'react'
+import { ThemeContext } from '../../../../contexts/ThemeContext.jsx'
 
 
 export default function UserIcon({ setClickedElement }) {
 
   const BASE_URL = import.meta.env.BASE_URL
-  const { theme } = useContext(MainContext)
+  const { theme } = useContext(ThemeContext)
 
 
   function handleClick(e) {

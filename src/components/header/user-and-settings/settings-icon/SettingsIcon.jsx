@@ -2,13 +2,13 @@
 
 import styles from './settingsIcon.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
+import { ThemeContext } from '../../../../contexts/ThemeContext.jsx'
 
 
 export default function SettingsIcon({ setClickedElement }) {
 
   const BASE_URL = import.meta.env.BASE_URL
-  const { theme } = useContext(MainContext)
+  const { theme } = useContext(ThemeContext)
 
 
   function handleClick(e) {

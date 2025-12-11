@@ -3,13 +3,16 @@
 import { useContext } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
 import { AppModalsContext } from '../../../../contexts/AppModalsContext.jsx'
+import { ThemeContext } from '../../../../contexts/ThemeContext.jsx'
 import styles from './settingsMenu.module.css'
 
 
 export default function SettingsMenu({ clickedElement }) {
 
-  const { boards, theme, setTheme, isCheckedStickersPanelShow, setIsCheckedStickersPanelShow } = useContext(MainContext)
+  const { boards, isCheckedStickersPanelShow, setIsCheckedStickersPanelShow } = useContext(MainContext)
   const { setOpenedAppModal } = useContext(AppModalsContext)
+  const { theme, setTheme } = useContext(ThemeContext)
+
 
   const showElement = clickedElement.elementName === 'settings' && clickedElement.showSettings
 

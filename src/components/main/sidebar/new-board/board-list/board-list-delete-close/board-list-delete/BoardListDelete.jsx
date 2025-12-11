@@ -5,11 +5,13 @@ import styles from './boardListDelete.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 import { AppModalsContext } from '../../../../../../../contexts/AppModalsContext.jsx'
+import { ThemeContext } from '../../../../../../../contexts/ThemeContext.jsx'
 
 
 export default function BoardListDelete({ board }) {
 
-  const { deleteBoard, updateBoard, theme, boards, setBoards, setCurrentBoardId } = useContext(MainContext)
+  const { deleteBoard, updateBoard, boards, setBoards, setCurrentBoardId } = useContext(MainContext)
+  const { theme } = useContext(ThemeContext)
   const { setOpenedAppModal } = useContext(AppModalsContext)
   const BASE_URL = import.meta.env.BASE_URL
 
