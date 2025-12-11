@@ -2,12 +2,12 @@
 
 import AppModalBase from '../app-modal-base/AppModalBase.jsx'
 import { useContext } from 'react'
-import { MainContext } from '../../../context-provider/ContextProvider.jsx'
+import { AppModalsContext } from '../../../contexts/AppModalsContext.jsx'
 
 
 export default function MessageNoCheckedStickersToDeleteModal() {
 
-  const { setIsMessageNoCheckedStickersToDeleteModalOpen } = useContext(MainContext)
+  const { setOpenedAppModal } = useContext(AppModalsContext)
 
 
   const messages = ['There are no checked stickers to delete.']
@@ -18,7 +18,7 @@ export default function MessageNoCheckedStickersToDeleteModal() {
 
 
   function handleOk() {
-    setIsMessageNoCheckedStickersToDeleteModalOpen(false)
+    setOpenedAppModal(null)
   }
 
 

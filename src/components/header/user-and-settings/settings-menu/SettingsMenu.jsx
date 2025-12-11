@@ -2,19 +2,14 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
+import { AppModalsContext } from '../../../../contexts/AppModalsContext.jsx'
 import styles from './settingsMenu.module.css'
 
 
 export default function SettingsMenu({ clickedElement }) {
 
-  const {
-    currentBoardId,
-    boards, setBoards,
-    theme, setTheme,
-    isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
-    setIsDeleteAllCheckedStickersModalOpen,
-    setIsMessageNoCheckedStickersToDeleteModalOpen
-  } = useContext(MainContext)
+  const { boards, theme, setTheme, isCheckedStickersPanelShow, setIsCheckedStickersPanelShow } = useContext(MainContext)
+  const { setOpenedAppModal } = useContext(AppModalsContext)
 
   const showElement = clickedElement.elementName === 'settings' && clickedElement.showSettings
 
@@ -31,8 +26,8 @@ export default function SettingsMenu({ clickedElement }) {
     const isThereBoardWithCheckedStickers = boards.some(board => board.isThereCheckedSticker)
 
     isThereBoardWithCheckedStickers
-      ? setIsDeleteAllCheckedStickersModalOpen(true)
-      : setIsMessageNoCheckedStickersToDeleteModalOpen(true)
+      ? setOpenedAppModal('DeleteAllCheckedStickersModal')
+      : setOpenedAppModal('MessageNoCheckedStickerToDeleteModal')
   }
 
 

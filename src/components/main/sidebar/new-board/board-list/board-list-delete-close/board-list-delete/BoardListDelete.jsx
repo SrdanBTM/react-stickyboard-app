@@ -4,11 +4,13 @@
 import styles from './boardListDelete.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { AppModalsContext } from '../../../../../../../contexts/AppModalsContext.jsx'
 
 
 export default function BoardListDelete({ board }) {
 
-  const { deleteBoard, updateBoard, theme, boards, setBoards, setCurrentBoardId, setIsDeleteBoardModalOpen } = useContext(MainContext)
+  const { deleteBoard, updateBoard, theme, boards, setBoards, setCurrentBoardId } = useContext(MainContext)
+  const { setOpenedAppModal } = useContext(AppModalsContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
@@ -23,7 +25,7 @@ export default function BoardListDelete({ board }) {
 
     board.stickers.length === 0
       ? deleteBoard(setBoards, currentBoardId)
-      : setIsDeleteBoardModalOpen(true)
+      : setOpenedAppModal('DeleteBoardModal')
   }
 
 
