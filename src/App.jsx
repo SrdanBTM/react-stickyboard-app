@@ -1,12 +1,12 @@
 
 
-// hooks
 import { useState, useRef } from 'react'
 
 
 // providers 
 import { MainProvider } from './context-provider/ContextProvider.jsx'
 import ClickOutsideElementProvider from './providers/ClickOutsideElementProvider.jsx'
+import AppModalsProvider from './providers/AppModalsProvider.jsx'
 
 
 // components
@@ -24,9 +24,7 @@ import { addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-fu
 import { closeCurrentStickerModal, openCurrentStickerModal, closeAllStickerModals } from './helper-functions/HelperFunctionsHandleStickerModal.jsx'
 
 
-import DeleteBoardModal from './components/app-modals/app-modals/DeleteBoardModal.jsx'
-import DeleteAllCheckedStickersModal from './components/app-modals/app-modals/DeleteAllCheckedStickersModal.jsx'
-import MessageNoCheckedStickerToDeleteModal from './components/app-modals/app-modals/MessageNoCheckedStickersToDeleteModal.jsx'
+
 
 
 export default function App() {
@@ -43,9 +41,6 @@ export default function App() {
 
 
   const [theme, setTheme] = useState('darkTheme')
-  const [isDeleteBoardModalOpen, setIsDeleteBoardModalOpen] = useState(false)
-  const [isDeleteAllCheckedStickersModalOpen, setIsDeleteAllCheckedStickersModalOpen] = useState(false)
-  const [isMessageNoCheckedStickersToDeleteModalOpen, setIsMessageNoCheckedStickersToDeleteModalOpen] = useState(false)
   const [searchValue, setSearchValue] = useState('')
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
@@ -59,61 +54,56 @@ export default function App() {
 
 
   return (
-    <ClickOutsideElementProvider>
-      <MainProvider
-        value={{
-          // templates
-          boardTemplate,
-          stickerTemplate,
+    <AppModalsProvider>
+      <ClickOutsideElementProvider>
+        <MainProvider
+          value={{
+            // templates
+            boardTemplate,
+            stickerTemplate,
 
-          // refs
-          boardRef,
+            // refs
+            boardRef,
 
-          // states
-          boards, setBoards,
-          theme, setTheme,
-          currentBoardId, setCurrentBoardId,
-          isDeleteBoardModalOpen, setIsDeleteBoardModalOpen,
-          isDeleteAllCheckedStickersModalOpen, setIsDeleteAllCheckedStickersModalOpen,
-          isMessageNoCheckedStickersToDeleteModalOpen, setIsMessageNoCheckedStickersToDeleteModalOpen,
-          searchValue, setSearchValue,
-          checkedOrderCounter, setCheckedOrderCounter,
-          checkedStickerId, setCheckedStickerId,
-          isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
-          isFilterDatedMenuShow, setIsFilterDatedMenuShow,
-          filterDatedTitle, setFilterDatedTitle,
-          currentBoardPanel, setCurrentBoardPanel,
+            // states
+            boards, setBoards,
+            theme, setTheme,
+            currentBoardId, setCurrentBoardId,
+            searchValue, setSearchValue,
+            checkedOrderCounter, setCheckedOrderCounter,
+            checkedStickerId, setCheckedStickerId,
+            isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
+            isFilterDatedMenuShow, setIsFilterDatedMenuShow,
+            filterDatedTitle, setFilterDatedTitle,
+            currentBoardPanel, setCurrentBoardPanel,
 
-          //helper functions handle sticker
-          updateSticker,
-          updateAllStickers,
-          addSticker,
-          deleteSticker,
-          deleteAllCheckedStickers,
+            //helper functions handle sticker
+            updateSticker,
+            updateAllStickers,
+            addSticker,
+            deleteSticker,
+            deleteAllCheckedStickers,
 
-          //helper functions handle sticker modal
-          closeCurrentStickerModal,
-          openCurrentStickerModal,
-          closeAllStickerModals,
+            //helper functions handle sticker modal
+            closeCurrentStickerModal,
+            openCurrentStickerModal,
+            closeAllStickerModals,
 
-          //helper functions handle board
-          addBoard,
-          updateBoard,
-          updateAllBoards,
-          deleteBoard,
+            //helper functions handle board
+            addBoard,
+            updateBoard,
+            updateAllBoards,
+            deleteBoard,
 
-          //arrays
-          filterDatedListTitle
+            //arrays
+            filterDatedListTitle
 
-        }}>
+          }}>
 
-        <AppContent />
+          <AppContent />
 
-        {isDeleteBoardModalOpen && <DeleteBoardModal />}
-        {isDeleteAllCheckedStickersModalOpen && <DeleteAllCheckedStickersModal />}
-        {isMessageNoCheckedStickersToDeleteModalOpen && <MessageNoCheckedStickerToDeleteModal />}
-
-      </MainProvider>
-    </ClickOutsideElementProvider>
+        </MainProvider>
+      </ClickOutsideElementProvider>
+    </AppModalsProvider>
   )
 }
