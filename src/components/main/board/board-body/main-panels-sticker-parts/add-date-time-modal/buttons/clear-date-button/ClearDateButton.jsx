@@ -1,7 +1,7 @@
 
 
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import ModalButtonWrapper from '../../../../main-panels-sticker-wrappers/modal-button-wrapper/ModalButtonWrapper.jsx'
 import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 

@@ -6,7 +6,7 @@ import CheckedStickerNote from '../checked-panels-sticker-parts/checked-sticker-
 import CheckedStickerCheck from '../checked-panels-sticker-parts/checked-sticker-check/CheckedStickerCheck.jsx'
 import { useState, useContext, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 

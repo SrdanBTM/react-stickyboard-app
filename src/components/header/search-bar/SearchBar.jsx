@@ -2,7 +2,7 @@
 
 import styles from './searchBar.module.css'
 import { useContext, useEffect } from 'react'
-import { MainContext } from '../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../contexts/MainContext.jsx'
 import { updateAllStickers } from '../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 

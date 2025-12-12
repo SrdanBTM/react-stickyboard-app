@@ -2,7 +2,7 @@
 
 import styles from './makeNewSticker.module.css'
 import { useContext, useRef, useState, useEffect } from 'react'
-import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { motion } from 'framer-motion'
 import { addSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx' 
 import { stickerTemplate } from '../../../../../templates/Templates.jsx'

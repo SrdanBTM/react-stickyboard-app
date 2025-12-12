@@ -2,7 +2,7 @@
 
 import styles from './boardNameDelete.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import { ThemeContext } from '../../../../../../../contexts/ThemeContext.jsx'
 import { updateAllBoards } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 

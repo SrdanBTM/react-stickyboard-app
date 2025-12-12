@@ -1,7 +1,7 @@
 
 
 import { useContext } from 'react'
-import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import styles from './mainPanelsStickersBase.module.css'
 import Pin from '../main-panels-sticker-parts/pin/Pin.jsx'
 import Header from '../main-panels-sticker-parts/header/Header.jsx'

@@ -6,7 +6,7 @@ import CheckedPanelHeader from '../checked-panels-parts/checked-panel-header/Che
 import CheckedPanelHover from '../checked-panels-parts/checked-panel-hover/CheckedPanelHover.jsx'
 import CheckedPanelMessage from '../checked-panels-parts/checked-panel-message/CheckedPanelMessage.jsx'
 import { useContext, useState, useEffect } from 'react'
-import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 

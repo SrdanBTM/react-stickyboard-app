@@ -1,7 +1,7 @@
 
 
 import { useContext } from 'react'
-import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import MainPanelsBase from '../main-panels-base/MainPanelsBase.jsx'
 
 

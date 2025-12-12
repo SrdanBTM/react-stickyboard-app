@@ -2,7 +2,7 @@
 
 import styles from './boardListSpan.module.css'
 import { useContext, useState } from 'react'
-import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../contexts/MainContext.jsx'
 import Edit from './board-name-edit/BoardNameEdit.jsx'
 import Delete from './board-name-delete/BoardNameDelete.jsx'
 

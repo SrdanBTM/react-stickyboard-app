@@ -4,7 +4,7 @@
 
 import styles from './button.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import { ThemeContext } from '../../../../../../../contexts/ThemeContext.jsx'
 import { deleteSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 

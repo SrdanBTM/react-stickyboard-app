@@ -2,7 +2,7 @@
 
 import styles from './createNewBoardInput.module.css'
 import { useEffect, useContext, useState, useRef } from 'react'
-import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../contexts/MainContext.jsx'
 import { addBoard } from '../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 import { boardTemplate } from '../../../../../../templates/Templates.jsx'
 

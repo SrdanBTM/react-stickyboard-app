@@ -2,7 +2,7 @@
 
 
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import FooterButtonWrapper from '../../../../main-panels-sticker-wrappers/footer-button-wrapper/FooterButtonWrapper.jsx'
 import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 import { closeCurrentStickerModal } from '../../../../../../../../helper-functions/HelperFunctionsHandleStickerModal.jsx'

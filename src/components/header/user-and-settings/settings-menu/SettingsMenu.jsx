@@ -1,7 +1,7 @@
 
 
 import { useContext } from 'react'
-import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../contexts/MainContext.jsx'
 import { AppModalsContext } from '../../../../contexts/AppModalsContext.jsx'
 import { ThemeContext } from '../../../../contexts/ThemeContext.jsx'
 import styles from './settingsMenu.module.css'

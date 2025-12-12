@@ -3,7 +3,7 @@
 
 import styles from './boardName.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 
 
 export default function BoardName({ mappedSticker }) {

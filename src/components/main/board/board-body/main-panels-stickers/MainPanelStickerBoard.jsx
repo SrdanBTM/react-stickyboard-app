@@ -2,7 +2,7 @@
 
 import { motion, useDragControls } from 'framer-motion'
 import { useContext, useRef } from 'react'
-import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import MainPanelsStickersBase from '../main-panels-stickers-base/MainPanelsStickersBase.jsx'
 import { updateSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 import { updateAllStickers } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'

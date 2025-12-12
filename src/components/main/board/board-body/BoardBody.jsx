@@ -2,7 +2,7 @@
 
 import styles from './boardBody.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../contexts/MainContext.jsx'
 
 import MainPanelBoard from './main-panels/MainPanelBoard.jsx'
 import MainPanelSearch from './main-panels/MainPanelSearch.jsx'

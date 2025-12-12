@@ -2,7 +2,7 @@
 
 import styles from './title.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 

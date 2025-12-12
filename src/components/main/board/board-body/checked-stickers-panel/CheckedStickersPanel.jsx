@@ -7,7 +7,7 @@ import CheckedStickersPanelHoverTitle from './checked-stickers-panel-hover-title
 import CheckedStickersPanelHeader from './checked-stickers-panel-header/CheckedStickersPanelHeader.jsx'
 import CheckedStickersPanelMessage from './checked-stickers-panel-message/CheckedStickersPanelMessage.jsx'
 import { useContext, useState, useEffect } from 'react'
-import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 

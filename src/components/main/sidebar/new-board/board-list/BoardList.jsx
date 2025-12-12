@@ -2,7 +2,7 @@
 
 import styles from './boardList.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { ClickOutsideElementContext } from '../../../../../contexts/ClickOutsideElementContext.jsx'
 import Input from './board-list-input/BoardListInput.jsx'
 import Span from './board-list-span/BoardListSpan.jsx'
