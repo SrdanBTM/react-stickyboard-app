@@ -16,24 +16,20 @@ import AppContent from './AppContent.jsx'
 
 // data
 import dummyData from './dummy-data/dummyData.json'
-import { boardTemplate } from './templates/Templates.jsx'
-
+// const [currentBoardId, setCurrentBoardId] = useState(id)
 
 
 
 
 export default function App() {
-
-
-
+  
+  // import { boardTemplate } from './templates/Templates.jsx'
   // const id = crypto.randomUUID()
   // const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
   const [boards, setBoards] = useState(dummyData)
 
-  // const [currentBoardId, setCurrentBoardId] = useState(id)
   const currentBoardIdInit = boards.length > 0 ? boards[0].boardId : null
   const [currentBoardId, setCurrentBoardId] = useState(currentBoardIdInit)
-
 
 
   const [searchValue, setSearchValue] = useState('')
@@ -51,17 +47,13 @@ export default function App() {
         <ClickOutsideElementProvider>
           <MainProvider
             value={{
-              // refs
               boardRef,
-
-              // states
               boards, setBoards,
               currentBoardId, setCurrentBoardId,
+              currentBoardPanel, setCurrentBoardPanel,
               searchValue, setSearchValue,
               checkedStickerId, setCheckedStickerId,
               isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
-              currentBoardPanel, setCurrentBoardPanel,
-
 
             }}>
 
