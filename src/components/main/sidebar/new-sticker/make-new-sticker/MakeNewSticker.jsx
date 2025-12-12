@@ -5,12 +5,13 @@ import { useContext, useRef, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 import { motion } from 'framer-motion'
 import { addSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx' 
+import { stickerTemplate } from '../../../../../templates/Templates.jsx'
 
 
 export default function MakeNewSticker() {
 
   const [key, setKey] = useState(0)
-  const { boards, boardRef, setBoards, stickerTemplate, currentBoardId } = useContext(MainContext)
+  const { boards, boardRef, setBoards, currentBoardId } = useContext(MainContext)
   const stickerRef = useRef()
   const [isStickerDragged, setIsStickerDragged] = useState(false)
 

@@ -16,7 +16,7 @@ import AppContent from './AppContent.jsx'
 
 // data
 import dummyData from './dummy-data/dummyData.json'
-import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
+import { boardTemplate } from './templates/Templates.jsx'
 
 
 
@@ -51,10 +51,6 @@ export default function App() {
         <ClickOutsideElementProvider>
           <MainProvider
             value={{
-              // templates
-              boardTemplate,
-              stickerTemplate,
-
               // refs
               boardRef,
 
