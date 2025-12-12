@@ -3,11 +3,12 @@
 import styles from './title.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { updateSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function Title({ mappedSticker }) {
 
-  const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { setBoards, currentBoardId } = useContext(MainContext)
 
 
   function handleChange(e) {

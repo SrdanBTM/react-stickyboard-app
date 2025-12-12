@@ -3,11 +3,13 @@
 import styles from './boardListInput.module.css'
 import { useContext, useRef, useEffect, useState } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
+import { updateAllStickers } from '../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { updateBoard } from '../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function BoardListInput({ board }) {
 
-  const { updateAllStickers, updateBoard, boards, setBoards, currentBoardId } = useContext(MainContext)
+  const { boards, setBoards, currentBoardId } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
   const inputRef = useRef()
 

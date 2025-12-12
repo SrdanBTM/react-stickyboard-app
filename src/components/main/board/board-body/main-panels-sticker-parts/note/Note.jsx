@@ -3,10 +3,12 @@
 import styles from './note.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
+import { updateSticker } from '../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+
 
 export default function Note({ mappedSticker }) {
 
-  const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { setBoards, currentBoardId } = useContext(MainContext)
 
 
   function handleChange(e) {
@@ -20,8 +22,8 @@ export default function Note({ mappedSticker }) {
     <div
       className={`
         ${styles.container} 
-        ${mappedSticker.date && mappedSticker.time && mappedSticker.isHover? styles.shadowTopBottom : ''}
-        ${!mappedSticker.date && !mappedSticker.time && mappedSticker.isHover? styles.shadowBottom : ''}
+        ${mappedSticker.date && mappedSticker.time && mappedSticker.isHover ? styles.shadowTopBottom : ''}
+        ${!mappedSticker.date && !mappedSticker.time && mappedSticker.isHover ? styles.shadowBottom : ''}
         `}
     >
       <div className={styles.textarea}>

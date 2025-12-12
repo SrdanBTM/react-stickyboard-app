@@ -4,11 +4,13 @@ import { motion, useDragControls } from 'framer-motion'
 import { useContext, useRef } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 import MainPanelsStickersBase from '../main-panels-stickers-base/MainPanelsStickersBase.jsx'
+import { updateSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { updateAllStickers } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function MainPanelStickerBoard({ mappedSticker }) {
 
-  const { updateAllStickers, checkedStickerId, boardRef, setBoards, currentBoardId, updateSticker } = useContext(MainContext)
+  const { checkedStickerId, boardRef, setBoards, currentBoardId } = useContext(MainContext)
   const stickerRef = useRef()
   const dragControl = useDragControls()
   const currentStickerId = mappedSticker.stickerId

@@ -4,11 +4,12 @@ import AppModalBase from '../app-modal-base/AppModalBase.jsx'
 import { useContext } from 'react'
 import { MainContext } from '../../../context-provider/ContextProvider.jsx'
 import { AppModalsContext } from '../../../contexts/AppModalsContext.jsx'
+import { deleteAllCheckedStickers } from '../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function DeleteAllCheckedStickersModal() {
 
-  const { deleteAllCheckedStickers, setBoards } = useContext(MainContext)
+  const { setBoards } = useContext(MainContext)
   const { setOpenedAppModal } = useContext(AppModalsContext)
 
 

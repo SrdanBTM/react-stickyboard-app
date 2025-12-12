@@ -4,19 +4,20 @@ import styles from './boardNameEdit.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider'
 import { ThemeContext } from '../../../../../../../contexts/ThemeContext'
+import { updateAllBoards } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard'
 
 
 export default function BoardNameEdit() {
 
-  const { updateAllBoards, setCurrentBoardId, setBoards } = useContext(MainContext)
+  const { setCurrentBoardId, setBoards } = useContext(MainContext)
   const { theme } = useContext(ThemeContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 
   function handleClick(e) {
     const currentBoardId = e.currentTarget.parentElement.parentElement.getAttribute('data-id')
-    const propertyTernaryPair1 = [{keyTrue: 'isInput', valueTrue: true}, {keyFalse: 'isInput', valueFalse: false}]
-    const propertyTernaryPair2 = [{keyTrue: 'isFocused', valueTrue: true}, {keyFalse: 'isFocused', valueFalse: false}]
+    const propertyTernaryPair1 = [{ keyTrue: 'isInput', valueTrue: true }, { keyFalse: 'isInput', valueFalse: false }]
+    const propertyTernaryPair2 = [{ keyTrue: 'isFocused', valueTrue: true }, { keyFalse: 'isFocused', valueFalse: false }]
     updateAllBoards(setBoards, currentBoardId, propertyTernaryPair1)
     updateAllBoards(setBoards, currentBoardId, propertyTernaryPair2)
     setCurrentBoardId(currentBoardId)
@@ -34,7 +35,7 @@ export default function BoardNameEdit() {
           : `${BASE_URL}images/icon-edit1.png`}
         alt="edit"
         data-id={'boardNameEdit'}
-        />
+      />
     </div>
   )
 }

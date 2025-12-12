@@ -20,12 +20,6 @@ import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 
 
 
-import { updateSticker, updateAllStickers, addSticker, deleteSticker, deleteAllCheckedStickers } from './helper-functions/HelperFunctionsHandleSticker.jsx'
-import { addBoard, updateBoard, updateAllBoards, deleteBoard } from './helper-functions/HelperFunctionsHandleBoard.jsx'
-import { closeCurrentStickerModal, openCurrentStickerModal, closeAllStickerModals } from './helper-functions/HelperFunctionsHandleStickerModal.jsx'
-
-
-
 
 
 export default function App() {
@@ -78,23 +72,6 @@ export default function App() {
               filterDatedTitle, setFilterDatedTitle,
               currentBoardPanel, setCurrentBoardPanel,
 
-              //helper functions handle sticker
-              updateSticker,
-              updateAllStickers,
-              addSticker,
-              deleteSticker,
-              deleteAllCheckedStickers,
-
-              //helper functions handle sticker modal
-              closeCurrentStickerModal,
-              openCurrentStickerModal,
-              closeAllStickerModals,
-
-              //helper functions handle board
-              addBoard,
-              updateBoard,
-              updateAllBoards,
-              deleteBoard,
 
               //arrays
               filterDatedListTitle

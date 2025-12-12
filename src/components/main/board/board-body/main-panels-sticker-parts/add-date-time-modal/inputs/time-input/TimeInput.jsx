@@ -3,11 +3,12 @@
 import styles from './timeInput.module.css'
 import { useContext, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
+import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function TimeInput({ mappedSticker }) {
 
-  const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { setBoards, currentBoardId } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
 
 
@@ -28,7 +29,7 @@ export default function TimeInput({ mappedSticker }) {
   function timeValidation(value) {
 
     console.log(value);
-    
+
     const timeParts = value.split(':')
     if (timeParts.length !== 2) return false
 

@@ -7,11 +7,12 @@ import CheckedStickersPanelHeader from './checked-stickers-panel-header/CheckedS
 import CheckedStickersPanelMessage from './checked-stickers-panel-message/CheckedStickersPanelMessage.js'
 import { useContext, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
+import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function CheckedBoardPanel() {
 
-  const { updateBoard, boards, setBoards, currentBoardId, isCheckedStickersPanelShow } = useContext(MainContext)
+  const { boards, setBoards, currentBoardId, isCheckedStickersPanelShow } = useContext(MainContext)
   const [isHoverTitleShow, setIsHoverTitleShow] = useState(true)
   const [isCheckedStickersPanelHover, setIsCheckedStickersPanelHover] = useState(false)
   const [randomUUID, setRandomUUID] = useState(crypto.randomUUID())

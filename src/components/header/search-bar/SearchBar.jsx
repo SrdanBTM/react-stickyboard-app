@@ -3,10 +3,12 @@
 import styles from './searchBar.module.css'
 import { useContext, useEffect } from 'react'
 import { MainContext } from '../../../context-provider/ContextProvider.jsx'
+import { updateAllStickers } from '../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+
 
 export default function SearchBar() {
 
-  const { setCurrentBoardPanel, updateAllStickers, setBoards, searchValue, setSearchValue, setCurrentBoardId, currentBoardId } = useContext(MainContext)
+  const { setCurrentBoardPanel, setBoards, searchValue, setSearchValue, setCurrentBoardId, currentBoardId } = useContext(MainContext)
 
   function handleChange(e) {
     const propertyToUpdate1 = { key: 'isAddDateTimeModalOpen', value: false }

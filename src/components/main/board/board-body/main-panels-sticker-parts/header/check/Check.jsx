@@ -3,12 +3,14 @@
 import styles from './check.module.css'
 import { useState, useContext, useEffect } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { updateSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+
 
 export default function Check({ mappedSticker }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const [isChecked, setIsChecked] = useState(false)
-  const { setCheckedStickerId, checkedOrderCounter, setCheckedOrderCounter, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { setCheckedStickerId, checkedOrderCounter, setCheckedOrderCounter, setBoards, currentBoardId } = useContext(MainContext)
 
 
   const checked = `${BASE_URL}images/checked3.png`

@@ -4,11 +4,13 @@ import styles from './boardListClose.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 import { ThemeContext } from '../../../../../../../contexts/ThemeContext.jsx'
+import { updateBoard } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
+
 
 export default function BoardListClose({ board }) {
 
-  const { setBoards, updateBoard } = useContext(MainContext) 
-  const { theme } = useContext(ThemeContext) 
+  const { setBoards } = useContext(MainContext)
+  const { theme } = useContext(ThemeContext)
   const BASE_URL = import.meta.env.BASE_URL
 
 

@@ -4,11 +4,13 @@ import styles from './palette.module.css'
 import { motion } from 'framer-motion'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { updateSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { closeCurrentStickerModal } from '../../../../../../../helper-functions/HelperFunctionsHandleStickerModal.jsx'
 
 
 export default function Palette({ mappedSticker }) {
 
-  const { closeCurrentStickerModal, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { setBoards, currentBoardId } = useContext(MainContext)
 
   const colors = [
     'var(--sticker-color1)',

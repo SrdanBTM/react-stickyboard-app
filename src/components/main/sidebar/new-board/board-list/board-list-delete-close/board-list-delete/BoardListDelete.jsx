@@ -6,11 +6,13 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
 import { AppModalsContext } from '../../../../../../../contexts/AppModalsContext.jsx'
 import { ThemeContext } from '../../../../../../../contexts/ThemeContext.jsx'
+import { deleteBoard } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
+import { updateBoard } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function BoardListDelete({ board }) {
 
-  const { deleteBoard, updateBoard, boards, setBoards, setCurrentBoardId } = useContext(MainContext)
+  const { boards, setBoards, setCurrentBoardId } = useContext(MainContext)
   const { theme } = useContext(ThemeContext)
   const { setOpenedAppModal } = useContext(AppModalsContext)
   const BASE_URL = import.meta.env.BASE_URL
@@ -22,7 +24,7 @@ export default function BoardListDelete({ board }) {
       : setCurrentBoardId(null)
 
     const currentBoardId = e.currentTarget.getAttribute('data-id')
-    const propertyToUpdate = {key: 'isDeleteShowed', value: false}
+    const propertyToUpdate = { key: 'isDeleteShowed', value: false }
     updateBoard(setBoards, currentBoardId, propertyToUpdate)
 
     board.stickers.length === 0

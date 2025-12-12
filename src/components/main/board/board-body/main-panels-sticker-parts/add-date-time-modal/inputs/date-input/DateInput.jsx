@@ -3,11 +3,12 @@
 import styles from './dateInput.module.css'
 import { useContext, useEffect, useState } from 'react'
 import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
+import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function DateInput({ mappedSticker }) {
 
-  const { currentBoardId, setBoards, updateSticker } = useContext(MainContext)
+  const { currentBoardId, setBoards } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
 
 

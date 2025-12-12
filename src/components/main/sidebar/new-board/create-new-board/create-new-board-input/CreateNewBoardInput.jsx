@@ -3,11 +3,12 @@
 import styles from './createNewBoardInput.module.css'
 import { useEffect, useContext, useState, useRef } from 'react'
 import { MainContext } from '../../../../../../context-provider/ContextProvider.jsx'
+import { addBoard } from '../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard }) {
 
-  const { addBoard, setBoards, boardTemplate, setSearchValue } = useContext(MainContext)
+  const { setBoards, boardTemplate, setSearchValue } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
   const inputRef = useRef()
 

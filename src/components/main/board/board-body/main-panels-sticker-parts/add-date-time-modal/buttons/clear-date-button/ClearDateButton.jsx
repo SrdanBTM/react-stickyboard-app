@@ -3,12 +3,13 @@
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../context-provider/ContextProvider.jsx'
 import ModalButtonWrapper from '../../../../main-panels-sticker-wrappers/modal-button-wrapper/ModalButtonWrapper.jsx'
+import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function ClearDateButton({ mappedSticker }) {
 
 
-  const { updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { setBoards, currentBoardId } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
   const BASE_URL = import.meta.env.BASE_URL
 

@@ -7,11 +7,12 @@ import CheckedStickerCheck from '../../../sticker-parts/checked-sticker-parts/ch
 import { useState, useContext, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { MainContext } from '../../../../../../../context-provider/ContextProvider.jsx'
+import { updateSticker } from '../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function StickerOnCheckedStickersPanel({ topPosition, mappedSticker, setRandomUUID }) {
 
-  const { boardRef, updateSticker, setBoards, currentBoardId } = useContext(MainContext)
+  const { boardRef, setBoards, currentBoardId } = useContext(MainContext)
   const [isMouseDown, setIsMouseDown] = useState(false)
   const stickerRef = useRef()
   const [isDragged, setIsDragged] = useState(false)
