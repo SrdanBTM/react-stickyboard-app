@@ -27,9 +27,6 @@ export default function TimeInput({ mappedSticker }) {
 
 
   function timeValidation(value) {
-
-    console.log(value);
-
     const timeParts = value.split(':')
     if (timeParts.length !== 2) return false
 
