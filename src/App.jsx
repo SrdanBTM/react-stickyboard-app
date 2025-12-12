@@ -24,7 +24,7 @@ import { boardTemplate, stickerTemplate } from './templates/Templates.jsx'
 
 export default function App() {
 
-  const filterDatedListTitle = ['Next 3 days', 'Next 10 days', 'Next 30 days']
+
 
   // const id = crypto.randomUUID()
   // const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
@@ -37,11 +37,8 @@ export default function App() {
 
 
   const [searchValue, setSearchValue] = useState('')
-  const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [checkedStickerId, setCheckedStickerId] = useState(null)
   const [isCheckedStickersPanelShow, setIsCheckedStickersPanelShow] = useState(false)
-  const [isFilterDatedMenuShow, setIsFilterDatedMenuShow] = useState(false)
-  const [filterDatedTitle, setFilterDatedTitle] = useState(filterDatedListTitle[0])
   const [currentBoardPanel, setCurrentBoardPanel] = useState('board')
 
 
@@ -65,16 +62,10 @@ export default function App() {
               boards, setBoards,
               currentBoardId, setCurrentBoardId,
               searchValue, setSearchValue,
-              checkedOrderCounter, setCheckedOrderCounter,
               checkedStickerId, setCheckedStickerId,
               isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
-              isFilterDatedMenuShow, setIsFilterDatedMenuShow,
-              filterDatedTitle, setFilterDatedTitle,
               currentBoardPanel, setCurrentBoardPanel,
 
-
-              //arrays
-              filterDatedListTitle
 
             }}>
 

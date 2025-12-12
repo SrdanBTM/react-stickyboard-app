@@ -1,14 +1,9 @@
 
 
 import styles from './datedButton.module.css'
-import { useContext } from 'react'
-import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function DatedButton() {
-
-  const { filterDatedTitle } = useContext(MainContext)
-
+export default function DatedButton({ filterDatedTitle }) {
 
   return (
     <div className={styles.container}>

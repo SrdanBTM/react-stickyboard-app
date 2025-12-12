@@ -1,16 +1,11 @@
 
 
 import styles from './datedMenu.module.css'
-import { useContext } from 'react'
-import { MainContext } from '../../../../../context-provider/ContextProvider.jsx'
 
 
-export default function DatedMenu() {
+export default function DatedMenu({ filterDatedListTitle, setFilterDatedTitle, isFilterDatedMenuShow, setIsFilterDatedMenuShow}) {
 
-  const { isFilterDatedMenuShow, filterDatedListTitle, setFilterDatedTitle, setIsFilterDatedMenuShow } = useContext(MainContext)
-
-
-
+  
   function handleClick(title) {
     setFilterDatedTitle(title)
     setIsFilterDatedMenuShow(false)
