@@ -1,6 +1,7 @@
 
 
 import { useContext } from 'react'
+import { motion } from 'framer-motion'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import styles from './mainPanelsStickersBase.module.css'
 import Pin from '../main-panels-sticker-parts/pin/Pin.jsx'
@@ -11,16 +12,52 @@ import DateTime from '../main-panels-sticker-parts/date-time/DateTime.jsx'
 import AddDateTimeModal from '../main-panels-sticker-parts/add-date-time-modal/AddDateTimeModal.jsx'
 import DeleteStickerModal from '../main-panels-sticker-parts/delete-sticker-modal/DeleteStickerModal.jsx'
 import ChangeColorModal from '../main-panels-sticker-parts/change-color-modal/ChangeColorModal.jsx'
+import { updateSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { updateAllStickers } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
 
-  const { currentBoardPanel } = useContext(MainContext)
+  const { checkedStickerId, currentBoardPanel, setBoards, currentBoardId } = useContext(MainContext)
+  const currentStickerId = mappedSticker.stickerId
+
+
+  function handleMouseOver() {
+    const propertyToUpdate = { key: 'isHover', value: true }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
+  }
+
+
+  function handleMouseLeave() {
+    const propertyToUpdate = { key: 'isHover', value: false }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
+  }
+
+
+  function handleMouseDown() {
+    const propertyToUpdate1 = { key: 'zIndex', value: 0 }
+    updateAllStickers(setBoards, currentBoardId, propertyToUpdate1)
+    const propertyToUpdate2 = { key: 'zIndex', value: 1 }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
+  }
+
 
   return (
-    <div
+    <motion.div
       className={`${styles.container} ${styles[currentBoardPanel]}`}
       style={{ backgroundColor: mappedSticker.color }}
+
+      onMouseOver={handleMouseOver}
+      onMouseLeave={handleMouseLeave}
+      onMouseDown={handleMouseDown}
+
+      animate={{
+        scale: checkedStickerId === mappedSticker.stickerId ? 0 : 1
+      }}
+      transition={{
+        duration: 0.5,
+        ease: 'easeOut'
+      }}
     >
 
       {currentBoardPanel === 'board'
@@ -32,7 +69,7 @@ export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
         && <DateTime mappedSticker={mappedSticker} />}
 
       <Note mappedSticker={mappedSticker} />
-      
+
       <Footer mappedSticker={mappedSticker} />
 
       {mappedSticker.isDeleteModalOpen
@@ -42,7 +79,7 @@ export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
       {mappedSticker.isChangeColorModalOpen
         && <ChangeColorModal mappedSticker={mappedSticker} />}
 
-    </div>
+    </motion.div>
 
   )
 }
