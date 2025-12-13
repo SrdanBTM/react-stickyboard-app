@@ -8,7 +8,9 @@ import MainPanelBoard from './main-panels/MainPanelBoard.jsx'
 import MainPanelSearch from './main-panels/MainPanelSearch.jsx'
 import MainPanelFilter from './main-panels/MainPanelFilter.jsx'
 
-import CheckedPanelsBase from './checked-panels-base/CheckedPanelsBase.jsx'
+import CheckedBoardPanel from './checked-panels/CheckedBoardPanel.jsx'
+import CheckedSearchPanel from './checked-panels/CheckedSearchPanel.jsx'
+import CheckedFilterPanel from './checked-panels/CheckedFilterPanel.jsx'
 
 
 export default function BoardBody() {
@@ -21,13 +23,21 @@ export default function BoardBody() {
     filter: MainPanelFilter
   }
 
+  const checkedPanelVariantes = {
+    board: CheckedBoardPanel,
+    search: CheckedSearchPanel,
+    filter: CheckedFilterPanel
+  }
+
+
   const MainPanelVariant = panelVariantes[currentBoardPanel]
+  const CheckedPanelVariant = checkedPanelVariantes[currentBoardPanel]
 
 
   return (
     <div className={styles.container}>
       <MainPanelVariant />
-      <CheckedPanelsBase />
+      <CheckedPanelVariant />
     </div>
   )
 }
