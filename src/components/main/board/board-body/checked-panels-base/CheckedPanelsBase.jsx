@@ -7,34 +7,14 @@ import CheckedPanelHover from '../checked-panels-parts/checked-panel-hover/Check
 import CheckedPanelMessage from '../checked-panels-parts/checked-panel-message/CheckedPanelMessage.jsx'
 import { useContext, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
-import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function CheckedPanelsBase() {
 
-  const { boards, setBoards, currentBoardId, isCheckedStickersPanelShow } = useContext(MainContext)
+export default function CheckedPanelsBase({ stickersToShowOnCheckedPanel }) {
+
+  const [isCheckedStickersPanelHover, setIsCheckedStickersPanelHover] = useState()
+  const { isCheckedStickersPanelShow } = useContext(MainContext)
   const [isHoverTitleShow, setIsHoverTitleShow] = useState(true)
-  const [isCheckedStickersPanelHover, setIsCheckedStickersPanelHover] = useState(false)
-  const [randomUUID, setRandomUUID] = useState(crypto.randomUUID())
-
-
-  let currentBoard = null
-  if (boards.length > 0) {
-    currentBoard = boards.find(board => board.boardId === currentBoardId)
-  }
-
-
-  const isCheckedStickersInCurrentBoard = currentBoard
-    ? currentBoard.stickers.some(sticker => sticker.checked)
-    : false
-
-
-  const filteredAndSortedCheckedStickers = currentBoard
-    ? currentBoard.stickers
-      .filter(sticker => sticker.checked)
-      .sort((a, b) => a.checkedOrder - b.checkedOrder)
-    : []
-
 
 
   useEffect(() => {
@@ -42,7 +22,7 @@ export default function CheckedPanelsBase() {
     setTimeout(() => {
       setIsHoverTitleShow(true)
     }, 300)
-  }, [filteredAndSortedCheckedStickers.length])
+  }, [stickersToShowOnCheckedPanel.length])
 
 
   function handleMouseOver() {
@@ -59,17 +39,6 @@ export default function CheckedPanelsBase() {
   }
 
 
-  useEffect(() => {
-    if (isCheckedStickersInCurrentBoard) {
-      const propertyToUpdate = { key: 'isThereCheckedSticker', value: true }
-      updateBoard(setBoards, currentBoardId, propertyToUpdate)
-    } else {
-      const propertyToUpdate = { key: 'isThereCheckedSticker', value: false }
-      updateBoard(setBoards, currentBoardId, propertyToUpdate)
-    }
-  }, [isCheckedStickersInCurrentBoard])
-
-
   return (
     <div
       className={styles.container}
@@ -81,8 +50,8 @@ export default function CheckedPanelsBase() {
     >
       <CheckedPanelHeader />
 
-      {currentBoardId && currentBoard.isThereCheckedSticker
-        ? <CheckedPanelBody filteredAndSortedCheckedStickers={filteredAndSortedCheckedStickers} />
+      {stickersToShowOnCheckedPanel.length > 0
+        ? <CheckedPanelBody stickersToShowOnCheckedPanel={stickersToShowOnCheckedPanel} />
         : <CheckedPanelMessage />}
 
       <CheckedPanelHover
