@@ -40,10 +40,6 @@ export default function CheckedBoardPanel() {
     : []
 
 
-    console.log(stickersToShowOnCheckedPanel);
-    
-
-
   return (
     <CheckedPanelsBase
       stickersToShowOnCheckedPanel={stickersToShowOnCheckedPanel}
