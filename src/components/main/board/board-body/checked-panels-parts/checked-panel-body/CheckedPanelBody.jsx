@@ -6,14 +6,14 @@ import StickerOnCheckedStickersPanel from '../../checked-panels-sticker/CheckedP
 import { useState } from 'react'
 
 
-export default function CheckedPanelBody({ filteredAndSortedCheckedStickers }) {
+export default function CheckedPanelBody({ stickersToShowOnCheckedPanel }) {
 
   const [randomUUID, setRandomUUID] = useState(crypto.randomUUID())
 
 
   return (
     <div className={styles.container}>
-      {filteredAndSortedCheckedStickers.map((sticker, index) => {
+      {stickersToShowOnCheckedPanel.map((sticker, index) => {
         return (
           <StickerOnCheckedStickersPanel
             key={sticker.stickerId + randomUUID}
