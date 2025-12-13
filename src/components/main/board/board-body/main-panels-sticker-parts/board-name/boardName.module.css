@@ -1,12 +1,14 @@
 
 
 .container {
-  width: 210px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
   display: flex;
   align-items: center;
+  justify-content: end;
+  padding: 10px;
 }
 
 .container span {
