@@ -1,11 +1,11 @@
 
 
-import styles from './allButton.module.css'
+import styles from './allDatedButton.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 
 
-export default function AllButton() {
+export default function AllDatedButton() {
 
   const { currentBoardPanel, setCurrentBoardPanel, setCurrentBoardId, setSearchValue } = useContext(MainContext)
 

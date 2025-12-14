@@ -1,13 +1,13 @@
 
 
-import styles from './showDated.module.css'
+import styles from './datedNextDays.module.css'
 import { useState } from 'react'
 import DatedMenuIcon from './dated-menu-icon/DatedMenuIcon.jsx'
 import DatedMenu from './dated-menu/DatedMenu.jsx'
 import DatedButton from './dated-button/DatedButton.jsx'
 
 
-export default function ShowDated() {
+export default function DatedNextDays() {
 
   const filterDatedListTitle = ['Next 3 days', 'Next 10 days', 'Next 30 days']
 
