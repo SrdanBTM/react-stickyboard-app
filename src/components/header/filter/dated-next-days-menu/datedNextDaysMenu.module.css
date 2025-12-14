@@ -1,0 +1,34 @@
+
+
+.container {
+  position: absolute;
+  top: 55px;
+  right: 0px;
+  color: var(--font-color1);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  transition: opacity 0.2s ease;
+  width: 180px;
+  z-index: 2;
+}
+
+.container li {
+  padding: 10px 10px 10px 60px;
+  list-style: none;
+  background-color: var(--bg-color3);
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.container li:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.container li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.container li:hover {
+  background-color: var(--hover-color3);
+}

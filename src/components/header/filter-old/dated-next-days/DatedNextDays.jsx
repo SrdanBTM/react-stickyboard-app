@@ -9,10 +9,7 @@ import DatedButton from './dated-button/DatedButton.jsx'
 
 export default function DatedNextDays() {
 
-  const filterDatedListTitle = ['Next 3 days', 'Next 10 days', 'Next 30 days']
-
-  const [filterDatedTitle, setFilterDatedTitle] = useState(filterDatedListTitle[0])
-  const [isFilterDatedMenuShow, setIsFilterDatedMenuShow] = useState(false)
+  
 
 
   return (
