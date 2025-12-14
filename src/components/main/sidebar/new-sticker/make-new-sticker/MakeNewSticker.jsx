@@ -1,7 +1,7 @@
 
 
 import styles from './makeNewSticker.module.css'
-import { useContext, useRef, useState, useEffect } from 'react'
+import { useContext, useRef, useState } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { AppModalsContext } from '../../../../../contexts/AppModalsContext.jsx'
 import { motion } from 'framer-motion'
@@ -13,7 +13,7 @@ export default function MakeNewSticker() {
 
   const [key, setKey] = useState(0)
   const { setOpenedAppModal } = useContext(AppModalsContext)
-  const { boards, boardRef, setBoards, currentBoardId, currentBoardPanel } = useContext(MainContext)
+  const { boards, boardRef, setBoards, currentBoardId } = useContext(MainContext)
   const stickerRef = useRef()
   const [isStickerDragged, setIsStickerDragged] = useState(false)
 
@@ -33,12 +33,12 @@ export default function MakeNewSticker() {
 
     if (stickerPositionInBoardLeft >= 0 && stickerPositionInBoardTop >= 0
       && stickerPositionInBoardRight >= 0 && stickerPositionInBoardBottom >= 0
-      && currentBoardPanel === 'board') {
+      && currentBoardId !== null) {
       const boardName = currentBoard.boardName
       const positionXValue = stickerPositionInBoardLeft
       const positionYValue = stickerPositionInBoardTop
       addSticker(setBoards, currentBoardId, stickerTemplate, boardName, positionXValue, positionYValue)
-    } else if (currentBoardPanel !== 'board') {
+    } else if (currentBoardId === null) {
       setOpenedAppModal('MessageNewStickerEnableOnlyOnBoardPanel')
     }
 
