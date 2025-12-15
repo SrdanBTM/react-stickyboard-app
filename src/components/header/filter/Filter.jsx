@@ -10,9 +10,13 @@ import { useState } from 'react'
 
 export default function Filter() {
 
-  const filterDatedListTitle = [`Next 3 day`, 'Next 10 days', 'Next 30 days']
+  const datedNextDaysList = [
+    { label: 'Next 3 days', value: 3},
+    { label: 'Next 10 days', value: 10},
+    { label: 'Next 30 days', value: 30},
+  ]
 
-  const [filterDatedTitle, setFilterDatedTitle] = useState(filterDatedListTitle[0])
+
   const [isFilterDatedMenuShow, setIsFilterDatedMenuShow] = useState(false)
 
 
@@ -26,7 +30,7 @@ export default function Filter() {
       <span>|</span>
 
       <DatedNextDaysButton
-        filterDatedTitle={filterDatedTitle}
+        datedNextDaysList={datedNextDaysList}
       />
 
       <DatedNextDaysMenuIcon
@@ -34,8 +38,7 @@ export default function Filter() {
       />
 
       <DatedNextDaysMenu
-        filterDatedListTitle={filterDatedListTitle}
-        setFilterDatedTitle={setFilterDatedTitle}
+        datedNextDaysList={datedNextDaysList}
         isFilterDatedMenuShow={isFilterDatedMenuShow}
         setIsFilterDatedMenuShow={setIsFilterDatedMenuShow}
       />

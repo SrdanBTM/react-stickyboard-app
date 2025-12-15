@@ -23,6 +23,7 @@ export default function MainProvider({ children }) {
   const [checkedStickerId, setCheckedStickerId] = useState(null)
   const [isCheckedStickersPanelShow, setIsCheckedStickersPanelShow] = useState(false)
   const [currentBoardPanel, setCurrentBoardPanel] = useState('board')
+  const [datedNextDaysValue, setDatedNextDaysValue] = useState(3)
 
 
   const boardRef = useRef()
@@ -38,7 +39,7 @@ export default function MainProvider({ children }) {
         searchValue, setSearchValue,
         checkedStickerId, setCheckedStickerId,
         isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
-
+        datedNextDaysValue, setDatedNextDaysValue
       }}
     >
       {children}

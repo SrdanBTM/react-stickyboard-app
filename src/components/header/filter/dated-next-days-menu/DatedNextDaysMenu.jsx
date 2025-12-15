@@ -1,14 +1,19 @@
 
 
 import styles from './datedNextDaysMenu.module.css'
+import { useContext } from 'react'
+import { MainContext } from '../../../../contexts/MainContext.jsx'
 
 
-export default function DatedNextDaysMenu({ filterDatedListTitle, setFilterDatedTitle, isFilterDatedMenuShow, setIsFilterDatedMenuShow}) {
+export default function DatedNextDaysMenu({ datedNextDaysList, isFilterDatedMenuShow, setIsFilterDatedMenuShow }) {
 
-  
-  function handleClick(title) {
-    setFilterDatedTitle(title)
+
+  const { setDatedNextDaysValue } = useContext(MainContext)
+
+
+  function handleClick(nextDaysValue) {
     setIsFilterDatedMenuShow(false)
+    setDatedNextDaysValue(nextDaysValue)
   }
 
 
@@ -21,9 +26,9 @@ export default function DatedNextDaysMenu({ filterDatedListTitle, setFilterDated
       }}
     >
       <ul>
-        <li onClick={() => handleClick(filterDatedListTitle[0])}>{filterDatedListTitle[0]}</li>
-        <li onClick={() => handleClick(filterDatedListTitle[1])}>{filterDatedListTitle[1]}</li>
-        <li onClick={() => handleClick(filterDatedListTitle[2])}>{filterDatedListTitle[2]}</li>
+        {datedNextDaysList.map(item => (
+          <li key={item.value} onClick={() => handleClick(item.value)}>{item.label}</li>)
+        )}
       </ul>
     </div>
   )
