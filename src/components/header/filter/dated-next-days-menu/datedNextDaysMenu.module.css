@@ -8,7 +8,7 @@
   border-radius: 5px;
   border: 1px solid var(--border-color);
   transition: opacity 0.2s ease;
-  width: 180px;
+  width: 190px;
   z-index: 2;
 }
 
