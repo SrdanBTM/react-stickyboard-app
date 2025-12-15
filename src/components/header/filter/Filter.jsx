@@ -1,7 +1,7 @@
 
 
 import styles from './filter.module.css'
-import AllDatedButton from './all-dated-button/AllDatedButton.jsx'
+import DatedAllButton from './dated-all-button/DatedAllButton.jsx'
 import DatedNextDaysButton from './dated-next-days-button/DatedNextDaysButton.jsx'
 import DatedNextDaysMenuIcon from './dated-next-days-menu-icon/DatedNextDaysMenuIcon.jsx'
 import DatedNextDaysMenu from './dated-next-days-menu/DatedNextDaysMenu.jsx'
@@ -21,7 +21,7 @@ export default function Filter() {
 
       <span>Show: </span>
 
-      <AllDatedButton />
+      <DatedAllButton />
 
       <span>|</span>
 
