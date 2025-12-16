@@ -19,19 +19,19 @@
         "checkedOrder": null,
         "zIndex": 0,
         "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
+          "day": 25,
+          "month": 12,
+          "year": 2025,
+          "hours": 10,
+          "minutes": 30,
+          "dayInWeek": "Friday"
         },
         "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
+          "day": 25,
+          "month": 12,
+          "year": 25,
+          "hours": 10,
+          "minutes": 30
         },
         "dateInput": null,
         "timeInput": null,
@@ -56,19 +56,19 @@
         "checkedOrder": null,
         "zIndex": 0,       
         "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
+          "day": 10,
+          "month": 1,
+          "year": 2026,
+          "hours": 10,
+          "minutes": 30,
+          "dayInWeek": "Friday"
         },
         "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
+          "day": 10,
+          "month": 1,
+          "year": 26,
+          "hours": 10,
+          "minutes": 30
         },
         "dateInput": null,
         "timeInput": null,
@@ -93,19 +93,19 @@
         "checkedOrder": null,
         "zIndex": 0,    
         "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
+          "day": 17,
+          "month": 12,
+          "year": 2025,
+          "hours": 10,
+          "minutes": 30,
+          "dayInWeek": "Friday"
         },
         "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
+          "day": 17,
+          "month": 12,
+          "year": 25,
+          "hours": 10,
+          "minutes": 30
         },
         "dateInput": null,
         "timeInput": null,
@@ -140,19 +140,19 @@
         "checkedOrder": null,
         "zIndex": 0,    
         "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
+          "day": 17,
+          "month": 12,
+          "year": 2025,
+          "hours": 10,
+          "minutes": 30,
+          "dayInWeek": "Friday"
         },
         "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
+          "day": 17,
+          "month": 12,
+          "year": 25,
+          "hours": 10,
+          "minutes": 30
         },
         "dateInput": null,
         "timeInput": null,
