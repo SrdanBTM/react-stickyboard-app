@@ -8,13 +8,24 @@ import { MainContext } from '../../../../contexts/MainContext.jsx'
 export default function DatedNextDaysMenu({ datedNextDaysList, isFilterDatedMenuShow, setIsFilterDatedMenuShow }) {
 
 
-  const { setDatedNextDaysValue } = useContext(MainContext)
+  const {
+    setCurrentBoardId,
+    setSearchValue,
+    setCurrentBoardPanel,
+    setSelectedFilterButton,
+    setDatedNextDaysValue } = useContext(MainContext)
 
 
   function handleClick(nextDaysValue) {
     setIsFilterDatedMenuShow(false)
     setDatedNextDaysValue(nextDaysValue)
+
+    setCurrentBoardId(null)
+    setSearchValue('')
+    setCurrentBoardPanel('filter')
+    setSelectedFilterButton('datedNextDays')
   }
+
 
 
   return (
