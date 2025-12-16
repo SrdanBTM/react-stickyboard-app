@@ -12,7 +12,7 @@ export default function MainProvider({ children }) {
   // const id = crypto.randomUUID()
   // const [boards, setBoards] = useState([{ ...boardTemplate, boardId: id }])
   const [boards, setBoards] = useState(dummyData)
-  
+
 
   // const [currentBoardId, setCurrentBoardId] = useState(id)
   const currentBoardIdInit = boards.length > 0 ? boards[0].boardId : null
@@ -23,7 +23,9 @@ export default function MainProvider({ children }) {
   const [checkedStickerId, setCheckedStickerId] = useState(null)
   const [isCheckedStickersPanelShow, setIsCheckedStickersPanelShow] = useState(false)
   const [currentBoardPanel, setCurrentBoardPanel] = useState('board')
-  const [datedNextDaysValue, setDatedNextDaysValue] = useState(3)
+  const [datedNextDaysValue, setDatedNextDaysValue] = useState()
+  const [selectedFilterButton, setSelectedFilterButton] = useState(null)
+
 
 
   const boardRef = useRef()
@@ -39,7 +41,8 @@ export default function MainProvider({ children }) {
         searchValue, setSearchValue,
         checkedStickerId, setCheckedStickerId,
         isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
-        datedNextDaysValue, setDatedNextDaysValue
+        datedNextDaysValue, setDatedNextDaysValue,
+        selectedFilterButton, setSelectedFilterButton
       }}
     >
       {children}
