@@ -7,13 +7,20 @@ import { MainContext } from '../../../../contexts/MainContext.jsx'
 
 export default function DatedAllButton() {
 
-  const { currentBoardPanel, setCurrentBoardPanel, setCurrentBoardId, setSearchValue } = useContext(MainContext)
+  const {
+    setCurrentBoardPanel,
+    setCurrentBoardId,
+    setSearchValue,
+    setDatedNextDaysValue,
+    selectedFilterButton, setSelectedFilterButton } = useContext(MainContext)
 
 
   function handleClick() {
     setCurrentBoardId(null)
     setSearchValue('')
     setCurrentBoardPanel('filter')
+    setDatedNextDaysValue('all')
+    setSelectedFilterButton('datedAll')
   }
 
 
@@ -22,8 +29,8 @@ export default function DatedAllButton() {
       <button
         onClick={handleClick}
         style={{
-          border: currentBoardPanel === 'filter' ? '1px solid rgba(255,255,255,0.5)' : '',
-          borderRadius: currentBoardPanel === 'filter' ? '5px' : ''
+          border: selectedFilterButton === 'datedAll' ? '1px solid rgba(255,255,255,0.5)' : '',
+          borderRadius: selectedFilterButton === 'datedAll' ? '5px' : ''
         }}
       >
         All dated
