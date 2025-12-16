@@ -66,7 +66,7 @@ export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
 
       <Header mappedSticker={mappedSticker} />
 
-      {mappedSticker.date && mappedSticker.time
+      {mappedSticker.isDateTimeValid
         && <DateTime mappedSticker={mappedSticker} />}
 
       <Note mappedSticker={mappedSticker} />
