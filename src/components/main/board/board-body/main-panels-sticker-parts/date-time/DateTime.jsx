@@ -6,9 +6,11 @@ import styles from './dateTime.module.css'
 
 export default function DateTime({ mappedSticker }) {
 
+  const dtvv = mappedSticker.dateTimeValidValue
+
   let dateTimeString = ''
-  if (mappedSticker.date && mappedSticker.time) {
-    dateTimeString = `${mappedSticker.date} | ${mappedSticker.dayInWeek} | ${mappedSticker.time}`
+  if (mappedSticker.isDateTimeValid) {
+    dateTimeString = `${dtvv.day}.${dtvv.month}.${dtvv.year} | ${dtvv.dayInWeek} | ${dtvv.hours}:${dtvv.minutes}`
   }
 
 
