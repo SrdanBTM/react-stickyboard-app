@@ -9,7 +9,7 @@ import Delete from './board-name-delete/BoardNameDelete.jsx'
 
 export default function BoardListSpan({ board }) {
 
-  const { setCurrentBoardPanel, setCurrentBoardId, setSearchValue } = useContext(MainContext)
+  const { setCurrentBoardPanel, setCurrentBoardId, setSearchValue, setSelectedFilterButton } = useContext(MainContext)
   const [isMouseOver, setIsMouseOver] = useState(false)
 
 
@@ -26,6 +26,7 @@ export default function BoardListSpan({ board }) {
     setCurrentBoardId(dataId)
     setSearchValue('')
     setCurrentBoardPanel('board')
+    setSelectedFilterButton(null)
   }
 
 

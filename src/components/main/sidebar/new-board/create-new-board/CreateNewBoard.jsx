@@ -10,7 +10,7 @@ import Input from './create-new-board-input/CreateNewBoardInput.jsx'
 
 export default function CreateNewBoard() {
 
-  const { boards, setCurrentBoardId } = useContext(MainContext)
+  const { boards, setCurrentBoardId, setSelectedFilterButton } = useContext(MainContext)
   const { isClickedOutsideNewBoard } = useContext(ClickOutsideElementContext)
   const [isCreateBoard, setIsCreateBoard] = useState(false)
 
@@ -25,6 +25,7 @@ export default function CreateNewBoard() {
 
   function handleClick() {
     setIsCreateBoard(true)
+    setSelectedFilterButton(null)
   }
 
 

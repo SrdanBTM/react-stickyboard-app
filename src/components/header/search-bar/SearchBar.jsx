@@ -8,7 +8,7 @@ import { updateAllStickers } from '../../../helper-functions/HelperFunctionsHand
 
 export default function SearchBar() {
 
-  const { setCurrentBoardPanel, setBoards, searchValue, setSearchValue, setCurrentBoardId, currentBoardId } = useContext(MainContext)
+  const { setCurrentBoardPanel, setBoards, searchValue, setSearchValue, setCurrentBoardId, currentBoardId, setSelectedFilterButton } = useContext(MainContext)
 
   function handleChange(e) {
     const propertyToUpdate1 = { key: 'isAddDateTimeModalOpen', value: false }
@@ -20,7 +20,7 @@ export default function SearchBar() {
 
     setSearchValue(e.target.value)
     setCurrentBoardId(null)
-
+    setSelectedFilterButton(null)
     setCurrentBoardPanel('search')
   }
 
