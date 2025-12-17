@@ -8,10 +8,12 @@ import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHand
 
 export default function CheckedSearchPanel() {
 
-  const { boards, setBoards, currentBoardId } = useContext(MainContext)
+  const { boards, searchValue } = useContext(MainContext)
 
 
-  const stickersToShowOnCheckedPanel = boards.flatMap(board => board.stickers.filter(sticker => sticker.checked))
+  const stickersToShowOnCheckedPanel = boards.flatMap(board => board.stickers)
+    .filter(sticker => sticker.checked)
+    .filter(sticker => sticker.title.toLowerCase().includes(searchValue.toLowerCase()))
 
 
   return (
