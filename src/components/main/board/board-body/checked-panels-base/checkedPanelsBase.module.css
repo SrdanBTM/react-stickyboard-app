@@ -2,8 +2,10 @@
 
 .container {
   position: absolute;
+  top: 166px;
+  bottom: 0;
+  right: 0;
   width: 200px;
-  height: 100%;
   border-left: 1px solid var(--border-app);
   background-color: var(--bg-color1);
   padding: 20px;
