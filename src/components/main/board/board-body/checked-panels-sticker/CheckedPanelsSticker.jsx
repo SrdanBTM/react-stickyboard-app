@@ -8,6 +8,7 @@ import { useState, useContext, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import CheckedStickerDateTime from '../checked-panels-sticker-parts/checked-sticker-date-time/CheckedStickerDateTime.jsx'
 
 
 export default function CheckedPanelSticker({ topPosition, mappedSticker, setRandomUUID }) {
@@ -95,9 +96,15 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     >
-      <CheckedStickerTitle mappedSticker={mappedSticker} isDragged={isDragged} />
+      <CheckedStickerTitle mappedSticker={mappedSticker} />
+
       <CheckedStickerCheck />
-      <CheckedStickerNote mappedSticker={mappedSticker} isDragged={isDragged} />
+
+      {mappedSticker.isDateTimeValid
+        && <CheckedStickerDateTime mappedSticker={mappedSticker} />}
+
+      <CheckedStickerNote mappedSticker={mappedSticker} />
+      
     </motion.div>
   )
 }
