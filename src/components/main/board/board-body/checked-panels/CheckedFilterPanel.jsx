@@ -6,7 +6,7 @@ import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function CheckedBoardPanel() {
+export default function CheckedFilterPanel() {
 
   const { boards, setBoards, currentBoardId } = useContext(MainContext)
 
