@@ -10,7 +10,7 @@ import MainPanelStickerSearch from '../main-panels-stickers/MainPanelStickerSear
 
 export default function MainPanelsBase({ stickers }) {
 
-  const { boardRef, currentBoardPanel } = useContext(MainContext)
+  const { boardRef, currentBoardPanel, isCheckedStickersPanelShow } = useContext(MainContext)
 
   const stickerVariants = {
     board: MainPanelStickerBoard,
@@ -25,6 +25,10 @@ export default function MainPanelsBase({ stickers }) {
     <div
       className={`${styles.container} ${styles[currentBoardPanel]}`}
       ref={boardRef}
+      style={{
+        paddingRight: isCheckedStickersPanelShow && currentBoardPanel !== 'board' ? '200px' : ''
+      }}
+
     >
       {stickers.map(sticker => (
         <MainPanelStickerVariant
