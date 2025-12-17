@@ -15,8 +15,9 @@ import CheckedFilterPanel from './checked-panels/CheckedFilterPanel.jsx'
 
 export default function BoardBody() {
 
-  const { currentBoardPanel } = useContext(MainContext)
+  const { currentBoardPanel, selectedFilterButton } = useContext(MainContext)
 
+  
   const panelVariantes = {
     board: MainPanelBoard,
     search: MainPanelSearch,
@@ -37,7 +38,9 @@ export default function BoardBody() {
   return (
     <div className={styles.container}>
       <MainPanelVariant />
-      <CheckedPanelVariant />
+
+      {selectedFilterButton !== 'datedNextDays'
+        && <CheckedPanelVariant />}
     </div>
   )
 }
