@@ -9,10 +9,10 @@ export default function MainPanelFilter() {
 
   const { boards, datedNextDaysValue } = useContext(MainContext)
 
-  const today = new Date()
-  const todayDay = today.getDate()
-  const todayMonth = today.getMonth() + 1
-  const todayYear = today.getFullYear()
+
+  const todayDay = new Date().getDate()
+  const todayMonth = new Date().getMonth() + 1
+  const todayYear = new Date().getFullYear()
 
 
   let filteredStickers = []
@@ -22,18 +22,21 @@ export default function MainPanelFilter() {
     filteredStickers = boards.flatMap(board => board.stickers.filter(sticker => sticker.isDateTimeValid))
 
   } else if (typeof datedNextDaysValue === 'number') {
-    const maxDay = todayDay + datedNextDaysValue
 
-    const daysInCurrentMonth = new Date(todayYear, todayMonth, 0).getDate()
-
+    const startDate = new Date(todayYear, todayMonth, todayDay)
+    const endDate = new Date(todayYear, todayMonth, todayDay + datedNextDaysValue)
+  
     filteredStickers = boards.flatMap(board =>
-      board.stickers.filter(sticker => 
-        sticker.isDateTimeValid && sticker.dateTimeValidValue.day >= todayDay && sticker.dateTimeValidValue.day <= maxDay)
+      board.stickers.filter(sticker => {
+        if (!sticker.isDateTimeValid) return false
+  
+        const { day, month, year } = sticker.dateTimeValidValue
+        const stickerDate = new Date(year, month, day)
+  
+        return stickerDate >= startDate && stickerDate <= endDate
+      })
     )
   }
-
-
-
 
 
   return (
