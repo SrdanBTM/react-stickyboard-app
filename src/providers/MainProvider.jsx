@@ -21,7 +21,7 @@ export default function MainProvider({ children }) {
 
   const [searchValue, setSearchValue] = useState('')
   const [checkedStickerId, setCheckedStickerId] = useState(null)
-  const [isCheckedStickersPanelShow, setIsCheckedStickersPanelShow] = useState(false)
+  const [isCheckedStickersPanelShow, setIsCheckedStickersPanelShow] = useState(true)
   const [currentBoardPanel, setCurrentBoardPanel] = useState('board')
   const [datedNextDaysValue, setDatedNextDaysValue] = useState('all')
   const [selectedFilterButton, setSelectedFilterButton] = useState(null)
