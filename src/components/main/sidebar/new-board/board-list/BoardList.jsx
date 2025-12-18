@@ -16,13 +16,13 @@ export default function BoardsList() {
 
 
   return (
-    <div>
+    <div className={`${styles.container} scroll`}>
       {boards.length > 0
-        && boards.map((board, index) => {
+        && boards.map(board => {
           return (
             <div
-              className={styles.container}
-              key={index}
+            className={styles.content}
+              key={board.boardId}
               style={{
                 height: board.isDeleteShowed ? '80px' : '37px',
                 border: board.boardId === currentBoardId ? '1px solid var(--border-color)' : ''
