@@ -45,7 +45,11 @@ export default function CheckedPanelsBase({ stickersToShowOnCheckedPanel }) {
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
       style={{
-        right: isCheckedStickersPanelShow || isCheckedStickersPanelHover ? '0' : '-200px'
+        backgroundColor: isCheckedStickersPanelShow ? 'var(--bg-color1)' : 'rgba(0,0,0,0.6)',
+        position: isCheckedStickersPanelShow ? '' : 'absolute',
+        top: isCheckedStickersPanelShow ? '' : '170px',
+        bottom: isCheckedStickersPanelShow ? '' : '0px',
+        right: isCheckedStickersPanelShow || isCheckedStickersPanelHover ? '0' : '-210px'
       }}
     >
       <CheckedPanelHeader />
