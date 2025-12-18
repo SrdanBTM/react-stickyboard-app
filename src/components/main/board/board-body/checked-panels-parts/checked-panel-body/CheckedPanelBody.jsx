@@ -12,7 +12,7 @@ export default function CheckedPanelBody({ stickersToShowOnCheckedPanel }) {
 
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} scroll`}>
       {stickersToShowOnCheckedPanel.map((sticker, index) => {
         return (
           <StickerOnCheckedStickersPanel
