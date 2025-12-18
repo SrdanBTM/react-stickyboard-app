@@ -20,11 +20,11 @@ export default function BoardHeader() {
   if (currentBoardPanel === 'board') {
     title = currentBoard.boardName
   } else if (currentBoardPanel === 'search') {
-    title = `Search results for '${searchValue}'`
+    title = `Search results   ·  ${searchValue}`
   } else if (currentBoardPanel === 'filter' && typeof datedNextDaysValue === 'number') {
-    title = `Dated stickers · Next ${datedNextDaysValue} days`
+    title = `Stickers due in the next ${datedNextDaysValue} days`
   } else if (currentBoardPanel === 'filter' && datedNextDaysValue === 'all') {
-    title = `Dated stickers · All`
+    title = `All dated stickers`
   }
 
 

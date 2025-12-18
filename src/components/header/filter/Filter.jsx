@@ -23,7 +23,7 @@ export default function Filter() {
   return (
     <div className={styles.container}>
 
-      <span>Show: </span>
+      <span>Show only dated: </span>
 
       <DatedAllButton />
 

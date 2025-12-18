@@ -41,7 +41,7 @@ export default function DatedNextDaysButton() {
           borderRadius: selectedFilterButton === 'datedNextDays' ? '5px' : ''
         }}
       >
-        {`Dated - Next ${datedNextDaysNumber} days`}
+        {`Next ${datedNextDaysNumber} days`}
       </button>
     </div>
   )
