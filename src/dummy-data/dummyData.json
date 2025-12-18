@@ -15,7 +15,7 @@
         "boardName": "Daily Tasks",
         "positionX": 120,
         "positionY": 80,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -240,7 +240,7 @@
         "boardName": "Home",
         "positionX": 110,
         "positionY": 150,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -347,7 +347,7 @@
         "boardName": "Ideas",
         "positionX": 340,
         "positionY": 260,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -422,7 +422,7 @@
         "boardName": "Fitness",
         "positionX": 280,
         "positionY": 240,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -572,7 +572,7 @@
         "boardName": "Shopping",
         "positionX": 320,
         "positionY": 240,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -647,7 +647,7 @@
         "boardName": "Travel",
         "positionX": 340,
         "positionY": 270,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -722,7 +722,7 @@
         "boardName": "Finance",
         "positionX": 300,
         "positionY": 260,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -797,7 +797,7 @@
         "boardName": "Reading",
         "positionX": 340,
         "positionY": 260,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -915,7 +915,7 @@
         "boardName": "Health",
         "positionX": 130,
         "positionY": 120,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -1065,7 +1065,7 @@
         "boardName": "Garden",
         "positionX": 140,
         "positionY": 120,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -1172,7 +1172,7 @@
         "boardName": "Maintenance",
         "positionX": 310,
         "positionY": 260,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -1215,7 +1215,7 @@
         "boardName": "Projects",
         "positionX": 140,
         "positionY": 120,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -1322,7 +1322,7 @@
         "boardName": "Admin",
         "positionX": 310,
         "positionY": 260,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -1440,7 +1440,7 @@
         "boardName": "Archive",
         "positionX": 150,
         "positionY": 130,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
@@ -1472,7 +1472,7 @@
         "boardName": "Archive",
         "positionX": 330,
         "positionY": 270,
-        "checked": false,
+        "checked": true,
         "checkedOrder": null,
         "zIndex": 1,
         "dateTimeValidValue": {
