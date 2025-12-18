@@ -1,12 +1,16 @@
 
 
 .container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.heading {
+.header {
   color: var(--font-color4);
   font-weight: bold;
   font-size: 20px;

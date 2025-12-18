@@ -9,7 +9,6 @@ export default function Sidebar() {
   return (
     <aside className={styles.container}>
       <NewSticker />
-      <div className={styles.border}></div>
       <NewBoard />
     </aside>
   )

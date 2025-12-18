@@ -11,10 +11,3 @@
   align-items: center;
   user-select: none;
 }
-
-.border {
-  width: 150px;
-  height: 1px;
-  border-bottom: 1px solid var(--border-color);
-  margin: 50px 0;
-}

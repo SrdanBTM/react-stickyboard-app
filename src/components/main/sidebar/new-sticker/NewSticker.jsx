@@ -7,7 +7,7 @@ import MakeNewSticker from './make-new-sticker/MakeNewSticker.jsx'
 export default function NewSticker() {
   return (
     <div className={styles.container}>
-      <div className={styles.heading}>
+      <div className={styles.header}>
         <span>Stickers</span>
       </div>
 

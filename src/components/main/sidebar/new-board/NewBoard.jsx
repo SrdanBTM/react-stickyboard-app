@@ -7,7 +7,7 @@ import CreateNewBoard from './create-new-board/CreateNewBoard.jsx'
 export default function NewBoard() {
   return (
     <div className={styles.container}>
-        <div className={styles.heading}>
+        <div className={styles.header}>
           <span>Boards</span>
         </div>
 
