@@ -78,96 +78,30 @@
 
   /* Firefox */
   scrollbar-width: auto;
-  scrollbar-color: rgba(255,255,255,0.15) var(--bg-color2);
+  scrollbar-color: rgba(255,255,255,0.1) var(--bg-color1);
 }
 
 /* WebKit */
+
 .scroll::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 .scroll::-webkit-scrollbar-track {
-  background: var(--bg-color3);
+  background-color: var(--bg-color1);
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.25);
+  background-color: rgba(255,255,255,0.1);
   border-radius: 6px;
+
+  border: 2px solid var(--bg-color1);
+  background-clip: padding-box;
 }
 
 .scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.18);
 }
-
-
-
-
-
-
-/* react day picker */
-
-.rdp-day {
-  font-size: 12px;
-  font-weight: bold;
-  color: var(--font-color1);
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  padding-bottom: 2px;
-}
-
-.rdp-day:hover {
-  background-color: var(--hover-color1);
-}
-
-.rdp-month {
-  padding: 5px 20px;
-  background-color:#0d0d0d;
-  width: 100%;
-  height: 250px;
-}
-
-.rdp-month_caption {
-  height: 30px;
-}
-
-.rdp-weekday {
-  font-size: 11px;
-} 
-
-.rdp-caption_label {
-  padding: 10px;
-  height: 26px;
-  font-size: 14px;
-}
-
-.rdp-nav {
-  height: 40px;
-  height: 26px;
-  margin-top: 5px;
-}
-
-.rdp-button_previous {
-  width: 30px;
-}
-
-.rdp-button_next {
-  width: 30px;
-  margin-right: 20px;
-}
-
-.rdp-chevron {
-  fill: var(--font-color2);
-  width: 16px;
-}
-
-.rdp-chevron:hover {
-  transform: scale(1.3);
-  transition: transform 0.1s ease;
-}
-
-
 
 
 
