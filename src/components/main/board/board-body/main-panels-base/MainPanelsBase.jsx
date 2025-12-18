@@ -23,7 +23,7 @@ export default function MainPanelsBase({ stickers }) {
 
   return (
     <div
-      className={`${styles.container} ${styles[currentBoardPanel]}`}
+      className={`${styles.container} ${styles[currentBoardPanel]} scroll`}
       ref={boardRef}
       style={{
         paddingRight: isCheckedStickersPanelShow && currentBoardPanel !== 'board' && selectedFilterButton !== 'datedNextDays' ? '200px' : ''
