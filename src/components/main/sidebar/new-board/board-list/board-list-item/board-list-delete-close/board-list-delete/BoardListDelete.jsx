@@ -3,14 +3,14 @@
 
 import styles from './boardListDelete.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
-import { AppModalsContext } from '../../../../../../../contexts/AppModalsContext.jsx'
-import { ThemeContext } from '../../../../../../../contexts/ThemeContext.jsx'
-import { deleteBoard } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
-import { updateBoard } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
+import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
+import { AppModalsContext } from '../../../../../../../../contexts/AppModalsContext.jsx'
+import { ThemeContext } from '../../../../../../../../contexts/ThemeContext.jsx'
+import { deleteBoard } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
+import { updateBoard } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function BoardListDelete({ board }) {
+export default function BoardListDelete({ mappedBoard }) {
 
   const { setBoards } = useContext(MainContext)
   const { theme } = useContext(ThemeContext)
@@ -23,7 +23,7 @@ export default function BoardListDelete({ board }) {
     const propertyToUpdate = { key: 'isDeleteShowed', value: false }
     updateBoard(setBoards, currentBoardId, propertyToUpdate)
 
-    board.stickers.length === 0
+    mappedBoard.stickers.length === 0
       ? deleteBoard(setBoards, currentBoardId)
       : setOpenedAppModal('DeleteBoardModal')
   }
@@ -33,7 +33,7 @@ export default function BoardListDelete({ board }) {
     <div
       className={styles.container}
       onClick={handleClick}
-      data-id={board.boardId}
+      data-id={mappedBoard.boardId}
     >
       {theme === 'darkTheme'
         ? <img src={`${BASE_URL}images/icon-delete1.png`} alt="delete" />

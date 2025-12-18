@@ -3,42 +3,20 @@
 import styles from './boardList.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
-import { ClickOutsideElementContext } from '../../../../../contexts/ClickOutsideElementContext.jsx'
-import Input from './board-list-input/BoardListInput.jsx'
-import Span from './board-list-span/BoardListSpan.jsx'
-import DeleteClose from './board-list-delete-close/BoardListDeleteClose.jsx'
+import BoardListItem from './board-list-item/BoardListItem.jsx'
 
 
 export default function BoardsList() {
 
-  const { boards, currentBoardId } = useContext(MainContext)
-  const { isClickedOutsideBoardList } = useContext(ClickOutsideElementContext)
+  const { boards } = useContext(MainContext)
 
 
   return (
-    <div>
+    <div className={styles.container}>
       {boards.length > 0
-        && boards.map((board, index) => {
+        && boards.map(board => {
           return (
-            <div
-              className={styles.container}
-              key={index}
-              style={{
-                height: board.isDeleteShowed ? '80px' : '37px',
-                border: board.boardId === currentBoardId ? '1px solid var(--border-color)' : ''
-              }}
-
-            >
-              {board.isInput && !isClickedOutsideBoardList
-                ?
-                <Input board={board} />
-                :
-                <>
-                  <DeleteClose board={board} />
-                  <Span board={board} />
-                </>
-              }
-            </div>
+           <BoardListItem key={board.boardId} mappedBoard={board} />
           )
         })}
     </div>

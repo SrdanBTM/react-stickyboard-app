@@ -2,12 +2,12 @@
 
 import styles from './boardListClose.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
-import { ThemeContext } from '../../../../../../../contexts/ThemeContext.jsx'
-import { updateBoard } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
+import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
+import { ThemeContext } from '../../../../../../../../contexts/ThemeContext.jsx'
+import { updateBoard } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function BoardListClose({ board }) {
+export default function BoardListClose({ mappedBoard }) {
 
   const { setBoards } = useContext(MainContext)
   const { theme } = useContext(ThemeContext)
@@ -24,7 +24,7 @@ export default function BoardListClose({ board }) {
     <div
       className={styles.container}
       onClick={handleClick}
-      data-id={board.boardId}
+      data-id={mappedBoard.boardId}
     >
       {theme === 'darkTheme'
         ? <img src={`${BASE_URL}images/icon-close1.png`} alt="close" />

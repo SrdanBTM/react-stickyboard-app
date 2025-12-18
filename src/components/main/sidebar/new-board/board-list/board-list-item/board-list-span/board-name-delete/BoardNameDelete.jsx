@@ -2,12 +2,12 @@
 
 import styles from './boardNameDelete.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
-import { ThemeContext } from '../../../../../../../contexts/ThemeContext.jsx'
-import { updateAllBoards } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
+import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
+import { ThemeContext } from '../../../../../../../../contexts/ThemeContext.jsx'
+import { updateAllBoards } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function boardNameDots({ board }) {
+export default function boardNameDots({ mappedBoard }) {
 
   const { setBoards } = useContext(MainContext)
   const { theme } = useContext(ThemeContext)
@@ -18,7 +18,7 @@ export default function boardNameDots({ board }) {
   function handleClick(e) {
     const currentBoardId = e.currentTarget.getAttribute('data-id')
     const propertyTernaryPair = [
-      { keyTrue: 'isDeleteShowed', valueTrue: !board.isDeleteShowed },
+      { keyTrue: 'isDeleteShowed', valueTrue: !mappedBoard.isDeleteShowed },
       { keyFalse: 'isDeleteShowed', valueFalse: false }
     ]
     updateAllBoards(setBoards, currentBoardId, propertyTernaryPair)
@@ -29,7 +29,7 @@ export default function boardNameDots({ board }) {
     <div
       className={styles.container}
       onClick={handleClick}
-      data-id={board.boardId}
+      data-id={mappedBoard.boardId}
     >
       { }
       <img src={

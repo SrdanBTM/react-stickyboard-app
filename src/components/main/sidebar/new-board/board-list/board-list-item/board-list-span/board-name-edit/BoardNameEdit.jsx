@@ -2,9 +2,9 @@
 
 import styles from './boardNameEdit.module.css'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
-import { ThemeContext } from '../../../../../../../contexts/ThemeContext'
-import { updateAllBoards } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard'
+import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
+import { ThemeContext } from '../../../../../../../../contexts/ThemeContext'
+import { updateAllBoards } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard'
 
 
 export default function BoardNameEdit() {

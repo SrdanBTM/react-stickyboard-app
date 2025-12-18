@@ -2,12 +2,12 @@
 
 import styles from './boardListSpan.module.css'
 import { useContext, useState } from 'react'
-import { MainContext } from '../../../../../../contexts/MainContext.jsx'
+import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import Edit from './board-name-edit/BoardNameEdit.jsx'
 import Delete from './board-name-delete/BoardNameDelete.jsx'
 
 
-export default function BoardListSpan({ board }) {
+export default function BoardListSpan({ mappedBoard }) {
 
   const { setCurrentBoardPanel, setCurrentBoardId, setSearchValue, setSelectedFilterButton } = useContext(MainContext)
   const [isMouseOver, setIsMouseOver] = useState(false)
@@ -33,17 +33,17 @@ export default function BoardListSpan({ board }) {
   return (
     <div
       className={styles.container}
-      data-id={board.boardId}
+      data-id={mappedBoard.boardId}
       onClick={handleClick}
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
     >
-      <span>{board.boardName}</span>
+      <span>{mappedBoard.boardName}</span>
       <div className={styles.editAndDots}>
-        {isMouseOver && !board.isDeleteShowed &&
+        {isMouseOver && !mappedBoard.isDeleteShowed &&
           <>
-            <Edit board={board} />
-            <Delete board={board} />
+            <Edit />
+            <Delete mappedBoard={mappedBoard} />
           </>
         }
       </div>

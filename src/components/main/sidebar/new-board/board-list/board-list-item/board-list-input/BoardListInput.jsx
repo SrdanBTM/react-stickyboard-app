@@ -2,12 +2,12 @@
 
 import styles from './boardListInput.module.css'
 import { useContext, useRef, useEffect, useState } from 'react'
-import { MainContext } from '../../../../../../contexts/MainContext.jsx'
-import { updateAllStickers } from '../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
-import { updateBoard } from '../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
+import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
+import { updateAllStickers } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { updateBoard } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function BoardListInput({ board }) {
+export default function BoardListInput({ mappedBoard }) {
 
   const { boards, setBoards, currentBoardId } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
@@ -44,7 +44,7 @@ export default function BoardListInput({ board }) {
     >
       <input
         type="text"
-        ref={board.isFocused ? inputRef : null}
+        ref={mappedBoard.isFocused ? inputRef : null}
         data-id={'boardListInput'}
       />
     </div>
