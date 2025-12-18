@@ -10,34 +10,29 @@
       {
         "stickerId": "s1",
         "title": "Buy groceries",
-        "note": "Milk, bread, fruits, coffee",
+        "note": "Milk, bread, fruits",
         "color": "var(--sticker-color1)",
         "boardName": "Daily Tasks",
         "positionX": 120,
         "positionY": 80,
         "checked": false,
         "checkedOrder": null,
-        "zIndex": 0,
+        "zIndex": 1,
         "dateTimeValidValue": {
-          "day": 25,
+          "day": 18,
           "month": 12,
           "year": 2025,
-          "hours": 10,
-          "minutes": 30,
-          "dayInWeek": "Friday"
+          "hours": 9,
+          "minutes": 0,
+          "dayInWeek": "Thursday"
         },
         "dateTimeCurrentValue": {
-          "day": 25,
+          "day": 18,
           "month": 12,
           "year": 25,
-          "hours": 10,
-          "minutes": 30
+          "hours": 9,
+          "minutes": 0
         },
-        "dateInput": null,
-        "timeInput": null,
-        "date": "10.12.2025",
-        "time": "10:00",
-        "dayInWeek": "Monday",
         "isDateTimeValid": true,
         "isAddDateTimeModalOpen": false,
         "isDeleteModalOpen": false,
@@ -47,72 +42,30 @@
       {
         "stickerId": "s2",
         "title": "Clean desk",
-        "note": "Organize cables and documents",
+        "note": "Organize cables",
         "color": "var(--sticker-color3)",
         "boardName": "Daily Tasks",
-        "positionX": 340,
-        "positionY": 200,
+        "positionX": 320,
+        "positionY": 160,
         "checked": false,
         "checkedOrder": null,
-        "zIndex": 0,       
+        "zIndex": 1,
         "dateTimeValidValue": {
-          "day": 10,
-          "month": 1,
-          "year": 2026,
-          "hours": 10,
-          "minutes": 30,
-          "dayInWeek": "Friday"
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
         },
         "dateTimeCurrentValue": {
-          "day": 10,
-          "month": 1,
-          "year": 26,
-          "hours": 10,
-          "minutes": 30
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
         },
-        "dateInput": null,
-        "timeInput": null,
-        "date": "10.12.2025",
-        "time": "10:00",
-        "dayInWeek": "Monday",
-        "isDateTimeValid": true,
-        "isAddDateTimeModalOpen": false,
-        "isDeleteModalOpen": false,
-        "isChangeColorModalOpen": false,
-        "isHover": false
-      },
-      {
-        "stickerId": "s3",
-        "title": "Laundry",
-        "note": "Don’t forget towels",
-        "color": "var(--sticker-color5)",
-        "boardName": "Daily Tasks",
-        "positionX": 220,
-        "positionY": 380,
-        "checked": false,
-        "checkedOrder": null,
-        "zIndex": 0,    
-        "dateTimeValidValue": {
-          "day": 17,
-          "month": 12,
-          "year": 2025,
-          "hours": 10,
-          "minutes": 30,
-          "dayInWeek": "Friday"
-        },
-        "dateTimeCurrentValue": {
-          "day": 17,
-          "month": 12,
-          "year": 25,
-          "hours": 10,
-          "minutes": 30
-        },
-        "dateInput": null,
-        "timeInput": null,
-        "date": "10.12.2025",
-        "time": "10:00",
-        "dayInWeek": "Monday",
-        "isDateTimeValid": true,
+        "isDateTimeValid": false,
         "isAddDateTimeModalOpen": false,
         "isDeleteModalOpen": false,
         "isChangeColorModalOpen": false,
@@ -120,45 +73,41 @@
       }
     ]
   },
+
   {
     "boardId": "b2",
-    "boardName": "Work Projects",
+    "boardName": "Work",
     "isInput": false,
     "isFocused": false,
     "isDeleteShowed": false,
-    "isThereCheckedSticker": false,
+    "isThereCheckedSticker": true,
     "stickers": [
       {
-        "stickerId": "s4",
-        "title": "React portfolio",
-        "note": "Add dark mode and deployment link",
+        "stickerId": "s3",
+        "title": "Finish report",
+        "note": "Send to manager",
         "color": "var(--sticker-color2)",
-        "boardName": "Work Projects",
-        "positionX": 180,
-        "positionY": 100,
-        "checked": false,
-        "checkedOrder": null,
-        "zIndex": 0,    
+        "boardName": "Work",
+        "positionX": 90,
+        "positionY": 120,
+        "checked": true,
+        "checkedOrder": 1,
+        "zIndex": 2,
         "dateTimeValidValue": {
-          "day": 17,
+          "day": 16,
           "month": 12,
           "year": 2025,
-          "hours": 10,
-          "minutes": 30,
-          "dayInWeek": "Friday"
+          "hours": 14,
+          "minutes": 0,
+          "dayInWeek": "Tuesday"
         },
         "dateTimeCurrentValue": {
-          "day": 17,
+          "day": 16,
           "month": 12,
           "year": 25,
-          "hours": 10,
-          "minutes": 30
+          "hours": 14,
+          "minutes": 0
         },
-        "dateInput": null,
-        "timeInput": null,
-        "date": "10.12.2025",
-        "time": "10:00",
-        "dayInWeek": "Monday",
         "isDateTimeValid": true,
         "isAddDateTimeModalOpen": false,
         "isDeleteModalOpen": false,
@@ -166,16 +115,16 @@
         "isHover": false
       },
       {
-        "stickerId": "s5",
-        "title": "StickyBoard app",
-        "note": "Fix drag constraints and theme switch",
+        "stickerId": "s4",
+        "title": "Team meeting",
+        "note": "Sprint planning",
         "color": "var(--sticker-color4)",
-        "boardName": "Work Projects",
-        "positionX": 420,
-        "positionY": 280,
+        "boardName": "Work",
+        "positionX": 260,
+        "positionY": 260,
         "checked": false,
         "checkedOrder": null,
-        "zIndex": 0,    
+        "zIndex": 1,
         "dateTimeValidValue": {
           "day": null,
           "month": null,
@@ -191,12 +140,7 @@
           "hours": null,
           "minutes": null
         },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
+        "isDateTimeValid": false,
         "isAddDateTimeModalOpen": false,
         "isDeleteModalOpen": false,
         "isChangeColorModalOpen": false,
@@ -204,129 +148,9 @@
       }
     ]
   },
+
   {
     "boardId": "b3",
-    "boardName": "Ideas",
-    "isInput": false,
-    "isFocused": false,
-    "isDeleteShowed": false,
-    "isThereCheckedSticker": false,
-    "stickers": [
-      {
-        "stickerId": "s6",
-        "title": "App for kids",
-        "note": "Simple drawing app with stickers",
-        "color": "var(--sticker-color1)",
-        "boardName": "Ideas",
-        "positionX": 260,
-        "positionY": 150,
-        "checked": false,
-        "checkedOrder": null,
-        "zIndex": 0,    
-        "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
-        },
-        "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
-        },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
-        "isAddDateTimeModalOpen": false,
-        "isDeleteModalOpen": false,
-        "isChangeColorModalOpen": false,
-        "isHover": false
-      },
-      {
-        "stickerId": "s7",
-        "title": "Budget tracker",
-        "note": "React + LocalStorage, minimal UI",
-        "color": "var(--sticker-color3)",
-        "boardName": "Ideas",
-        "positionX": 480,
-        "positionY": 340,
-        "checked": false,
-        "checkedOrder": null,
-        "zIndex": 0,    
-        "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
-        },
-        "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
-        },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
-        "isAddDateTimeModalOpen": false,
-        "isDeleteModalOpen": false,
-        "isChangeColorModalOpen": false,
-        "isHover": false
-      },
-      {
-        "stickerId": "s8",
-        "title": "Smart notes",
-        "note": "Tags, colors, search by title",
-        "color": "var(--sticker-color5)",
-        "boardName": "Ideas",
-        "positionX": 160,
-        "positionY": 420,
-        "checked": false,
-        "checkedOrder": null,
-        "zIndex": 0,    
-        "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
-        },
-        "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
-        },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
-        "isAddDateTimeModalOpen": false,
-        "isDeleteModalOpen": false,
-        "isChangeColorModalOpen": false,
-        "isHover": false
-      }
-    ]
-  },
-  {
-    "boardId": "b4",
     "boardName": "Learning",
     "isInput": false,
     "isFocused": false,
@@ -334,90 +158,48 @@
     "isThereCheckedSticker": false,
     "stickers": [
       {
-        "stickerId": "s9",
-        "title": "React Hooks",
-        "note": "Practice useState and useEffect with small examples",
-        "color": "var(--sticker-color2)",
+        "stickerId": "s5",
+        "title": "React hooks",
+        "note": "useEffect, useMemo",
+        "color": "var(--sticker-color5)",
         "boardName": "Learning",
         "positionX": 140,
         "positionY": 90,
         "checked": false,
         "checkedOrder": null,
-        "zIndex": 0,    
+        "zIndex": 1,
         "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
+          "day": 22,
+          "month": 12,
+          "year": 2025,
+          "hours": 19,
+          "minutes": 0,
+          "dayInWeek": "Monday"
         },
         "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
+          "day": 22,
+          "month": 12,
+          "year": 25,
+          "hours": 19,
+          "minutes": 0
         },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
+        "isDateTimeValid": true,
         "isAddDateTimeModalOpen": false,
         "isDeleteModalOpen": false,
         "isChangeColorModalOpen": false,
         "isHover": false
       },
       {
-        "stickerId": "s10",
-        "title": "Next.js basics",
-        "note": "Learn routing and SSR concepts",
-        "color": "var(--sticker-color4)",
-        "boardName": "Learning",
-        "positionX": 380,
-        "positionY": 260,
-        "checked": false,
-        "checkedOrder": null,
-        "zIndex": 0,    
-        "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
-        },
-        "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
-        },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
-        "isAddDateTimeModalOpen": false,
-        "isDeleteModalOpen": false,
-        "isChangeColorModalOpen": false,
-        "isHover": false
-      },
-      {
-        "stickerId": "s11",
-        "title": "React Native",
-        "note": "Test app on emulator",
+        "stickerId": "s6",
+        "title": "CSS Grid",
+        "note": "Layouts",
         "color": "var(--sticker-color1)",
         "boardName": "Learning",
-        "positionX": 240,
-        "positionY": 390,
+        "positionX": 360,
+        "positionY": 220,
         "checked": false,
         "checkedOrder": null,
-        "zIndex": 0,    
+        "zIndex": 1,
         "dateTimeValidValue": {
           "day": null,
           "month": null,
@@ -433,12 +215,7 @@
           "hours": null,
           "minutes": null
         },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
+        "isDateTimeValid": false,
         "isAddDateTimeModalOpen": false,
         "isDeleteModalOpen": false,
         "isChangeColorModalOpen": false,
@@ -446,62 +223,58 @@
       }
     ]
   },
+
   {
-    "boardId": "b5",
-    "boardName": "Personal Goals",
+    "boardId": "b4",
+    "boardName": "Home",
     "isInput": false,
     "isFocused": false,
     "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
-        "stickerId": "s12",
-        "title": "Exercise",
-        "note": "Stretch daily for 15 minutes",
-        "color": "var(--sticker-color5)",
-        "boardName": "Personal Goals",
-        "positionX": 200,
-        "positionY": 120,
+        "stickerId": "s7",
+        "title": "Fix door",
+        "note": "Living room",
+        "color": "var(--sticker-color2)",
+        "boardName": "Home",
+        "positionX": 110,
+        "positionY": 150,
         "checked": false,
         "checkedOrder": null,
-        "zIndex": 0,    
+        "zIndex": 1,
         "dateTimeValidValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null,
-          "dayInWeek": null
+          "day": 24,
+          "month": 12,
+          "year": 2025,
+          "hours": 15,
+          "minutes": 0,
+          "dayInWeek": "Wednesday"
         },
         "dateTimeCurrentValue": {
-          "day": null,
-          "month": null,
-          "year": null,
-          "hours": null,
-          "minutes": null
+          "day": 24,
+          "month": 12,
+          "year": 25,
+          "hours": 15,
+          "minutes": 0
         },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
+        "isDateTimeValid": true,
         "isAddDateTimeModalOpen": false,
         "isDeleteModalOpen": false,
         "isChangeColorModalOpen": false,
         "isHover": false
       },
       {
-        "stickerId": "s13",
-        "title": "Read book",
-        "note": "Finish 'The Kite Runner'",
-        "color": "var(--sticker-color3)",
-        "boardName": "Personal Goals",
-        "positionX": 360,
-        "positionY": 260,
+        "stickerId": "s8",
+        "title": "Buy bulbs",
+        "note": "Warm white",
+        "color": "var(--sticker-color4)",
+        "boardName": "Home",
+        "positionX": 300,
+        "positionY": 300,
         "checked": false,
         "checkedOrder": null,
-        "zIndex": 0,    
+        "zIndex": 1,
         "dateTimeValidValue": {
           "day": null,
           "month": null,
@@ -517,12 +290,200 @@
           "hours": null,
           "minutes": null
         },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b5",
+    "boardName": "Ideas",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s9",
+        "title": "App feature",
+        "note": "Calendar sync",
+        "color": "var(--sticker-color5)",
+        "boardName": "Ideas",
+        "positionX": 130,
+        "positionY": 100,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 28,
+          "month": 12,
+          "year": 2025,
+          "hours": 20,
+          "minutes": 0,
+          "dayInWeek": "Sunday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 28,
+          "month": 12,
+          "year": 25,
+          "hours": 20,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s10",
+        "title": "Design tweak",
+        "note": "Header spacing",
+        "color": "var(--sticker-color1)",
+        "boardName": "Ideas",
+        "positionX": 340,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b6",
+    "boardName": "Fitness",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s11",
+        "title": "Stretching",
+        "note": "Back & neck",
+        "color": "var(--sticker-color2)",
+        "boardName": "Fitness",
+        "positionX": 100,
+        "positionY": 120,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 19,
+          "month": 12,
+          "year": 2025,
+          "hours": 8,
+          "minutes": 30,
+          "dayInWeek": "Friday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 19,
+          "month": 12,
+          "year": 25,
+          "hours": 8,
+          "minutes": 30
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s12",
+        "title": "Walk",
+        "note": "30 minutes",
+        "color": "var(--sticker-color3)",
+        "boardName": "Fitness",
+        "positionX": 280,
+        "positionY": 240,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b7",
+    "boardName": "Family",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s13",
+        "title": "School meeting",
+        "note": "Parent evening",
+        "color": "var(--sticker-color4)",
+        "boardName": "Family",
+        "positionX": 140,
+        "positionY": 110,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 17,
+          "month": 12,
+          "year": 2025,
+          "hours": 17,
+          "minutes": 0,
+          "dayInWeek": "Wednesday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 17,
+          "month": 12,
+          "year": 25,
+          "hours": 17,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
         "isAddDateTimeModalOpen": false,
         "isDeleteModalOpen": false,
         "isChangeColorModalOpen": false,
@@ -530,15 +491,15 @@
       },
       {
         "stickerId": "s14",
-        "title": "Sleep early",
-        "note": "Try before 23:00",
-        "color": "var(--sticker-color2)",
-        "boardName": "Personal Goals",
-        "positionX": 460,
-        "positionY": 400,
+        "title": "Guitar lesson",
+        "note": "For kid",
+        "color": "var(--sticker-color1)",
+        "boardName": "Family",
+        "positionX": 340,
+        "positionY": 260,
         "checked": false,
         "checkedOrder": null,
-        "zIndex": 0,    
+        "zIndex": 1,
         "dateTimeValidValue": {
           "day": null,
           "month": null,
@@ -554,12 +515,982 @@
           "hours": null,
           "minutes": null
         },
-        "dateInput": null,
-        "timeInput": null,
-        "date": null,
-        "time": null,
-        "dayInWeek": null,
-        "isDateTimeValid": null,
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b8",
+    "boardName": "Shopping",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s15",
+        "title": "New shoes",
+        "note": "Winter",
+        "color": "var(--sticker-color2)",
+        "boardName": "Shopping",
+        "positionX": 120,
+        "positionY": 100,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 23,
+          "month": 12,
+          "year": 2025,
+          "hours": 16,
+          "minutes": 0,
+          "dayInWeek": "Tuesday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 23,
+          "month": 12,
+          "year": 25,
+          "hours": 16,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s16",
+        "title": "Headphones",
+        "note": "Over-ear",
+        "color": "var(--sticker-color5)",
+        "boardName": "Shopping",
+        "positionX": 320,
+        "positionY": 240,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b9",
+    "boardName": "Travel",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s17",
+        "title": "Book hotel",
+        "note": "Spring trip",
+        "color": "var(--sticker-color3)",
+        "boardName": "Travel",
+        "positionX": 150,
+        "positionY": 130,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 5,
+          "month": 1,
+          "year": 2026,
+          "hours": 18,
+          "minutes": 0,
+          "dayInWeek": "Monday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 5,
+          "month": 1,
+          "year": 26,
+          "hours": 18,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s18",
+        "title": "Renew passport",
+        "note": "",
+        "color": "var(--sticker-color1)",
+        "boardName": "Travel",
+        "positionX": 340,
+        "positionY": 270,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b10",
+    "boardName": "Finance",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s19",
+        "title": "Pay bills",
+        "note": "Electricity",
+        "color": "var(--sticker-color4)",
+        "boardName": "Finance",
+        "positionX": 120,
+        "positionY": 120,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 20,
+          "month": 12,
+          "year": 2025,
+          "hours": 10,
+          "minutes": 0,
+          "dayInWeek": "Saturday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 20,
+          "month": 12,
+          "year": 25,
+          "hours": 10,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s20",
+        "title": "Budget review",
+        "note": "",
+        "color": "var(--sticker-color2)",
+        "boardName": "Finance",
+        "positionX": 300,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b11",
+    "boardName": "Reading",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s21",
+        "title": "Finish novel",
+        "note": "Last chapters",
+        "color": "var(--sticker-color5)",
+        "boardName": "Reading",
+        "positionX": 130,
+        "positionY": 100,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 26,
+          "month": 12,
+          "year": 2025,
+          "hours": 21,
+          "minutes": 0,
+          "dayInWeek": "Friday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 26,
+          "month": 12,
+          "year": 25,
+          "hours": 21,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s22",
+        "title": "New book list",
+        "note": "",
+        "color": "var(--sticker-color1)",
+        "boardName": "Reading",
+        "positionX": 340,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b12",
+    "boardName": "Music",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s23",
+        "title": "Practice guitar",
+        "note": "Chords",
+        "color": "var(--sticker-color3)",
+        "boardName": "Music",
+        "positionX": 110,
+        "positionY": 130,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 19,
+          "month": 12,
+          "year": 2025,
+          "hours": 18,
+          "minutes": 0,
+          "dayInWeek": "Friday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 19,
+          "month": 12,
+          "year": 25,
+          "hours": 18,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s24",
+        "title": "Song ideas",
+        "note": "",
+        "color": "var(--sticker-color4)",
+        "boardName": "Music",
+        "positionX": 300,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b13",
+    "boardName": "Health",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s25",
+        "title": "Doctor appointment",
+        "note": "Check-up",
+        "color": "var(--sticker-color2)",
+        "boardName": "Health",
+        "positionX": 130,
+        "positionY": 120,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 7,
+          "month": 1,
+          "year": 2026,
+          "hours": 9,
+          "minutes": 30,
+          "dayInWeek": "Wednesday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 7,
+          "month": 1,
+          "year": 26,
+          "hours": 9,
+          "minutes": 30
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s26",
+        "title": "Buy vitamins",
+        "note": "",
+        "color": "var(--sticker-color5)",
+        "boardName": "Health",
+        "positionX": 320,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b14",
+    "boardName": "Car",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s27",
+        "title": "Service",
+        "note": "Oil change",
+        "color": "var(--sticker-color3)",
+        "boardName": "Car",
+        "positionX": 120,
+        "positionY": 130,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 30,
+          "month": 12,
+          "year": 2025,
+          "hours": 10,
+          "minutes": 0,
+          "dayInWeek": "Tuesday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 30,
+          "month": 12,
+          "year": 25,
+          "hours": 10,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s28",
+        "title": "Wash car",
+        "note": "",
+        "color": "var(--sticker-color1)",
+        "boardName": "Car",
+        "positionX": 300,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b15",
+    "boardName": "Garden",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s29",
+        "title": "Trim bushes",
+        "note": "",
+        "color": "var(--sticker-color4)",
+        "boardName": "Garden",
+        "positionX": 140,
+        "positionY": 120,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 2,
+          "month": 1,
+          "year": 2026,
+          "hours": 11,
+          "minutes": 0,
+          "dayInWeek": "Friday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 2,
+          "month": 1,
+          "year": 26,
+          "hours": 11,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s30",
+        "title": "Buy soil",
+        "note": "",
+        "color": "var(--sticker-color2)",
+        "boardName": "Garden",
+        "positionX": 320,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b16",
+    "boardName": "Maintenance",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s31",
+        "title": "Check boiler",
+        "note": "",
+        "color": "var(--sticker-color1)",
+        "boardName": "Maintenance",
+        "positionX": 130,
+        "positionY": 110,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 6,
+          "month": 1,
+          "year": 2026,
+          "hours": 10,
+          "minutes": 0,
+          "dayInWeek": "Tuesday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 6,
+          "month": 1,
+          "year": 26,
+          "hours": 10,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s32",
+        "title": "Change filter",
+        "note": "",
+        "color": "var(--sticker-color5)",
+        "boardName": "Maintenance",
+        "positionX": 310,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b17",
+    "boardName": "Projects",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s33",
+        "title": "StickyBoard refactor",
+        "note": "",
+        "color": "var(--sticker-color3)",
+        "boardName": "Projects",
+        "positionX": 140,
+        "positionY": 120,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 29,
+          "month": 12,
+          "year": 2025,
+          "hours": 18,
+          "minutes": 0,
+          "dayInWeek": "Monday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 29,
+          "month": 12,
+          "year": 25,
+          "hours": 18,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s34",
+        "title": "Portfolio update",
+        "note": "",
+        "color": "var(--sticker-color2)",
+        "boardName": "Projects",
+        "positionX": 320,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b18",
+    "boardName": "Admin",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s35",
+        "title": "Email Arbeitsagentur",
+        "note": "",
+        "color": "var(--sticker-color4)",
+        "boardName": "Admin",
+        "positionX": 130,
+        "positionY": 120,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 21,
+          "month": 12,
+          "year": 2025,
+          "hours": 11,
+          "minutes": 0,
+          "dayInWeek": "Sunday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 21,
+          "month": 12,
+          "year": 25,
+          "hours": 11,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s36",
+        "title": "Sort documents",
+        "note": "",
+        "color": "var(--sticker-color1)",
+        "boardName": "Admin",
+        "positionX": 310,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b19",
+    "boardName": "Wishlist",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s37",
+        "title": "New keyboard",
+        "note": "Wireless",
+        "color": "var(--sticker-color5)",
+        "boardName": "Wishlist",
+        "positionX": 140,
+        "positionY": 120,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 3,
+          "month": 1,
+          "year": 2026,
+          "hours": 12,
+          "minutes": 0,
+          "dayInWeek": "Saturday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 3,
+          "month": 1,
+          "year": 26,
+          "hours": 12,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s38",
+        "title": "New chair",
+        "note": "",
+        "color": "var(--sticker-color3)",
+        "boardName": "Wishlist",
+        "positionX": 320,
+        "positionY": 260,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      }
+    ]
+  },
+
+  {
+    "boardId": "b20",
+    "boardName": "Archive",
+    "isInput": false,
+    "isFocused": false,
+    "isDeleteShowed": false,
+    "isThereCheckedSticker": false,
+    "stickers": [
+      {
+        "stickerId": "s39",
+        "title": "Old notes",
+        "note": "",
+        "color": "var(--sticker-color2)",
+        "boardName": "Archive",
+        "positionX": 150,
+        "positionY": 130,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": 31,
+          "month": 12,
+          "year": 2025,
+          "hours": 23,
+          "minutes": 0,
+          "dayInWeek": "Wednesday"
+        },
+        "dateTimeCurrentValue": {
+          "day": 31,
+          "month": 12,
+          "year": 25,
+          "hours": 23,
+          "minutes": 0
+        },
+        "isDateTimeValid": true,
+        "isAddDateTimeModalOpen": false,
+        "isDeleteModalOpen": false,
+        "isChangeColorModalOpen": false,
+        "isHover": false
+      },
+      {
+        "stickerId": "s40",
+        "title": "Cleanup",
+        "note": "",
+        "color": "var(--sticker-color4)",
+        "boardName": "Archive",
+        "positionX": 330,
+        "positionY": 270,
+        "checked": false,
+        "checkedOrder": null,
+        "zIndex": 1,
+        "dateTimeValidValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null,
+          "dayInWeek": null
+        },
+        "dateTimeCurrentValue": {
+          "day": null,
+          "month": null,
+          "year": null,
+          "hours": null,
+          "minutes": null
+        },
+        "isDateTimeValid": false,
         "isAddDateTimeModalOpen": false,
         "isDeleteModalOpen": false,
         "isChangeColorModalOpen": false,
