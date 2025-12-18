@@ -7,3 +7,12 @@
   color: var(--font-color5);
   font-size: 13px;
 }
+
+.container span {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 25px;
+}
