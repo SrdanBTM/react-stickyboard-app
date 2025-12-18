@@ -12,7 +12,7 @@ export default function BoardsList() {
 
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} scroll`}>
       {boards.length > 0
         && boards.map(board => {
           return (
