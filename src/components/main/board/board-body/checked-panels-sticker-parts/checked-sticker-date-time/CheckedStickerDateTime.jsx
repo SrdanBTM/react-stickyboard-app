@@ -10,7 +10,7 @@ export default function CheckedStickerDateTime({ mappedSticker }) {
 
   let dateTimeString = ''
   if (mappedSticker.isDateTimeValid) {
-    dateTimeString = `${dtvv.day}.${dtvv.month}.${dtvv.year} | ${dtvv.hours}:${dtvv.minutes}`
+    dateTimeString = `${dtvv.day}.${dtvv.month}.${dtvv.year} · ${dtvv.hours}:${dtvv.minutes}`
   }
 
 

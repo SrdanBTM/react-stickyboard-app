@@ -100,11 +100,10 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
 
       <CheckedStickerCheck />
 
-      {mappedSticker.isDateTimeValid
-        && <CheckedStickerDateTime mappedSticker={mappedSticker} />}
+      <CheckedStickerDateTime mappedSticker={mappedSticker} />
 
       <CheckedStickerNote mappedSticker={mappedSticker} />
-      
+
     </motion.div>
   )
 }
