@@ -25,9 +25,6 @@ export default function MainPanelsBase({ stickers }) {
     <div
       className={`${styles.container} ${styles[currentBoardPanel]} scroll`}
       ref={boardRef}
-      style={{
-        paddingRight: isCheckedStickersPanelShow && currentBoardPanel !== 'board' && selectedFilterButton !== 'datedNextDays' ? '200px' : ''
-      }}
 
     >
       {stickers.map(sticker => (
