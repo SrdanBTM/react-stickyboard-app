@@ -2,7 +2,7 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
-import MainPanelsBase from '../main-panels-base/MainPanelsBase.jsx'
+import MainPanelBase from '../main-panel-base/MainPanelBase.jsx'
 
 
 export default function MainPanelBoard() {
@@ -19,7 +19,7 @@ export default function MainPanelBoard() {
 
 
   return (
-    <MainPanelsBase
+    <MainPanelBase
       stickers={currentBoardStickers}
     />
 

@@ -3,7 +3,7 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
-import MainPanelsBase from '../main-panels-base/MainPanelsBase.jsx'
+import MainPanelBase from '../main-panel-base/MainPanelBase.jsx'
 
 
 
@@ -59,6 +59,6 @@ export default function MainPanelFilter() {
 
 
   return (
-    <MainPanelsBase stickers={sortedStickers} />
+    <MainPanelBase stickers={sortedStickers} />
   )
 }
