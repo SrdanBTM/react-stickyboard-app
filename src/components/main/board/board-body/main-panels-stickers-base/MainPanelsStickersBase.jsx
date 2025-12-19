@@ -17,7 +17,7 @@ import ChangeColorModal from '../main-panels-sticker-parts/change-color-modal/Ch
 
 export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
 
-  const { checkedStickerId, currentBoardPanel } = useContext(MainContext)
+  const { currentBoardPanel } = useContext(MainContext)
   const [isHover, setIsHover] = useState(false)
 
 
@@ -39,13 +39,10 @@ export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
 
-      animate={{
-        opacity: checkedStickerId === mappedSticker.stickerId ? 0 : 1
-      }}
-      transition={{
-        duration: 0.3,
-        ease: 'easeOut'
-      }}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
     >
 
       {currentBoardPanel === 'board'
