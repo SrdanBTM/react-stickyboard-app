@@ -1,7 +1,7 @@
 
 
 import styles from './boardListSpan.module.css'
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import Edit from './board-name-edit/BoardNameEdit.jsx'
 import Delete from './board-name-delete/BoardNameDelete.jsx'
@@ -9,7 +9,7 @@ import Delete from './board-name-delete/BoardNameDelete.jsx'
 
 export default function BoardListSpan({ mappedBoard }) {
 
-  const { setCurrentBoardPanel, setCurrentBoardId, setSearchValue, setSelectedFilterButton } = useContext(MainContext)
+  const { setCurrentBoardPanel, currentBoardId, setCurrentBoardId, setSearchValue, setSelectedFilterButton, setIsBoardChanging } = useContext(MainContext)
   const [isMouseOver, setIsMouseOver] = useState(false)
 
 
@@ -27,7 +27,12 @@ export default function BoardListSpan({ mappedBoard }) {
     setSearchValue('')
     setCurrentBoardPanel('board')
     setSelectedFilterButton(null)
+    setIsBoardChanging(true)
   }
+
+  useEffect(() => {
+    setIsBoardChanging(false)
+  }, [currentBoardId])
 
 
   return (

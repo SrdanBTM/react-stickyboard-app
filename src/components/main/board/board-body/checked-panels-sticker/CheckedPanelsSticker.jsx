@@ -13,7 +13,7 @@ import CheckedStickerDateTime from '../checked-panels-sticker-parts/checked-stic
 
 export default function CheckedPanelSticker({ topPosition, mappedSticker, setRandomUUID }) {
 
-  const { boardRef, setBoards, currentBoardId, setActiveStickerId } = useContext(MainContext)
+  const { boardRef, setBoards, currentBoardId, setActiveStickerId, isBoardChanging } = useContext(MainContext)
   const [isMouseDown, setIsMouseDown] = useState(false)
   const stickerRef = useRef()
   const [isDragged, setIsDragged] = useState(false)
@@ -84,7 +84,7 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
         opacity: 1
       }}
       transition={{
-        duration: 0.3,
+        duration: isBoardChanging ? 0 : 0.3,
         ease: 'linear'
       }}
 
