@@ -47,7 +47,7 @@ export default function CheckedPanelsBase({ stickersToShowOnCheckedPanel }) {
       style={{
         backgroundColor: isCheckedStickersPanelShow ? 'var(--bg-color1)' : 'rgba(0,0,0,0.6)',
         position: isCheckedStickersPanelShow ? '' : 'absolute',
-        top: isCheckedStickersPanelShow ? '' : '170px',
+        top: isCheckedStickersPanelShow ? '' : '0px',
         bottom: isCheckedStickersPanelShow ? '' : '0px',
         right: isCheckedStickersPanelShow || isCheckedStickersPanelHover ? '0' : '-210px'
       }}
