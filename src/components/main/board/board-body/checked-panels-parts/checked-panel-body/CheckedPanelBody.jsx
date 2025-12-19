@@ -17,7 +17,7 @@ export default function CheckedPanelBody({ stickersToShowOnCheckedPanel }) {
         return (
           <StickerOnCheckedStickersPanel
             key={sticker.stickerId + randomUUID}
-            topPosition={20 + index * 55}
+            topPosition={70 + index * 55}
             mappedSticker={sticker}
             setRandomUUID={setRandomUUID}
           />

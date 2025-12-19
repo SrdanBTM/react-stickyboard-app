@@ -1,7 +1,6 @@
 
 
 .container {
-
   width: 210px;
   border-left: 1px solid var(--border-app);
   padding: 20px 0;
@@ -12,5 +11,4 @@
   z-index: 1;
   transition: right 0.3s ease;
 }
-
 
