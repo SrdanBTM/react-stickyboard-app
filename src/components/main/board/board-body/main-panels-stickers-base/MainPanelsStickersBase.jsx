@@ -13,23 +13,12 @@ import DateTime from '../main-panels-sticker-parts/date-time/DateTime.jsx'
 import AddDateTimeModal from '../main-panels-sticker-parts/add-date-time-modal/AddDateTimeModal.jsx'
 import DeleteStickerModal from '../main-panels-sticker-parts/delete-sticker-modal/DeleteStickerModal.jsx'
 import ChangeColorModal from '../main-panels-sticker-parts/change-color-modal/ChangeColorModal.jsx'
-import { updateSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
-import { updateAllStickers } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
 
-  const { checkedStickerId, currentBoardPanel, setBoards, currentBoardId } = useContext(MainContext)
+  const { checkedStickerId, currentBoardPanel } = useContext(MainContext)
   const [isHover, setIsHover] = useState(false)
-  const currentStickerId = mappedSticker.stickerId
-
-
-  function handleMouseDown() {
-    const propertyToUpdate1 = { key: 'zIndex', value: 0 }
-    updateAllStickers(setBoards, currentBoardId, propertyToUpdate1)
-    const propertyToUpdate2 = { key: 'zIndex', value: 1 }
-    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
-  }
 
 
   function handleHoverStart() {
@@ -47,7 +36,6 @@ export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
       className={`${styles.container} ${styles[currentBoardPanel]}`}
       style={{ backgroundColor: mappedSticker.color }}
 
-      onMouseDown={handleMouseDown}
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
 
