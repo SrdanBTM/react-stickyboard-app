@@ -20,7 +20,6 @@ export const stickerTemplate = {
   positionY: '',
   checked: false,
   checkedOrder: null,
-  zIndex: 0,
   dateTimeValidValue: {
     day: null,
     month: null,

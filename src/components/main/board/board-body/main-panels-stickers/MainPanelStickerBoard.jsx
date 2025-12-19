@@ -9,7 +9,7 @@ import { updateSticker } from '../../../../../helper-functions/HelperFunctionsHa
 
 export default function MainPanelStickerBoard({ mappedSticker }) {
 
-  const { boardRef, setBoards, currentBoardId } = useContext(MainContext)
+  const { boardRef, setBoards, currentBoardId, activeStickerId, setActiveStickerId } = useContext(MainContext)
   const stickerRef = useRef()
   const dragControl = useDragControls()
   const currentStickerId = mappedSticker.stickerId
@@ -29,6 +29,11 @@ export default function MainPanelStickerBoard({ mappedSticker }) {
   }
 
 
+  function handleMouseDown() {
+    setActiveStickerId(mappedSticker.stickerId)
+  }
+
+
   return (
     <motion.div
       drag
@@ -39,10 +44,11 @@ export default function MainPanelStickerBoard({ mappedSticker }) {
       dragElastic={0}
       onDragEnd={handleDragEnd}
       ref={stickerRef}
+      onMouseDown={handleMouseDown}
       style={{
         y: mappedSticker.positionY,
         x: mappedSticker.positionX,
-        zIndex: mappedSticker.zIndex,
+        zIndex: mappedSticker.stickerId === activeStickerId ? 1 : 0,
         position: 'absolute'
       }}
     >
