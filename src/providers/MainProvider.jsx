@@ -25,6 +25,7 @@ export default function MainProvider({ children }) {
   const [currentBoardPanel, setCurrentBoardPanel] = useState('board')
   const [datedNextDaysValue, setDatedNextDaysValue] = useState('all')
   const [selectedFilterButton, setSelectedFilterButton] = useState(null)
+  const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
 
 
 
@@ -42,7 +43,8 @@ export default function MainProvider({ children }) {
         checkedStickerId, setCheckedStickerId,
         isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
         datedNextDaysValue, setDatedNextDaysValue,
-        selectedFilterButton, setSelectedFilterButton
+        selectedFilterButton, setSelectedFilterButton,
+        checkedOrderCounter, setCheckedOrderCounter
       }}
     >
       {children}

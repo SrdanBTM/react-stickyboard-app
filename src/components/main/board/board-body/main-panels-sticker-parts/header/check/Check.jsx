@@ -10,8 +10,8 @@ export default function Check({ mappedSticker }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const [isChecked, setIsChecked] = useState(false)
-  const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
-  const { setCheckedStickerId, setBoards, currentBoardId } = useContext(MainContext)
+
+  const { setCheckedStickerId, setBoards, currentBoardId, checkedOrderCounter, setCheckedOrderCounter } = useContext(MainContext)
 
 
   const checked = `${BASE_URL}images/checked3.png`
