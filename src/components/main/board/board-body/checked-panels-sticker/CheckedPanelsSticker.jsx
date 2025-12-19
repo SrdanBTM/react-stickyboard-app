@@ -84,7 +84,7 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
         opacity: 1
       }}
       transition={{
-        duration: 0.2,
+        duration: 0.3,
         ease: 'linear'
       }}
 

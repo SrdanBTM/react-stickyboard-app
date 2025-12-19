@@ -27,12 +27,3 @@
   margin: 15px;
 }
 
-
-.container .footer {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.container:hover .footer {
-  opacity: 1;
-}

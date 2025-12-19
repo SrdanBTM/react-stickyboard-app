@@ -17,12 +17,12 @@ export default function CheckedPanelsBase({ stickersToShowOnCheckedPanel }) {
   const [isHoverTitleShow, setIsHoverTitleShow] = useState(true)
 
 
-  useEffect(() => {
-    setIsCheckedStickersPanelHover(false)
-    setTimeout(() => {
-      setIsHoverTitleShow(true)
-    }, 300)
-  }, [stickersToShowOnCheckedPanel.length])
+  // useEffect(() => {
+  //   setIsCheckedStickersPanelHover(false)
+  //   setTimeout(() => {
+  //     setIsHoverTitleShow(true)
+  //   }, 300)
+  // }, [stickersToShowOnCheckedPanel.length])
 
 
   function handleMouseOver() {

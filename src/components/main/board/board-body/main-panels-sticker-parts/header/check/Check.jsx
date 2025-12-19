@@ -26,14 +26,12 @@ export default function Check({ mappedSticker, isHover }) {
 
 
   useEffect(() => {
-    setTimeout(() => {
-      const currentStickerId = mappedSticker.stickerId
-      const propertyToUpdate1 = { key: 'checked', value: isChecked }
-      const propertyToUpdate2 = { key: 'checkedOrder', value: checkedOrderCounter }
-      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
-      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
-      setCheckedStickerId(null)
-    }, 200)
+    const currentStickerId = mappedSticker.stickerId
+    const propertyToUpdate1 = { key: 'checked', value: isChecked }
+    const propertyToUpdate2 = { key: 'checkedOrder', value: checkedOrderCounter }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
+    setCheckedStickerId(null)
   }, [isChecked])
 
 
