@@ -6,7 +6,7 @@ import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
-export default function Check({ mappedSticker }) {
+export default function Check({ mappedSticker, isHover }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const [isChecked, setIsChecked] = useState(false)
@@ -42,7 +42,8 @@ export default function Check({ mappedSticker }) {
       className={styles.container}
       onClick={handleClick}
       style={{
-        opacity: mappedSticker.isHover ? 1 : 0
+        opacity: isHover ? 1 : 0,
+        transition: 'opacity 0.3s ease'
       }}
     >
       <img src={isChecked ? checked : unchecked} alt="check sticker" />

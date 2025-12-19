@@ -5,14 +5,14 @@ import StickerTitle from './title/Title.jsx'
 import StickerCheck from './check/Check.jsx'
 
 
-export default function Header({ mappedSticker }) {
+export default function Header({ mappedSticker, isHover }) {
   return (
     <div className={`
       ${styles.container} 
       ${mappedSticker.date && mappedSticker.time ? styles.dateTime : styles.noDateTime}
       `}>
       <StickerTitle mappedSticker={mappedSticker} />
-      <StickerCheck mappedSticker={mappedSticker} />
+      <StickerCheck mappedSticker={mappedSticker} isHover={isHover} />
     </div>
   )
 } 

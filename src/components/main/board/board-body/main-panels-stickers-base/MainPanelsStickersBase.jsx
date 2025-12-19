@@ -1,6 +1,6 @@
 
 
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { motion } from 'framer-motion'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import styles from './mainPanelsStickersBase.module.css'
@@ -20,19 +20,8 @@ import { updateAllStickers } from '../../../../../helper-functions/HelperFunctio
 export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
 
   const { checkedStickerId, currentBoardPanel, setBoards, currentBoardId } = useContext(MainContext)
+  const [isHover, setIsHover] = useState(false)
   const currentStickerId = mappedSticker.stickerId
-
-
-  function handleMouseOver() {
-    const propertyToUpdate = { key: 'isHover', value: true }
-    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
-  }
-
-
-  function handleMouseLeave() {
-    const propertyToUpdate = { key: 'isHover', value: false }
-    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate)
-  }
 
 
   function handleMouseDown() {
@@ -43,14 +32,24 @@ export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
   }
 
 
+  function handleHoverStart() {
+    setIsHover(true)
+  }
+
+
+  function handleHoverEnd() {
+    setIsHover(false)
+  }
+
+
   return (
     <motion.div
       className={`${styles.container} ${styles[currentBoardPanel]}`}
       style={{ backgroundColor: mappedSticker.color }}
 
-      onMouseOver={handleMouseOver}
-      onMouseLeave={handleMouseLeave}
       onMouseDown={handleMouseDown}
+      onHoverStart={handleHoverStart}
+      onHoverEnd={handleHoverEnd}
 
       animate={{
         scale: checkedStickerId === mappedSticker.stickerId ? 0 : 1
@@ -64,17 +63,17 @@ export default function MainPanelsStickersBase({ mappedSticker, dragControl }) {
       {currentBoardPanel === 'board'
         && <Pin dragControl={dragControl} mappedSticker={mappedSticker} />}
 
-      <Header mappedSticker={mappedSticker} />
+      <Header mappedSticker={mappedSticker} isHover={isHover} />
 
       {mappedSticker.isDateTimeValid
         && <DateTime mappedSticker={mappedSticker} />}
 
       <Note mappedSticker={mappedSticker} />
 
-      {currentBoardPanel !== 'board' 
-      && <BoardName mappedSticker={mappedSticker} />}
+      {currentBoardPanel !== 'board'
+        && <BoardName mappedSticker={mappedSticker} />}
 
-      <Footer mappedSticker={mappedSticker} />
+      <Footer mappedSticker={mappedSticker} isHover={isHover} />
 
       {mappedSticker.isDeleteModalOpen
         && <DeleteStickerModal mappedSticker={mappedSticker} />}
