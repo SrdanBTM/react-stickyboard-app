@@ -11,9 +11,8 @@ export default function Logo() {
   return (
     <div className={styles.container}>
       <img
-        src={`${BASE_URL}${theme === 'darkTheme' ? 'images/icon-logo3.png' : 'images/icon-logo4.png'}`}
+        src='images/logo.png'
         alt="logo image" />
-      <span>StickyBoard</span>
     </div>
   )
 }
