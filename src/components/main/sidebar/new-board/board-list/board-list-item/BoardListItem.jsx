@@ -21,7 +21,9 @@ export default function BoardListItem({ mappedBoard }) {
       className={styles.container}
       style={{
         height: mappedBoard.isDeleteShowed ? '80px' : '37px',
-        border: mappedBoard.boardId === currentBoardId ? '1px solid var(--border-color)' : ''
+        backgroundColor: mappedBoard.boardId === currentBoardId ? 'var(--board-bg-selected)' : '',
+        border: mappedBoard.boardId === currentBoardId ? 'var(--board-border-selected)' : 'var(--border-transparent)',
+        boxShadow: mappedBoard.boardId === currentBoardId ? 'var(--board-shadow-selected)' : ''
       }}
 
     >

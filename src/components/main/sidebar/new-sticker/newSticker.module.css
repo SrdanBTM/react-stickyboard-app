@@ -7,11 +7,10 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
-  border-bottom: 1px solid var(--border-color);
 }
 
 .header {
-  color: var(--font-color4);
+  color: var(--font-secondary);
   font-weight: bold;
   font-size: 20px;
   text-align: center;

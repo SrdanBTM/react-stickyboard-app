@@ -10,14 +10,16 @@
 .container input {
   padding: 10px 20px;
   width: 100%;
-  border: 1px solid var(--border-color);
-  border-radius: 7px;
+  border-radius: var(--radius-lg);
   font-size: var(--font-size);
   outline: none;
-  background-color: var(--bg-color1);
   color: var(--font-color1);
+  border: var(--input-border);
+  background-color: var(--input-bg);
 }
 
 .container input:focus {
-  box-shadow: 0 2px 2px #555, 0 -2px 2px #555;
+  border: var(--input-border-focus);
+  background-color: var(--input-bg-focus);
+  box-shadow: var(--input-shadow-focus);
 }

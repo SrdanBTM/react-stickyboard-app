@@ -2,7 +2,7 @@
 
 .container {
   width: 100%;
-  background-color: var(--bg-color2);
+  background-color: var(--bg-panel);
   flex: 1;
   min-height: 0;
 }

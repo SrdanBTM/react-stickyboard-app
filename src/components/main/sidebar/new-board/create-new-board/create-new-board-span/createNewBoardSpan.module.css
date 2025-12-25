@@ -5,14 +5,15 @@
   display: flex;
   align-items: center;
   font-weight: bold;
-  color: var(--font-color1);
   padding: 5px 0 5px 20px;
-  border-radius: 5px;
+  border-radius: var(--radius-md);
   height: 100%;
   width: 100%;
+  color: var(--font-secondary);
 }
 
 .span:hover {
   cursor: pointer;
-  background-color: var(--hover-color1);
+  background-color: var(--board-bg-hover-2);
+  color: var(--font-primary);
 }

@@ -1,7 +1,7 @@
 
 
 .header {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-header);
   width: 100%;
   min-height: 110px;
   display: flex;
@@ -9,5 +9,5 @@
   justify-content: space-between;
   padding: 0 60px 0 50px;
   user-select: none;
-  border-bottom: 2px solid var(--border-app);
+  border-bottom: 3px solid var(--border-soft);
 }

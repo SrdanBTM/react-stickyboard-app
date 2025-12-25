@@ -8,5 +8,6 @@
   height: 35px;
   flex-shrink: 0;
   transition: height 0.2s ease-out;
-  border-radius: 3px;
+  border-radius: var(--radius-md);
+  margin-bottom: 2px;
 }

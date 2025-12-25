@@ -12,12 +12,13 @@
   height: 35px;
   color: var(--font-color2);
   padding: 5px 0 5px 10px;
-  background-color: transparent;
   border: none;
   outline: none;
-  border-radius: 3px;
+  border-radius: var(--radius-md);
+  background-color: transparent;
 }
 
 .container input:focus {
-  box-shadow: 0 2px 2px #555, 0 -2px 2px #555;
+  border: var(--input-border-focus);
+  box-shadow: var(--input-shadow-focus);
 }
