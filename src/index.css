@@ -81,9 +81,9 @@
   --font-primary: #e5e7eb;
 
   /* icon */
-  --icon-color: #9ca3af;
+  --icon-color: #6b7280;
   --icon-color-hover-normal: #e5e7eb;
-  --icon-color-hover-danger: #ef4444;
+  --icon-color-hover-danger: #dc2626;
 }
 
 .lightTheme {

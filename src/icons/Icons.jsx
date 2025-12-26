@@ -66,33 +66,30 @@ export function IconDelete() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d="M3 6h18"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <path
-        d="M8 6V4h8v2"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <rect
-        x="6"
-        y="6"
-        width="12"
-        height="14"
-        rx="1"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-      <path
-        d="M10 11v6M14 11v6"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
+      <g transform="translate(0 -2)">
+        <path
+          d="M3 6h18"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M8 6V4h8v2"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <rect
+          x="6"
+          y="6"
+          width="12"
+          height="16"
+          rx="1"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <path d="M10 11v6M14 11v6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </g>
     </svg>
   )
 }
