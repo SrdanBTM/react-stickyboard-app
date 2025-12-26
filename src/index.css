@@ -72,13 +72,18 @@
   --input-border: 1px solid rgba(255, 255, 255, 0.06);
   --input-border-focus: 1px solid rgba(96, 165, 250, 0.6);
   --input-shadow-focus: 0 0 0 1px rgba(96, 165, 250, 0.25);
-  
- /* border-transparent */
+
+  /* border-transparent */
   --border-transparent: 1px solid transparent;
 
   /* font */
-  --font-primary: #e5e7eb;
   --font-secondary: #9ca3af;
+  --font-primary: #e5e7eb;
+
+  /* icon */
+  --icon-color: #9ca3af;
+  --icon-color-hover-normal: #e5e7eb;
+  --icon-color-hover-danger: #ef4444;
 }
 
 .lightTheme {
@@ -109,6 +114,24 @@
 }
 
 
+
+
+
+/* icons */
+
+.icon {
+  color: var(--icon-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.iconNormal:hover {
+  color: var(--icon-color-hover-normal);
+}
+
+.iconDanger:hover {
+  color: var(--icon-color-hover-danger);
+}
 
 
 

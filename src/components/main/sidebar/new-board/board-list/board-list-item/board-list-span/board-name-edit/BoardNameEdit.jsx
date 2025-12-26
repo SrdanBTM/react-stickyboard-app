@@ -1,6 +1,7 @@
 
 
 import styles from './boardNameEdit.module.css'
+import { IconEdit } from '../../../../../../../../icons/Icons.jsx'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import { ThemeContext } from '../../../../../../../../contexts/ThemeContext'
@@ -28,14 +29,9 @@ export default function BoardNameEdit() {
     <div
       className={styles.container}
       onClick={handleClick}
+      data-id={'boardNameEdit'}
     >
-      <img src={
-        theme === 'darkTheme'
-          ? `${BASE_URL}images/icon-edit2.png`
-          : `${BASE_URL}images/icon-edit1.png`}
-        alt="edit"
-        data-id={'boardNameEdit'}
-      />
+      <IconEdit />
     </div>
   )
 }

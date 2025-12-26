@@ -11,11 +11,3 @@
   transition: all 0.1s ease;
 }
 
-.container img {
-  width: 15px;
-  height: 15px;
-}
-
-.container:hover {
-  transform: scale(1.3);
-}

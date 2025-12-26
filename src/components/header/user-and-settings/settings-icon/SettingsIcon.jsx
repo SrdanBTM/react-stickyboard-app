@@ -1,6 +1,8 @@
 
 
+
 import styles from './settingsIcon.module.css'
+import { IconSettings } from '../../../../icons/Icons.jsx'
 import { useContext } from 'react'
 import { ThemeContext } from '../../../../contexts/ThemeContext.jsx'
 
@@ -30,11 +32,7 @@ export default function SettingsIcon({ setClickedElement }) {
       onClick={handleClick}
       data-id={'settingsIcon'}
     >
-      <img
-        src={theme === 'darkTheme'
-          ? `${BASE_URL}images/icon-settings2.png`
-          : `${BASE_URL}images/icon-settings1.png`}
-        alt="settings icon" />
+      <IconSettings />
     </div>
   )
 }

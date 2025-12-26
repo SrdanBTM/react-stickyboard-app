@@ -1,6 +1,7 @@
 
 
 import styles from './boardNameDelete.module.css'
+import { IconDelete } from '../../../../../../../../icons/Icons.jsx'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import { ThemeContext } from '../../../../../../../../contexts/ThemeContext.jsx'
@@ -31,12 +32,7 @@ export default function boardNameDots({ mappedBoard }) {
       onClick={handleClick}
       data-id={mappedBoard.boardId}
     >
-      { }
-      <img src={
-        theme === 'darkTheme'
-          ? `${BASE_URL}images/icon-delete2.png`
-          : `${BASE_URL}images/icon-delete1.png`}
-        alt="edit" />
+      <IconDelete />
     </div>
   )
 }
