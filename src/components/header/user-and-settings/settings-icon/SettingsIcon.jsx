@@ -28,7 +28,7 @@ export default function SettingsIcon({ setClickedElement }) {
 
   return (
     <div
-      className={styles.container}
+      className={`${styles.container} icon iconNormal`}
       onClick={handleClick}
       data-id={'settingsIcon'}
     >

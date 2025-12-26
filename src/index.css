@@ -119,17 +119,17 @@
 
 /* icons */
 
-.icon {
+.icon > svg {
   color: var(--icon-color);
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.iconNormal:hover {
+.iconNormal:hover > svg {
   color: var(--icon-color-hover-normal);
 }
 
-.iconDanger:hover {
+.iconDanger:hover > svg {
   color: var(--icon-color-hover-danger);
 }
 
