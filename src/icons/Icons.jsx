@@ -39,6 +39,7 @@ export function IconEdit() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="icon iconNormal"
+      data-id='boardNameEdit'
     >
       <path
         d="M12 20h9"

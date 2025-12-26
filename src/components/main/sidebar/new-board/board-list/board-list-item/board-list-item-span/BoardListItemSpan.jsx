@@ -1,10 +1,10 @@
 
 
-import styles from './boardListSpan.module.css'
+import styles from './boardListItemSpan.module.css'
 import { useContext, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
-import Edit from './board-name-edit/BoardNameEdit.jsx'
-import Delete from './board-name-delete/BoardNameDelete.jsx'
+import EditButton from './board-list-item-span-buttons/BoardListItemSpanButtonEdit.jsx'
+import DeleteButton from './board-list-item-span-buttons/BoardListItemSpanButtonDelete.jsx'
 
 
 export default function BoardListSpan({ mappedBoard }) {
@@ -44,11 +44,11 @@ export default function BoardListSpan({ mappedBoard }) {
       onMouseLeave={handleMouseLeave}
     >
       <span>{mappedBoard.boardName}</span>
-      <div className={styles.editAndDots}>
+      <div className={styles.buttons}>
         {isMouseOver && !mappedBoard.isDeleteShowed &&
           <>
-            <Edit />
-            <Delete mappedBoard={mappedBoard} />
+            <EditButton mappedBoard={mappedBoard} />
+            <DeleteButton mappedBoard={mappedBoard} />
           </>
         }
       </div>

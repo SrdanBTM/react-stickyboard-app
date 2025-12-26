@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { ClickOutsideElementContext } from '../../../../../../contexts/ClickOutsideElementContext.jsx'
 import { MainContext } from '../../../../../../contexts/MainContext.jsx'
 import Input from './board-list-input/BoardListInput.jsx'
-import Span from './board-list-span/BoardListSpan.jsx'
+import Span from './board-list-item-span/BoardListItemSpan.jsx'
 import DeleteClose from './board-list-delete-close/BoardListDeleteClose.jsx'
 
 

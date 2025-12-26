@@ -1,6 +1,6 @@
 
 
-import styles from './boardNameDelete.module.css'
+import styles from './boardListItemSpanButton.module.css'
 import { IconDelete } from '../../../../../../../../icons/Icons.jsx'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
@@ -8,21 +8,19 @@ import { ThemeContext } from '../../../../../../../../contexts/ThemeContext.jsx'
 import { updateAllBoards } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function boardNameDots({ mappedBoard }) {
+export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
 
   const { setBoards } = useContext(MainContext)
   const { theme } = useContext(ThemeContext)
-  const BASE_URL = import.meta.env.BASE_URL
 
 
-
-  function handleClick(e) {
-    const currentBoardId = e.currentTarget.getAttribute('data-id')
-    const propertyTernaryPair = [
-      { keyTrue: 'isDeleteShowed', valueTrue: !mappedBoard.isDeleteShowed },
-      { keyFalse: 'isDeleteShowed', valueFalse: false }
-    ]
-    updateAllBoards(setBoards, currentBoardId, propertyTernaryPair)
+  function handleClick() {
+    updateAllBoards(
+      setBoards,
+      mappedBoard.boardId,
+      [{ keyTrue: 'isDeleteShowed', valueTrue: !mappedBoard.isDeleteShowed },
+      { keyFalse: 'isDeleteShowed', valueFalse: false }]
+    )
   }
 
 
@@ -30,7 +28,6 @@ export default function boardNameDots({ mappedBoard }) {
     <div
       className={styles.container}
       onClick={handleClick}
-      data-id={mappedBoard.boardId}
     >
       <IconDelete />
     </div>
