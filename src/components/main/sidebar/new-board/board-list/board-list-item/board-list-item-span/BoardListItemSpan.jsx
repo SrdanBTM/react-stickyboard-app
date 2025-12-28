@@ -45,7 +45,7 @@ export default function BoardListSpan({ mappedBoard }) {
     >
       <span>{mappedBoard.boardName}</span>
       <div className={styles.buttons}>
-        {isMouseOver && !mappedBoard.isDeleteShowed &&
+        {isMouseOver &&
           <>
             <EditButton mappedBoard={mappedBoard} />
             <DeleteButton mappedBoard={mappedBoard} />

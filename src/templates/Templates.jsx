@@ -5,7 +5,6 @@ export const boardTemplate = {
   boardName: 'My Board',
   isInput: false,
   isFocused: false,
-  isDeleteShowed: false,
   isThereCheckedSticker: false,
   stickers: []
 }

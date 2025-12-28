@@ -4,6 +4,8 @@ import AppModalBase from '../app-modal-base/AppModalBase.jsx'
 import { useContext } from 'react'
 import { MainContext } from '../../../contexts/MainContext.jsx'
 import { AppModalsContext } from '../../../contexts/AppModalsContext.jsx'
+import { changeCurrentBoardId } from '../../../helper-functions/HelperFunctions.jsx'
+import { deleteBoard } from '../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function DeleteAllCheckedStickersModal() {
@@ -27,29 +29,13 @@ export default function DeleteAllCheckedStickersModal() {
 
   function handleDelete() {
     setOpenedAppModal(null)
-    setBoards(prev => {
-      const filtered = prev.filter(board => board.boardId !== currentBoardId)
-
-      if (filtered.length > 0) {
-        setCurrentBoardId(filtered[filtered.length - 1].boardId)
-      } else {
-        setCurrentBoardId(null)
-      }
-
-      return filtered
-    })
+    deleteBoard(setBoards, currentBoardId)
+    changeCurrentBoardId(setBoards, currentBoardId, setCurrentBoardId)
   }
 
 
   function handleClose() {
     setOpenedAppModal(null)
-    setBoards(prev => prev.map(board => {
-      return (
-        board.boardId === currentBoardId
-          ? { ...board, isDeleteShowed: false }
-          : board
-      )
-    }))
   }
 
 

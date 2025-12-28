@@ -4,7 +4,6 @@
     "boardName": "Daily Tasks",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -79,7 +78,6 @@
     "boardName": "Work",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": true,
     "stickers": [
       {
@@ -154,7 +152,6 @@
     "boardName": "Learning",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -229,7 +226,6 @@
     "boardName": "Home",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -304,7 +300,6 @@
     "boardName": "Ideas",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -379,7 +374,6 @@
     "boardName": "Fitness",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -454,7 +448,6 @@
     "boardName": "Family",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -529,7 +522,6 @@
     "boardName": "Shopping",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -604,7 +596,6 @@
     "boardName": "Travel",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -679,7 +670,6 @@
     "boardName": "Finance",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -754,7 +744,6 @@
     "boardName": "Reading",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -829,7 +818,6 @@
     "boardName": "Music",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -904,7 +892,6 @@
     "boardName": "Health",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -979,7 +966,6 @@
     "boardName": "Car",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -1054,7 +1040,6 @@
     "boardName": "Garden",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -1129,7 +1114,6 @@
     "boardName": "Maintenance",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -1204,7 +1188,6 @@
     "boardName": "Projects",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -1279,7 +1262,6 @@
     "boardName": "Admin",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -1354,7 +1336,6 @@
     "boardName": "Wishlist",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {
@@ -1429,7 +1410,6 @@
     "boardName": "Archive",
     "isInput": false,
     "isFocused": false,
-    "isDeleteShowed": false,
     "isThereCheckedSticker": false,
     "stickers": [
       {

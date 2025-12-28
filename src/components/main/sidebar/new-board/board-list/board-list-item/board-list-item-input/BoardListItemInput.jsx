@@ -1,13 +1,13 @@
 
 
-import styles from './boardListInput.module.css'
+import styles from './boardListItemInput.module.css'
 import { useContext, useRef, useEffect, useState } from 'react'
 import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import { updateAllStickers } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 import { updateBoard } from '../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function BoardListInput({ mappedBoard }) {
+export default function BoardListItemInput({ mappedBoard }) {
 
   const { boards, setBoards, currentBoardId } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
