@@ -15,15 +15,31 @@ export default function DeleteAllCheckedStickersModal() {
   const currentBoard = boards.find(board => board.boardId === currentBoardId)
 
 
+  const activeCount  = currentBoard.stickers.filter(sticker => !sticker.checked).length
+  const checkedCount  = currentBoard.stickers.filter(sticker => sticker.checked).length
+
+  const messageOption1 = `${activeCount} active sticker${activeCount === 1 ? '' : 's'}`
+  const messageOption2 = `${checkedCount} checked sticker${checkedCount === 1 ? '' : 's'}`
+
+  let message = null
+  if (activeCount !== 0 && checkedCount === 0) {
+    message = messageOption1
+  } else if (activeCount === 0 && checkedCount !== 0) {
+    message = messageOption2
+  } else if (activeCount !== 0 && checkedCount !== 0) {
+    message = `${messageOption1} and ${messageOption2}`
+  }
+
   const messages = [
-    `The selected board has ${currentBoard.stickers.length} ${''} ${currentBoard.stickers.length === 1 ? 'sticker.' : 'stickers.'}`,
-    'Deleting this board will also remove all stickers on it.',
+    `The selected board has ${message}.`,
+    'Deleting this board will permanently remove all stickers on it.',
     'Do you want to continue?'
   ]
 
+
   const buttons = [
-    { title: 'Delete', onClick: handleDelete },
-    { title: 'Close', onClick: handleClose }
+    { title: 'Cancel', onClick: handleCancel },
+    { title: 'Delete', onClick: handleDelete }
   ]
 
 
@@ -34,7 +50,7 @@ export default function DeleteAllCheckedStickersModal() {
   }
 
 
-  function handleClose() {
+  function handleCancel() {
     setOpenedAppModal(null)
   }
 

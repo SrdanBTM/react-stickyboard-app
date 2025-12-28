@@ -41,7 +41,7 @@
 .button {
   width: 100px;
   padding: 10px 0;
-  background-color: var(--bg-color2);
+  background-color: var(--button-color-neutral);
   border-radius: 3px;
   color: var(--font-color1);
   border: none;
@@ -50,6 +50,10 @@
 
 .button:hover {
   cursor: pointer;
-  box-shadow: 0 0 4px #666;
-  background-color: rgb(57, 15, 15);
+  box-shadow: var(--button-boxshadow);
+
 } 
+
+.danger:hover {
+  background-color: var(--button-color-danger);
+}

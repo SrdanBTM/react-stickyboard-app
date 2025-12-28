@@ -84,7 +84,16 @@
   --icon-color: #6b7280;
   --icon-color-hover-normal: #e5e7eb;
   --icon-color-hover-danger: #dc2626;
+
+  /* button */
+  --button-color-danger: #390f0f;
+  --button-color-neutral: #181818;
+  --button-boxshadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 8px 18px rgba(0, 0, 0, 0.75);
 }
+
+
 
 .lightTheme {
   --bg-color1: #fff;
@@ -119,17 +128,17 @@
 
 /* icons */
 
-.icon > svg {
+.icon>svg {
   color: var(--icon-color);
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.iconNormal:hover > svg {
+.iconNormal:hover>svg {
   color: var(--icon-color-hover-normal);
 }
 
-.iconDanger:hover > svg {
+.iconDanger:hover>svg {
   color: var(--icon-color-hover-danger);
 }
 
