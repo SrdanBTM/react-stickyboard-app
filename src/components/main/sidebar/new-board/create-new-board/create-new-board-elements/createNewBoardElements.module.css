@@ -12,18 +12,16 @@
   height: 100%;
   display: flex;
   align-items: center;
-  color: var(--font-secondary);
   outline: none;
-  border-radius: var(--radius-md);
-  background-color: transparent;
   cursor: pointer;
+  color: var(--font-secondary);
+  border-radius: var(--radius-md);
   transition: var(--transition);
 }
 
 .container > :first-child:focus {
   border: var(--input-border-focus);
   box-shadow: var(--input-shadow-focus);
-  
 }
 
 
@@ -31,7 +29,8 @@
   font-size: 12px;
   font-weight: bold;
   justify-content: center;
-  border: var(--input-border);
+  border: var(--element-border);
+  background-color: var(--bg-header);
 }
 
 .container span:hover {
@@ -43,6 +42,7 @@
 .container input {
   padding-left: 20px;
   border: var(--border-transparent);
+  background-color: transparent;
 }
 
 .container input::placeholder {

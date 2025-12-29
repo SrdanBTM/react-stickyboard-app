@@ -55,6 +55,12 @@ export default function MakeNewSticker() {
     <motion.div
       key={key}
       className={styles.container}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 0.3,
+        ease: 'easeOut'
+      }}
       style={{
         width: isStickerDragged ? '250px' : '',
         height: isStickerDragged ? '250px' : '',
