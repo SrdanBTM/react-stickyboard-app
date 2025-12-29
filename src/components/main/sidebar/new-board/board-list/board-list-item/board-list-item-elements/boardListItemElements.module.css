@@ -8,7 +8,7 @@
   justify-content: space-between;
   border-radius: var(--radius-md);
   background-color: var(--bg-sidebar);
-  transition: all 0.1s ease;
+  transition: var(--transition);
 }
 
 .container > :first-child {
