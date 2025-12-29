@@ -16,6 +16,7 @@
   border-radius: var(--radius-md);
   background-color: transparent;
   cursor: pointer;
+  transition: all 0.1s ease;
 }
 
 .container > :only-child:focus {
@@ -35,6 +36,7 @@
 
 .container span {
   font-size: 12px;
+  font-weight: bold;
   justify-content: center;
   border: var(--input-border);
 }

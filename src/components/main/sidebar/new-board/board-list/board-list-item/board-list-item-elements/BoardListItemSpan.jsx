@@ -1,6 +1,6 @@
 
 
-import styles from './boardListItemSpan.module.css'
+import styles from './boardListItemElements.module.css'
 import { useContext, useState, useEffect } from 'react'
 import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import EditButton from './board-list-item-span-buttons/BoardListItemSpanButtonEdit.jsx'

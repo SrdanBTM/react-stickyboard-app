@@ -1,6 +1,6 @@
 
 
-import styles from './boardListItemInput.module.css'
+import styles from './boardListItemElements.module.css'
 import { useContext, useRef, useEffect, useState } from 'react'
 import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import { updateAllStickers } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'

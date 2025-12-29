@@ -4,8 +4,8 @@ import styles from './boardListItem.module.css'
 import { useContext } from 'react'
 import { ClickOutsideElementContext } from '../../../../../../contexts/ClickOutsideElementContext.jsx'
 import { MainContext } from '../../../../../../contexts/MainContext.jsx'
-import Input from './board-list-item-input/BoardListItemInput.jsx'
-import Span from './board-list-item-span/BoardListItemSpan.jsx'
+import Input from './board-list-item-elements/BoardListItemInput.jsx'
+import Span from './board-list-item-elements/BoardListItemSpan.jsx'
 
 
 export default function BoardListItem({ mappedBoard }) {
