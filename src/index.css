@@ -55,7 +55,7 @@
   --bg-checked-header: #161b23;
 
   /* app border */
-  --border-soft: rgba(255, 255, 255, 0.06);
+  --border-soft: 1px solid rgba(255, 255, 255, 0.06);
 
 
   /* board item */
@@ -79,6 +79,7 @@
   /* font */
   --font-secondary: #9ca3af;
   --font-primary: #e5e7eb;
+  --font-placeholder: #5f6672;
 
   /* icon */
   --icon-color: #6b7280;

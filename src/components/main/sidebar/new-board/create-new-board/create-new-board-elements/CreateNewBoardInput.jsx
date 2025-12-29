@@ -1,6 +1,6 @@
 
 
-import styles from './createNewBoardInput.module.css'
+import styles from './createNewBoardElements.module.css'
 import { useEffect, useContext, useState, useRef } from 'react'
 import { MainContext } from '../../../../../../contexts/MainContext.jsx'
 import { addBoard } from '../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
@@ -36,14 +36,17 @@ export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard })
 
 
   return (
-    <input
-      type='text'
-      className={styles.input}
-      value={inputValue}
-      ref={inputRef}
-      onKeyDown={handleKeyDown}
-      onChange={handleChange}
-      data-id={'createNewBoardInput'}
-    />
+    <div className={styles.container}>
+      <input
+        type='text'
+        value={inputValue}
+        ref={inputRef}
+        onKeyDown={handleKeyDown}
+        onChange={handleChange}
+        data-id={'createNewBoardInput'}
+        placeholder='Enter board name'
+      />
+    </div>
+
   )
 }
