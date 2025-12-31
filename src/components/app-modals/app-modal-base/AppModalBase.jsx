@@ -1,11 +1,17 @@
 
 
 import styles from './appModalBase.module.css'
+import { motion } from 'framer-motion'
 
 
 export default function AppModalBase({ messages, buttons }) {
   return (
-    <div className={styles.container}>
+    <motion.div
+      className={styles.container}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.1, ease: 'easeOut'}}
+    >
       <div className={styles.content}>
 
         <div className={styles.messages}>
@@ -25,6 +31,6 @@ export default function AppModalBase({ messages, buttons }) {
         </div>
 
       </div>
-    </div>
+    </motion.div>
   )
 }

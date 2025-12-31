@@ -80,6 +80,7 @@
   --font-secondary: #9ca3af;
   --font-primary: #e5e7eb;
   --font-placeholder: #5f6672;
+  --font-modal: #b8bdc7;
 
   /* icon */
   --icon-color: #6b7280;
@@ -87,11 +88,17 @@
   --icon-color-hover-danger: #dc2626;
 
   /* button */
-  --button-color-danger: #390f0f;
-  --button-color-neutral: #181818;
+  --button-color-neutral: #1a1f28;
+  --button-color-neutral-hover: #202838;
+  --button-color-danger-hover: #390f0f;
+
+  /* boxs-hadow */
   --button-boxshadow:
     0 0 0 1px rgba(255, 255, 255, 0.12),
     0 8px 18px rgba(0, 0, 0, 0.75);
+  --modal-boxshadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
 
   /* transition */
   --transition: all 0.2s ease;

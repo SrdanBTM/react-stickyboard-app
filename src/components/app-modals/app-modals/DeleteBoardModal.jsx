@@ -38,8 +38,8 @@ export default function DeleteAllCheckedStickersModal() {
 
 
   const buttons = [
-    { title: 'Cancel', onClick: handleCancel },
-    { title: 'Delete', onClick: handleDelete }
+    { title: 'Delete', onClick: handleDelete },
+    { title: 'Cancel', onClick: handleCancel }
   ]
 
 

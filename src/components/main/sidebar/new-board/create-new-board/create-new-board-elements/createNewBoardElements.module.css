@@ -13,8 +13,6 @@
   display: flex;
   align-items: center;
   outline: none;
-  cursor: pointer;
-  color: var(--font-secondary);
   border-radius: var(--radius-md);
   transition: var(--transition);
 }
@@ -30,19 +28,23 @@
   font-weight: bold;
   justify-content: center;
   border: var(--element-border);
-  background-color: var(--bg-header);
+  background-color: var(--button-color-neutral);
+  color: var(--font-secondary);
+  cursor: pointer;
 }
 
 .container span:hover {
-  background-color: var(--board-bg-hover-2);
+  background-color: var(--button-color-neutral-hover);
   color: var(--font-primary);
 }
 
 
 .container input {
+  font-size: 14px;
   padding-left: 20px;
   border: var(--border-transparent);
   background-color: transparent;
+  color: var(--font-primary);
 }
 
 .container input::placeholder {
