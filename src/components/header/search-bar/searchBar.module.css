@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   border: var(--input-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
 }
 
 .container .input {
