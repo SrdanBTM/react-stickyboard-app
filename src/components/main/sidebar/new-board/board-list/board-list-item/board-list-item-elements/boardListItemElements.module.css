@@ -8,7 +8,6 @@
   justify-content: space-between;
   border-radius: var(--radius-md);
   background-color: var(--bg-sidebar);
-  transition: var(--transition);
 }
 
 .container > :first-child {
@@ -17,6 +16,7 @@
   display: flex;
   align-items: center;
   color: var(--font-secondary);
+  transition: var(--transition);
   outline: none;
   border-radius: var(--radius-md);
   background-color: transparent;
