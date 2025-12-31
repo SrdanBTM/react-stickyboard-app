@@ -11,9 +11,11 @@ export default function CheckedPanelSearch() {
   const { boards, searchValue } = useContext(MainContext)
 
 
-  const stickersToShowOnCheckedPanel = boards.flatMap(board => board.stickers)
-    .filter(sticker => sticker.checked)
-    .filter(sticker => sticker.title.toLowerCase().includes(searchValue.toLowerCase()))
+  const stickersToShowOnCheckedPanel = searchValue.length === 0
+    ? []
+    : boards.flatMap(board => board.stickers)
+      .filter(sticker => sticker.checked)
+      .filter(sticker => sticker.title.toLowerCase().includes(searchValue.toLowerCase()))
 
 
   return (
