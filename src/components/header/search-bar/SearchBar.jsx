@@ -10,7 +10,7 @@ import { IconSearch } from '../../../icons/Icons.jsx'
 export default function SearchBar() {
 
   const [isSearchInput, setIsSearchInput] = useState(false)
-  const { setCurrentBoardPanel, setBoards, searchValue, setSearchValue, setCurrentBoardId, currentBoardId, setSelectedFilterButton } = useContext(MainContext)
+  const { currentBoardPanel, setCurrentBoardPanel, setBoards, searchValue, setSearchValue, setCurrentBoardId, currentBoardId, setSelectedFilterButton } = useContext(MainContext)
   const inputRef = useRef()
 
 
@@ -23,27 +23,28 @@ export default function SearchBar() {
     updateAllStickers(setBoards, currentBoardId, propertyToUpdate3)
 
     setSearchValue(e.target.value)
+  }
+
+  function handleClick() {
+    setIsSearchInput(true)
     setCurrentBoardId(null)
     setSelectedFilterButton(null)
     setCurrentBoardPanel('search')
   }
 
-  function handleClick() {
-    setIsSearchInput(true)
-  }
 
-  useEffect(()=>{
-    if (isSearchInput) {
+  useEffect(() => {
+    if (isSearchInput && inputRef.current)
       inputRef.current.focus()
-    }
-  },[isSearchInput])
-
+  }, [currentBoardPanel])
 
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+    >
 
-      {isSearchInput
+      {isSearchInput && currentBoardPanel === 'search'
         ?
         <div className={styles.input}>
           <input
