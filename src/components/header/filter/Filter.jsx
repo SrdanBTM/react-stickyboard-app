@@ -28,11 +28,11 @@ export default function Filter() {
         <IconFilter />
       </div>
 
-      <div className={styles.filterElements}>
+      <div className={styles.allDated}>
         <DatedAllButton />
+      </div>
 
-        <div className={styles.divider} />
-
+      <div className={styles.nextDaysDated}>
         <DatedNextDaysButton
           datedNextDaysList={datedNextDaysList}
         />
@@ -47,6 +47,7 @@ export default function Filter() {
           setIsFilterDatedMenuShow={setIsFilterDatedMenuShow}
         />
       </div>
+
 
 
     </div>

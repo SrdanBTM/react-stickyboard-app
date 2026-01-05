@@ -6,24 +6,24 @@
   height: 40px;
 }
 
-.container .filterIcon {
+.filterIcon {
   display: flex;
   color: var(--icon-color);
   margin-right: 10px;
 }
 
-.container .filterElements {
-  position: relative;
+
+.allDated,
+.nextDaysDated {
+  width: auto;
   height: 100%;
   display: flex;
   align-items: center;
   border: var(--input-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-md);    
 }
 
-.divider {
-  width: 1px;
-  height: 60%;
-  background-color: rgba(255,255,255,0.15);
+.nextDaysDated {
+  position: relative;
+  margin-left: 10px;
 }
-
