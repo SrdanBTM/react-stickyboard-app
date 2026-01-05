@@ -1,7 +1,7 @@
 
 
 import styles from './footer.module.css'
-import Buttons from './buttons/Buttons.jsx'
+import AllButtons from './all-buttons/AllButtons.jsx'
 
 
 export default function Footer({ mappedSticker, isHover }) {
@@ -18,7 +18,7 @@ export default function Footer({ mappedSticker, isHover }) {
         backgroundColor: mappedSticker.color
       }}
     >
-      <Buttons mappedSticker={mappedSticker} />
+      <AllButtons mappedSticker={mappedSticker} />
     </div>
   )
 }

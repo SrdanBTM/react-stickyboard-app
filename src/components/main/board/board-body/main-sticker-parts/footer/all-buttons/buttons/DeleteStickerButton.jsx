@@ -1,19 +1,18 @@
 
 
-
+import styles from './buttons.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
-import FooterButtonWrapper from '../../../../main-sticker-wrappers/footer-button-wrapper/FooterButtonWrapper.jsx'
 import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 import { closeCurrentStickerModal } from '../../../../../../../../helper-functions/HelperFunctionsHandleStickerModal.jsx'
 import { openCurrentStickerModal } from '../../../../../../../../helper-functions/HelperFunctionsHandleStickerModal.jsx'
 import { closeAllStickerModals } from '../../../../../../../../helper-functions/HelperFunctionsHandleStickerModal.jsx'
+import { IconDelete, IconClose } from '../../../../../../../../icons/Icons.jsx'
 
 
 export default function DeleteStickerButton({ mappedSticker }) {
 
   const { setBoards, currentBoardId } = useContext(MainContext)
-  const BASE_URL = import.meta.env.BASE_URL
   const currentModal = 'isDeleteModalOpen'
   const currentStickerId = mappedSticker.stickerId
 
@@ -29,16 +28,17 @@ export default function DeleteStickerButton({ mappedSticker }) {
 
 
   return (
-    <FooterButtonWrapper
-      currentModal={currentModal}
-      mappedSticker={mappedSticker}
+    <div
+      className={styles.container}
+      onClick={handleClick}
+      style={{
+        backgroundColor: mappedSticker[currentModal] ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.35)'
+      }}
     >
-      <button onClick={handleClick}>
-        {mappedSticker.isDeleteModalOpen
-          ? <img src={`${BASE_URL}images/icon-close6.png`} alt='close' />
-          : <img src={`${BASE_URL}images/icon-delete5.png`} alt='delete' />
-        }
-      </button>
-    </FooterButtonWrapper>
+      {mappedSticker[currentModal]
+        ? <IconClose />
+        : <IconDelete />
+      }
+    </div>
   )
 }

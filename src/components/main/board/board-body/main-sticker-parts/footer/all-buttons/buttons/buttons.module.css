@@ -1,7 +1,6 @@
 
 
 
-
 .container {
   flex: 1;
   height: 100%;
@@ -14,31 +13,27 @@
   outline: none;
   position: relative;
   border-bottom: 2px solid transparent;
-  transition: border 0.2s ease;
+  transition: var(--transition);
 }
 
-.container button {
+.container svg {
   border: none;
   outline: none;
   background-color: transparent;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
+  color: var(--icon-color);
+  transition: var(--transition);
 }
 
-.container img {
-  width: 20px;
-  height: 20px;
+.container:hover svg {
+  color: var(--icon-color-hover-normal);
 }
 
 .container:hover,
 .container:focus {
   border-bottom: 2px solid rgba(255,255,255,0.2);
 }
-
-
 
