@@ -4,18 +4,20 @@
   position: absolute;
   top: 60px;
   right: -80px;
-  color: var(--font-color1);
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
+  color: var(--font-secondary);
+  border-radius: var(--radius-md);
+  border: var(--border-soft);
   transition: opacity 0.2s ease;
   width: 220px;
   z-index: 2;
+  box-shadow: var(--modal-boxshadow);
 }
 
 .container li {
-  padding: 10px 10px 10px 20px;
+  text-align: center;
+  padding: 10px;
   list-style: none;
-  background-color: var(--bg-color3);
+  background-color: var(--bg-header);
   font-size: 14px;
   width: 100%;
   cursor: pointer;
@@ -30,5 +32,5 @@
 }
 
 .container li:hover {
-  background-color: var(--hover-color3);
+  background-color: var(--board-bg-hover);
 }
