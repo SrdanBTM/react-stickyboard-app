@@ -4,6 +4,8 @@ import styles from './check.module.css'
 import { useState, useContext, useEffect } from 'react'
 import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { IconCheckbox } from '../../../../../../../icons/Icons.jsx'
+import { IconCheckboxChecked } from '../../../../../../../icons/Icons.jsx'
 
 
 export default function Check({ mappedSticker, isHover }) {
@@ -44,7 +46,11 @@ export default function Check({ mappedSticker, isHover }) {
         transition: 'opacity 0.3s ease'
       }}
     >
-      <img src={isChecked ? checked : unchecked} alt="check sticker" />
+      {isChecked
+        ? <IconCheckboxChecked size={22} />
+        : <IconCheckbox size={22} />
+      }
+
     </div>
   )
 }

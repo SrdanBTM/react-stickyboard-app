@@ -10,7 +10,7 @@ export default function CheckedStickerCheck() {
 
   return (
     <div className={styles.container}>
-        <IconCheckboxChecked />
+        <IconCheckboxChecked size={16} />
     </div>
   )
 }
