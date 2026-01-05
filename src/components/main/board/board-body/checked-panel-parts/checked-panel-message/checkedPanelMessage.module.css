@@ -9,6 +9,6 @@
 }
 
 .container span {
-  color: var(--font-color4);
+  color: var(--font-secondary);
   font-size: 12px;
 }

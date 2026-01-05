@@ -8,7 +8,7 @@ export default function NewSticker() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <span>Stickers</span>
+        <span>STICKERS</span>
       </div>
 
       <div className={styles.stack}>

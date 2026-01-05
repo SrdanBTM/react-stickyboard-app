@@ -8,7 +8,7 @@ export default function CheckedPanelHeader() {
 
   return (
     <div className={styles.container  }>
-      <span>{'Checked stickers'}</span>
+      <span>CHECKED STIKCERS</span>
     </div>
   )
 } 

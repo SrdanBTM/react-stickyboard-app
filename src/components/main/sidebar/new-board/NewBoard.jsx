@@ -8,7 +8,7 @@ export default function NewBoard() {
   return (
     <div className={styles.container}>
         <div className={styles.header}>
-          <span>Boards</span>
+          <span>BOARDS</span>
         </div>
 
         <BoardList />

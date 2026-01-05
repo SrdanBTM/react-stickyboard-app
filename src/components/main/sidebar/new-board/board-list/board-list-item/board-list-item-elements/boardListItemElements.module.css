@@ -10,22 +10,26 @@
   background-color: var(--bg-sidebar);
 }
 
-.container > :first-child {
+.container > span,
+.container > input {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   color: var(--font-secondary);
-  transition: var(--transition);
   outline: none;
   border-radius: var(--radius-md);
   background-color: transparent;
   cursor: pointer;
   font-size: 14px;
-  color: var(--font-primary);
+  color: var(--font-modal);
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 10px;
+}
+
+.container > span:hover {
+  color: var(--font-primary);
 }
 
 .container:hover {
@@ -52,6 +56,11 @@
 
 .selected {
   background-color: var(--board-bg-hover);
+}
+
+.selected > span {
+  color: var(--font-primary);
+  font-weight: 600;
 }
 
 
