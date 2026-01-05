@@ -39,6 +39,7 @@
 }
 
 .container input:focus {
+  background-color: var(--board-bg-hover);
   border: var(--input-border-focus);
   box-shadow: var(--input-shadow-focus);
 }
@@ -49,8 +50,9 @@
   justify-content: center;
 }
 
-
-
+.selected {
+  background-color: var(--board-bg-hover);
+}
 
 
 

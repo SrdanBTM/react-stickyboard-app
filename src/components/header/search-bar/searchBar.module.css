@@ -34,7 +34,7 @@
 
 .container .input input:focus {
   border: var(--input-border-focus);
-  background-color: var(--input-bg-focus);
+  background-color: var(--board-bg-hover);
   box-shadow: var(--input-shadow-focus);
 }
 

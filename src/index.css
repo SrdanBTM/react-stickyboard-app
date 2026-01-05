@@ -62,8 +62,7 @@
   --board-bg-selected: 1px solid rgba(96, 165, 250, 0.10);
   --board-border-selected: 1px solid rgba(96, 165, 250, 0.45);
   --board-shadow-selected: inset 2px 0 0 rgba(96, 165, 250, 0.6);
-  --board-bg-hover: #1a202b;
-  --board-bg-hover-2: #202838;
+  --board-bg-hover: #202838;
 
 
   /* input */

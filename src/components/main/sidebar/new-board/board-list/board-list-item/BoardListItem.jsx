@@ -17,13 +17,10 @@ export default function BoardListItem({ mappedBoard }) {
 
   return (
     <div
-      className={styles.container}
-      style={{
-        backgroundColor: mappedBoard.boardId === currentBoardId ? 'var(--board-bg-selected)' : '',
-        border: mappedBoard.boardId === currentBoardId ? 'var(--board-border-selected)' : 'var(--border-transparent)',
-        boxShadow: mappedBoard.boardId === currentBoardId ? 'var(--board-shadow-selected)' : ''
-      }}
-
+      className={`
+        ${styles.container} 
+        ${mappedBoard.boardId === currentBoardId ? styles.selected : styles.noSelected}
+        `}
     >
       {mappedBoard.isInput && !isClickedOutsideBoardList
         ? <Input mappedBoard={mappedBoard} />

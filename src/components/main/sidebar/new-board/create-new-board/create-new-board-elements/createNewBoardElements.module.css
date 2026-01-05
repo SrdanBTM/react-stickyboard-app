@@ -34,7 +34,7 @@
 }
 
 .container span:hover {
-  background-color: var(--button-color-neutral-hover);
+  background-color: var(--board-bg-hover);
   color: var(--font-primary);
 }
 
@@ -43,7 +43,7 @@
   font-size: 14px;
   padding-left: 20px;
   border: var(--border-transparent);
-  background-color: transparent;
+  background-color: var(--board-bg-hover);
   color: var(--font-primary);
 }
 

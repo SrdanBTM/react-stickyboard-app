@@ -28,6 +28,12 @@ export default function CreateNewBoard() {
     setSelectedFilterButton(null)
   }
 
+  useEffect(()=>{
+    if (isCreateBoard) {
+      setCurrentBoardId(null)
+    }
+  },[isCreateBoard])
+
 
   return (
     <div

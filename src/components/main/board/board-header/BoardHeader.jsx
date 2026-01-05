@@ -17,7 +17,7 @@ export default function BoardHeader() {
 
   let title = null
 
-  if (currentBoardPanel === 'board') {
+  if (currentBoardPanel === 'board' && currentBoardId !== null) {
     title = currentBoard.boardName
   } else if (currentBoardPanel === 'search') {
     title = `Search results   ·  ${searchValue}`

@@ -1,9 +1,10 @@
 
 
 import styles from './datedNextDaysMenuIcon.module.css'
+import { IconDown } from '../../../../icons/Icons'
 
 
-export default function DatedNextDaysMenuIcon({setIsFilterDatedMenuShow}) {
+export default function DatedNextDaysMenuIcon({ setIsFilterDatedMenuShow }) {
 
   const BASE_URL = import.meta.env.BASE_URL
 
@@ -14,11 +15,11 @@ export default function DatedNextDaysMenuIcon({setIsFilterDatedMenuShow}) {
 
 
   return (
-    <div 
-    className={styles.container}
-    onClick={handleClick}
+    <div
+      className={`${styles.container} icon iconNormal`}
+      onClick={handleClick}
     >
-      <img src={`${BASE_URL}images/icon-down-arrow1.png`} alt='down arrow' />
+      <IconDown />
     </div>
   )
 }

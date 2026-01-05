@@ -37,7 +37,7 @@ export default function BoardListSpan({ mappedBoard }) {
 
   return (
     <div
-      className={styles.container}
+      className={`${styles.container} ${mappedBoard.boardId === currentBoardId ? styles.selected : ''}`}
       data-id={mappedBoard.boardId}
       onClick={handleClick}
       onMouseOver={handleMouseOver}

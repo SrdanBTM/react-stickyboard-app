@@ -1,6 +1,6 @@
 
 
-import styles from './datedNextDaysButton.module.css'
+import styles from './filterButtons.module.css'
 import { MainContext } from '../../../../contexts/MainContext.jsx'
 import { useContext, useEffect, useState } from 'react'
 
@@ -33,16 +33,11 @@ export default function DatedNextDaysButton() {
 
 
   return (
-    <div className={styles.container}>
-      <button
-        onClick={handleClick}
-        style={{
-          border: selectedFilterButton === 'datedNextDays' ? '1px solid rgba(255,255,255,0.5)' : '',
-          borderRadius: selectedFilterButton === 'datedNextDays' ? '5px' : ''
-        }}
-      >
-        {`Next ${datedNextDaysNumber} days`}
-      </button>
+    <div
+      className={`${styles.container} ${selectedFilterButton === 'datedNextDays' ? styles.selected : ''} `}
+      onClick={handleClick}
+    >
+      {`Next ${datedNextDaysNumber} days dated`}
     </div>
   )
 }

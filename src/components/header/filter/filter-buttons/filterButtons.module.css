@@ -1,0 +1,31 @@
+
+
+
+
+.container {
+  height: 100%;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  color: var(--font-secondary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: var(--radius-md);    
+}
+
+
+.container:hover,
+.container:focus {
+  background-color: var(--board-bg-hover);
+  color: var(--font-primary);
+}
+
+.selected {
+  border: var(--board-border-selected);
+  color: var(--font-primary);
+  background-color: var(--board-bg-hover);
+}

@@ -1,15 +1,29 @@
 
 
 .container {
-  position: relative;
-  width: auto;
-  height: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  height: 40px;
 }
 
-.container span {
-  color: var(--font-color4);
-  font-size: 14px;
+.container .filterIcon {
+  display: flex;
+  color: var(--icon-color);
+  margin-right: 10px;
 }
+
+.container .filterElements {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: var(--input-border);
+  border-radius: var(--radius-md);
+}
+
+.divider {
+  width: 1px;
+  height: 60%;
+  background-color: rgba(255,255,255,0.15);
+}
+
