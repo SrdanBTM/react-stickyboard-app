@@ -34,15 +34,18 @@
   --hover-color1: #333;
   --hover-color2: #a9a9a9;
   --hover-color3: #222;
-  --sticker-color1: #2b2100;
-  --sticker-color2: #002c1d;
-  --sticker-color3: #3a0018;
-  --sticker-color4: #001e36;
-  --sticker-color5: #3a1b00;
-  --sticker-color6: #1d0036;
   --boardlist-delete-color: #701b1b;
   --boardlist-close-color: #274558;
   --border-app: rgba(255, 255, 255, 0.1);
+
+  
+  /* stickers */
+  --sticker-color1: #3a2d00; 
+  --sticker-color2: #003f2a; 
+  --sticker-color3: #52001f; 
+  --sticker-color4: #002a4f; 
+  --sticker-color5: #4f2600; 
+  --sticker-color6: #2a0052; 
 
 
   /* app background - blue */
@@ -53,6 +56,7 @@
   --bg-panel-header: #12161d;
   --bg-checked-panel: #12161d;
   --bg-checked-header: #161b23;
+
 
   /* app border */
   --border-soft: 1px solid rgba(255, 255, 255, 0.06);
