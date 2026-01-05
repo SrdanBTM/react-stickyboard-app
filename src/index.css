@@ -38,14 +38,14 @@
   --boardlist-close-color: #274558;
   --border-app: rgba(255, 255, 255, 0.1);
 
-  
+
   /* stickers */
-  --sticker-color1: #3a2d00; 
-  --sticker-color2: #003f2a; 
-  --sticker-color3: #52001f; 
-  --sticker-color4: #002a4f; 
-  --sticker-color5: #4f2600; 
-  --sticker-color6: #2a0052; 
+  --sticker-color1: #3a2d00;
+  --sticker-color2: #003f2a;
+  --sticker-color3: #52001f;
+  --sticker-color4: #002a4f;
+  --sticker-color5: #4f2600;
+  --sticker-color6: #2a0052;
 
 
   /* app background - blue */
@@ -76,8 +76,10 @@
   --input-border-focus: 1px solid rgba(96, 165, 250, 0.6);
   --input-shadow-focus: 0 0 0 1px rgba(96, 165, 250, 0.25);
 
+  
   /* border-transparent */
   --border-transparent: 1px solid transparent;
+
 
   /* font */
   --font-secondary: #9ca3af;
@@ -85,31 +87,34 @@
   --font-placeholder: #5f6672;
   --font-modal: #b8bdc7;
 
+
   /* icon */
   --icon-color: #6b7280;
   --icon-color-hover-normal: #e5e7eb;
   --icon-color-hover-danger: #dc2626;
+
 
   /* button */
   --button-color-neutral: #1a1f28;
   --button-color-neutral-hover: #202838;
   --button-color-danger-hover: #390f0f;
 
-  /* boxs-hadow */
+
+  /* box-shadow */
   --button-boxshadow:
     0 0 0 1px rgba(255, 255, 255, 0.12),
     0 8px 18px rgba(0, 0, 0, 0.75);
   --modal-boxshadow:
     0 20px 40px rgba(0, 0, 0, 0.6),
     0 0 0 1px rgba(255, 255, 255, 0.04);
+  --sticker-boxshadow:
+    0 2px 6px rgba(0, 0, 0, 0.6),
+    0 1px 2px rgba(255, 255, 255, 0.05);
+
 
   /* transition */
   --transition: all 0.2s ease;
 
-  /* sticker */
-  --sidebar-sticker-boxshadow:
-    0 2px 6px rgba(0, 0, 0, 0.6),
-    0 1px 2px rgba(255, 255, 255, 0.05);
 
   /* element */
   --element-border: 1px solid rgba(255, 255, 255, 0.03);
