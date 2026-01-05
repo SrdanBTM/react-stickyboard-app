@@ -13,9 +13,9 @@
 
 .container svg {
   transition: var(--transition);
-  color: var(--font-secondary);
+  color: var(--icon-color);
 }
 
 .container:hover svg {
-  color: var(--font-primary);
+  color: var(--icon-color-hover-normal);
 }

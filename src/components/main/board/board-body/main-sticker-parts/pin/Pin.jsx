@@ -3,6 +3,7 @@
 import styles from './pin.module.css'
 import { useState, useContext } from 'react'
 import { ThemeContext } from '../../../../../../contexts/ThemeContext.jsx'
+import { IconPin } from '../../../../../../icons/Icons.jsx'
 
 
 export default function Pin({ dragControl, mappedSticker }) {
@@ -32,19 +33,7 @@ export default function Pin({ dragControl, mappedSticker }) {
         transform: isUnpined ? 'translateY(-5px)' : ''
       }}
     >
-      <div className={styles.image}>
-        <img
-          src={
-            isUnpined
-              ? theme === 'lightTheme'
-                ? `${BASE_URL}images/icon-pin4.png`
-                : `${BASE_URL}images/icon-pin6.png`
-              : theme === 'lightTheme'
-                ? `${BASE_URL}images/icon-pin3.png`
-                : `${BASE_URL}images/icon-pin5.png`
-          }
-          alt="pin icon" />
-      </div>
+      <IconPin />
     </div>
   )
 }
