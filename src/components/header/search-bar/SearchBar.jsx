@@ -57,6 +57,7 @@ export default function SearchBar() {
         <button
           className='icon iconNormal'
           onClick={handleClick}
+          title='Search by title'
         >
           <IconSearch />
         </button>

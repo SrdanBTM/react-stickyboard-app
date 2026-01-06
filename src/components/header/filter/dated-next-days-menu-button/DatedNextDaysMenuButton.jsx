@@ -16,6 +16,7 @@ export default function DatedNextDaysMenuButton({ setIsFilterDatedMenuShow }) {
     <button
       className={`${styles.container} icon iconNormal`}
       onClick={handleClick}
+      title='Set date range'
     >
       <IconDown />
     </button>
