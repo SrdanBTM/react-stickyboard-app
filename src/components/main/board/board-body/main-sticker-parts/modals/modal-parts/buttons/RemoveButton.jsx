@@ -30,16 +30,17 @@ export default function RemoveButton({ mappedSticker }) {
 
 
   return (
-    <div
+    <button
       className={`${styles.container} ${styles.buttonNormal} icon iconNormal`}
       onClick={handleClick}
+      title='Remove date'
       style={{
         opacity: mappedSticker.isDateTimeValid ? 1 : 0,
         pointerEvents: mappedSticker.isDateTimeValid ? 'auto' : 'none'
       }}
     >
       <IconRemoveDate />
-    </div>
+    </button>
   )
 
 }

@@ -6,7 +6,7 @@ import { ThemeContext } from '../../../../../../contexts/ThemeContext.jsx'
 import { IconPin } from '../../../../../../icons/Icons.jsx'
 
 
-export default function Pin({ dragControl, mappedSticker }) {
+export default function Pin({ dragControl }) {
 
   const BASE_URL = import.meta.env.BASE_URL
   const [isUnpined, setIsUnpined] = useState(false)
@@ -25,15 +25,16 @@ export default function Pin({ dragControl, mappedSticker }) {
 
 
   return (
-    <div
+    <button
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       className={styles.container}
+      title='Drag to move sticker'
       style={{
         transform: isUnpined ? 'translateY(-5px)' : ''
       }}
     >
       <IconPin />
-    </div>
+    </button>
   )
 }

@@ -24,11 +24,11 @@ export default function DeleteButton({ mappedSticker }) {
 
 
   return (
-    <div
+    <button
       className={`${styles.container} ${styles.buttonDanger} icon iconDanger`}
       onClick={handleClick}
     >
       <IconDelete />
-    </div>
+    </button>
   )
 }

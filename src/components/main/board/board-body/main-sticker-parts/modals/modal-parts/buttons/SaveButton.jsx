@@ -80,11 +80,11 @@ export default function SaveButton({ mappedSticker }) {
 
 
   return (
-    <div
+    <button
       className={`${styles.container} ${styles.buttonNormal} icon iconNormal`}
       onClick={handleClick}
     >
       <IconSave />
-    </div>
+    </button>
   )
 }

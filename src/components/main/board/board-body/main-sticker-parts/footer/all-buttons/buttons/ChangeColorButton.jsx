@@ -28,9 +28,10 @@ export default function ChangeColorButton({ mappedSticker }) {
 
 
   return (
-    <div
+    <button
       className={styles.container}
       onClick={handleClick}
+      title='Change color'
       style={{
         backgroundColor: mappedSticker[currentModal] ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.35)'
       }}
@@ -39,7 +40,7 @@ export default function ChangeColorButton({ mappedSticker }) {
         ? <IconClose />
         : <IconPalette />
       }
-    </div>
+    </button>
   )
 }
 

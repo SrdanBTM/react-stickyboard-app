@@ -28,9 +28,10 @@ export default function AddDateIcon({ mappedSticker }) {
 
 
   return (
-    <div
+    <button
       className={styles.container}
       onClick={handleClick}
+      title='Add date and time'
       style={{
         backgroundColor: mappedSticker[currentModal] ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.35)'
       }}
@@ -39,6 +40,6 @@ export default function AddDateIcon({ mappedSticker }) {
         ? <IconClose />
         : <IconDateTime />
       }
-    </div>
+    </button>
   )
 }

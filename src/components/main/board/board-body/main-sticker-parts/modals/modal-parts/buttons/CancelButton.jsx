@@ -23,11 +23,11 @@ export default function CloseButton({ mappedSticker }) {
 
 
   return (
-    <div
+    <button
       className={styles.container}
       onClick={handleClick}
     >
       <IconClose />
-    </div>
+    </button>
   )
 }
