@@ -7,7 +7,7 @@ import EditButton from './board-list-item-span-buttons/BoardListItemSpanButtonEd
 import DeleteButton from './board-list-item-span-buttons/BoardListItemSpanButtonDelete.jsx'
 
 
-export default function BoardListSpan({ mappedBoard }) {
+export default function BoardListName({ mappedBoard }) {
 
   const { setCurrentBoardPanel, currentBoardId, setCurrentBoardId, setSearchValue, setSelectedFilterButton, setIsBoardChanging } = useContext(MainContext)
   const [isMouseOver, setIsMouseOver] = useState(false)
@@ -43,14 +43,17 @@ export default function BoardListSpan({ mappedBoard }) {
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
     >
-      <span>{mappedBoard.boardName}</span>
-      <div className={styles.buttons}>
-        {isMouseOver &&
-          <>
-            <EditButton mappedBoard={mappedBoard} />
-            <DeleteButton mappedBoard={mappedBoard} />
-          </>
-        }
+      <div className={styles.name}>
+        {mappedBoard.boardName}
+
+        <div className={styles.buttons}>
+          {isMouseOver &&
+            <>
+              <EditButton mappedBoard={mappedBoard} />
+              <DeleteButton mappedBoard={mappedBoard} />
+            </>
+          }
+        </div>
       </div>
 
     </div>

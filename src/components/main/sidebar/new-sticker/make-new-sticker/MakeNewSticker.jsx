@@ -71,6 +71,7 @@ export default function MakeNewSticker() {
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
       ref={stickerRef}
+      title='Drag to create a new sticker'
     >
     </motion.div>
   )

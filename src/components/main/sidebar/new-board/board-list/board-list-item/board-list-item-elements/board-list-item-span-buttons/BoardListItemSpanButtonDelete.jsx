@@ -29,11 +29,12 @@ export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
 
 
   return (
-    <div
+    <button
       className={`${styles.container} icon iconDanger`}
       onClick={handleClick}
+      title='Delete board'
     >
       <IconDelete />
-    </div>
+    </button>
   )
 }

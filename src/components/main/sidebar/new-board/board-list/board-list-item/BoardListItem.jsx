@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { ClickOutsideElementContext } from '../../../../../../contexts/ClickOutsideElementContext.jsx'
 import { MainContext } from '../../../../../../contexts/MainContext.jsx'
 import Input from './board-list-item-elements/BoardListItemInput.jsx'
-import Span from './board-list-item-elements/BoardListItemSpan.jsx'
+import Name from './board-list-item-elements/BoardListItemName.jsx'
 
 
 export default function BoardListItem({ mappedBoard }) {
@@ -16,7 +16,7 @@ export default function BoardListItem({ mappedBoard }) {
 
 
   return (
-    <div
+    <li
       className={`
         ${styles.container} 
         ${mappedBoard.boardId === currentBoardId ? styles.selected : styles.noSelected}
@@ -24,8 +24,8 @@ export default function BoardListItem({ mappedBoard }) {
     >
       {mappedBoard.isInput && !isClickedOutsideBoardList
         ? <Input mappedBoard={mappedBoard} />
-        : <Span mappedBoard={mappedBoard} />
+        : <Name mappedBoard={mappedBoard} />
       }
-    </div>
+    </li>
   )
 }

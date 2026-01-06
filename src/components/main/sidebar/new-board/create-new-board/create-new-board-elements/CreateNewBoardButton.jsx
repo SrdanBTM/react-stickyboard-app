@@ -1,15 +1,15 @@
 
+
+
 import styles from './createNewBoardElements.module.css'
 
 
-export default function CreateNewBoardSpan() {
+export default function CreateNewBoardButton() {
   return (
     <div className={styles.container}>
-      <span
-        data-id={'createNewBoardSpan'}
-      >
+      <button data-id={'createNewBoardSpan'}>
         + CREATE BOARD
-      </span>
+      </button>
     </div>
   )
 }

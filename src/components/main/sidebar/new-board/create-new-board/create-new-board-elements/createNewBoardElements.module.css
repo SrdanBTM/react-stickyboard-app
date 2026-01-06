@@ -23,7 +23,7 @@
 }
 
 
-.container span {
+.container button {
   font-size: 12px;
   font-weight: bold;
   justify-content: center;
@@ -33,7 +33,7 @@
   cursor: pointer;
 }
 
-.container span:hover {
+.container button:hover {
   background-color: var(--board-bg-hover);
   color: var(--font-primary);
 }

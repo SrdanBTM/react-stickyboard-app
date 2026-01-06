@@ -4,7 +4,7 @@ import styles from './createNewBoard.module.css'
 import { useState, useEffect, useContext } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { ClickOutsideElementContext } from '../../../../../contexts/ClickOutsideElementContext.jsx'
-import Span from './create-new-board-elements/CreateNewBoardSpan.jsx'
+import Button from './create-new-board-elements/CreateNewBoardButton.jsx'
 import Input from './create-new-board-elements/CreateNewBoardInput.jsx'
 
 
@@ -45,7 +45,7 @@ export default function CreateNewBoard() {
           isCreateBoard={isCreateBoard}
           setIsCreateBoard={setIsCreateBoard}
         />
-        : <Span />
+        : <Button />
       }
     </div>
   )

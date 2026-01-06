@@ -12,13 +12,13 @@ export default function BoardsList() {
 
 
   return (
-    <div className={`${styles.container} scroll`}>
+    <ul className={`${styles.container} scroll`}>
       {boards.length > 0
         && boards.map(board => {
           return (
            <BoardListItem key={board.boardId} mappedBoard={board} />
           )
         })}
-    </div>
+    </ul>
   )
 }
