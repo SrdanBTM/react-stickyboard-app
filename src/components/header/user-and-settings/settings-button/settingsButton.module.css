@@ -5,10 +5,11 @@
   height: 100%;
   border-radius: 50%;
   background-color: transparent;
-  transition: background-color 0.2s ease;
+  transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
 .container:hover {

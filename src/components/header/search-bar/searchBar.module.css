@@ -42,7 +42,7 @@
   color: var(--font-placeholder);
 }
 
-.container .icon {
+.container button {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -50,4 +50,6 @@
   align-items: center;
   cursor: pointer;
   padding-left: 10px;
+  background-color: transparent;
+  border: none;
 }

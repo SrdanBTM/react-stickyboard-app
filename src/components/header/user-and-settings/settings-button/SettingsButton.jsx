@@ -1,15 +1,14 @@
 
 
 
-import styles from './settingsIcon.module.css'
+import styles from './settingsButton.module.css'
 import { IconSettings } from '../../../../icons/Icons.jsx'
 import { useContext } from 'react'
 import { ThemeContext } from '../../../../contexts/ThemeContext.jsx'
 
 
-export default function SettingsIcon({ setClickedElement }) {
+export default function SettingsButton({ setClickedElement }) {
 
-  const BASE_URL = import.meta.env.BASE_URL
   const { theme } = useContext(ThemeContext)
 
 
@@ -27,12 +26,12 @@ export default function SettingsIcon({ setClickedElement }) {
 
 
   return (
-    <div
+    <button
       className={`${styles.container} icon iconNormal`}
       onClick={handleClick}
       data-id={'settingsIcon'}
     >
       <IconSettings />
-    </div>
+    </button>
   )
 }

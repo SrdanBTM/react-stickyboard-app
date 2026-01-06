@@ -33,11 +33,11 @@ export default function DatedNextDaysButton() {
 
 
   return (
-    <div
+    <button
       className={`${styles.container} ${selectedFilterButton === 'datedNextDays' ? styles.selected : ''} `}
       onClick={handleClick}
     >
       {`Next ${datedNextDaysNumber} days dated`}
-    </div>
+    </button>
   )
 }

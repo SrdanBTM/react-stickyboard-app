@@ -14,10 +14,9 @@
   font-size: 14px;
   color: var(--font-secondary);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: var(--transition);
   border-radius: var(--radius-md);    
 }
-
 
 .container:hover,
 .container:focus {

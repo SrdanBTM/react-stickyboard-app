@@ -40,9 +40,7 @@ export default function SearchBar() {
 
 
   return (
-    <div
-      className={styles.container}
-    >
+    <div className={styles.container}>
 
       {isSearchInput && currentBoardPanel === 'search'
         ?
@@ -56,12 +54,12 @@ export default function SearchBar() {
           />
         </div>
         :
-        <div
-          className={`${styles.icon} icon iconNormal`}
+        <button
+          className='icon iconNormal'
           onClick={handleClick}
         >
           <IconSearch />
-        </div>
+        </button>
       }
 
     </div >

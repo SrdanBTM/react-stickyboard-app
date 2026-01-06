@@ -25,11 +25,11 @@ export default function DatedAllButton() {
 
 
   return (
-    <div
+    <button
       className={`${styles.container} ${selectedFilterButton === 'datedAll' ? styles.selected : ''} `}
       onClick={handleClick}
     >
       All dated
-    </div>
+    </button>
   )
 }

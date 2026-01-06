@@ -1,12 +1,10 @@
 
 
-import styles from './datedNextDaysMenuIcon.module.css'
+import styles from './datedNextDaysMenuButton.module.css'
 import { IconDown } from '../../../../icons/Icons'
 
 
-export default function DatedNextDaysMenuIcon({ setIsFilterDatedMenuShow }) {
-
-  const BASE_URL = import.meta.env.BASE_URL
+export default function DatedNextDaysMenuButton({ setIsFilterDatedMenuShow }) {
 
 
   function handleClick() {
@@ -15,11 +13,11 @@ export default function DatedNextDaysMenuIcon({ setIsFilterDatedMenuShow }) {
 
 
   return (
-    <div
+    <button
       className={`${styles.container} icon iconNormal`}
       onClick={handleClick}
     >
       <IconDown />
-    </div>
+    </button>
   )
 }

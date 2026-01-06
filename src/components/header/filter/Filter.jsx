@@ -3,7 +3,7 @@
 import styles from './filter.module.css'
 import DatedAllButton from './filter-buttons/DatedAllButton.jsx'
 import DatedNextDaysButton from './filter-buttons/DatedNextDaysButton.jsx'
-import DatedNextDaysMenuIcon from './dated-next-days-menu-icon/DatedNextDaysMenuIcon.jsx'
+import DatedNextDaysMenuButton from './dated-next-days-menu-button/DatedNextDaysMenuButton.jsx'
 import DatedNextDaysMenu from './dated-next-days-menu/DatedNextDaysMenu.jsx'
 import { IconFilter } from '../../../icons/Icons.jsx'
 import { useState } from 'react'
@@ -37,7 +37,7 @@ export default function Filter() {
           datedNextDaysList={datedNextDaysList}
         />
 
-        <DatedNextDaysMenuIcon
+        <DatedNextDaysMenuButton
           setIsFilterDatedMenuShow={setIsFilterDatedMenuShow}
         />
 
