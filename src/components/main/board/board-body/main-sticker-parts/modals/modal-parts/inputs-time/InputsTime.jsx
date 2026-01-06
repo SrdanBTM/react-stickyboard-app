@@ -3,8 +3,8 @@
 import styles from './inputsTime.module.css'
 import Input from '../input/Input.jsx'
 import { useContext, useEffect, useState } from 'react'
-import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
-import { updateSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
+import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
 export default function InputsTime({ mappedSticker }) {

@@ -1,13 +1,14 @@
 
 
+import styles from './buttons.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
-import ModalButtonWrapper from '../../../../main-sticker-wrappers/modal-button-wrapper/ModalButtonWrapper.jsx'
 import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 import { closeCurrentStickerModal } from '../../../../../../../../helper-functions/HelperFunctionsHandleStickerModal.jsx'
+import { IconSave } from '../../../../../../../../icons/Icons.jsx'
 
 
-export default function SaveDateButton({ mappedSticker }) {
+export default function SaveButton({ mappedSticker }) {
 
   const { boards, setBoards, currentBoardId } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
@@ -79,11 +80,11 @@ export default function SaveDateButton({ mappedSticker }) {
 
 
   return (
-    <ModalButtonWrapper>
-      <button onClick={handleClick}>
-        <img src={`${BASE_URL}images/icon-save1.png`} alt='save' />
-        <span>Save</span>
-      </button>
-    </ModalButtonWrapper>
+    <div
+      className={`${styles.container} ${styles.buttonNormal} icon iconNormal`}
+      onClick={handleClick}
+    >
+      <IconSave />
+    </div>
   )
 }

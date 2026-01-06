@@ -3,10 +3,10 @@
 import styles from './title.module.css'
 
 
-export default function Title() {
+export default function Title({ title }) {
   return (
     <div className={styles.container}>
-      <span>Pick Color</span>
+      <span>{title}</span>
     </div>
   )
 }

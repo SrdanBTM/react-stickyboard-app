@@ -3,9 +3,9 @@
 import styles from './palette.module.css'
 import { motion } from 'framer-motion'
 import { useContext } from 'react'
-import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
-import { updateSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
-import { closeCurrentStickerModal } from '../../../../../../../helper-functions/HelperFunctionsHandleStickerModal.jsx'
+import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
+import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { closeCurrentStickerModal } from '../../../../../../../../helper-functions/HelperFunctionsHandleStickerModal.jsx'
 
 
 export default function Palette({ mappedSticker }) {

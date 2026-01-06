@@ -1,12 +1,13 @@
 
 
+import styles from './buttons.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
-import ModalButtonWrapper from '../../../../main-sticker-wrappers/modal-button-wrapper/ModalButtonWrapper.jsx'
 import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { IconRemoveDate } from '../../../../../../../../icons/Icons.jsx'
 
 
-export default function ClearDateButton({ mappedSticker }) {
+export default function RemoveButton({ mappedSticker }) {
 
 
   const { setBoards, currentBoardId } = useContext(MainContext)
@@ -29,18 +30,16 @@ export default function ClearDateButton({ mappedSticker }) {
 
 
   return (
-    <ModalButtonWrapper>
-      <button
-        onClick={handleClick}
-        style={{
-          opacity: mappedSticker.isDateTimeValid ? 1 : 0,
-          pointerEvents: mappedSticker.isDateTimeValid ? 'auto' : 'none'
-        }}
-      >
-        <img src={`${BASE_URL}images/icon-clear3.png`} alt='clear' />
-        <span>Clear</span>
-      </button>
-    </ModalButtonWrapper>
+    <div
+      className={`${styles.container} ${styles.buttonNormal} icon iconNormal`}
+      onClick={handleClick}
+      style={{
+        opacity: mappedSticker.isDateTimeValid ? 1 : 0,
+        pointerEvents: mappedSticker.isDateTimeValid ? 'auto' : 'none'
+      }}
+    >
+      <IconRemoveDate />
+    </div>
   )
 
 }
