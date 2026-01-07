@@ -53,7 +53,7 @@ export default function MainStickerBase({ mappedSticker, dragControl }) {
       {mappedSticker.isDateTimeValid
         && <DateTime mappedSticker={mappedSticker} />}
 
-      <Note mappedSticker={mappedSticker} />
+      <Note mappedSticker={mappedSticker} isHover={isHover} />
 
       {currentBoardPanel !== 'board'
         && <BoardName mappedSticker={mappedSticker} />}

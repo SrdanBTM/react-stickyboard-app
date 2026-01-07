@@ -6,7 +6,7 @@ import { MainContext } from '../../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
-export default function Note({ mappedSticker }) {
+export default function Note({ mappedSticker, isHover}) {
 
   const { setBoards, currentBoardId } = useContext(MainContext)
 
@@ -26,8 +26,9 @@ export default function Note({ mappedSticker }) {
         ${!mappedSticker.date && !mappedSticker.time && mappedSticker.isHover ? styles.shadowBottom : ''}
         `}
     >
-      <div className={styles.textarea}>
+      <div className={`${styles.textarea} ${isHover ? styles.addPaddingBottom : ''}`}>
         <textarea
+          className='stickerScroll'
           placeholder='Note...'
           value={mappedSticker.note}
           onChange={handleChange}

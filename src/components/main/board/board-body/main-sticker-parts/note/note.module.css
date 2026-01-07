@@ -18,10 +18,12 @@
   border: none;
   outline: none;
   resize: none;
-  padding: 10px;
+  padding: 5px 10px;
   font-size: 14px;
   color: var(--font-sticker-secondary);
   font-weight: 300;
+  border-left: 3px solid transparent;
+  transition: var(--transition);
 }
 
 .shadowTopBottom {
@@ -38,7 +40,14 @@
   box-shadow: inset 0 -4px 6px -4px rgba(255, 255, 255, 0.1);
 }
 
-.container textarea::placeholder {
+.textarea textarea::placeholder {
   color: var(--font-partly-transparent);
 }
 
+.textarea textarea:focus {
+  border-left: var(--border-left-sticker-focus);
+}
+
+.addPaddingBottom {
+  padding-bottom: 40px;
+}
