@@ -1,14 +1,14 @@
 
 
 import styles from './buttons.module.css'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 import { closeCurrentStickerModal } from '../../../../../../../../helper-functions/HelperFunctionsHandleStickerModal.jsx'
 import { IconSave } from '../../../../../../../../icons/Icons.jsx'
 
 
-export default function SaveButton({ mappedSticker }) {
+export default function SaveButton({ mappedSticker, setMessageText }) {
 
   const { boards, setBoards, currentBoardId } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
@@ -75,8 +75,18 @@ export default function SaveButton({ mappedSticker }) {
       closeCurrentStickerModal(updateSticker, setBoards, currentBoardId, currentStickerId, currentModal)
     } else {
       updateSticker(setBoards, currentBoardId, currentStickerId, { key: 'isDateTimeValid', value: false })
+      updateSticker(setBoards, currentBoardId, currentStickerId, { key: 'isTryToSaveUnvalidDateTime', value: true })
     }
   }
+
+
+  useEffect(() => {
+    if (mappedSticker.isDateTimeValid === false && mappedSticker.isTryToSaveUnvalidDateTime === true) {
+      setMessageText('Invalid date or time value')
+    } else {
+      setMessageText('')
+    }
+  }, [mappedSticker.isDateTimeValid, mappedSticker.isTryToSaveUnvalidDateTime])
 
 
   return (

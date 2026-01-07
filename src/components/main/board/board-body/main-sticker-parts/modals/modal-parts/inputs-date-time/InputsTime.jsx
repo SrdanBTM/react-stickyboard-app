@@ -21,7 +21,8 @@ export default function InputsTime({ mappedSticker }) {
         [inputName]: e.currentTarget.value
       }
     })
-}
+    updateSticker(setBoards, currentBoardId, currentStickerId, { key: 'isTryToSaveUnvalidDateTime', value: false })
+  }
 
 
   return (

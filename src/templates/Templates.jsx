@@ -34,6 +34,7 @@ export const stickerTemplate = {
     hours: null,
     minutes: null,
   },
+  siTryToSaveUnvalidDateTime: false,
   isDateTimeValid: null,
   isAddDateTimeModalOpen: false,
   isDeleteModalOpen: false,

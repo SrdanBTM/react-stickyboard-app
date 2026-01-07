@@ -7,9 +7,12 @@ import InputsTime from './modal-parts/inputs-date-time/InputsTime.jsx'
 import Message from './modal-parts/message/Message.jsx'
 import SaveButton from './modal-parts/buttons/SaveButton.jsx'
 import RemoveButton from './modal-parts/buttons/RemoveButton.jsx'
-
+import { useState, useEffect } from 'react'
 
 export default function AddDateTimeModal({ mappedSticker }) {
+
+  const [messageText, setMessageText] = useState('')
+
 
   return (
     <div
@@ -24,12 +27,12 @@ export default function AddDateTimeModal({ mappedSticker }) {
       </div>
 
       <div className={styles.body}>
-        <InputsDate mappedSticker={mappedSticker} />
-        <InputsTime mappedSticker={mappedSticker} />
-        <Message mappedSticker={mappedSticker} />
+        <InputsDate mappedSticker={mappedSticker} setMessageText={setMessageText} />
+        <InputsTime mappedSticker={mappedSticker} setMessageText={setMessageText} />
+        <Message mappedSticker={mappedSticker} messageText={messageText} />
 
         <div className={styles.buttons}>
-          <SaveButton mappedSticker={mappedSticker} />
+          <SaveButton mappedSticker={mappedSticker} setMessageText={setMessageText} />
           <RemoveButton mappedSticker={mappedSticker} />
         </div>
       </div>

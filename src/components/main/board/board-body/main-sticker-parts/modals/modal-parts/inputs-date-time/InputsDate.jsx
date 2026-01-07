@@ -13,14 +13,15 @@ export default function InputsDate({ mappedSticker }) {
 
 
   function handleChange(inputName, e) {
-      const currentStickerId = mappedSticker.stickerId
-      updateSticker(setBoards, currentBoardId, currentStickerId, {
-        key: 'dateTimeCurrentValue',
-        value: {
-          ...mappedSticker.dateTimeCurrentValue,
-          [inputName]: e.currentTarget.value
-        }
-      })
+    const currentStickerId = mappedSticker.stickerId
+    updateSticker(setBoards, currentBoardId, currentStickerId, {
+      key: 'dateTimeCurrentValue',
+      value: {
+        ...mappedSticker.dateTimeCurrentValue,
+        [inputName]: e.currentTarget.value
+      }
+    })
+    updateSticker(setBoards, currentBoardId, currentStickerId, { key: 'isTryToSaveUnvalidDateTime', value: false })
   }
 
 
