@@ -7,16 +7,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-sticker-title);
 }
 
 .dateTime {
   box-shadow:
-  inset 0 4px 6px -4px rgba(255, 255, 255, 0.1),
-  inset 0 -4px 6px -4px rgba(255, 255, 255, 0.1);
+    inset 0 4px 6px -4px rgba(255, 255, 255, 0.1),
+    inset 0 -4px 6px -4px rgba(255, 255, 255, 0.1);
 }
 
 .noDateTime {
   box-shadow: inset 0 4px 6px -4px rgba(255, 255, 255, 0.1);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: var(--border-bottom-sticker-header);
 }

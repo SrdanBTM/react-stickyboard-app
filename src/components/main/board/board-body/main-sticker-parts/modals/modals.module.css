@@ -18,14 +18,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-sticker-title);
   z-index: -1;
 }
 
 .header {
   width: 100%;
   height: 20%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--bg-sticker-footer);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +41,7 @@
 .body {
   width: 100%;
   height: 80%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--bg-sticker-footer);
   display: flex;
   flex-direction: column;
   align-items: center;

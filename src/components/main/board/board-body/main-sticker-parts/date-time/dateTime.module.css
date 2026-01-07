@@ -17,5 +17,5 @@
   font-size: 14px;
   color: var(--font-sticker-secondary);
   font-weight: 300;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--bg-sticker-date);
 }

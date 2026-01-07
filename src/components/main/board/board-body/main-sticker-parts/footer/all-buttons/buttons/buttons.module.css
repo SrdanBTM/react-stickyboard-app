@@ -33,6 +33,13 @@
 }
 
 .container:hover {
-  border-bottom: 2px solid rgba(255,255,255,0.2);
+  border-bottom: var(--border-bottom-sticker-footer);
 }
 
+.selected {
+  background-color: var(--bg-sticker-title);
+}
+
+.noSelected {
+  background-color: var(--bg-sticker-footer);
+}

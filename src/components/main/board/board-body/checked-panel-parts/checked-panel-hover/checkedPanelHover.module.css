@@ -11,10 +11,12 @@
   align-items: center;
   justify-content: center;
   background-color: var(--bg-checked-panel);
-  border-radius: 5px;
+  border-radius: var(--radius-md);
   transition: left 0.3s ease, opacity 0.1s ease;
+  border: var(--border-partly-transparent);
 }
 
 .container span {
-  color: var(--font-color4);
+  color: var(--font-secondary);
+  font-size: 14px;
 }
