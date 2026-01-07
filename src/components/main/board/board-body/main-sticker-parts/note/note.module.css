@@ -21,6 +21,7 @@
   padding: 10px;
   font-size: 14px;
   color: var(--font-sticker-secondary);
+  font-weight: 300;
 }
 
 .shadowTopBottom {
