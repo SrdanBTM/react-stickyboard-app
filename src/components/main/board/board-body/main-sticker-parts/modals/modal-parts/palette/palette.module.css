@@ -9,14 +9,15 @@
 }
 
 .oneColor {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   border-radius: var(--radius-md);
   border: var(--border-soft);
-  transition: all 0.1s ease;
+  transition: var(--transition);
 }
 
 .oneColor:hover {
-  transform: translateY(-1px) scale(1.05);
+  box-shadow: var(--sticker-button-boxshadow);
+  border: var(--border-partly-transparent-focus);
 }
