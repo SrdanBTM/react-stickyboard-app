@@ -20,7 +20,7 @@
   resize: none;
   padding: 10px;
   font-size: 14px;
-  color: var(--font-color5);
+  color: var(--font-sticker-secondary);
 }
 
 .shadowTopBottom {
@@ -35,5 +35,9 @@
 
 .shadowBottom {
   box-shadow: inset 0 -4px 6px -4px rgba(255, 255, 255, 0.1);
+}
+
+.container textarea::placeholder {
+  color: var(--font-partly-transparent);
 }
 

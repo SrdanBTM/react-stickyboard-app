@@ -25,7 +25,7 @@ export default function DeleteButton({ mappedSticker }) {
 
   return (
     <button
-      className={`${styles.container} ${styles.buttonDanger} icon iconDanger`}
+      className={`${styles.container} ${styles.buttonDanger} iconSticker iconStickerDanger`}
       onClick={handleClick}
     >
       <IconDelete />

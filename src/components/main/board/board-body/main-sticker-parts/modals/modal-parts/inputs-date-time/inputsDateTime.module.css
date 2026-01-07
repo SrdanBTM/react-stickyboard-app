@@ -11,8 +11,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  color: var(--font-color1);
-  opacity: 0.6;
+  color: var(--font-partly-transparent);
   font-size: 14px;
   padding-right: 10px;
 }
@@ -24,15 +23,20 @@
   width: auto;
   height: 100%;
   background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 5px;
+  border-radius: var(--radius-md);
   font-size: 14px;
   outline: none;
-  color: var(--font-color1);
-  box-shadow: 0 0 2px rgba(255,255,255,0.2);
-  transition: border 0.3s ease;
+  color: var(--font-primary);
+  transition: var(--transition);
+  border: var(--border-partly-transparent);
+}
+
+.inputs span {
+  color: var(--font-partly-transparent);
 }
 
 .inputs:focus-within {
-  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: var(--sticker-button-boxshadow);
+  border: var(--border-partly-transparent-focus);
 }
+

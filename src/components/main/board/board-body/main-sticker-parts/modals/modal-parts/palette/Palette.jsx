@@ -39,14 +39,14 @@ export default function Palette({ mappedSticker }) {
     >
       {colors.map((color, index) => {
         return (
-          <div
+          <button
             key={index}
             className={styles.oneColor}
             style={{ backgroundColor: `${color}` }}
             onClick={(e) => handleClick(e, color)}
             data-id={mappedSticker.stickerId}
           >
-          </div>
+          </button>
         )
       })}
     </motion.div>

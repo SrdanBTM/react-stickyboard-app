@@ -29,7 +29,7 @@ export default function AddDateIcon({ mappedSticker }) {
 
   return (
     <button
-      className={styles.container}
+      className={`${styles.container} iconSticker iconStickerNormal`}
       onClick={handleClick}
       title='Add date and time'
       style={{

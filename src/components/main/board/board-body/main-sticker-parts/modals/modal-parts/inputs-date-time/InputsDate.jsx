@@ -1,6 +1,6 @@
 
 
-import styles from './inputsDate.module.css'
+import styles from './inputsDateTime.module.css'
 import Input from '../input/Input.jsx'
 import { useContext, useEffect, useState } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
@@ -28,7 +28,7 @@ export default function InputsDate({ mappedSticker }) {
     <div className={styles.container}>
 
       <span className={styles.label}>
-        Date :
+        Date
       </span>
 
       <div className={styles.inputs}>

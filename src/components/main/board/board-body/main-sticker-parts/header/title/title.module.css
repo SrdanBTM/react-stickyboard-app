@@ -12,9 +12,13 @@
   border: none;
   outline: none;
   padding: 10px;
-  color: var(--font-color5);
+  color: var(--font-sticker-primary);
   font-size: 14px;
   font-weight: 600;
+}
 
+
+.container input::placeholder {
+  color: var(--font-partly-transparent);
 }
 

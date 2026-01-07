@@ -31,7 +31,7 @@ export default function RemoveButton({ mappedSticker }) {
 
   return (
     <button
-      className={`${styles.container} ${styles.buttonNormal} icon iconNormal`}
+      className={`${styles.container} ${styles.buttonNormal} iconSticker iconNormal`}
       onClick={handleClick}
       title='Remove date'
       style={{

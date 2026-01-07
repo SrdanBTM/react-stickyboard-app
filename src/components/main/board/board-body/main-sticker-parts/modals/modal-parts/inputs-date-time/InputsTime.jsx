@@ -1,6 +1,6 @@
 
 
-import styles from './inputsTime.module.css'
+import styles from './inputsDateTime.module.css'
 import Input from '../input/Input.jsx'
 import { useContext, useEffect, useState } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
@@ -28,7 +28,7 @@ export default function InputsTime({ mappedSticker }) {
     <div className={styles.container}>
 
       <span className={styles.label}>
-        Time :
+        Time
       </span>
 
       <div className={styles.inputs}>

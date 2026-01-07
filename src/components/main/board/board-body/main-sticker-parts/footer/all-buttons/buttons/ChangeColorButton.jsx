@@ -29,7 +29,7 @@ export default function ChangeColorButton({ mappedSticker }) {
 
   return (
     <button
-      className={styles.container}
+      className={`${styles.container} iconSticker iconStickerNormal`}
       onClick={handleClick}
       title='Change color'
       style={{

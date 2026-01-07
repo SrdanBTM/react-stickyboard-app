@@ -2,15 +2,14 @@
 
 .container {
   width: 100%;
-  height: 30px;
   position: absolute;
-  top: -20px;
+  top: -14px;
   left: 0;
   display: flex;
   align-self: center;
   justify-content: center;
   cursor: grab;
-  transition: transform 0.1s ease;
+  transition: var(--transition);
   user-select: none;
   z-index: 1;
   background-color: transparent;
@@ -21,6 +20,7 @@
   color: var(--icon-color);
   transition: var(--transition);
   margin-top: 2px;
+  cursor: grab !important;
 }
 
 .container:hover svg {

@@ -11,7 +11,7 @@ export default function Message({ mappedSticker }) {
     message = `${mappedSticker.dateInput} | ${mappedSticker.dayInWeek} | ${mappedSticker.timeInput}`
 
   } else if (mappedSticker.isDateTimeValid === false) {
-    message = 'Invalid date or time value.'
+    message = 'Invalid date or time value'
   }
 
 
@@ -19,7 +19,7 @@ export default function Message({ mappedSticker }) {
     <div
       className={styles.container}
       style={{
-        color: mappedSticker.isDateTimeValid === false ? '#9d0000' : 'var(--font-color1)'
+        color: mappedSticker.isDateTimeValid === false ? 'var(--font-danger)' : 'var(--font-primary)'
       }}
     >
       <span>{message}</span>

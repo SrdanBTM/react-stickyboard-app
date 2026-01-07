@@ -38,8 +38,8 @@ export default function Check({ mappedSticker, isHover }) {
 
 
   return (
-    <button
-      className={styles.container}
+    <div
+      className={`${styles.container} iconSticker iconStickerNormal`}
       onClick={handleClick}
       title='Check sticker'
       style={{
@@ -52,6 +52,6 @@ export default function Check({ mappedSticker, isHover }) {
         : <IconCheckbox size={22} />
       }
 
-    </button>
+    </div>
   )
 }

@@ -2,8 +2,8 @@
 
 import styles from './modals.module.css'
 import Title from './modal-parts/title/Title.jsx'
-import InputsDate from './modal-parts/inputs-date/InputsDate.jsx'
-import InputsTime from './modal-parts/inputs-time/InputsTime.jsx'
+import InputsDate from './modal-parts/inputs-date-time/InputsDate.jsx'
+import InputsTime from './modal-parts/inputs-date-time/InputsTime.jsx'
 import Message from './modal-parts/message/Message.jsx'
 import SaveButton from './modal-parts/buttons/SaveButton.jsx'
 import RemoveButton from './modal-parts/buttons/RemoveButton.jsx'

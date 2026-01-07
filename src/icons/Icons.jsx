@@ -219,54 +219,45 @@ export function IconCheckbox({ size }) {
 }
 
 
-export function IconPin() {
+export function IconPin({ color }) {
   return (
     <svg
       width={22}
       height={22}
       viewBox="0 0 24 24"
-      fill="none"
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
     >
-      {/* scale Y +20% and re-center */}
-      <g transform="translate(0 -2) scale(1 1.2)">
-        <path
-          d="M5.6 2.3 H18.4 L16.7 8.3 C17.7 8.3 22.8 13.3 20.4 16.6 H3.6 C1.2 13.3 6.3 8.3 7.3 8.3 L5.6 2.3 Z"
-          fill="var(--bg-panel)"
-        />
+      {/* outer head */}
+      <circle
+        cx="12"
+        cy="12"
+        r="9"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
 
-        <path
-          d="M5.6 2.3 H18.4 L16.7 8.3 C17.7 8.3 22.8 13.3 20.4 16.6 H3.6 C1.2 13.3 6.3 8.3 7.3 8.3 L5.6 2.3 Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinejoin="round"
-        />
+      {/* inner ring (subtle depth) */}
+      <circle
+        cx="12"
+        cy="12"
+        r="7"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        opacity="0.55"
+      />
 
-        <path
-          d="M8.8 11.8h2.6"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        <path
-          d="M13 11.8h2.2"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M12 16.6v7.4"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-        />
-      </g>
+      {/* small highlight */}
+      <path
+        d="M10 9.8c.6-.7 1.4-1.1 2.4-1.1"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        opacity="0.55"
+      />
     </svg>
   )
 }
-
 
 
 export function IconPalette() {

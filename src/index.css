@@ -57,9 +57,9 @@
   --bg-checked-panel: #12161d;
   --bg-checked-header: #161b23;
 
-
-  /* app border */
-  --border-soft: 1px solid rgba(255, 255, 255, 0.06);
+  
+  /* background */
+  --bg-partly-transparent: rgba(255, 255, 255, 0.05);
 
 
   /* board item */
@@ -77,28 +77,36 @@
   --input-shadow-focus: 0 0 0 1px rgba(96, 165, 250, 0.25);
 
 
-  /* border-transparent */
+  /* border */
+  --border-soft: 1px solid rgba(255, 255, 255, 0.06);
   --border-transparent: 1px solid transparent;
+  --border-partly-transparent: 1px solid rgba(150, 150, 150, 0.2);
+  --border-partly-transparent-focus: 1px solid rgba(150, 150, 150, 0.8);
 
 
   /* font */
-  --font-secondary: #9ca3af;
   --font-primary: #e5e7eb;
-  --font-placeholder: #5f6672;
   --font-modal: #b8bdc7;
+  --font-secondary: #9ca3af;
+  --font-placeholder: #5f6672;
+  --font-danger: rgba(199, 36, 36, 0.6);
+  --font-partly-transparent: rgba(150, 150, 150, 0.6);
+  --font-sticker-primary: rgba(255, 255, 255, 0.60);
+  --font-sticker-secondary: rgba(255, 255, 255, 0.60);
 
 
   /* icon */
   --icon-color: #6b7280;
   --icon-color-hover-normal: #e5e7eb;
-  --icon-color-hover-danger: #c23c3c;
-  ;
+  --icon-color-hover-danger: rgba(199, 36, 36, 0.8);
+  --icon-color-sticker: rgba(255, 255, 255, 0.40);
+  --icon-color-sticker-hover: rgba(255, 255, 255, 0.90);
 
 
   /* button */
   --button-color-neutral: #1a1f28;
   --button-color-neutral-hover: #202838;
-  --button-color-danger-hover: #390f0f;
+  --button-color-danger-hover: rgba(199, 36, 36, 0.3);
 
 
   /* box-shadow */
@@ -159,7 +167,7 @@
 .icon>svg {
   color: var(--icon-color);
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: var(--transition);
 }
 
 .iconNormal:hover>svg {
@@ -170,7 +178,19 @@
   color: var(--icon-color-hover-danger);
 }
 
+.iconSticker>svg {
+  color: var(--icon-color-sticker);
+  cursor: pointer;
+  transition: var(--transition);
+}
 
+.iconStickerNormal:hover>svg {
+  color: var(--icon-color-sticker-hover);
+}
+
+.iconStickerDanger:hover>svg {
+  color: var(--icon-color-hover-normal);
+}
 
 
 

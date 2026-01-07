@@ -81,7 +81,7 @@ export default function SaveButton({ mappedSticker }) {
 
   return (
     <button
-      className={`${styles.container} ${styles.buttonNormal} icon iconNormal`}
+      className={`${styles.container} ${styles.buttonNormal} iconSticker iconNormal`}
       onClick={handleClick}
     >
       <IconSave />
