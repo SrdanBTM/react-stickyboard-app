@@ -32,8 +32,7 @@
   color: var(--icon-color-hover-normal);
 }
 
-.container:hover,
-.container:focus {
+.container:hover {
   border-bottom: 2px solid rgba(255,255,255,0.2);
 }
 
