@@ -1,7 +1,7 @@
 
 
 import styles from './title.module.css'
-import { useContext } from 'react'
+import { useContext, useRef, useEffect } from 'react'
 import { MainContext } from '../../../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
@@ -9,6 +9,7 @@ import { updateSticker } from '../../../../../../../helper-functions/HelperFunct
 export default function Title({ mappedSticker }) {
 
   const { setBoards, currentBoardId } = useContext(MainContext)
+  const inputRef = useRef()
 
 
   function handleChange(e) {
@@ -18,6 +19,11 @@ export default function Title({ mappedSticker }) {
   }
 
 
+  useEffect(() => {
+    inputRef.current.focus()
+  }, [])
+  
+
   return (
     <div className={styles.container}>
       <input
@@ -25,6 +31,7 @@ export default function Title({ mappedSticker }) {
         placeholder="Title..."
         value={mappedSticker.title}
         onChange={handleChange}
+        ref={inputRef}
       />
     </div>
   )
