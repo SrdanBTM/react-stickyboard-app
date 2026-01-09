@@ -8,7 +8,7 @@ import { changeCurrentBoardId } from '../../../helper-functions/HelperFunctions.
 import { deleteBoard } from '../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function DeleteAllCheckedStickersModal() {
+export default function DeleteBoardModal() {
 
   const { setOpenedAppModal } = useContext(AppModalsContext)
   const { boards, currentBoardId, setBoards, setCurrentBoardId } = useContext(MainContext)

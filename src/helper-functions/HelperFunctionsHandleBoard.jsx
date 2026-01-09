@@ -34,7 +34,7 @@ export function updateBoard(setBoards, currentBoardId, propertyToUpdate) {
 
 
 
-// UPDATE ALL BOARDS
+// UPDATE ALL BOARDS - 2 PROPERTIES
 export function updateAllBoards(setBoards, currentBoardId, propertyTernaryPair) {
   const [propertyTrue, propertyFalse] = propertyTernaryPair
   const { keyTrue, valueTrue } = propertyTrue
@@ -53,6 +53,21 @@ export function updateAllBoards(setBoards, currentBoardId, propertyTernaryPair) 
   })
 }
 
+
+
+
+// UPDATE ALL BOARDS - 1 PROPERTY
+export function updateAllBoardsOneProperty(setBoards, propertyToUpdate) {
+  const { key, value } = propertyToUpdate
+  setBoards(prev => prev.map(board => {
+    return (
+      {
+        ...board,
+        [key]: value
+      }
+    )
+  }))
+}
 
 
 
