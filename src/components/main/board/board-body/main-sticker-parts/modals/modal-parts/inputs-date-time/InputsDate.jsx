@@ -2,17 +2,18 @@
 
 import styles from './inputsDateTime.module.css'
 import Input from '../input/Input.jsx'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
-export default function InputsDate({ mappedSticker }) {
+export default function InputsDate({ mappedSticker, inputsArray, inputNames, inputIndexCounter, setInputIndexCounter }) {
 
   const { currentBoardId, setBoards } = useContext(MainContext)
 
 
   function handleChange(inputName, e) {
+
     const currentStickerId = mappedSticker.stickerId
     updateSticker(setBoards, currentBoardId, currentStickerId, {
       key: 'dateTimeCurrentValue',
@@ -22,6 +23,12 @@ export default function InputsDate({ mappedSticker }) {
       }
     })
     updateSticker(setBoards, currentBoardId, currentStickerId, { key: 'isTryToSaveUnvalidDateTime', value: false })
+
+    const currentInputIndex = inputNames.indexOf(inputName)
+    if (e.currentTarget.value.length === 2) {
+      setInputIndexCounter(currentInputIndex + 1)
+    }
+
   }
 
 
@@ -38,6 +45,7 @@ export default function InputsDate({ mappedSticker }) {
           placeholder='dd'
           handleChange={handleChange}
           value={mappedSticker.dateTimeCurrentValue.day ?? ''}
+          inputRef={inputsArray[0]}
         />
 
         <span> / </span>
@@ -47,6 +55,7 @@ export default function InputsDate({ mappedSticker }) {
           placeholder='mm'
           handleChange={handleChange}
           value={mappedSticker.dateTimeCurrentValue.month ?? ''}
+          inputRef={inputsArray[1]}
         />
 
         <span> / </span>
@@ -56,6 +65,7 @@ export default function InputsDate({ mappedSticker }) {
           placeholder='yy'
           handleChange={handleChange}
           value={mappedSticker.dateTimeCurrentValue.year ?? ''}
+          inputRef={inputsArray[2]}
         />
       </div>
 

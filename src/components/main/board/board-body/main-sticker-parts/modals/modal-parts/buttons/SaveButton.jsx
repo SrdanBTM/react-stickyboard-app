@@ -8,7 +8,7 @@ import { closeCurrentStickerModal } from '../../../../../../../../helper-functio
 import { IconSave } from '../../../../../../../../icons/Icons.jsx'
 
 
-export default function SaveButton({ mappedSticker, setMessageText }) {
+export default function SaveButton({ mappedSticker, setMessageText, saveButtonRef }) {
 
   const { boards, setBoards, currentBoardId } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
@@ -93,6 +93,7 @@ export default function SaveButton({ mappedSticker, setMessageText }) {
     <button
       className={`${styles.container} ${styles.buttonNormal} iconSticker iconNormal`}
       onClick={handleClick}
+      ref={saveButtonRef}
     >
       <IconSave />
     </button>

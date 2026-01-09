@@ -3,7 +3,7 @@
 import styles from './input.module.css'
 
 
-export default function Input({ placeholder, handleChange, inputName, value }) {
+export default function Input({ placeholder, handleChange, inputName, value, inputRef }) {
   return (
     <div className={styles.container}>
       <input
@@ -12,6 +12,7 @@ export default function Input({ placeholder, handleChange, inputName, value }) {
         placeholder={placeholder}
         onChange={(e) => handleChange(inputName, e)}
         value={value}
+        ref={inputRef}
       />
     </div>
 
