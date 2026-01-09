@@ -44,6 +44,17 @@ export default function SaveButton({ mappedSticker, setMessageText, saveButtonRe
   }
 
 
+  function getMonthName(validDateTime) {
+    const { month } = validDateTime
+    const months = [
+      'January', 'February', 'March', 'April',
+      'May', 'June', 'July', 'August',
+      'September', 'October', 'November', 'December'
+    ]
+    return months[month-1]
+  }
+
+
   function handleClick() {
     const validDateTime = {
       day: Number(mappedSticker.dateTimeCurrentValue.day),
@@ -57,6 +68,7 @@ export default function SaveButton({ mappedSticker, setMessageText, saveButtonRe
 
     if (isValid) {
       const dayInWeek = findDayInWeek(validDateTime)
+      const monthName = getMonthName(validDateTime) 
       const currentModal = 'isAddDateTimeModalOpen'
       updateSticker(setBoards, currentBoardId, currentStickerId, { key: 'isDateTimeValid', value: true })
       updateSticker(setBoards, currentBoardId, currentStickerId, {
@@ -66,7 +78,8 @@ export default function SaveButton({ mappedSticker, setMessageText, saveButtonRe
           year: validDateTime.year,
           hours: validDateTime.hours,
           minutes: validDateTime.minutes,
-          dayInWeek: dayInWeek
+          dayInWeek: dayInWeek,
+          monthName: monthName
         }
       })
 
