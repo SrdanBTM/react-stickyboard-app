@@ -17,7 +17,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   padding-right: 25px;
-  color: var(--font-sticker-secondary);
+  color: var(--font-sticker-primary);
   font-size: 13px;
   font-weight: 500;
 }

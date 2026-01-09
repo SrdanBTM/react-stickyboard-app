@@ -41,17 +41,17 @@
 .date,
 .time,
 .oneDot {
-  color: var(--font-sticker-secondary);
+  color: var(--font-sticker-primary);
   font-size: 14px;
 }
 
 .dayInWeek {
-  color: rgba(255,255,255,0.4);
+  color: var(--font-sticker-secondary);
   font-size: 12px;
 }
 
 .oneDot {
-  color: rgba(255,255,255,0.4);
+  color: var(--font-sticker-secondary);
   margin: 0 8px;
 }
 
