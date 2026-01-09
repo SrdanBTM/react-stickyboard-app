@@ -20,9 +20,7 @@ export default function SaveButton({ mappedSticker, setMessageText, saveButtonRe
   function validateDateTimeValues(validDateTime) {
     const { day, month, year, hours, minutes } = validDateTime
 
-    if (day == null || month == null || year == null || hours == null || minutes == null) return false;
-
-    if (isNaN(day) || isNaN(month) || isNaN(year) || isNaN(hours) || isNaN(minutes)) return false;
+    if (isNaN(day) || isNaN(month) || isNaN(year) || isNaN(hours) || isNaN(minutes)) return false
 
     if (day < 1 || day > 31) return false;
     if (month < 1 || month > 12) return false;
@@ -48,11 +46,11 @@ export default function SaveButton({ mappedSticker, setMessageText, saveButtonRe
 
   function handleClick() {
     const validDateTime = {
-      day: parseInt(mappedSticker.dateTimeCurrentValue.day),
-      month: parseInt(mappedSticker.dateTimeCurrentValue.month),
-      year: parseInt(mappedSticker.dateTimeCurrentValue.year) + 2000,
-      hours: parseInt(mappedSticker.dateTimeCurrentValue.hours),
-      minutes: parseInt(mappedSticker.dateTimeCurrentValue.minutes)
+      day: Number(mappedSticker.dateTimeCurrentValue.day),
+      month: Number(mappedSticker.dateTimeCurrentValue.month),
+      year: Number(mappedSticker.dateTimeCurrentValue.year) + 2000,
+      hours: Number(mappedSticker.dateTimeCurrentValue.hours),
+      minutes: Number(mappedSticker.dateTimeCurrentValue.minutes)
     }
 
     const isValid = validateDateTimeValues(validDateTime)

@@ -49,7 +49,6 @@ export default function AddDateTimeModal({ mappedSticker }) {
           setMessageText={setMessageText}
           inputsArray={inputsArray}
           inputNames={inputNames}
-          inputIndexCounter={inputIndexCounter}
           setInputIndexCounter={setInputIndexCounter}
         />
         <InputsTime
@@ -57,7 +56,6 @@ export default function AddDateTimeModal({ mappedSticker }) {
           setMessageText={setMessageText}
           inputsArray={inputsArray}
           inputNames={inputNames}
-          inputIndexCounter={inputIndexCounter}
           setInputIndexCounter={setInputIndexCounter}
           saveButtonRef={saveButtonRef}
         />

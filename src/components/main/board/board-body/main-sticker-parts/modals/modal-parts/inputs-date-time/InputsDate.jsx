@@ -7,13 +7,19 @@ import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
 
 
-export default function InputsDate({ mappedSticker, inputsArray, inputNames, inputIndexCounter, setInputIndexCounter }) {
+export default function InputsDate({ mappedSticker, inputsArray, inputNames, setInputIndexCounter }) {
 
   const { currentBoardId, setBoards } = useContext(MainContext)
 
 
   function handleChange(inputName, e) {
 
+    // is value = number validation
+    const value = e.currentTarget.value
+    if (!/^\d*$/.test(value)) return
+    
+
+    // update sticker
     const currentStickerId = mappedSticker.stickerId
     updateSticker(setBoards, currentBoardId, currentStickerId, {
       key: 'dateTimeCurrentValue',
@@ -24,6 +30,8 @@ export default function InputsDate({ mappedSticker, inputsArray, inputNames, inp
     })
     updateSticker(setBoards, currentBoardId, currentStickerId, { key: 'isTryToSaveUnvalidDateTime', value: false })
 
+
+    // change input focus
     const currentInputIndex = inputNames.indexOf(inputName)
     if (e.currentTarget.value.length === 2) {
       setInputIndexCounter(currentInputIndex + 1)

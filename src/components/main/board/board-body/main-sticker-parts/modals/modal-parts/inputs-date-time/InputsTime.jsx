@@ -13,6 +13,13 @@ export default function InputsTime({ mappedSticker, inputsArray, inputNames, set
 
 
   function handleChange(inputName, e) {
+
+    // is value = number validation
+    const value = e.currentTarget.value
+    if (!/^\d*$/.test(value)) return
+
+
+    // update sticker
     const currentStickerId = mappedSticker.stickerId
     updateSticker(setBoards, currentBoardId, currentStickerId, {
       key: 'dateTimeCurrentValue',
@@ -23,6 +30,8 @@ export default function InputsTime({ mappedSticker, inputsArray, inputNames, set
     })
     updateSticker(setBoards, currentBoardId, currentStickerId, { key: 'isTryToSaveUnvalidDateTime', value: false })
 
+
+    // change input focus
     const currentInputIndex = inputNames.indexOf(inputName)
     if (e.currentTarget.value.length === 2 && inputName !== 'minutes') {
       setInputIndexCounter(currentInputIndex + 1)
