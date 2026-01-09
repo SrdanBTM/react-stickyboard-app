@@ -28,6 +28,7 @@ export default function MainProvider({ children }) {
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [activeStickerId, setActiveStickerId] = useState(null)
   const [isBoardChanging, setIsBoardChanging] = useState(false)
+  const [lastCreatedStickerId, setLastCreatedStickerId] = useState(null)
 
 
 
@@ -48,7 +49,8 @@ export default function MainProvider({ children }) {
         selectedFilterButton, setSelectedFilterButton,
         checkedOrderCounter, setCheckedOrderCounter,
         activeStickerId, setActiveStickerId,
-        isBoardChanging, setIsBoardChanging
+        isBoardChanging, setIsBoardChanging,
+        lastCreatedStickerId, setLastCreatedStickerId
       }}
     >
       {children}

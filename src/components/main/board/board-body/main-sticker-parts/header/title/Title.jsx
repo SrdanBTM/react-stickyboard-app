@@ -8,8 +8,9 @@ import { updateSticker } from '../../../../../../../helper-functions/HelperFunct
 
 export default function Title({ mappedSticker }) {
 
-  const { setBoards, currentBoardId } = useContext(MainContext)
+  const { setBoards, currentBoardId, lastCreatedStickerId } = useContext(MainContext)
   const inputRef = useRef()
+
 
 
   function handleChange(e) {
@@ -20,8 +21,10 @@ export default function Title({ mappedSticker }) {
 
 
   useEffect(() => {
-    inputRef.current.focus()
-  }, [])
+    if (mappedSticker.stickerId === lastCreatedStickerId) {
+      inputRef.current.focus()
+    }
+  }, [lastCreatedStickerId])
   
 
   return (

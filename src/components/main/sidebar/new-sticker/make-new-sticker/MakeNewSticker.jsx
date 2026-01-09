@@ -13,7 +13,7 @@ export default function MakeNewSticker() {
 
   const [key, setKey] = useState(0)
   const { setOpenedAppModal } = useContext(AppModalsContext)
-  const { boards, boardRef, setBoards, currentBoardId, setActiveStickerId } = useContext(MainContext)
+  const { boards, boardRef, setBoards, currentBoardId, setActiveStickerId, setLastCreatedStickerId} = useContext(MainContext)
   const stickerRef = useRef()
   const [isStickerDragged, setIsStickerDragged] = useState(false)
 
@@ -35,9 +35,11 @@ export default function MakeNewSticker() {
       && stickerPositionInBoardRight >= 0 && stickerPositionInBoardBottom >= 0
       && currentBoardId !== null) {
       const boardName = currentBoard.boardName
+      const stickerId = crypto.randomUUID()
       const positionXValue = stickerPositionInBoardLeft
       const positionYValue = stickerPositionInBoardTop
-      addSticker(setBoards, currentBoardId, stickerTemplate, boardName, positionXValue, positionYValue)
+      addSticker(setBoards, currentBoardId, stickerTemplate, boardName, stickerId, positionXValue, positionYValue)
+      setLastCreatedStickerId(stickerId)
     } else if (currentBoardId === null) {
       setOpenedAppModal('MessageNewStickerEnableOnlyOnBoardPanel')
     }
