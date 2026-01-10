@@ -32,11 +32,10 @@ export default function DatedNextDaysMenu({ datedNextDaysList, isFilterDatedMenu
 
   return (
     <div
-      className={styles.container}
-      style={{
-        opacity: isFilterDatedMenuShow && !isClickedOutsideFilter? 1 : 0,
-        pointerEvents: isFilterDatedMenuShow && !isClickedOutsideFilter ? 'auto' : 'none'
-      }}
+      className={`
+        ${styles.container} 
+        ${isFilterDatedMenuShow && !isClickedOutsideFilter ? styles.showMenu : styles.hideMenu}
+        `}
     >
       <ul>
         {datedNextDaysList.map(item => (

@@ -34,3 +34,14 @@
 .container li:hover {
   background-color: var(--board-bg-hover);
 }
+
+
+.showMenu {
+  opacity: 1;
+  pointerEvents: auto
+}
+
+.hideMenu {
+  opacity: 0;
+  pointerEvents: none;
+}

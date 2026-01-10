@@ -33,17 +33,16 @@ export default function SettingsMenu({ isSettingsMenuShow, setIsSettingsMenuShow
       ? setOpenedAppModal('DeleteAllCheckedStickersModal')
       : setOpenedAppModal('MessageNoCheckedStickerToDeleteModal')
 
-      setIsSettingsMenuShow(false)
+    setIsSettingsMenuShow(false)
   }
 
 
   return (
     <div
-      className={styles.container}
-      style={{
-        opacity: isSettingsMenuShow && !isClickedOutsideSettings ? 1 : 0,
-        pointerEvents: isSettingsMenuShow && !isClickedOutsideSettings ? 'auto' : 'none'
-      }}
+      className={`
+      ${styles.container} 
+      ${isSettingsMenuShow && !isClickedOutsideSettings ? styles.showMenu : styles.hideMenu}
+      `}
     >
       <ul>
         <li onClick={handleClickHideCheckedStickersPanel}>{isCheckedStickersPanelShow ? 'Hide Checked Stickers' : 'Show Checked Stickers'}</li>
