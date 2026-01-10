@@ -3,7 +3,7 @@
 .container {
   position: absolute;
   top: 60px;
-  right: 0px;
+  right: -80px;
   color: var(--font-secondary);
   border-radius: var(--radius-md);
   border: var(--border-soft);
@@ -14,12 +14,12 @@
 }
 
 .container li {
-  text-align: center;
-  padding: 10px;
+  min-width: 1px;
+  text-align: left;
+  padding: 10px 20px;
   list-style: none;
   background-color: var(--bg-header);
   font-size: 14px;
-  width: 100%;
   cursor: pointer;
 }
 
