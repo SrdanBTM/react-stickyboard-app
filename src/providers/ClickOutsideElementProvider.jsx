@@ -9,18 +9,24 @@ export default function ClickOutsideElementProvider({ children }) {
   const [clickedElementOnApp, setClickedElementOnApp] = useState(null)
   const [isClickedOutsideBoardList, setIsClickedOutsideBoardList] = useState(false)
   const [isClickedOutsideNewBoard, setIsClickedOutsideNewBoard] = useState(false)
-  const [isClickedOutsideUserAndSettings, setIsClickedOutsideUserAndSettings] = useState(false)
+  const [isClickedOutsideSettings, setIsClickedOutsideSettings] = useState(false)
+  const [isClickedOutsideFilter, setIsClickedOutsideFilter] = useState(false)
 
 
   useEffect(() => {
 
     if (clickedElementOnApp) {
 
-      const dataId = clickedElementOnApp.getAttribute('data-id')
+      const closestElementWithId = clickedElementOnApp.closest('[data-id]')
+      const dataId = closestElementWithId && closestElementWithId.getAttribute('data-id')
+
+      console.log(dataId);
+      
 
       setIsClickedOutsideBoardList(dataId !== 'boardNameEdit' && dataId !== 'boardListInput' ? true : false)
       setIsClickedOutsideNewBoard(dataId !== 'createNewBoardSpan' && dataId !== 'createNewBoardInput' ? true : false)
-      setIsClickedOutsideUserAndSettings(dataId !== 'settingsIcon' && dataId !== 'userIcon' ? true : false)
+      setIsClickedOutsideSettings(dataId !== 'settings' ? true : false)
+      setIsClickedOutsideFilter(dataId !== 'filter' ? true : false)
 
     }
   }, [clickedElementOnApp])
@@ -32,7 +38,8 @@ export default function ClickOutsideElementProvider({ children }) {
         setClickedElementOnApp,
         isClickedOutsideBoardList,
         isClickedOutsideNewBoard, 
-        isClickedOutsideUserAndSettings,
+        isClickedOutsideSettings,
+        isClickedOutsideFilter
       }}
     >
 

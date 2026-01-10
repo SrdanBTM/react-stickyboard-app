@@ -7,30 +7,21 @@ import { useContext } from 'react'
 import { ThemeContext } from '../../../../contexts/ThemeContext.jsx'
 
 
-export default function SettingsButton({ setClickedElement }) {
+export default function SettingsButton({ setIsSettingsMenuShow }) {
 
   const { theme } = useContext(ThemeContext)
 
 
-  function handleClick(e) {
-    setClickedElement(prev => {
-      return (
-        {
-          elementName: 'settings',
-          showSettings: !prev.showSettings,
-          showUser: false
-        }
-      )
-    })
+  function handleClick() {
+    setIsSettingsMenuShow(prev => !prev)
   }
 
-
+  
   return (
     <button
       className={`${styles.container} icon iconNormal`}
-      onClick={handleClick}
-      data-id={'settingsIcon'}
       title='settings'
+      onClick={handleClick}
     >
       <IconSettings />
     </button>

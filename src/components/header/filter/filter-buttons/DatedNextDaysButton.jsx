@@ -5,7 +5,7 @@ import { MainContext } from '../../../../contexts/MainContext.jsx'
 import { useContext, useEffect, useState } from 'react'
 
 
-export default function DatedNextDaysButton() {
+export default function DatedNextDaysButton({ setIsFilterDatedMenuShow }) {
 
   const [datedNextDaysNumber, setDatedNextDaysNumber] = useState(3)
   const {
@@ -29,6 +29,7 @@ export default function DatedNextDaysButton() {
     setCurrentBoardPanel('filter')
     setSelectedFilterButton('datedNextDays')
     setDatedNextDaysValue(datedNextDaysNumber)
+    setIsFilterDatedMenuShow(false)
   }
 
 

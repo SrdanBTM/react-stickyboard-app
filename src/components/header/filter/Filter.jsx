@@ -22,19 +22,25 @@ export default function Filter() {
 
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      data-id='filter'
+    >
 
       <div className={styles.filterIcon}>
-        <IconFilter />
+        <IconFilter/>
       </div>
 
       <div className={styles.allDated}>
-        <DatedAllButton />
+        <DatedAllButton
+          setIsFilterDatedMenuShow={setIsFilterDatedMenuShow}
+        />
       </div>
 
       <div className={styles.nextDaysDated}>
         <DatedNextDaysButton
           datedNextDaysList={datedNextDaysList}
+          setIsFilterDatedMenuShow={setIsFilterDatedMenuShow}
         />
 
         <DatedNextDaysMenuButton

@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { MainContext } from '../../../../contexts/MainContext.jsx'
 
 
-export default function DatedAllButton() {
+export default function DatedAllButton({ setIsFilterDatedMenuShow }) {
 
   const {
     setCurrentBoardPanel,
@@ -21,6 +21,7 @@ export default function DatedAllButton() {
     setCurrentBoardPanel('filter')
     setDatedNextDaysValue('all')
     setSelectedFilterButton('datedAll')
+    setIsFilterDatedMenuShow(false)
   }
 
 

@@ -3,11 +3,13 @@
 import styles from './datedNextDaysMenu.module.css'
 import { useContext } from 'react'
 import { MainContext } from '../../../../contexts/MainContext.jsx'
+import { ClickOutsideElementContext } from '../../../../contexts/ClickOutsideElementContext.jsx'
 
 
 export default function DatedNextDaysMenu({ datedNextDaysList, isFilterDatedMenuShow, setIsFilterDatedMenuShow }) {
 
 
+  const { isClickedOutsideFilter } = useContext(ClickOutsideElementContext)
   const {
     setCurrentBoardId,
     setSearchValue,
@@ -32,8 +34,8 @@ export default function DatedNextDaysMenu({ datedNextDaysList, isFilterDatedMenu
     <div
       className={styles.container}
       style={{
-        opacity: isFilterDatedMenuShow ? 1 : 0,
-        pointerEvents: isFilterDatedMenuShow ? 'auto' : 'none'
+        opacity: isFilterDatedMenuShow && !isClickedOutsideFilter? 1 : 0,
+        pointerEvents: isFilterDatedMenuShow && !isClickedOutsideFilter ? 'auto' : 'none'
       }}
     >
       <ul>

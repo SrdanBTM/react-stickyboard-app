@@ -1,19 +1,11 @@
 
 
 .container {
-  height: 100%;
   display: flex;
   align-items: center;
-}
-
-.user, 
-.settings {
   height: 50px;
   width: 50px;
   position: relative;
   margin-right: 50px;
 }
 
-.user {
-  margin-right: 10px;
-}

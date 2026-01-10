@@ -2,27 +2,28 @@
 
 import { useContext } from 'react'
 import { MainContext } from '../../../../contexts/MainContext.jsx'
+import { ClickOutsideElementContext } from '../../../../contexts/ClickOutsideElementContext.jsx'
 import { AppModalsContext } from '../../../../contexts/AppModalsContext.jsx'
 import { ThemeContext } from '../../../../contexts/ThemeContext.jsx'
 import styles from './settingsMenu.module.css'
 
 
-export default function SettingsMenu({ clickedElement }) {
+export default function SettingsMenu({ isSettingsMenuShow, setIsSettingsMenuShow }) {
 
   const { boards, isCheckedStickersPanelShow, setIsCheckedStickersPanelShow } = useContext(MainContext)
+  const { isClickedOutsideSettings } = useContext(ClickOutsideElementContext)
   const { setOpenedAppModal } = useContext(AppModalsContext)
   const { theme, setTheme } = useContext(ThemeContext)
 
 
-  const showElement = clickedElement.elementName === 'settings' && clickedElement.showSettings
-
-
   function handleClickChangeTheme() {
     setTheme(prev => prev === 'darkTheme' ? 'lightTheme' : 'darkTheme')
+    setIsSettingsMenuShow(false)
   }
 
   function handleClickHideCheckedStickersPanel() {
     setIsCheckedStickersPanelShow(prev => !prev)
+    setIsSettingsMenuShow(false)
   }
 
   function handleClickDeleteAllCheckedStickers() {
@@ -31,6 +32,8 @@ export default function SettingsMenu({ clickedElement }) {
     isThereBoardWithCheckedStickers
       ? setOpenedAppModal('DeleteAllCheckedStickersModal')
       : setOpenedAppModal('MessageNoCheckedStickerToDeleteModal')
+
+      setIsSettingsMenuShow(false)
   }
 
 
@@ -38,11 +41,11 @@ export default function SettingsMenu({ clickedElement }) {
     <div
       className={styles.container}
       style={{
-        opacity: showElement ? 1 : 0,
-        pointerEvents: showElement ? 'auto' : 'none'
+        opacity: isSettingsMenuShow && !isClickedOutsideSettings ? 1 : 0,
+        pointerEvents: isSettingsMenuShow && !isClickedOutsideSettings ? 'auto' : 'none'
       }}
     >
-      <ul data-id={'settingsMenu'}>
+      <ul>
         <li onClick={handleClickHideCheckedStickersPanel}>{isCheckedStickersPanelShow ? 'Hide Checked Stickers' : 'Show Checked Stickers'}</li>
         <li onClick={handleClickDeleteAllCheckedStickers}>Delete All Checked Stickers</li>
         <li onClick={handleClickChangeTheme}>{theme === 'darkTheme' ? 'Set Light Theme' : 'Set Dark Theme'}</li>
