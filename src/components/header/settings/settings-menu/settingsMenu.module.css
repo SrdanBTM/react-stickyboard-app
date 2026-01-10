@@ -3,7 +3,7 @@
 .container {
   position: absolute;
   top: 60px;
-  right: -80px;
+  right: 0px;
   color: var(--font-secondary);
   border-radius: var(--radius-md);
   border: var(--border-soft);
