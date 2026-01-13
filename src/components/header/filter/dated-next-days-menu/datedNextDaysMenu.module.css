@@ -38,10 +38,10 @@
 
 .showMenu {
   opacity: 1;
-  pointerEvents: auto
+  pointer-events: auto
 }
 
 .hideMenu {
   opacity: 0;
-  pointerEvents: none;
+  pointer-events: none;
 }
