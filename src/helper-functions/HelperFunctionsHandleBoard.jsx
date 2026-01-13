@@ -12,6 +12,8 @@ export function addBoard(setBoards, boardTemplate, boardNameValue) {
   }
 
   setBoards(prev => [...prev, boardToAdd])
+
+  return boardToAdd.boardId
 }
 
 

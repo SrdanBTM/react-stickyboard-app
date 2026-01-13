@@ -9,13 +9,15 @@ import { boardTemplate } from '../../../../../../templates/Templates.jsx'
 
 export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard }) {
 
-  const { setBoards, setSearchValue } = useContext(MainContext)
+  const { setBoards, setSearchValue, setCurrentBoardId } = useContext(MainContext)
   const [inputValue, setInputValue] = useState('')
   const inputRef = useRef()
 
 
   useEffect(() => {
-    isCreateBoard === true && inputRef.current.focus()
+    if (isCreateBoard) {
+      inputRef.current.focus()
+    }
   }, [isCreateBoard])
 
 
@@ -24,8 +26,8 @@ export default function CreateNewBoardInput({ isCreateBoard, setIsCreateBoard })
       setSearchValue('')
       setIsCreateBoard(false)
 
-      const boardNameValue = inputValue
-      addBoard(setBoards, boardTemplate, boardNameValue)
+      const newBoardId = addBoard(setBoards, boardTemplate, inputValue)
+      setCurrentBoardId(newBoardId)
     }
   }
 
