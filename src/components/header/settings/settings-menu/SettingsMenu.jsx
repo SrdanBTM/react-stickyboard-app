@@ -39,6 +39,7 @@ export default function SettingsMenu({ isSettingsMenuShow, setIsSettingsMenuShow
 
   function handleClickResetApp() {
     setOpenedAppModal('ResetAppModal')
+    setIsSettingsMenuShow(false)
   }
 
 
