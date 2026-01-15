@@ -41,7 +41,7 @@ export default function MakeNewSticker() {
       addSticker(setBoards, currentBoardId, stickerTemplate, boardName, stickerId, positionXValue, positionYValue)
       setLastCreatedStickerId(stickerId)
     } else if (currentBoardId === null) {
-      setOpenedAppModal('MessageNewStickerEnableOnlyOnBoardPanel')
+      setOpenedAppModal('MessageNewStickerEnableOnlyOnBoardPanelModal')
     }
 
     setKey(prev => prev + 1)

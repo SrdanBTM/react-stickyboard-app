@@ -22,7 +22,7 @@ export default function AppModalBase({ messages, buttons }) {
           {buttons.map((btn, index) => (
             <button
               key={index}
-              className={`${styles.button} ${btn.title === 'Delete' ? styles.danger : ''} `}
+              className={`${styles.button} ${btn.title === 'Delete' || btn.title === 'Reset' ? styles.danger : ''} `}
               onClick={btn.onClick}
             >
               {btn.title}

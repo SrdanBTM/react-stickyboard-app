@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { AppModalsContext } from '../../../contexts/AppModalsContext.jsx'
 
 
-export default function MessageNewStickerEnableOnlyOnBoardPanel() {
+export default function MessageNewStickerEnableOnlyOnBoardPanelModal() {
 
   const { setOpenedAppModal } = useContext(AppModalsContext)
 

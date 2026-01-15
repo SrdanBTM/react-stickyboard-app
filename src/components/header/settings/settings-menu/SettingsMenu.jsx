@@ -37,6 +37,11 @@ export default function SettingsMenu({ isSettingsMenuShow, setIsSettingsMenuShow
   }
 
 
+  function handleClickResetApp() {
+    setOpenedAppModal('ResetAppModal')
+  }
+
+
   return (
     <div
       className={`
@@ -48,6 +53,7 @@ export default function SettingsMenu({ isSettingsMenuShow, setIsSettingsMenuShow
         <li onClick={handleClickHideCheckedStickersPanel}>{isCheckedStickersPanelShow ? 'Hide Checked Stickers' : 'Show Checked Stickers'}</li>
         <li onClick={handleClickDeleteAllCheckedStickers}>Delete All Checked Stickers</li>
         <li onClick={handleClickChangeTheme}>{theme === 'darkTheme' ? 'Set Light Theme' : 'Set Dark Theme'}</li>
+        <li onClick={handleClickResetApp}>Reset App</li>
       </ul>
     </div>
 
