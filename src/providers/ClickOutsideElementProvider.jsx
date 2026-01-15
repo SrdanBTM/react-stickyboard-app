@@ -20,9 +20,6 @@ export default function ClickOutsideElementProvider({ children }) {
       const closestElementWithId = clickedElementOnApp.closest('[data-id]')
       const dataId = closestElementWithId && closestElementWithId.getAttribute('data-id')
 
-      console.log(dataId);
-      
-
       setIsClickedOutsideBoardList(dataId !== 'boardNameEdit' && dataId !== 'boardListInput' ? true : false)
       setIsClickedOutsideNewBoard(dataId !== 'createNewBoardSpan' && dataId !== 'createNewBoardInput' ? true : false)
       setIsClickedOutsideSettings(dataId !== 'settings' ? true : false)
