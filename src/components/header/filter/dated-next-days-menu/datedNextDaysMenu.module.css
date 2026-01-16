@@ -5,8 +5,8 @@
   top: 55px;
   right: 0px;
   color: var(--font-secondary);
-  border-radius: var(--radius-md);
-  border: var(--border-soft);
+  border-radius: var(--radius-sm);
+  border: var(--element-border);
   transition: var(--transition);
   width: 170px;
   z-index: 2;
@@ -24,11 +24,11 @@
 }
 
 .container li:first-child {
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
 
 .container li:last-child {
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
 }
 
 .container li:hover {
