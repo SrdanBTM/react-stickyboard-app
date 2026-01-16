@@ -6,7 +6,7 @@
   right: -80px;
   color: var(--font-secondary);
   border-radius: var(--radius-sm);
-  border: var(--border-soft);
+  border: var(--element-border-soft);
   transition: var(--transition);
   width: 220px;
   z-index: 2;

@@ -6,17 +6,17 @@
   right: 0px;
   color: var(--font-secondary);
   border-radius: var(--radius-sm);
-  border: var(--element-border);
+  border: var(--element-border-soft);
   transition: var(--transition);
-  width: 170px;
+  width: 190px;
   z-index: 2;
   box-shadow: var(--modal-boxshadow);
   background-color: var(--bg-header);
 }
 
 .container li {
-  text-align: center;
-  padding: 10px;
+  text-align: start;
+  padding: 10px 10px 10px 50px;
   list-style: none;
   font-size: 14px;
   width: 100%;

@@ -16,7 +16,7 @@
 
 .content {
   width: 500px;
-  border: var(--border-soft);
+  border: var(--app-border-soft);
   background-color: var(--bg-modal);
   padding: 30px;
   box-shadow: var(--modal-boxshadow);

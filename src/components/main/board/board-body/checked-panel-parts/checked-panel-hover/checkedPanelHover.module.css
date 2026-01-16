@@ -13,7 +13,7 @@
   background-color: var(--bg-checked-panel);
   border-radius: var(--radius-md);
   transition: left 0.3s ease, opacity 0.1s ease;
-  border: var(--element-border);
+  border: var(--element-border-soft);
 }
 
 .container span {

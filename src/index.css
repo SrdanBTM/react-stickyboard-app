@@ -44,7 +44,7 @@
 
 
   /* border */
-  --border-soft: 1px solid rgba(255, 255, 255, 0.06);
+  --app-border-soft: 1px solid rgba(255, 255, 255, 0.06);
   --border-transparent: 1px solid transparent;
   --border-partly-transparent: 1px solid rgba(150, 150, 150, 0.2);
   --border-partly-transparent-focus: 1px solid rgba(150, 150, 150, 0.8);
@@ -94,6 +94,7 @@
 
 
   /* element */
+  --element-border-soft: 1px solid rgba(255, 255, 255, 0.1);
   --element-border: 2px solid rgba(255, 255, 255, 0.1);
   --element-border-selected-sidebar: 2px solid transparent;
   --element-border-selected-header: 2px solid transparent;
@@ -145,7 +146,7 @@
 
 
   /* border */
-  --border-soft: 1px solid rgba(0, 0, 0, 0.1);
+  --app-border-soft: 1px solid rgba(0, 0, 0, 0.1);
   --border-transparent: 1px solid transparent;
   --border-partly-transparent: 1px solid rgba(0, 0, 0, 0.1);
   --border-partly-transparent-focus: 1px solid rgba(0, 0, 0, 0.35);
@@ -189,6 +190,7 @@
 
 
   /* element */
+  --element-border-soft: 1px solid rgba(0, 0, 0, 0.1);
   --element-border: 2px solid rgba(0, 0, 0, 0.1);
   --element-border-selected-sidebar: 2px solid transparent;
   --element-border-selected-header: 2px solid transparent;
