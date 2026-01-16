@@ -97,8 +97,8 @@
   --element-border-selected-sidebar: 1px solid transparent;
   --element-border-selected-header: 1px solid transparent;
   --element-border-transparent: 1px solid transparent;
-  --element-bg-hover: rgba(0, 114, 253, 0.15);
-  --element-bg-selected: rgba(0, 114, 253, 0.15);
+  --element-bg-hover: rgba(0, 114, 200, 0.15);
+  --element-bg-selected: rgba(0, 114, 200, 0.15);
 
 
   /* sticker background */
@@ -194,8 +194,8 @@
   --element-border-selected-sidebar: 1px solid transparent;
   --element-border-selected-header: 1px solid transparent;
   --element-border-transparent: 1px solid transparent;
-  --element-bg-hover: rgba(0, 150, 255, 0.25);
-  --element-bg-selected: rgba(0, 150, 255, 0.25);
+  --element-bg-hover: rgba(0, 100, 150, 0.15);
+  --element-bg-selected: rgba(0, 100, 150, 0.15);
 
 
   /* sticker background */

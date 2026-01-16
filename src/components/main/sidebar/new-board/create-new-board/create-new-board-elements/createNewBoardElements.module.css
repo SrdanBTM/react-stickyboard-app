@@ -2,7 +2,7 @@
 
 
 .container {
-  width: 150px;
+  width: 200px;
   height: 100%;
 }
 
@@ -15,6 +15,7 @@
   outline: none;
   transition: var(--transition);
   border: none;
+  border-radius: var(--radius-md);
 }
 
 .container button {
@@ -24,7 +25,6 @@
   background-color: transparent;
   color: var(--font-secondary);
   cursor: pointer;
-  border-radius: var(--radius-md);
 }
 
 .container button:hover {
@@ -32,18 +32,12 @@
   color: var(--font-primary);
 }
 
-
 .container input {
   font-size: 14px;
   padding-left: 20px;
   background-color: var(--element-bg-selected);
   color: var(--font-primary);
 }
-
-.container input:focus {
-  border: var(--element-border);
-  border: var(--element-border-selected-sidebar);
-} 
 
 .container input::placeholder {
   color: var(--font-placeholder);
