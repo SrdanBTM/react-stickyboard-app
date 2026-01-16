@@ -28,7 +28,7 @@
   outline: none;
   color: var(--font-primary);
   transition: var(--transition);
-  border: var(--border-partly-transparent);
+  border: var(--element-border-partly-transparent);
 }
 
 .inputs span {
@@ -36,7 +36,6 @@
 }
 
 .inputs:focus-within {
-  box-shadow: var(--sticker-button-boxshadow);
-  border: var(--border-partly-transparent-focus);
+  border: var(--element-border-partly-transparent-focus);
 }
 

@@ -12,5 +12,5 @@
 }
 
 .noSelected {
-  border: var(--border-transparent);
+  border: var(--element-border-transparent);
 }

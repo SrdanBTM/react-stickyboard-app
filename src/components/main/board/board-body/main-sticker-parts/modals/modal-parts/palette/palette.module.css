@@ -13,11 +13,11 @@
   height: 50px;
   cursor: pointer;
   border-radius: var(--radius-md);
-  border: var(--element-border-soft);
+  border: var(--element-border-partly-transparent);
   transition: var(--transition);
 }
 
 .oneColor:hover {
   box-shadow: var(--sticker-button-boxshadow);
-  border: var(--border-partly-transparent-focus);
+  border: var(--element-border-partly-transparent-focus);
 }

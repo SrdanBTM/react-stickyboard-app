@@ -36,18 +36,8 @@
   --bg-panel-header: #12161d;
   --bg-checked-panel: #12161d;
   --bg-checked-header: #161b23;
-
-
-  /* background */
-  --bg-partly-transparent: rgba(255, 255, 255, 0.05);
   --bg-modal: #0e1116;
-
-
-  /* border */
   --app-border-soft: 1px solid rgba(255, 255, 255, 0.06);
-  --border-transparent: 1px solid transparent;
-  --border-partly-transparent: 1px solid rgba(150, 150, 150, 0.2);
-  --border-partly-transparent-focus: 1px solid rgba(150, 150, 150, 0.8);
 
 
   /* font */
@@ -69,12 +59,6 @@
   --icon-color-sticker-hover: rgba(255, 255, 255, 0.9);
 
 
-  /* button */
-  --button-color-neutral: #1a1f28;
-  --button-color-neutral-hover: #202838;
-  --button-color-danger-hover: rgba(199, 36, 36, 0.3);
-
-
   /* box-shadow */
   --button-boxshadow:
     0 0 0 1px rgba(255, 255, 255, 0.12),
@@ -85,8 +69,6 @@
   --sticker-boxshadow:
     0 2px 6px rgba(0, 0, 0, 0.6),
     0 1px 2px rgba(255, 255, 255, 0.05);
-  --sticker-button-boxshadow:
-    0 0 0 1px rgba(255, 255, 255, 0.1);
 
 
   /* transition */
@@ -99,6 +81,8 @@
   --element-border-selected-sidebar: 2px solid transparent;
   --element-border-selected-header: 2px solid transparent;
   --element-border-transparent: 2px solid transparent;
+  --element-border-partly-transparent: 1px solid rgba(150, 150, 150, 0.3);
+  --element-border-partly-transparent-focus: 1px solid rgba(150, 150, 150, 0.8);
   --element-bg-hover: rgba(0, 114, 253, 0.15);
   --element-bg-selected: rgba(0, 114, 253, 0.15);
   --element-bg-transparent: transparent;
@@ -109,6 +93,7 @@
   --bg-sticker-title: rgba(0, 0, 0, 0.1);
   --bg-sticker-date: rgba(0, 0, 0, 0.3);
   --bg-sticker-footer: rgba(0, 0, 0, 0.3);
+  --bg-sticker-modal: transparent;
 
 
   /* sticker border */
@@ -130,26 +115,15 @@
   --sticker-color6: #e3d0ff;
 
 
-  /* app background */
+  /* app */
   --bg-panel: #fff;
   --bg-panel-header: #f9fcff;
   --bg-checked-panel: #f9fcff;
   --bg-sidebar: #f9fcff;
   --bg-checked-header: #e9eff8;
   --bg-header: #f3f9ff;
-
-
-  /* background */
-  --bg-partly-transparent: rgba(0, 0, 0, 0.04);
   --bg-modal: #f3f9ff;
-
-
-
-  /* border */
   --app-border-soft: 1px solid rgba(0, 0, 0, 0.1);
-  --border-transparent: 1px solid transparent;
-  --border-partly-transparent: 1px solid rgba(0, 0, 0, 0.1);
-  --border-partly-transparent-focus: 1px solid rgba(0, 0, 0, 0.35);
 
 
   /* font */
@@ -181,8 +155,6 @@
   --sticker-boxshadow:
     0 2px 6px rgba(0, 0, 0, 0.15),
     0 1px 2px rgba(255, 255, 255, 0.8);
-  --sticker-button-boxshadow:
-    0 0 0 1px rgba(0, 0, 0, 0.12);
 
 
   /* transition */
@@ -195,6 +167,8 @@
   --element-border-selected-sidebar: 2px solid transparent;
   --element-border-selected-header: 2px solid transparent;
   --element-border-transparent: 2px solid transparent;
+  --element-border-partly-transparent: 1px solid rgba(0, 0, 0, 0.15);
+  --element-border-partly-transparent-focus: 1px solid rgba(0, 0, 0, 0.5);
   --element-bg-hover: rgba(0, 90, 150, 0.2);
   --element-bg-selected: rgba(0, 90, 150, 0.2);
   --element-bg-transparent: transparent;
@@ -203,9 +177,9 @@
 
   /* sticker background */
   --bg-sticker-title: rgba(255, 255, 255, 0.1);
-  --bg-sticker-date: rgba(255, 255, 255, 0.3);
+  --bg-sticker-date: rgba(255, 255, 255, 0.25);
   --bg-sticker-footer: rgba(255, 255, 255, 0.4);
-  --bg-sticker-focus: rgba(0, 0, 0, 0.15);
+  --bg-sticker-modal: transparent;
 
 
   /* sticker border */

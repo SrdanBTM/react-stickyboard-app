@@ -12,18 +12,16 @@
   border-radius: var(--radius-md);
   color: var(--font-modal);
   transition: var(--transition);
-  border: var(--border-partly-transparent);
+  border: var(--element-border-partly-transparent);
   cursor: pointer;
 }
 
 .buttonDanger:hover {
-  background-color: var(--button-color-danger-hover);
-  box-shadow: var(--sticker-button-boxshadow);
-  border: var(--border-partly-transparent-focus);
+  background-color: var(--element-bg-danger-hover);
+  border: var(--element-border-partly-transparent-focus);
 }
 
 .buttonNormal:hover {
-  background-color: var(--button-color-normal-hover);
-  box-shadow: var(--sticker-button-boxshadow);
-  border: var(--border-partly-transparent-focus);
+  background-color: var(--element-bg-transparent);
+  border: var(--element-border-partly-transparent-focus);
 }

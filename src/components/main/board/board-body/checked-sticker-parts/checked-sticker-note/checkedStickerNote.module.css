@@ -9,5 +9,6 @@
   color: var(--font-sticker-primary);
   overflow: hidden;
   margin-top: 4px;
+  margin-bottom: 5px;
 }
 
