@@ -461,3 +461,149 @@ export function IconRemoveDate() {
     </svg>
   )
 }
+
+
+export function IconLogoDark({ size = 80 }) {
+
+  const colors = {
+    noteTop: "#0f3fa4",
+    noteBottom: "#0543ab",
+    noteStroke: "rgba(255,255,255,0.10)",
+    foldTop: "#5aa8ff",
+    foldBottom: "#1e4fb8",
+    foldStroke: "rgba(255,255,255,0.35)",
+    shadow: "rgba(0,0,0,0.35)"
+  }
+
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      role="img"
+    >
+
+      <defs>
+
+        <linearGradient id="sb_noteGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor={colors.noteTop} />
+          <stop offset="1" stopColor={colors.noteBottom} />
+        </linearGradient>
+
+        <linearGradient id="sb_foldGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor={colors.foldTop} />
+          <stop offset="1" stopColor={colors.foldBottom} />
+        </linearGradient>
+
+        <linearGradient id="sb_pinHeadGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={colors.pinHeadTop} />
+          <stop offset="1" stopColor={colors.pinHeadBottom} />
+        </linearGradient>
+      </defs>
+
+      {/* Logo group */}
+      <g filter="url(#sb_softShadow)">
+
+        {/* Main note */}
+        <rect
+          x="126"
+          y="120"
+          width="276"
+          height="276"
+          rx="18"
+          fill="url(#sb_noteGrad)"
+          stroke={colors.noteStroke}
+          strokeWidth="2"
+        />
+
+        {/* Folded corner */}
+        <path
+          d="M402 300
+             C370 300 346 300 330 300
+             C322 300 316 306 316 314
+             C316 330 316 354 316 386
+             C345 360 370 336 402 300Z"
+          fill="url(#sb_foldGrad)"
+          stroke={colors.foldStroke}
+          strokeWidth="2"
+        />
+
+      </g>
+    </svg>
+  );
+}
+
+
+export function IconLogoLight({ size = 80 }) {
+
+  const colors = {
+    noteTop: "#70c0ff",
+    noteBottom: "#50a6ff",
+    noteStroke: "rgba(0,0,0,0.10)",
+    foldTop: "#f3f8ff",
+    foldBottom: "#7fb6ff",
+    foldStroke: "rgba(255,255,255,0.55)",
+    shadow: "rgba(0,0,0,0.22)"
+  }
+
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      role="img"
+    >
+
+      <defs>
+
+        <linearGradient id="sb_noteGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor={colors.noteTop} />
+          <stop offset="1" stopColor={colors.noteBottom} />
+        </linearGradient>
+
+        <linearGradient id="sb_foldGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor={colors.foldTop} />
+          <stop offset="1" stopColor={colors.foldBottom} />
+        </linearGradient>
+
+        <linearGradient id="sb_pinHeadGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={colors.pinHeadTop} />
+          <stop offset="1" stopColor={colors.pinHeadBottom} />
+        </linearGradient>
+      </defs>
+
+      {/* Logo group */}
+      <g filter="url(#sb_softShadow)">
+
+        {/* Main note */}
+        <rect
+          x="126"
+          y="120"
+          width="276"
+          height="276"
+          rx="18"
+          fill="url(#sb_noteGrad)"
+          stroke={colors.noteStroke}
+          strokeWidth="2"
+        />
+
+        {/* Folded corner */}
+        <path
+          d="M402 300
+             C370 300 346 300 330 300
+             C322 300 316 306 316 314
+             C316 330 316 354 316 386
+             C345 360 370 336 402 300Z"
+          fill="url(#sb_foldGrad)"
+          stroke={colors.foldStroke}
+          strokeWidth="2"
+        />
+
+      </g>
+    </svg>
+  );
+}

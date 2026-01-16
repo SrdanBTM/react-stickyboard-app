@@ -1,18 +1,25 @@
 
 
+
 .container {
+  position: relative;
   display: flex;
   align-items: center;
   height: 100%;
+  width: 150px;
 }
 
-.container img {
-  width: 70px;
-  margin-right: 5px;
+
+.container .heading {
+  position: absolute;
+  left: 70px;
 }
 
-.container span {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--font-color1);
+.container .heading h1 {
+  font-size: 13px;
+  color: var(--font-placeholder);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 1.1;
 }
