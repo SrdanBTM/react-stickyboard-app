@@ -52,12 +52,9 @@
   background-color: var(--element-bg-hover);
 }
 
-.containerInput > input:focus {
+.containerInput > input {
   background-color: var(--element-bg-selected);
-  border: var(--element-border-selected-sidebar);
 }
-
-
 
 .selected {
   background-color: var(--element-bg-selected);

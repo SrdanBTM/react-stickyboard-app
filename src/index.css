@@ -92,12 +92,12 @@
 
 
   /* element */
-  --element-border: 1px solid rgba(255, 255, 255, 0.08);
-  --element-border-selected-sidebar: 1px solid rgba(96, 165, 250, 0.15);
-  --element-border-selected-header: 1px solid rgba(96, 165, 250, 0.08);
+  --element-border: 1px solid rgba(255, 255, 255, 0.1);
+  --element-border-selected-sidebar: 1px solid transparent;
+  --element-border-selected-header: 1px solid transparent;
   --element-border-transparent: 1px solid transparent;
-  --element-bg-hover: rgba(0, 114, 253, 0.1);
-  --element-bg-selected: rgba(0, 114, 253, 0.1);
+  --element-bg-hover: rgba(0, 114, 253, 0.15);
+  --element-bg-selected: rgba(0, 114, 253, 0.15);
 
 
   /* sticker background */
@@ -149,7 +149,7 @@
   --font-primary: #1f2937;
   --font-modal: #374151;
   --font-secondary: #6b7280;
-  --font-placeholder: #9ca3af;
+  --font-placeholder: #78818f;
   --font-danger: rgba(199, 36, 36, 0.8);
   --font-partly-transparent: rgba(55, 65, 81, 0.6);
   --font-sticker-primary: rgba(0, 0, 0, 0.8);
@@ -189,12 +189,12 @@
 
 
   /* element */
-  --element-border: 1px solid rgba(0, 0, 0, 0.15);
-  --element-border-selected-sidebar: 1px solid rgba(37, 99, 235, 0.15);
-  --element-border-selected-header: 1px solid rgba(37, 99, 235, 0.10);
+  --element-border: 1px solid rgba(0, 0, 0, 0.1);
+  --element-border-selected-sidebar: 1px solid transparent;
+  --element-border-selected-header: 1px solid transparent;
   --element-border-transparent: 1px solid transparent;
-  --element-bg-hover: rgba(0, 150, 255, 0.1);
-  --element-bg-selected: rgba(0, 150, 255, 0.1);
+  --element-bg-hover: rgba(0, 150, 255, 0.25);
+  --element-bg-selected: rgba(0, 150, 255, 0.25);
 
 
   /* sticker background */
