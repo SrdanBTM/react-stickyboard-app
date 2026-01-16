@@ -13,7 +13,7 @@ export default function MessageNoCheckedStickersToDeleteModal() {
   const messages = ['There are no checked stickers to delete.']
 
   const buttons = [
-    { title: 'Ok', onClick: handleOk }
+    { title: 'OK', onClick: handleOk }
   ]
 
 

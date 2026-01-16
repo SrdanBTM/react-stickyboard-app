@@ -17,7 +17,7 @@
 .content {
   width: 500px;
   border: var(--border-soft);
-  background-color: var(--bg-panel);
+  background-color: var(--bg-modal);
   padding: 30px;
   box-shadow: var(--modal-boxshadow);
 }
@@ -40,24 +40,22 @@
 .button {
   width: 100px;
   padding: 10px 0;
-  background-color: var(--button-color-neutral);
+  background-color: var(--element-bg-transparent);
   border-radius: var(--radius-md);
   color: var(--font-modal);
   border: none;
   font-size: 14px;
   transition: var(--transition);
-  border: var(--border-soft);
+  border: var(--element-border);
   cursor: pointer;
 }
 
 .button:hover {
   color: var(--font-primary);
+  border: var(--element-border-transparent);
+  background-color: var(--element-bg-hover);
 }
 
-.button:hover {
-  background-color: var(--button-color-neutral-hover);
-} 
-
 .danger:hover {
-  background-color: var(--button-color-danger-hover);
+  background-color: var(--element-bg-danger-hover);
 }

@@ -40,6 +40,7 @@
 
   /* background */
   --bg-partly-transparent: rgba(255, 255, 255, 0.05);
+  --bg-modal: #0e1116;
 
 
   /* border */
@@ -93,12 +94,14 @@
 
 
   /* element */
-  --element-border: 1px solid rgba(255, 255, 255, 0.1);
-  --element-border-selected-sidebar: 1px solid transparent;
-  --element-border-selected-header: 1px solid transparent;
-  --element-border-transparent: 1px solid transparent;
-  --element-bg-hover: rgba(0, 114, 200, 0.15);
-  --element-bg-selected: rgba(0, 114, 200, 0.15);
+  --element-border: 2px solid rgba(255, 255, 255, 0.1);
+  --element-border-selected-sidebar: 2px solid transparent;
+  --element-border-selected-header: 2px solid transparent;
+  --element-border-transparent: 2px solid transparent;
+  --element-bg-hover: rgba(0, 114, 253, 0.15);
+  --element-bg-selected: rgba(0, 114, 253, 0.15);
+  --element-bg-transparent: transparent;
+  --element-bg-danger-hover: rgba(199, 36, 36, 0.3);
 
 
   /* sticker background */
@@ -137,6 +140,8 @@
 
   /* background */
   --bg-partly-transparent: rgba(0, 0, 0, 0.04);
+  --bg-modal: #f3f9ff;
+
 
 
   /* border */
@@ -165,12 +170,6 @@
   --icon-color-sticker-hover: rgba(0, 0, 0, 0.85);
 
 
-  /* button */
-  --button-color-neutral: #ffffff;
-  --button-color-neutral-hover: #e6ebf2;
-  --button-color-danger-hover: rgba(199, 36, 36, 0.18);
-
-
   /* box-shadow */
   --button-boxshadow:
     0 0 0 1px rgba(0, 0, 0, 0.08),
@@ -190,12 +189,14 @@
 
 
   /* element */
-  --element-border: 1px solid rgba(0, 0, 0, 0.1);
-  --element-border-selected-sidebar: 1px solid transparent;
-  --element-border-selected-header: 1px solid transparent;
-  --element-border-transparent: 1px solid transparent;
-  --element-bg-hover: rgba(0, 100, 150, 0.15);
-  --element-bg-selected: rgba(0, 100, 150, 0.15);
+  --element-border: 2px solid rgba(0, 0, 0, 0.1);
+  --element-border-selected-sidebar: 2px solid transparent;
+  --element-border-selected-header: 2px solid transparent;
+  --element-border-transparent: 2px solid transparent;
+  --element-bg-hover: rgba(0, 90, 150, 0.2);
+  --element-bg-selected: rgba(0, 90, 150, 0.2);
+  --element-bg-transparent: transparent;
+  --element-bg-danger-hover: rgba(199, 36, 36, 0.3);
 
 
   /* sticker background */
