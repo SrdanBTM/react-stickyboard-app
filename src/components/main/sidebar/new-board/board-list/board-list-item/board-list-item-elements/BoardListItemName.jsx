@@ -37,7 +37,7 @@ export default function BoardListName({ mappedBoard }) {
 
   return (
     <div
-      className={`${styles.container} ${mappedBoard.boardId === currentBoardId ? styles.selected : ''}`}
+      className={`${styles.containerName} ${mappedBoard.boardId === currentBoardId ? styles.selected : ''}`}
       data-id={mappedBoard.boardId}
       onClick={handleClick}
       onMouseOver={handleMouseOver}
@@ -45,15 +45,15 @@ export default function BoardListName({ mappedBoard }) {
     >
       <div className={styles.name}>
         {mappedBoard.boardName}
+      </div>
 
-        <div className={styles.buttons}>
-          {isMouseOver &&
-            <>
-              <EditButton mappedBoard={mappedBoard} />
-              <DeleteButton mappedBoard={mappedBoard} />
-            </>
-          }
-        </div>
+      <div className={styles.buttons}>
+        {isMouseOver &&
+          <>
+            <EditButton mappedBoard={mappedBoard} />
+            <DeleteButton mappedBoard={mappedBoard} />
+          </>
+        }
       </div>
 
     </div>

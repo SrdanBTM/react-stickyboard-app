@@ -1,61 +1,63 @@
 
 
-.container {
-  position: relative;
+.containerName {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  border-radius: var(--radius-md);
+  justify-content: space-between;
   background-color: var(--bg-sidebar);
 }
 
-.container .name,
-.container > input {
+.containerInput {
+  width: 100%;
+}
+
+.containerName .name,
+.containerInput > input {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   color: var(--font-secondary);
   outline: none;
-  border-radius: var(--radius-md);
   background-color: transparent;
   cursor: pointer;
   font-size: 14px;
   color: var(--font-modal);
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-left: 10px;
   border: var(--element-border-transparent);
 }
 
-.container .name:hover {
-  color: var(--font-primary);
+.containerName .name {
+  margin-right: 15px;
+  margin-left: 20px;
 }
 
-.container:hover {
-  cursor: pointer;
-  background-color: var(--element-bg-hover);
-}
-
-.container > :first-child:focus {
-  border: var(--element-border-selected-sidebar);
-}
-
-.container input:focus {
-  background-color: var(--element-bg-selected);
-  border: var(--element-border-selected-sidebar);
-}
-
-.container .buttons {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
+.containerName .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.containerInput > input {
+  padding-left: 20px;
+}
+
+.containerName:hover,
+.containerInput:hover {
+  color: var(--font-primary);
+  cursor: pointer;
+  background-color: var(--element-bg-hover);
+}
+
+.containerInput > input:focus {
+  background-color: var(--element-bg-selected);
+  border: var(--element-border-selected-sidebar);
+}
+
+
 
 .selected {
   background-color: var(--element-bg-selected);

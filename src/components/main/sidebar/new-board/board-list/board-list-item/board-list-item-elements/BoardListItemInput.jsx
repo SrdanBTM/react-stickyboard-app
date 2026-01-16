@@ -37,7 +37,7 @@ export default function BoardListItemInput({ mappedBoard }) {
 
   return (
     <div
-      className={styles.container}
+      className={styles.containerInput}
       value={inputValue}
       onChange={handleChange}
       onKeyDown={handleKeyDown}

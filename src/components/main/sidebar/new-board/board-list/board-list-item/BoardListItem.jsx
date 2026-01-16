@@ -27,10 +27,7 @@ export default function BoardListItem({ mappedBoard }) {
 
   return (
     <li
-      className={`
-        ${styles.container} 
-        ${mappedBoard.boardId === currentBoardId ? styles.selected : styles.noSelected}
-        `}
+      className={styles.container}
       ref={mappedBoard.boardId === currentBoardId ? itemRef : null}
     >
       {mappedBoard.isInput && !isClickedOutsideBoardList
