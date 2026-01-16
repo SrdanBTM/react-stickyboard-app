@@ -51,13 +51,15 @@ export default function MainProvider({ children }) {
   const [lastCreatedStickerId, setLastCreatedStickerId] = useState(null)
 
 
-  const boardRef = useRef()
+  const boardRef = useRef(null)
+  const previousBoardIdRef = useRef(null)
 
 
   return (
     <MainContext.Provider
       value={{
         boardRef,
+        previousBoardIdRef,
         boards, setBoards,
         currentBoardId, setCurrentBoardId,
         currentBoardPanel, setCurrentBoardPanel,

@@ -10,9 +10,10 @@ import Input from './create-new-board-elements/CreateNewBoardInput.jsx'
 
 export default function CreateNewBoard() {
 
-  const { boards, setCurrentBoardId, setSelectedFilterButton } = useContext(MainContext)
+  const { boards, currentBoardId, setCurrentBoardId, previousBoardIdRef, setSelectedFilterButton } = useContext(MainContext)
   const { isClickedOutsideNewBoard } = useContext(ClickOutsideElementContext)
   const [isCreateBoard, setIsCreateBoard] = useState(false)
+
 
 
   useEffect(() => {
@@ -26,13 +27,16 @@ export default function CreateNewBoard() {
   function handleClick() {
     setIsCreateBoard(true)
     setSelectedFilterButton(null)
+    previousBoardIdRef.current = currentBoardId
+    setCurrentBoardId(null)
   }
 
-  useEffect(()=>{
-    if (isCreateBoard) {
-      setCurrentBoardId(null)
+
+  useEffect(() => {
+    if (isClickedOutsideNewBoard && currentBoardId === null) {
+      setCurrentBoardId(previousBoardIdRef.current)
     }
-  },[isCreateBoard])
+  }, [isClickedOutsideNewBoard])
 
 
   return (
