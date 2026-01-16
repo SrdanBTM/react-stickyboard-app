@@ -15,7 +15,7 @@
   text-align: center;
   background-color: transparent;
   color: var(--font-modal);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   font-size: 14px;
 }
 

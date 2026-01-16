@@ -29,7 +29,7 @@
 }
 
 .container:hover svg {
-  color: var(--icon-color-hover-normal);
+  color: var(--icon-color-hover-neutral);
 }
 
 .container:hover {

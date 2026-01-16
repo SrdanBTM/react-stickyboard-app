@@ -14,9 +14,7 @@
 }
 
 :root {
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
+  --radius-md: 8px;
 }
 
 .darkTheme {
@@ -30,10 +28,9 @@
   --sticker-color6: #2a0052;
 
 
-  /* app background - blue */
-  --bg-app: #0e1116;
-  --bg-header: #1a1f28;
-  --bg-sidebar: #151a22;
+  /* app background */
+  --bg-header: #171b23;
+  --bg-sidebar: #12161d;
   --bg-panel: #0e1116;
   --bg-panel-header: #12161d;
   --bg-checked-panel: #12161d;
@@ -42,21 +39,6 @@
 
   /* background */
   --bg-partly-transparent: rgba(255, 255, 255, 0.05);
-
-
-  /* board item */
-  --board-bg-selected: 1px solid rgba(96, 165, 250, 0.10);
-  --board-border-selected: 1px solid rgba(96, 165, 250, 0.45);
-  --board-shadow-selected: inset 2px 0 0 rgba(96, 165, 250, 0.6);
-  --board-bg-hover: #202838;
-
-
-  /* input */
-  --input-bg: #151a22;
-  --input-bg-focus: #171b26;
-  --input-border: 1px solid rgba(255, 255, 255, 0.06);
-  --input-border-focus: 1px solid rgba(96, 165, 250, 0.6);
-  --input-shadow-focus: 0 0 0 1px rgba(96, 165, 250, 0.25);
 
 
   /* border */
@@ -79,7 +61,7 @@
 
   /* icon */
   --icon-color: #6b7280;
-  --icon-color-hover-normal: #e5e7eb;
+  --icon-color-hover-neutral: #e5e7eb;
   --icon-color-hover-danger: rgba(199, 36, 36, 0.8);
   --icon-color-sticker: rgba(255, 255, 255, 0.4);
   --icon-color-sticker-hover: rgba(255, 255, 255, 0.9);
@@ -109,8 +91,15 @@
   --transition: all 0.2s ease;
 
 
+
   /* element */
-  --element-border: 1px solid rgba(255, 255, 255, 0.03);
+  --element-border: 1px solid rgba(255, 255, 255, 0.08);
+  --element-border-selected-sidebar: 1px solid rgba(96, 165, 250, 0.15);
+  --element-border-selected-header: 1px solid rgba(96, 165, 250, 0.08);
+  --element-border-transparent: 1px solid transparent;
+  --element-bg-hover: rgba(0, 114, 253, 0.1);
+  --element-bg-selected: rgba(0, 114, 253, 0.1);
+
 
 
   /* scrollbar */
@@ -119,12 +108,12 @@
   --scrollbar-thumb-hover: rgba(255, 255, 255, 0.28);
   --scrollbar-border: var(--bg-sidebar);
 
-  
+
   /* sticker background */
   --bg-sticker-title: rgba(0, 0, 0, 0.1);
   --bg-sticker-date: rgba(0, 0, 0, 0.3);
   --bg-sticker-footer: rgba(0, 0, 0, 0.3);
-  
+
 
   /* sticker border */
   --border-bottom-sticker-footer: 2px solid rgba(255, 255, 255, 0.15);
@@ -146,32 +135,17 @@
 
 
   /* app background */
-  --bg-app: #f5f6f8;
-  --bg-header: #ffffff;
-  --bg-sidebar: #f0f2f5;
-  --bg-panel: #f5f6f8;
-  --bg-panel-header: #eceff3;
-  --bg-checked-panel: #eceff3;
-  --bg-checked-header: #e6eaf0;
+  --bg-panel: #fff;
+  --bg-panel-header: #f9fcff;
+  --bg-checked-panel: #f9fcff;
+  --bg-sidebar: #f9fcff;
+  --bg-checked-header: #e9eff8;
+  --bg-header: #f3f9ff;
+
 
 
   /* background */
   --bg-partly-transparent: rgba(0, 0, 0, 0.04);
-
-
-  /* board item */
-  --board-bg-selected: rgba(96, 165, 250, 0.12);
-  --board-border-selected: 1px solid rgba(96, 165, 250, 0.6);
-  --board-shadow-selected: inset 2px 0 0 rgba(96, 165, 250, 0.6);
-  --board-bg-hover: #e6ebf2;
-
-
-  /* input */
-  --input-bg: #ffffff;
-  --input-bg-focus: #ffffff;
-  --input-border: 1px solid rgba(0, 0, 0, 0.15);
-  --input-border-focus: 1px solid rgba(96, 165, 250, 0.6);
-  --input-shadow-focus: 0 0 0 2px rgba(96, 165, 250, 0.25);
 
 
   /* border */
@@ -194,7 +168,7 @@
 
   /* icon */
   --icon-color: #6b7280;
-  --icon-color-hover-normal: #1f2937;
+  --icon-color-hover-neutral: #1f2937;
   --icon-color-hover-danger: rgba(199, 36, 36, 0.9);
   --icon-color-sticker: rgba(0, 0, 0, 0.45);
   --icon-color-sticker-hover: rgba(0, 0, 0, 0.85);
@@ -225,7 +199,12 @@
 
 
   /* element */
-  --element-border: 1px solid rgba(0, 0, 0, 0.04);
+  --element-border: 1px solid rgba(0, 0, 0, 0.15);
+  --element-border-selected-sidebar: 1px solid rgba(37, 99, 235, 0.15);
+  --element-border-selected-header: 1px solid rgba(37, 99, 235, 0.10);
+  --element-border-transparent: 1px solid transparent;
+  --element-bg-hover: rgba(0, 150, 255, 0.1);
+  --element-bg-selected: rgba(0, 150, 255, 0.1);
 
 
   /* scrollbar */
@@ -265,7 +244,7 @@
 }
 
 .iconNormal:hover>svg {
-  color: var(--icon-color-hover-normal);
+  color: var(--icon-color-hover-neutral);
 }
 
 .iconDanger:hover>svg {
@@ -283,7 +262,7 @@
 }
 
 .iconStickerDanger:hover>svg {
-  color: var(--icon-color-hover-normal);
+  color: var(--icon-color-hover-neutral);
 }
 
 
@@ -307,7 +286,7 @@
 
 .scroll::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border: 2px solid var(--scrollbar-border);
   background-clip: padding-box;
 }
@@ -337,7 +316,7 @@
 
 .stickerScroll::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.28);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background-clip: padding-box;
 }
 

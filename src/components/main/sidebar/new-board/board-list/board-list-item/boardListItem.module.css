@@ -8,11 +8,9 @@
 }
 
 .selected {
-  border: var(--board-border-selected);
-  box-shadow: var(--board-shadow-selected);
+  border: var(--element-border-selected-sidebar);
 }
 
 .noSelected {
   border: var(--border-transparent);
-  box-shadow: none;
 }

@@ -6,7 +6,6 @@
   height: 40px;
   display: flex;
   align-items: center;
-  border: var(--input-border);
   border-radius: var(--radius-md);
 }
 
@@ -16,7 +15,6 @@
   height: 100%;
   display: flex;  
   align-items: center;
-
 }
 
 .container .input input {
@@ -25,17 +23,16 @@
   color: var(--font-primary);
   background-color: transparent;
   padding-left: 20px;
-  border: var(--border-transparent);
   font-size: 14px;
   outline: none;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   transition: var(--transition);
+  border: var(--element-border);
 }
 
 .container .input input:focus {
-  border: var(--input-border-focus);
-  background-color: var(--board-bg-hover);
-  box-shadow: var(--input-shadow-focus);
+  background-color: var(--element-bg-selected);
+  border: var(--element-border-selected-header);
 }
 
 .container .input input::placeholder {
@@ -51,5 +48,6 @@
   cursor: pointer;
   padding-left: 10px;
   background-color: transparent;
-  border: none;
+  border: var(--element-border);
+  border-radius: var(--radius-md);
 }

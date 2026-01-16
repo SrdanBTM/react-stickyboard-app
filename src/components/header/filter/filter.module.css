@@ -9,7 +9,7 @@
 .filterIcon {
   display: flex;
   color: var(--icon-color);
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 
@@ -19,11 +19,11 @@
   height: 100%;
   display: flex;
   align-items: center;
-  border: var(--input-border);
   border-radius: var(--radius-md);    
 }
 
 .nextDaysDated {
   position: relative;
-  margin-left: 10px;
+  margin-left: 20px;
 }
+

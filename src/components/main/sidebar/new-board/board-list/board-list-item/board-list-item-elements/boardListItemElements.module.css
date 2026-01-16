@@ -26,7 +26,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 10px;
-  border: none;
+  border: var(--element-border-transparent);
 }
 
 .container .name:hover {
@@ -35,18 +35,16 @@
 
 .container:hover {
   cursor: pointer;
-  background-color: var(--board-bg-hover);
+  background-color: var(--element-bg-hover);
 }
 
 .container > :first-child:focus {
-  border: var(--input-border-focus);
-  box-shadow: var(--input-shadow-focus);
+  border: var(--element-border-selected-sidebar);
 }
 
 .container input:focus {
-  background-color: var(--board-bg-hover);
-  border: var(--input-border-focus);
-  box-shadow: var(--input-shadow-focus);
+  background-color: var(--element-bg-selected);
+  border: var(--element-border-selected-sidebar);
 }
 
 .container .buttons {
@@ -60,12 +58,11 @@
 }
 
 .selected {
-  background-color: var(--board-bg-hover);
+  background-color: var(--element-bg-selected);
 }
 
 .selected .name {
   color: var(--font-primary);
-  font-weight: 600;
 }
 
 

@@ -41,7 +41,7 @@
   width: 100px;
   padding: 10px 0;
   background-color: var(--button-color-neutral);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   color: var(--font-modal);
   border: none;
   font-size: 14px;

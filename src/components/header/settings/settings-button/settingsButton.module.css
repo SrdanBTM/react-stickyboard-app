@@ -14,5 +14,5 @@
 }
 
 .container:hover {
-  background-color: var(--board-bg-hover);
+  background-color: var(--element-bg-hover);
 }

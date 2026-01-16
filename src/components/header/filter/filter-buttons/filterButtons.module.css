@@ -10,22 +10,23 @@
   align-items: center;
   gap: 6px;
   background-color: transparent;
-  border: none;
   font-size: 14px;
   color: var(--font-secondary);
   cursor: pointer;
   transition: var(--transition);
-  border-radius: var(--radius-md);    
+  border-radius: var(--radius-md); 
+  border: var(--element-border);
 }
 
 .container:hover,
 .container:focus {
-  background-color: var(--board-bg-hover);
+  background-color: var(--element-bg-hover);
   color: var(--font-primary);
+  border: var(--element-border-selected-header);
 }
 
 .selected {
-  border: var(--board-border-selected);
+  border: var(--element-border-selected-header);
   color: var(--font-primary);
-  background-color: var(--board-bg-hover);
+  background-color: var(--element-bg-selected);
 }
