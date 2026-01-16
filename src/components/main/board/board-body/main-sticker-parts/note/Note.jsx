@@ -28,7 +28,7 @@ export default function Note({ mappedSticker, isHover}) {
     >
       <div className={`${styles.textarea} ${isHover ? styles.addPaddingBottom : ''}`}>
         <textarea
-          className='stickerScroll'
+          className='scroll'
           placeholder='Note...'
           value={mappedSticker.note}
           onChange={handleChange}
