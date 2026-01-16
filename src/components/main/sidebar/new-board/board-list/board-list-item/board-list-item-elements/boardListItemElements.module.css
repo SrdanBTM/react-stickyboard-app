@@ -58,6 +58,8 @@
 
 .selected {
   background-color: var(--element-bg-selected);
+  border-top: var(--element-border-selected-sidebar); 
+  border-bottom: var(--element-border-selected-sidebar); 
 }
 
 .selected .name {

@@ -78,13 +78,13 @@
   /* element */
   --element-border-soft: 1px solid rgba(255, 255, 255, 0.1);
   --element-border: 2px solid rgba(255, 255, 255, 0.1);
-  --element-border-selected-sidebar: 2px solid transparent;
-  --element-border-selected-header: 2px solid transparent;
+  --element-border-selected-sidebar: 2px solid rgba(0, 114, 253, 0.15);
+  --element-border-selected-header: 2px solid rgba(0, 114, 253, 0.15);
   --element-border-transparent: 2px solid transparent;
   --element-border-partly-transparent: 1px solid rgba(150, 150, 150, 0.3);
   --element-border-partly-transparent-focus: 1px solid rgba(150, 150, 150, 0.8);
-  --element-bg-hover: rgba(0, 114, 253, 0.15);
-  --element-bg-selected: rgba(0, 114, 253, 0.15);
+  --element-bg-hover: rgba(0, 114, 253, 0.05);
+  --element-bg-selected: rgba(0, 114, 253, 0.05);
   --element-bg-transparent: transparent;
   --element-bg-danger-hover: rgba(199, 36, 36, 0.3);
 
@@ -164,13 +164,13 @@
   /* element */
   --element-border-soft: 1px solid rgba(0, 0, 0, 0.1);
   --element-border: 2px solid rgba(0, 0, 0, 0.1);
-  --element-border-selected-sidebar: 2px solid transparent;
-  --element-border-selected-header: 2px solid transparent;
+  --element-border-selected-sidebar: 2px solid rgba(0, 90, 150, 0.3);
+  --element-border-selected-header: 2px solid rgba(0, 90, 150, 0.3);
   --element-border-transparent: 2px solid transparent;
   --element-border-partly-transparent: 1px solid rgba(0, 0, 0, 0.15);
   --element-border-partly-transparent-focus: 1px solid rgba(0, 0, 0, 0.5);
-  --element-bg-hover: rgba(0, 90, 150, 0.2);
-  --element-bg-selected: rgba(0, 90, 150, 0.2);
+  --element-bg-hover: rgba(0, 90, 150, 0.05);
+  --element-bg-selected: rgba(0, 90, 150, 0.05);
   --element-bg-transparent: transparent;
   --element-bg-danger-hover: rgba(199, 36, 36, 0.3);
 

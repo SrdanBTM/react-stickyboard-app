@@ -14,8 +14,8 @@
   align-items: center;
   outline: none;
   transition: var(--transition);
-  border: none;
   border-radius: var(--radius-md);
+  border: var(--element-border);
 }
 
 .container button {
@@ -29,6 +29,7 @@
 
 .container button:hover {
   background-color: var(--element-bg-hover);
+  border: var(--element-border-selected-sidebar);
   color: var(--font-primary);
 }
 
@@ -38,6 +39,11 @@
   background-color: var(--element-bg-selected);
   color: var(--font-primary);
 }
+
+.container input:focus {
+  border: var(--element-border-selected-sidebar);
+}
+
 
 .container input::placeholder {
   color: var(--font-placeholder);
