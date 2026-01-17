@@ -26,7 +26,7 @@ export default function Pin({ dragControl, mappedSticker }) {
 
   return (
     <button
-      className={`${styles.container} iconSticker iconStickerNormal`}
+      className={`${styles.container} iconStickerPin iconStickerPinHover`}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       title='Drag to move sticker'

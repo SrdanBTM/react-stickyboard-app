@@ -9,7 +9,7 @@
   flex-direction: column;
   user-select: none;
   cursor: grab;
-  box-shadow: var(--sticker-boxshadow);
+  box-shadow: var(--sticker-boxshadow-sidebar-shecked);
 }
 
 

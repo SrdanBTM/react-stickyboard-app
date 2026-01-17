@@ -8,7 +8,7 @@
   left: 0;
   z-index: 1;
   background-color: var(--sticker-color1);
-  box-shadow: var(--sticker-boxshadow);
+  box-shadow: var(--sticker-boxshadow-sidebar-checked);
   transition: width 0.2s ease, height 0.2s ease;
 }
 

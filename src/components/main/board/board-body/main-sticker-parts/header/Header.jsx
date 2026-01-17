@@ -9,7 +9,7 @@ export default function Header({ mappedSticker, isHover }) {
   return (
     <div className={`
       ${styles.container} 
-      ${mappedSticker.date && mappedSticker.time ? styles.dateTime : styles.noDateTime}
+      ${mappedSticker.isDateTimeValid ? styles.dateTime : styles.noDateTime}
       `}>
       <StickerTitle mappedSticker={mappedSticker} />
       <StickerCheck mappedSticker={mappedSticker} isHover={isHover} />

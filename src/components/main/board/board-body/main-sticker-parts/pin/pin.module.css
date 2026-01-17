@@ -17,12 +17,8 @@
 }
 
 .container svg {
-  color: var(--icon-color);
   transition: var(--transition);
-  margin-top: 2px;
+  margin-top: 4px;
   cursor: grab !important;
 }
 
-.container:hover svg {
-  color: var(--icon-color-hover-neutral);
-}

@@ -18,6 +18,5 @@
 }
 
 .oneColor:hover {
-  box-shadow: var(--sticker-button-boxshadow);
   border: var(--element-border-partly-transparent-focus);
 }

@@ -22,7 +22,7 @@
   width: 150px;
   height: 150px;
   position: relative;
-  border: var(--element-border);
+  border: var(--element-border-soft);
 }
 
 .remainingStickers {

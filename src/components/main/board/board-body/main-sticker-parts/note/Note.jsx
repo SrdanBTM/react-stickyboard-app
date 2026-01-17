@@ -22,8 +22,8 @@ export default function Note({ mappedSticker, isHover}) {
     <div
       className={`
         ${styles.container} 
-        ${mappedSticker.date && mappedSticker.time && mappedSticker.isHover ? styles.shadowTopBottom : ''}
-        ${!mappedSticker.date && !mappedSticker.time && mappedSticker.isHover ? styles.shadowBottom : ''}
+        ${mappedSticker.isDateTimeValid ? styles.shadowTopBottom : ''}
+        ${!mappedSticker.isDateTimeValid ? styles.shadowBottom : ''}
         `}
     >
       <div className={`${styles.textarea} ${isHover ? styles.addPaddingBottom : ''}`}>

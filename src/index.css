@@ -37,7 +37,11 @@
   --bg-checked-panel: #12161d;
   --bg-checked-header: #161b23;
   --bg-modal: #0e1116;
-  --app-border-soft: 1px solid rgba(255, 255, 255, 0.06);
+  --bg-modal-cover: rgba(0, 0, 0, 0.5);
+
+
+  /* app border */
+  --app-border-soft: 1px solid rgba(150, 150, 200, 0.1);
 
 
   /* font */
@@ -57,18 +61,30 @@
   --icon-color-hover-danger: rgba(199, 36, 36, 0.8);
   --icon-color-sticker: rgba(255, 255, 255, 0.4);
   --icon-color-sticker-hover: rgba(255, 255, 255, 0.9);
+  --icon-color-pin: rgba(255, 255, 255, 0.4);
+  --icon-color-pin-hover: #e5e7eb;
 
 
   /* box-shadow */
-  --button-boxshadow:
-    0 0 0 1px rgba(255, 255, 255, 0.12),
-    0 8px 18px rgba(0, 0, 0, 0.75);
   --modal-boxshadow:
-    0 20px 40px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(0, 0, 0, 0.04);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 8px 20px rgba(0, 0, 0, 0.65);
   --sticker-boxshadow:
-    0 2px 6px rgba(0, 0, 0, 0.6),
-    0 1px 2px rgba(255, 255, 255, 0.05);
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 8px 20px rgba(0, 0, 0, 0.55);
+  --sticker-boxshadow-sidebar-shecked:
+    inset 0 1px 0 rgba(255, 255, 255, 0.10),
+    0 1px 0 rgba(0, 0, 0, 0.35);
+  --sticker-header-boxshadow-with-date-time:
+    inset 0 4px 6px -4px rgba(255, 255, 255, 0.1),
+    inset 0 -4px 6px -4px rgba(255, 255, 255, 0.05);
+  --sticker-header-boxshadow-without-date-time:
+    inset 0 4px 6px -4px rgba(255, 255, 255, 0.1);
+  --sticker-note-boxshadow-top-bottom:
+    inset 0 4px 6px -4px rgba(255, 255, 255, 0.05),
+    inset 0 -4px 6px -4px rgba(255, 255, 255, 0.1);
+  --sticker-note-boxshadow-bottom:
+    inset 0 -4px 6px -4px rgba(255, 255, 255, 0.1);
 
 
   /* transition */
@@ -84,20 +100,21 @@
   --element-border-partly-transparent: 1px solid rgba(150, 150, 150, 0.3);
   --element-border-partly-transparent-focus: 1px solid rgba(150, 150, 150, 0.8);
   --element-bg-hover: rgba(0, 114, 253, 0.05);
+  --element-bg-app-modal-hover: rgba(0, 114, 253, 0.2);
   --element-bg-selected: rgba(0, 114, 253, 0.05);
   --element-bg-transparent: transparent;
-  --element-bg-danger-hover: rgba(199, 36, 36, 0.3);
+  --element-bg-danger-hover: rgb(95, 37, 37);
 
 
   /* sticker background */
-  --bg-sticker-title: rgba(0, 0, 0, 0.1);
+  --bg-sticker-title: rgba(0, 0, 0, 0.12);
   --bg-sticker-date: rgba(0, 0, 0, 0.3);
   --bg-sticker-footer: rgba(0, 0, 0, 0.3);
   --bg-sticker-modal: transparent;
 
 
   /* sticker border */
-  --border-bottom-sticker-footer: 2px solid rgba(255, 255, 255, 0.15);
+  --border-bottom-sticker-footer: 2px solid rgba(255, 255, 255, 0.2);
   --border-bottom-sticker-header: 2px solid rgba(255, 255, 255, 0.05);
   --border-left-sticker-focus: 3px solid rgba(255, 255, 255, 0.15);
 }
@@ -123,7 +140,11 @@
   --bg-checked-header: #e9eff8;
   --bg-header: #f3f9ff;
   --bg-modal: #f3f9ff;
-  --app-border-soft: 1px solid rgba(0, 0, 0, 0.1);
+  --bg-modal-cover: rgba(255, 255, 255, 0.5);
+
+
+  /* app border */
+  --app-border-soft: 1px solid rgba(150, 150, 200, 0.3);
 
 
   /* font */
@@ -143,18 +164,30 @@
   --icon-color-hover-danger: rgba(199, 36, 36, 0.9);
   --icon-color-sticker: rgba(0, 0, 0, 0.45);
   --icon-color-sticker-hover: rgba(0, 0, 0, 0.85);
+  --icon-color-pin: rgba(0, 0, 0, 0.4);
+  --icon-color-pin-hover: #3d4147;
 
 
   /* box-shadow */
-  --button-boxshadow:
-    0 0 0 1px rgba(0, 0, 0, 0.08),
-    0 4px 10px rgba(0, 0, 0, 0.08);
   --modal-boxshadow:
     0 20px 40px rgba(0, 0, 0, 0.15),
     0 0 0 1px rgba(0, 0, 0, 0.06);
   --sticker-boxshadow:
-    0 2px 6px rgba(0, 0, 0, 0.15),
-    0 1px 2px rgba(255, 255, 255, 0.8);
+    0 1px 2px rgba(0, 0, 0, 0.15),
+    0 6px 16px rgba(0, 0, 0, 0.12);
+  --sticker-boxshadow-sidebar-checked:
+    inset 0 1px 0 rgba(255, 255, 255, 0.70),
+    0 1px 0 rgba(0, 0, 0, 0.10);
+  --sticker-header-boxshadow-with-date-time:
+    inset 0 4px 6px -4px rgba(0, 0, 0, 0.1),
+    inset 0 -4px 6px -4px rgba(0, 0, 0, 0.05);
+  --sticker-header-boxshadow-without-date-time:
+    inset 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --sticker-note-boxshadow-top-bottom:
+    inset 0 4px 6px -4px rgba(0, 0, 0, 0.05),
+    inset 0 -4px 6px -4px rgba(0, 0, 0, 0.1);
+  --sticker-note-boxshadow-bottom:
+    inset 0 -4px 6px -4px rgba(0, 0, 0, 0.1);
 
 
   /* transition */
@@ -170,22 +203,23 @@
   --element-border-partly-transparent: 1px solid rgba(0, 0, 0, 0.15);
   --element-border-partly-transparent-focus: 1px solid rgba(0, 0, 0, 0.5);
   --element-bg-hover: rgba(0, 90, 150, 0.05);
+  --element-bg-app-modal-hover: rgba(0, 90, 150, 0.2);
   --element-bg-selected: rgba(0, 90, 150, 0.05);
   --element-bg-transparent: transparent;
-  --element-bg-danger-hover: rgba(199, 36, 36, 0.3);
+  --element-bg-danger-hover: rgb(242, 182, 182);
 
 
   /* sticker background */
-  --bg-sticker-title: rgba(255, 255, 255, 0.1);
-  --bg-sticker-date: rgba(255, 255, 255, 0.25);
-  --bg-sticker-footer: rgba(255, 255, 255, 0.4);
+  --bg-sticker-title: rgba(255, 255, 255, 0.15);
+  --bg-sticker-date: rgba(255, 255, 255, 0.3);
+  --bg-sticker-footer: rgba(255, 255, 255, 0.7);
   --bg-sticker-modal: transparent;
 
 
   /* sticker border */
-  --border-bottom-sticker-footer: 2px solid rgba(0, 0, 0, 0.15);
-  --border-bottom-sticker-header: 2px solid rgba(0, 0, 0, 0.03);
-  --border-left-sticker-focus: 3px solid rgba(0, 0, 0, 0.15);
+  --border-bottom-sticker-footer: 2px solid rgba(0, 0, 0, 0.3);
+  --border-bottom-sticker-header: 2px solid rgba(0, 0, 0, 0.05);
+  --border-left-sticker-focus: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 
@@ -222,6 +256,13 @@
   color: var(--icon-color-hover-neutral);
 }
 
+.iconStickerPin>svg {
+  color: var(--icon-color-pin);
+}
+
+.iconStickerPin:hover>svg {
+  color: var(--icon-color-pin-hover);
+}
 
 
 
