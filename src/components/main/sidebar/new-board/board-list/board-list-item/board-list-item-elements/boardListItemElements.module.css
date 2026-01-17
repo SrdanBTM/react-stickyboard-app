@@ -21,7 +21,6 @@
   align-items: center;
   color: var(--font-secondary);
   outline: none;
-  background-color: transparent;
   cursor: pointer;
   font-size: 14px;
   color: var(--font-modal);
@@ -31,6 +30,7 @@
 }
 
 .containerName .name {
+  background-color: transparent;
   margin-right: 15px;
   margin-left: 20px;
 }
@@ -43,7 +43,15 @@
 
 .containerInput > input {
   padding-left: 20px;
+  background-color: var(--element-bg-selected);
 }
+
+.containerInput > input:focus {
+  padding-left: 20px;
+  border-top: var(--element-border-selected-sidebar); 
+  border-bottom: var(--element-border-selected-sidebar); 
+}
+
 
 .containerName:hover,
 .containerInput:hover {
@@ -52,9 +60,6 @@
   background-color: var(--element-bg-hover);
 }
 
-.containerInput > input {
-  background-color: var(--element-bg-selected);
-}
 
 .selected {
   background-color: var(--element-bg-selected);
