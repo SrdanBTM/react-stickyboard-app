@@ -17,6 +17,8 @@
   transition: var(--transition);
 }
 
-.oneColor:hover {
+.oneColor:hover,
+.oneColor:focus-visible {
   border: var(--element-border-partly-transparent-focus);
+  outline: none;
 }

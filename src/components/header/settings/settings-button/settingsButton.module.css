@@ -16,3 +16,7 @@
 .container:hover {
   background-color: var(--element-bg-hover);
 }
+
+.container:focus-visible {
+  outline: none;
+}

@@ -22,12 +22,16 @@
   width: 90px;
 }
 
-.buttonNormal:hover {
+.buttonNormal:hover,
+.buttonNormal:focus-visible {
   background-color: var(--element-bg-transparent);
   border: var(--element-border-partly-transparent-focus);
+  outline: none;
 }
 
-.buttonDanger:hover {
+.buttonDanger:hover,
+.buttonDanger:focus-visible {
   background-color: var(--element-bg-danger-hover);
   border: var(--element-border-partly-transparent-focus);
+  outline: none;
 }

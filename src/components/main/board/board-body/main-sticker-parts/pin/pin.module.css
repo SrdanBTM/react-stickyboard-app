@@ -22,3 +22,7 @@
   cursor: grab !important;
 }
 
+.container {
+  outline: none;
+}
+

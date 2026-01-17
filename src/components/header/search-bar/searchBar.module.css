@@ -30,9 +30,12 @@
   border: var(--element-border);
 }
 
-.container .input input:focus {
+.container .input input:focus,
+.container .input input:focus-visible,
+.container button:focus-visible {
   background-color: var(--element-bg-selected);
   border: var(--element-border-selected-header);
+  outline: none;
 }
 
 .container .input input::placeholder {

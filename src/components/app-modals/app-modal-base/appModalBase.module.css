@@ -50,13 +50,19 @@
   cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.button:focus-visible {
   color: var(--font-primary);
   border: var(--element-border-transparent);
   background-color: var(--element-bg-app-modal-hover);
+  outline: none;
 }
 
-.danger:hover {
+.danger:hover,
+.danger:focus-visible {
   background-color: var(--element-bg-danger-hover);
+  outline: none;
 }
+
+
 

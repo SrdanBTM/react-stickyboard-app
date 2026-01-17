@@ -25,6 +25,10 @@
   border: var(--element-border-selected-header);
 }
 
+.container:focus-visible {
+  outline: none;
+}
+
 .selected {
   border: var(--element-border-selected-header);
   color: var(--font-primary);
