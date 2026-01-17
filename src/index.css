@@ -72,8 +72,10 @@
   --sticker-boxshadow:
     0 1px 2px rgba(0, 0, 0, 0.45),
     0 8px 20px rgba(0, 0, 0, 0.55);
-  --sticker-boxshadow-sidebar-shecked:
-    inset 0 1px 0 rgba(255, 255, 255, 0.10),
+  --sticker-boxshadow-sidebar:
+    0 1px 0 rgba(0, 0, 0, 0.35);
+  --sticker-boxshadow-checked:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
     0 1px 0 rgba(0, 0, 0, 0.35);
   --sticker-header-boxshadow-with-date-time:
     inset 0 4px 6px -4px rgba(255, 255, 255, 0.1),
@@ -111,6 +113,7 @@
   --bg-sticker-date: rgba(0, 0, 0, 0.3);
   --bg-sticker-footer: rgba(0, 0, 0, 0.3);
   --bg-sticker-modal: transparent;
+  --bg-sticker-checked: rgba(0, 0, 0, 0.4);
 
 
   /* sticker border */
@@ -175,8 +178,10 @@
   --sticker-boxshadow:
     0 1px 2px rgba(0, 0, 0, 0.15),
     0 6px 16px rgba(0, 0, 0, 0.12);
-  --sticker-boxshadow-sidebar-checked:
-    inset 0 1px 0 rgba(255, 255, 255, 0.70),
+  --sticker-boxshadow-sidebar:
+    0 1px 0 rgba(0, 0, 0, 0.10);
+  --sticker-boxshadow-checked:
+    inset 0 1px 0 rgba(0, 0, 0, 0.1),
     0 1px 0 rgba(0, 0, 0, 0.10);
   --sticker-header-boxshadow-with-date-time:
     inset 0 4px 6px -4px rgba(0, 0, 0, 0.1),
@@ -214,6 +219,7 @@
   --bg-sticker-date: rgba(255, 255, 255, 0.3);
   --bg-sticker-footer: rgba(255, 255, 255, 0.7);
   --bg-sticker-modal: transparent;
+  --bg-sticker-checked: rgba(255, 255, 255, 0.3);
 
 
   /* sticker border */
