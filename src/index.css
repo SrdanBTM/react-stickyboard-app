@@ -100,7 +100,7 @@
   --element-border-selected-header: 2px solid rgba(0, 114, 253, 0.15);
   --element-border-transparent: 2px solid transparent;
   --element-border-partly-transparent: 1px solid rgba(150, 150, 150, 0.3);
-  --element-border-partly-transparent-focus: 1px solid rgba(150, 150, 150, 0.8);
+  --element-border-partly-transparent-focus: 1px solid rgba(150, 150, 150, 1);
   --element-bg-hover: rgba(0, 114, 253, 0.05);
   --element-bg-app-modal-hover: rgba(0, 114, 253, 0.2);
   --element-bg-selected: rgba(0, 114, 253, 0.05);
