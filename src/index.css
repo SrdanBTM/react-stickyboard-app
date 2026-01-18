@@ -21,12 +21,12 @@
 .darkTheme {
 
   /* stickers */
-  --sticker-color1: #3a2d00;
-  --sticker-color2: #003f2a;
-  --sticker-color3: #52001f;
-  --sticker-color4: #002a4f;
-  --sticker-color5: #4f2600;
-  --sticker-color6: #2a0052;
+  --sticker-color1: #382e0e;
+  --sticker-color2: #0d3b2c;
+  --sticker-color3: #441624;
+  --sticker-color4: #0d2f47;
+  --sticker-color5: #473015;
+  --sticker-color6: #281844;
 
 
   /* app background */
@@ -113,7 +113,7 @@
   --bg-sticker-date: rgba(0, 0, 0, 0.3);
   --bg-sticker-footer: rgba(0, 0, 0, 0.3);
   --bg-sticker-modal: transparent;
-  --bg-sticker-checked: rgba(0, 0, 0, 0.4);
+  --bg-sticker-checked: rgba(0, 0, 0, 0.3);
 
 
   /* sticker border */
