@@ -38,6 +38,7 @@
   --bg-checked-header: #161b23;
   --bg-modal: #0e1116;
   --bg-modal-cover: rgba(0, 0, 0, 0.5);
+  --bg-scroll: #272c37;
 
 
   /* app border */
@@ -144,6 +145,7 @@
   --bg-header: #f3f9ff;
   --bg-modal: #f3f9ff;
   --bg-modal-cover: rgba(255, 255, 255, 0.5);
+  --bg-scroll: #dee5ed;
 
 
   /* app border */
@@ -278,5 +280,5 @@
 .scroll {
   overflow-y: auto;
   scrollbar-width: auto;
-  scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+  scrollbar-color: var(--bg-scroll) transparent;
 }
