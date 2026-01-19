@@ -27,6 +27,7 @@ export default function ResetApp() {
     localStorage.removeItem('theme')
     localStorage.removeItem('isCheckedPanel')
     localStorage.removeItem('nextDaysValue')
+    localStorage.removeItem('currentBoardId')
     setOpenedAppModal(null)
     window.location.reload()
   }

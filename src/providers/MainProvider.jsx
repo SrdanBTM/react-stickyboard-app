@@ -17,9 +17,14 @@ export default function MainProvider({ children }) {
   }, [boards])
 
 
-  const [currentBoardId, setCurrentBoardId] = useState(null)
+  const [currentBoardId, setCurrentBoardId] = useState(() => {
+    const savedCurrentBoardId = localStorage.getItem('currentBoardId')
+    return savedCurrentBoardId ? JSON.parse(savedCurrentBoardId) : null
+  })
   useEffect(() => {
-    setCurrentBoardId(boards[boards.length - 1].boardId)
+    if (!currentBoardId) {
+      setCurrentBoardId(boards[boards.length - 1].boardId)
+    }
   }, [])
 
 

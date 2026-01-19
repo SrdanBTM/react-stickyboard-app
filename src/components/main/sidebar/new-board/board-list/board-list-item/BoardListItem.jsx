@@ -22,6 +22,8 @@ export default function BoardListItem({ mappedBoard }) {
         block: 'nearest'
       })
     }
+
+    localStorage.setItem('currentBoardId', JSON.stringify(currentBoardId))
   }, [currentBoardId])
 
 
