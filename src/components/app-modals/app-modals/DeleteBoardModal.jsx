@@ -4,7 +4,7 @@ import AppModalBase from '../app-modal-base/AppModalBase.jsx'
 import { useContext } from 'react'
 import { MainContext } from '../../../contexts/MainContext.jsx'
 import { AppModalsContext } from '../../../contexts/AppModalsContext.jsx'
-import { deleteBoard } from '../../../helper-functions/HelperFunctionsHandleBoard.jsx'
+import { deleteBoardAndSetCurrentBoardId } from '../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function DeleteBoardModal() {
@@ -44,19 +44,7 @@ export default function DeleteBoardModal() {
 
   function handleDelete() {
     setOpenedAppModal(null)
-    setBoards(prevBoards => {
-      const filtered = prevBoards.filter(
-        board => board.boardId !== currentBoardId
-      )
-
-      if (filtered.length > 0) {
-        setCurrentBoardId(filtered[filtered.length - 1].boardId)
-      } else {
-        setCurrentBoardId(null)
-      }
-
-      return filtered
-    })
+    deleteBoardAndSetCurrentBoardId(setBoards, currentBoardId, setCurrentBoardId)
   }
 
 
