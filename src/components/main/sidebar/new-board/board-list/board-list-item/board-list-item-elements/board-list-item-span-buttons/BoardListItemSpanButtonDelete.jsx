@@ -2,7 +2,7 @@
 
 import styles from './boardListItemSpanButton.module.css'
 import { IconDelete } from '../../../../../../../../icons/Icons.jsx'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import { AppModalsContext } from '../../../../../../../../contexts/AppModalsContext.jsx'
 import { deleteBoardAndSetCurrentBoardId } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
@@ -11,7 +11,7 @@ import { deleteBoardAndSetCurrentBoardId } from '../../../../../../../../helper-
 
 export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
 
-  const { boards, setBoards, currentBoardId, setCurrentBoardId } = useContext(MainContext)
+  const { setBoards, currentBoardId, setCurrentBoardId } = useContext(MainContext)
   const { setOpenedAppModal } = useContext(AppModalsContext)
 
 
@@ -23,13 +23,6 @@ export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
       setOpenedAppModal('DeleteBoardModal')
     }
   }
-
-
-  useEffect(() => {
-    console.log(boards.length);
-
-
-  }, [currentBoardId])
 
 
   return (
