@@ -5,7 +5,6 @@ import { IconDelete } from '../../../../../../../../icons/Icons.jsx'
 import { useContext, useEffect } from 'react'
 import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import { AppModalsContext } from '../../../../../../../../contexts/AppModalsContext.jsx'
-import { deleteBoard } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 
@@ -17,14 +16,21 @@ export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
 
   function handleClick() {
     if (mappedBoard.stickers.length === 0) {
-      const filteredBoards = deleteBoard(boards, setBoards, mappedBoard.boardId)
 
-      if (filteredBoards.length > 0) {
-        setCurrentBoardId(filteredBoards[filteredBoards.length - 1].boardId)
-      } else {
-        setCurrentBoardId(null)
-      }
+      setBoards(prevBoards => {
+        const filtered = prevBoards.filter(
+          board => board.boardId !== currentBoardId
+        )
 
+        if (filtered.length > 0) {
+          setCurrentBoardId(filtered[filtered.length - 1].boardId)
+        } else {
+          setCurrentBoardId(null)
+        }
+
+        return filtered
+      })
+      
     } else {
       setOpenedAppModal('DeleteBoardModal')
     }
@@ -33,8 +39,8 @@ export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
 
   useEffect(() => {
     console.log(boards.length);
-    
-    
+
+
   }, [currentBoardId])
 
 

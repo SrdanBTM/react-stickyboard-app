@@ -44,13 +44,19 @@ export default function DeleteBoardModal() {
 
   function handleDelete() {
     setOpenedAppModal(null)
-    const filteredBoards = deleteBoard(boards, setBoards, currentBoardId)
+    setBoards(prevBoards => {
+      const filtered = prevBoards.filter(
+        board => board.boardId !== currentBoardId
+      )
 
-    if (filteredBoards.length > 0) {
-      setCurrentBoardId(filteredBoards[filteredBoards.length - 1].boardId)
-    } else {
-      setCurrentBoardId(null)
-    }
+      if (filtered.length > 0) {
+        setCurrentBoardId(filtered[filtered.length - 1].boardId)
+      } else {
+        setCurrentBoardId(null)
+      }
+
+      return filtered
+    })
   }
 
 
