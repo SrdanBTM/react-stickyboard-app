@@ -8,10 +8,9 @@ import { ThemeContext } from '../../../../../../../../contexts/ThemeContext.jsx'
 import { updateAllBoards } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
-export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
+export default function BoardListItemSpanButtonEdit({ mappedBoard }) {
 
   const { setCurrentBoardId, setBoards } = useContext(MainContext)
-  const { theme } = useContext(ThemeContext)
 
 
   function handleClick() {

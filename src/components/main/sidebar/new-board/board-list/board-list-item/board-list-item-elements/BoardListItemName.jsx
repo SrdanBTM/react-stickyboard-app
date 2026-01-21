@@ -9,7 +9,7 @@ import DeleteButton from './board-list-item-span-buttons/BoardListItemSpanButton
 
 export default function BoardListName({ mappedBoard }) {
 
-  const { boards, setCurrentBoardPanel, currentBoardId, setCurrentBoardId, setSearchValue, setSelectedFilterButton, setIsBoardChanging } = useContext(MainContext)
+  const { setCurrentBoardPanel, currentBoardId, setCurrentBoardId, setSearchValue, setSelectedFilterButton, setIsBoardChanging } = useContext(MainContext)
   const [isMouseOver, setIsMouseOver] = useState(false)
 
 
@@ -21,7 +21,7 @@ export default function BoardListName({ mappedBoard }) {
     setIsMouseOver(false)
   }
 
-  function handleClick(e) {
+  function handleClick() {
     setCurrentBoardId(mappedBoard.boardId)
     setSearchValue('')
     setCurrentBoardPanel('board')

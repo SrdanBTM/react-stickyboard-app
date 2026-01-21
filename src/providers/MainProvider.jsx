@@ -23,7 +23,7 @@ export default function MainProvider({ children }) {
     return savedCurrentBoardId ? JSON.parse(savedCurrentBoardId) : null
   })
   useEffect(() => {
-    if (!currentBoardId) {
+    if (boards.length > 0 && currentBoardId == null) {
       setCurrentBoardId(boards[boards.length - 1].boardId)
     }
   }, [])
