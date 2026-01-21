@@ -9,16 +9,18 @@ import { deleteBoardAndSetCurrentBoardId } from '../../../helper-functions/Helpe
 
 export default function DeleteBoardModal() {
 
-  const { setOpenedAppModal } = useContext(AppModalsContext)
-  const { boards, currentBoardId, setBoards, setCurrentBoardId } = useContext(MainContext)
-  const currentBoard = boards.find(board => board.boardId === currentBoardId)
+  const { setOpenedAppModal, boardToDeleteId, setBoardToDeleteId } = useContext(AppModalsContext)
+  const { boards, setBoards, setCurrentBoardId } = useContext(MainContext)
 
 
-  const activeCount = currentBoard.stickers.filter(sticker => !sticker.checked).length
-  const checkedCount = currentBoard.stickers.filter(sticker => sticker.checked).length
+  const boardToDelete = boards.find(board => board.boardId === boardToDeleteId)
+  
+  const activeCount = boardToDelete.stickers.filter(sticker => !sticker.checked).length
+  const checkedCount = boardToDelete.stickers.filter(sticker => sticker.checked).length
 
   const messageOption1 = `${activeCount} active sticker${activeCount === 1 ? '' : 's'}`
   const messageOption2 = `${checkedCount} checked sticker${checkedCount === 1 ? '' : 's'}`
+
 
   let message = null
   if (activeCount !== 0 && checkedCount === 0) {
@@ -28,6 +30,7 @@ export default function DeleteBoardModal() {
   } else if (activeCount !== 0 && checkedCount !== 0) {
     message = `${messageOption1} and ${messageOption2}`
   }
+
 
   const messages = [
     `The selected board has ${message}.`,
@@ -43,12 +46,14 @@ export default function DeleteBoardModal() {
 
 
   function handleDelete() {
+    setBoardToDeleteId(null)
     setOpenedAppModal(null)
-    deleteBoardAndSetCurrentBoardId(setBoards, currentBoardId, setCurrentBoardId)
+    deleteBoardAndSetCurrentBoardId(setBoards, boardToDeleteId, setCurrentBoardId)
   }
 
 
   function handleCancel() {
+    setBoardToDeleteId(null)
     setOpenedAppModal(null)
   }
 

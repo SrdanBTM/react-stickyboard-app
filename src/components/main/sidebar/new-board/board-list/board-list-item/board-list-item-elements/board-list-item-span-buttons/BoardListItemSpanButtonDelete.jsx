@@ -11,15 +11,16 @@ import { deleteBoardAndSetCurrentBoardId } from '../../../../../../../../helper-
 
 export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
 
-  const { setBoards, currentBoardId, setCurrentBoardId } = useContext(MainContext)
-  const { setOpenedAppModal } = useContext(AppModalsContext)
+  const { setBoards, setCurrentBoardId } = useContext(MainContext)
+  const { setOpenedAppModal, setBoardToDeleteId } = useContext(AppModalsContext)
 
 
   function handleClick() {
     if (mappedBoard.stickers.length === 0) {
-      deleteBoardAndSetCurrentBoardId(setBoards, currentBoardId, setCurrentBoardId)
+      deleteBoardAndSetCurrentBoardId(setBoards, mappedBoard.boardId, setCurrentBoardId)
 
     } else {
+      setBoardToDeleteId(mappedBoard.boardId)
       setOpenedAppModal('DeleteBoardModal')
     }
   }
