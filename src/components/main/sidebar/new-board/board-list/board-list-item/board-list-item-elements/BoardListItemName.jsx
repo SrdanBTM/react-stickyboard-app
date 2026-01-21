@@ -22,8 +22,7 @@ export default function BoardListName({ mappedBoard }) {
   }
 
   function handleClick(e) {
-    const dataId = e.currentTarget.getAttribute('data-id')  // ne treba mi ovo, imam mappedBoard.boardId
-    setCurrentBoardId(dataId)
+    setCurrentBoardId(mappedBoard.boardId)
     setSearchValue('')
     setCurrentBoardPanel('board')
     setSelectedFilterButton(null)
@@ -38,7 +37,6 @@ export default function BoardListName({ mappedBoard }) {
   return (
     <div
       className={`${styles.containerName} ${mappedBoard.boardId === currentBoardId ? styles.selected : ''}`}
-      data-id={mappedBoard.boardId}
       onClick={handleClick}
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
