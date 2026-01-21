@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { MainContext } from '../contexts/MainContext.jsx'
 import { boardTemplate } from '../templates/Templates.jsx'
+import { updateAllBoardsOneProperty } from '../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 
@@ -44,6 +45,15 @@ export default function MainProvider({ children }) {
   useEffect(() => {
     localStorage.setItem('nextDaysValue', JSON.stringify(datedNextDaysValue))
   }, [datedNextDaysValue])
+
+
+
+  useEffect(() => {
+    const propertyToUpdate1 = { key: 'isInput', value: false }
+    const propertyToUpdate2 = { key: 'isFocused', value: false }
+    updateAllBoardsOneProperty(setBoards, propertyToUpdate1)
+    updateAllBoardsOneProperty(setBoards, propertyToUpdate2)
+  }, [])
 
 
   const [searchValue, setSearchValue] = useState('')
