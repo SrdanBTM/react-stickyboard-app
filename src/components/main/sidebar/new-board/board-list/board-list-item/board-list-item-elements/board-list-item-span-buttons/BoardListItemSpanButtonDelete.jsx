@@ -7,21 +7,31 @@ import { MainContext } from '../../../../../../../../contexts/MainContext.jsx'
 import { ThemeContext } from '../../../../../../../../contexts/ThemeContext.jsx'
 import { AppModalsContext } from '../../../../../../../../contexts/AppModalsContext.jsx'
 import { deleteBoard } from '../../../../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
-import { changeCurrentBoardId } from '../../../../../../../../helper-functions/HelperFunctions.jsx'
 
 
 
 export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
 
-  const { setBoards, setCurrentBoardId } = useContext(MainContext)
-  const { theme } = useContext(ThemeContext)
+  const { setBoards, currentBoardId, setCurrentBoardId } = useContext(MainContext)
   const { setOpenedAppModal } = useContext(AppModalsContext)
 
 
   function handleClick() {
     if (mappedBoard.stickers.length === 0) {
       deleteBoard(setBoards, mappedBoard.boardId)
-      changeCurrentBoardId(setBoards, mappedBoard.boardId, setCurrentBoardId)
+
+      setBoards(prev => {
+        const filtered = prev.filter(board => board.boardId !== currentBoardId)
+    
+        if (filtered.length > 0) {
+          setCurrentBoardId(filtered[filtered.length - 1].boardId)
+        } else {
+          setCurrentBoardId(null)
+        }
+    
+        return filtered
+      })
+
     } else {
       setOpenedAppModal('DeleteBoardModal')
     }
