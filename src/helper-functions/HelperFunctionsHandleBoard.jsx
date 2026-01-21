@@ -75,8 +75,10 @@ export function updateAllBoardsOneProperty(setBoards, propertyToUpdate) {
 
 
 // DELETE BOARD
-export function deleteBoard(setBoards, currentBoardId) {
-  setBoards(prev => prev.filter(board => board.boardId !== currentBoardId && board))
+export function deleteBoard(boards, setBoards, currentBoardId) {
+  const filteredBoards = boards.filter(board => board.boardId !== currentBoardId)
+  setBoards(filteredBoards)
+  return filteredBoards
 }
 
 

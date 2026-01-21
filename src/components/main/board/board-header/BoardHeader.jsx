@@ -15,17 +15,19 @@ export default function BoardHeader() {
       : null
 
 
+
+
   let title = null
 
   if (currentBoardPanel === 'board' && currentBoardId !== null) {
-    title = currentBoard.boardName
+    // title = currentBoard.boardName
   } else if (currentBoardPanel === 'search') {
     title = `Search results   ·  ${searchValue}`
   } else if (currentBoardPanel === 'filter' && typeof datedNextDaysValue === 'number') {
     title = `Stickers due in the next ${datedNextDaysValue} days`
   } else if (currentBoardPanel === 'filter' && datedNextDaysValue === 'all') {
     title = `All dated stickers`
-  }
+  } 
 
 
   return (

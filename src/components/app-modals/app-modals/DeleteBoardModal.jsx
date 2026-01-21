@@ -14,8 +14,8 @@ export default function DeleteBoardModal() {
   const currentBoard = boards.find(board => board.boardId === currentBoardId)
 
 
-  const activeCount  = currentBoard.stickers.filter(sticker => !sticker.checked).length
-  const checkedCount  = currentBoard.stickers.filter(sticker => sticker.checked).length
+  const activeCount = currentBoard.stickers.filter(sticker => !sticker.checked).length
+  const checkedCount = currentBoard.stickers.filter(sticker => sticker.checked).length
 
   const messageOption1 = `${activeCount} active sticker${activeCount === 1 ? '' : 's'}`
   const messageOption2 = `${checkedCount} checked sticker${checkedCount === 1 ? '' : 's'}`
@@ -44,19 +44,13 @@ export default function DeleteBoardModal() {
 
   function handleDelete() {
     setOpenedAppModal(null)
-    deleteBoard(setBoards, currentBoardId)
+    const filteredBoards = deleteBoard(boards, setBoards, currentBoardId)
 
-    setBoards(prev => {
-      const filtered = prev.filter(board => board.boardId !== currentBoardId)
-  
-      if (filtered.length > 0) {
-        setCurrentBoardId(filtered[filtered.length - 1].boardId)
-      } else {
-        setCurrentBoardId(null)
-      }
-  
-      return filtered
-    })
+    if (filteredBoards.length > 0) {
+      setCurrentBoardId(filteredBoards[filteredBoards.length - 1].boardId)
+    } else {
+      setCurrentBoardId(null)
+    }
   }
 
 
