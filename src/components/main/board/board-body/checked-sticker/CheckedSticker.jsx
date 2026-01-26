@@ -8,12 +8,13 @@ import { useState, useContext, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { updateSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 import CheckedStickerDateTime from '../checked-sticker-parts/checked-sticker-date-time/CheckedStickerDateTime.jsx'
 
 
 export default function CheckedPanelSticker({ topPosition, mappedSticker, setRandomUUID }) {
 
-  const { boardRef, setBoards, currentBoardId, setActiveStickerId, isBoardChanging } = useContext(MainContext)
+  const { boardRef, boards, setBoards, currentBoardId, setActiveStickerId, isBoardChanging } = useContext(MainContext)
   const [isMouseDown, setIsMouseDown] = useState(false)
   const stickerRef = useRef()
   const [isDragged, setIsDragged] = useState(false)
@@ -50,15 +51,23 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
       && stickerPositionInBoardTop >= 0
       && stickerPositionInBoardRight >= 0
       && stickerPositionInBoardBottom >= 0) {
+
+      const currentBoard = boards.find(board => board.boardId === currentBoardId)
+      const newValueZIndexCounter = currentBoard.zIndexCounter + 1
+      const propertyToUpdate0 = { key: 'zIndexCounter', value: newValueZIndexCounter }
+      updateBoard(setBoards, currentBoardId, propertyToUpdate0)
+
       const currentStickerId = mappedSticker.stickerId
       const propertyToUpdate1 = { key: 'checked', value: false }
       const propertyToUpdate2 = { key: 'positionX', value: stickerPositionInBoardLeft }
       const propertyToUpdate3 = { key: 'positionY', value: stickerPositionInBoardTop }
       const propertyToUpdate4 = { key: 'checkedOrder', value: null }
+      const propertyToUpdate5 = { key: 'zIndex', value: newValueZIndexCounter }
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate3)
       updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate4)
+      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate5)
 
     } else {
       setRandomUUID(crypto.randomUUID())
@@ -72,8 +81,7 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
       className={styles.container}
       style={{
         top: topPosition,
-        backgroundColor: mappedSticker.color,
-        zIndex: isMouseDown ? 1 : 0
+        backgroundColor: mappedSticker.color
       }}
       initial={{
         opacity: 0
@@ -87,7 +95,6 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
         duration: isBoardChanging ? 0 : 0.3,
         ease: 'linear'
       }}
-
 
       ref={stickerRef}
       onMouseDown={handleMouseDown}

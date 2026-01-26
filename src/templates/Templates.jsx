@@ -6,6 +6,7 @@ export const boardTemplate = {
   isInput: false,
   isFocused: false,
   isThereCheckedSticker: false,
+  zIndexCounter: 0,
   stickers: []
 }
 
@@ -39,6 +40,7 @@ export const stickerTemplate = {
   isAddDateTimeModalOpen: false,
   isDeleteModalOpen: false,
   isChangeColorModalOpen: false,
+  zIndex: 0
 }
 
 

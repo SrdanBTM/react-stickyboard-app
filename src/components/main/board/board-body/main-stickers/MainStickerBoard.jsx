@@ -5,11 +5,12 @@ import { useContext, useRef } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import MainPanelsStickersBase from '../main-sticker-base/MainStickerBase.jsx'
 import { updateSticker } from '../../../../../helper-functions/HelperFunctionsHandleSticker.jsx'
+import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function MainStickerBoard({ mappedSticker }) {
 
-  const { boardRef, setBoards, currentBoardId, activeStickerId, setActiveStickerId } = useContext(MainContext)
+  const { boards, boardRef, setBoards, currentBoardId, setActiveStickerId } = useContext(MainContext)
   const stickerRef = useRef()
   const dragControl = useDragControls()
   const currentStickerId = mappedSticker.stickerId
@@ -24,6 +25,7 @@ export default function MainStickerBoard({ mappedSticker }) {
 
     const propertyToUpdate1 = { key: 'positionX', value: stickerPositionLeft }
     const propertyToUpdate2 = { key: 'positionY', value: stickerPositionTop }
+
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
     updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
   }
@@ -31,6 +33,16 @@ export default function MainStickerBoard({ mappedSticker }) {
 
   function handleMouseDown() {
     setActiveStickerId(mappedSticker.stickerId)
+
+    const currentBoard = boards.find(board => board.boardId === currentBoardId)
+    const newValueZIndexCounter = currentBoard.zIndexCounter + 1
+    console.log(newValueZIndexCounter);
+    
+    updateBoard(setBoards, currentBoardId, {key: 'zIndexCounter', value: newValueZIndexCounter})
+
+    const propertyToUpdate1 = { key: 'zIndex', value: newValueZIndexCounter }
+    updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
+
   }
 
 
@@ -48,8 +60,8 @@ export default function MainStickerBoard({ mappedSticker }) {
       style={{
         y: mappedSticker.positionY,
         x: mappedSticker.positionX,
-        zIndex: mappedSticker.stickerId === activeStickerId ? 1 : 0,
-        position: 'absolute'
+        position: 'absolute',
+        zIndex: mappedSticker.zIndex
       }}
     >
 

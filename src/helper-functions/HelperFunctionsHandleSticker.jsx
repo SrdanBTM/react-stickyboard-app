@@ -70,11 +70,12 @@ export function updateAllStickers(setBoards, currentBoardId, propertyToUpdate) {
 
 
 // ADD STICKER
-export function addSticker(setBoards, currentBoardId, stickerTemplate, boardName, stickerId, positionXValue, positionYValue) {
+export function addSticker(setBoards, currentBoardId, stickerTemplate, boardName, stickerId, newValueZIndexCounter, positionXValue, positionYValue) {
   const stickerToAdd = {
     ...stickerTemplate,
     stickerId: stickerId,
     boardName: boardName,
+    zIndex: newValueZIndexCounter,
     positionX: positionXValue,
     positionY: positionYValue
   }

@@ -9,7 +9,7 @@
   border: var(--element-border-soft);
   transition: var(--transition);
   width: 220px;
-  z-index: 2;
+  z-index: 1000001;
   box-shadow: var(--modal-boxshadow);
   background-color: var(--bg-header);
 }
