@@ -60,7 +60,6 @@ export default function MainProvider({ children }) {
   const [checkedStickerId, setCheckedStickerId] = useState(null)
   const [currentBoardPanel, setCurrentBoardPanel] = useState('board')
   const [selectedFilterButton, setSelectedFilterButton] = useState(null)
-  const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
   const [isBoardChanging, setIsBoardChanging] = useState(false)
   const [lastCreatedStickerId, setLastCreatedStickerId] = useState(null)
 
@@ -82,7 +81,6 @@ export default function MainProvider({ children }) {
         isCheckedStickersPanelShow, setIsCheckedStickersPanelShow,
         datedNextDaysValue, setDatedNextDaysValue,
         selectedFilterButton, setSelectedFilterButton,
-        checkedOrderCounter, setCheckedOrderCounter,
         isBoardChanging, setIsBoardChanging,
         lastCreatedStickerId, setLastCreatedStickerId
       }}

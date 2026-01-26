@@ -6,6 +6,7 @@ export const boardTemplate = {
   isInput: false,
   isFocused: false,
   zIndexCounter: 0,
+  checkedOrderCounter: 0,
   stickers: []
 }
 
@@ -19,7 +20,7 @@ export const stickerTemplate = {
   positionX: '',
   positionY: '',
   checked: false,
-  checkedOrder: null,
+  checkedOrder: 0,
   dateTimeValidValue: {
     day: null,
     month: null,
