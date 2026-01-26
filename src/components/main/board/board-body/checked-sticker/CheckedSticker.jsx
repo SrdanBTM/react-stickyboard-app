@@ -14,7 +14,7 @@ import CheckedStickerDateTime from '../checked-sticker-parts/checked-sticker-dat
 
 export default function CheckedPanelSticker({ topPosition, mappedSticker, setRandomUUID }) {
 
-  const { boardRef, boards, setBoards, currentBoardId, setActiveStickerId, isBoardChanging } = useContext(MainContext)
+  const { boardRef, boards, setBoards, currentBoardId, isBoardChanging } = useContext(MainContext)
   const [isMouseDown, setIsMouseDown] = useState(false)
   const stickerRef = useRef()
   const [isDragged, setIsDragged] = useState(false)
@@ -22,7 +22,6 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
 
   function handleMouseDown() {
     setIsMouseDown(true)
-    setActiveStickerId(mappedSticker.stickerId)
   }
 
 

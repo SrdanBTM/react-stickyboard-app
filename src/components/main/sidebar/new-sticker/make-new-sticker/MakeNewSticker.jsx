@@ -14,7 +14,7 @@ export default function MakeNewSticker() {
 
   const [key, setKey] = useState(0)
   const { setOpenedAppModal } = useContext(AppModalsContext)
-  const { boards, boardRef, setBoards, currentBoardId, setActiveStickerId, setLastCreatedStickerId } = useContext(MainContext)
+  const { boards, boardRef, setBoards, currentBoardId, setLastCreatedStickerId } = useContext(MainContext)
   const stickerRef = useRef()
   const [isStickerDragged, setIsStickerDragged] = useState(false)
 
@@ -58,7 +58,6 @@ export default function MakeNewSticker() {
 
   function handleDragStart() {
     setIsStickerDragged(true)
-    setActiveStickerId(null)
   }
 
 

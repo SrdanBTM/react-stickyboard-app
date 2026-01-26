@@ -61,7 +61,6 @@ export default function MainProvider({ children }) {
   const [currentBoardPanel, setCurrentBoardPanel] = useState('board')
   const [selectedFilterButton, setSelectedFilterButton] = useState(null)
   const [checkedOrderCounter, setCheckedOrderCounter] = useState(0)
-  const [activeStickerId, setActiveStickerId] = useState(null)
   const [isBoardChanging, setIsBoardChanging] = useState(false)
   const [lastCreatedStickerId, setLastCreatedStickerId] = useState(null)
 
@@ -84,7 +83,6 @@ export default function MainProvider({ children }) {
         datedNextDaysValue, setDatedNextDaysValue,
         selectedFilterButton, setSelectedFilterButton,
         checkedOrderCounter, setCheckedOrderCounter,
-        activeStickerId, setActiveStickerId,
         isBoardChanging, setIsBoardChanging,
         lastCreatedStickerId, setLastCreatedStickerId
       }}

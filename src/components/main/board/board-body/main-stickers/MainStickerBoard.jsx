@@ -10,7 +10,7 @@ import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHand
 
 export default function MainStickerBoard({ mappedSticker }) {
 
-  const { boards, boardRef, setBoards, currentBoardId, setActiveStickerId } = useContext(MainContext)
+  const { boards, boardRef, setBoards, currentBoardId } = useContext(MainContext)
   const stickerRef = useRef()
   const dragControl = useDragControls()
   const currentStickerId = mappedSticker.stickerId
@@ -32,8 +32,6 @@ export default function MainStickerBoard({ mappedSticker }) {
 
 
   function handleMouseDown() {
-    setActiveStickerId(mappedSticker.stickerId)
-
     const currentBoard = boards.find(board => board.boardId === currentBoardId)
     const newValueZIndexCounter = currentBoard.zIndexCounter + 1
     console.log(newValueZIndexCounter);
