@@ -1,7 +1,7 @@
 
 
 import styles from './makeNewSticker.module.css'
-import { useContext, useRef, useState, useEffect } from 'react'
+import { useContext, useRef, useState } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 import { AppModalsContext } from '../../../../../contexts/AppModalsContext.jsx'
 import { motion } from 'framer-motion'
@@ -24,8 +24,6 @@ export default function MakeNewSticker() {
 
     const stickerPosition = stickerRef.current.getBoundingClientRect()
     const boardPosition = boardRef.current.getBoundingClientRect()
-
-
 
     const stickerPositionInBoardLeft = stickerPosition.left - boardPosition.left
     const stickerPositionInBoardTop = stickerPosition.top - boardPosition.top
@@ -59,12 +57,6 @@ export default function MakeNewSticker() {
   function handleDragStart() {
     setIsStickerDragged(true)
   }
-
-
-  useEffect(() => {
-    console.log(boards);
-
-  }, [boards])
 
 
   return (

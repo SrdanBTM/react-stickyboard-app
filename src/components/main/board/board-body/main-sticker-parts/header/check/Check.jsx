@@ -11,14 +11,8 @@ import { IconCheckboxChecked } from '../../../../../../../icons/Icons.jsx'
 
 export default function Check({ mappedSticker, isHover }) {
 
-  const BASE_URL = import.meta.env.BASE_URL
   const [isChecked, setIsChecked] = useState(false)
-
   const { setCheckedStickerId, boards, setBoards, currentBoardId, } = useContext(MainContext)
-
-
-  const checked = `${BASE_URL}images/checked3.png`
-  const unchecked = `${BASE_URL}images/checked4.png`
 
 
   function handleClick() {
@@ -30,7 +24,6 @@ export default function Check({ mappedSticker, isHover }) {
   useEffect(() => {
     const currentBoard = boards.find(board => board.boardId === currentBoardId)
     const newValueCheckedOrderCounter = currentBoard.checkedOrderCounter + 1
-    console.log(newValueCheckedOrderCounter);
     
     const currentStickerId = mappedSticker.stickerId
     const propertyToUpdate1 = { key: 'checked', value: isChecked }

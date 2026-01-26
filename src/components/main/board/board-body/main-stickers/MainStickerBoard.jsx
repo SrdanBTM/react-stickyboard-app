@@ -34,8 +34,6 @@ export default function MainStickerBoard({ mappedSticker }) {
   function handleMouseDown() {
     const currentBoard = boards.find(board => board.boardId === currentBoardId)
     const newValueZIndexCounter = currentBoard.zIndexCounter + 1
-    console.log(newValueZIndexCounter);
-    
     updateBoard(setBoards, currentBoardId, {key: 'zIndexCounter', value: newValueZIndexCounter})
 
     const propertyToUpdate1 = { key: 'zIndex', value: newValueZIndexCounter }

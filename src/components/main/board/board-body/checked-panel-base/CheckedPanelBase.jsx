@@ -5,7 +5,7 @@ import CheckedPanelBody from '../checked-panel-parts/checked-panel-body/CheckedP
 import CheckedPanelHeader from '../checked-panel-parts/checked-panel-header/CheckedPanelHeader.jsx'
 import CheckedPanelHover from '../checked-panel-parts/checked-panel-hover/CheckedPanelHover.jsx'
 import CheckedPanelMessage from '../checked-panel-parts/checked-panel-message/CheckedPanelMessage.jsx'
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useState } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
 
 
@@ -15,14 +15,6 @@ export default function CheckedPanelBase({ stickersToShowOnCheckedPanel }) {
   const [isCheckedStickersPanelHover, setIsCheckedStickersPanelHover] = useState()
   const { isCheckedStickersPanelShow } = useContext(MainContext)
   const [isHoverTitleShow, setIsHoverTitleShow] = useState(true)
-
-
-  // useEffect(() => {
-  //   setIsCheckedStickersPanelHover(false)
-  //   setTimeout(() => {
-  //     setIsHoverTitleShow(true)
-  //   }, 300)
-  // }, [stickersToShowOnCheckedPanel.length])
 
 
   function handleMouseOver() {

@@ -14,9 +14,6 @@ export default function BoardHeader() {
       ? boards.find(board => board.boardId === currentBoardId)
       : null
 
-      console.log(currentBoardId);
-      
-
 
   let title = null
 

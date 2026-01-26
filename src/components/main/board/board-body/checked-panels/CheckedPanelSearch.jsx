@@ -1,9 +1,8 @@
 
 
 import CheckedPanelBase from '../checked-panel-base/CheckedPanelBase.jsx'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { MainContext } from '../../../../../contexts/MainContext.jsx'
-import { updateBoard } from '../../../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function CheckedPanelSearch() {

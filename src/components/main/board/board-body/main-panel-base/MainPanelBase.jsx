@@ -11,7 +11,7 @@ import MainStickerSearch from '../main-stickers/MainStickerSearch.jsx'
 
 export default function MainPanelBase({ stickers }) {
 
-  const { boardRef, currentBoardPanel, isCheckedStickersPanelShow, selectedFilterButton } = useContext(MainContext)
+  const { boardRef, currentBoardPanel } = useContext(MainContext)
 
   const stickerVariants = {
     board: MainStickerBoard,

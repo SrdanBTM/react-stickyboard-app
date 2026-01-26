@@ -10,11 +10,8 @@ import { IconSave } from '../../../../../../../../icons/Icons.jsx'
 
 export default function SaveButton({ mappedSticker, setMessageText, saveButtonRef }) {
 
-  const { boards, setBoards, currentBoardId } = useContext(MainContext)
+  const { setBoards, currentBoardId } = useContext(MainContext)
   const currentStickerId = mappedSticker.stickerId
-  const BASE_URL = import.meta.env.BASE_URL
-
-
 
 
   function validateDateTimeValues(validDateTime) {
