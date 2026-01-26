@@ -10,14 +10,17 @@ export default function BoardHeader() {
   const { currentBoardPanel, currentBoardId, boards, datedNextDaysValue, searchValue } = useContext(MainContext)
 
   const currentBoard =
-    boards.length > 0
+    boards.length > 0 && currentBoardId
       ? boards.find(board => board.boardId === currentBoardId)
       : null
+
+      console.log(currentBoardId);
+      
 
 
   let title = null
 
-  if (currentBoardPanel === 'board' && currentBoardId !== null) {
+  if (currentBoardPanel === 'board' && currentBoardId) {
     title = currentBoard.boardName
   } else if (currentBoardPanel === 'search') {
     title = `Search results   ·  ${searchValue}`

@@ -11,20 +11,31 @@ import { deleteBoard } from '../../../../../../../../helper-functions/HelperFunc
 
 export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
 
-  const { setBoards } = useContext(MainContext)
+  const { boards, setBoards, currentBoardId, setCurrentBoardId } = useContext(MainContext)
   const { setOpenedAppModal, setBoardToDeleteId } = useContext(AppModalsContext)
 
 
   function handleClick(e) {
     e.stopPropagation()
-    
-    if (mappedBoard.stickers.length === 0) {
-      deleteBoard(setBoards, mappedBoard.boardId)
 
-    } else {
+    if (mappedBoard.stickers.length !== 0) {
       setBoardToDeleteId(mappedBoard.boardId)
       setOpenedAppModal('DeleteBoardModal')
+      return
     }
+
+    const deletedBoardIndex = boards.findIndex(board => board.boardId === mappedBoard.boardId)
+    let nextBoardId = null
+    if (deletedBoardIndex !== 0) {
+      nextBoardId = boards[deletedBoardIndex - 1].boardId
+    } else if (deletedBoardIndex === 0 && boards.length > 1) {
+      nextBoardId = boards[deletedBoardIndex + 1].boardId
+    } else if (deletedBoardIndex === 0 && boards.length === 1) {
+      nextBoardId = null
+    }
+    
+    deleteBoard(setBoards, mappedBoard.boardId)
+    setCurrentBoardId(nextBoardId)
   }
 
 
