@@ -74,6 +74,7 @@ export function addSticker(setBoards, currentBoardId, stickerTemplate, boardName
   const stickerToAdd = {
     ...stickerTemplate,
     stickerId: stickerId,
+    boardId: currentBoardId,
     boardName: boardName,
     zIndex: newValueZIndexCounter,
     positionX: positionXValue,

@@ -14,7 +14,7 @@ import CheckedStickerDateTime from '../checked-sticker-parts/checked-sticker-dat
 
 export default function CheckedPanelSticker({ topPosition, mappedSticker, setRandomUUID }) {
 
-  const { boardRef, boards, setBoards, currentBoardId, isBoardChanging } = useContext(MainContext)
+  const { boardRef, boards, setBoards, isBoardChanging, currentBoardPanel } = useContext(MainContext)
   const stickerRef = useRef()
   const [isDragged, setIsDragged] = useState(false)
 
@@ -40,22 +40,24 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
       && stickerPositionInBoardRight >= 0
       && stickerPositionInBoardBottom >= 0) {
 
-      const currentBoard = boards.find(board => board.boardId === currentBoardId)
-      const newValueZIndexCounter = currentBoard.zIndexCounter + 1
-      const propertyToUpdate0 = { key: 'zIndexCounter', value: newValueZIndexCounter }
-      updateBoard(setBoards, currentBoardId, propertyToUpdate0)
+      const mappedStickerBoard = boards.find(board => board.boardId === mappedSticker.boardId)
+      const newValueZIndexCounter = mappedStickerBoard.zIndexCounter + 1
+      const propertyToUpdate1 = { key: 'zIndexCounter', value: newValueZIndexCounter }
+      updateBoard(setBoards, mappedSticker.boardId, propertyToUpdate1)
 
-      const currentStickerId = mappedSticker.stickerId
-      const propertyToUpdate1 = { key: 'checked', value: false }
-      const propertyToUpdate2 = { key: 'positionX', value: stickerPositionInBoardLeft }
-      const propertyToUpdate3 = { key: 'positionY', value: stickerPositionInBoardTop }
-      const propertyToUpdate4 = { key: 'checkedOrder', value: null }
-      const propertyToUpdate5 = { key: 'zIndex', value: newValueZIndexCounter }
-      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate1)
-      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate2)
-      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate3)
-      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate4)
-      updateSticker(setBoards, currentBoardId, currentStickerId, propertyToUpdate5)
+      const propertyToUpdate2 = { key: 'checked', value: false }
+      const propertyToUpdate3 = { key: 'checkedOrder', value: null }
+      const propertyToUpdate4 = { key: 'zIndex', value: newValueZIndexCounter }
+      updateSticker(setBoards, mappedSticker.boardId, mappedSticker.stickerId, propertyToUpdate2)
+      updateSticker(setBoards, mappedSticker.boardId, mappedSticker.stickerId, propertyToUpdate3)
+      updateSticker(setBoards, mappedSticker.boardId, mappedSticker.stickerId, propertyToUpdate4)
+
+      if (currentBoardPanel === 'board') {
+        const propertyToUpdate5 = { key: 'positionX', value: stickerPositionInBoardLeft }
+        const propertyToUpdate6 = { key: 'positionY', value: stickerPositionInBoardTop }
+        updateSticker(setBoards, mappedSticker.boardId, mappedSticker.stickerId, propertyToUpdate5)
+        updateSticker(setBoards, mappedSticker.boardId, mappedSticker.stickerId, propertyToUpdate6)
+      }
 
     } else {
       setRandomUUID(crypto.randomUUID())
