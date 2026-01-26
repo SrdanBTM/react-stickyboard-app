@@ -10,7 +10,7 @@ import { deleteBoard } from '../../../helper-functions/HelperFunctionsHandleBoar
 export default function DeleteBoardModal() {
 
   const { setOpenedAppModal, boardToDeleteId, setBoardToDeleteId } = useContext(AppModalsContext)
-  const { boards, setBoards } = useContext(MainContext)
+  const { boards, setBoards, setCurrentBoardId } = useContext(MainContext)
 
 
   const boardToDelete = boards.find(board => board.boardId === boardToDeleteId)
@@ -46,9 +46,20 @@ export default function DeleteBoardModal() {
 
 
   function handleDelete() {
+    const deletedBoardIndex = boards.findIndex(board => board.boardId === boardToDeleteId)
+    let nextBoardId = null
+    if (deletedBoardIndex !== 0) {
+      nextBoardId = boards[deletedBoardIndex - 1].boardId
+    } else if (deletedBoardIndex === 0 && boards.length > 1) {
+      nextBoardId = boards[deletedBoardIndex + 1].boardId
+    } else if (deletedBoardIndex === 0 && boards.length === 1) {
+      nextBoardId = null
+    }
+
     setBoardToDeleteId(null)
     setOpenedAppModal(null)
     deleteBoard(setBoards, boardToDeleteId)
+    setCurrentBoardId(nextBoardId)
   }
 
 
