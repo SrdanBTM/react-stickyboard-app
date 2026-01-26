@@ -27,7 +27,7 @@ export default function SettingsMenu({ isSettingsMenuShow, setIsSettingsMenuShow
   }
 
   function handleClickDeleteAllCheckedStickers() {
-    const isThereBoardWithCheckedStickers = boards.some(board => board.isThereCheckedSticker)
+    const isThereBoardWithCheckedStickers = boards.some(board => board.stickers.some(sticker => sticker.checked))
 
     isThereBoardWithCheckedStickers
       ? setOpenedAppModal('DeleteAllCheckedStickersModal')

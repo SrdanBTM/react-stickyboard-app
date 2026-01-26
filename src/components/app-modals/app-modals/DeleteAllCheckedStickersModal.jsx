@@ -5,7 +5,6 @@ import { useContext } from 'react'
 import { MainContext } from '../../../contexts/MainContext.jsx'
 import { AppModalsContext } from '../../../contexts/AppModalsContext.jsx'
 import { deleteAllCheckedStickers } from '../../../helper-functions/HelperFunctionsHandleSticker.jsx'
-import { updateAllBoardsOneProperty } from '../../../helper-functions/HelperFunctionsHandleBoard.jsx'
 
 
 export default function DeleteAllCheckedStickersModal() {
@@ -25,8 +24,6 @@ export default function DeleteAllCheckedStickersModal() {
   function handleDelete() {
     setOpenedAppModal(null)
     deleteAllCheckedStickers(setBoards)
-    const propertyToUpdate = { key: 'isThereCheckedSticker', value: false }
-    updateAllBoardsOneProperty(setBoards, propertyToUpdate)
   }
 
   function handleClose() {

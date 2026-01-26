@@ -17,22 +17,6 @@ export default function CheckedPanelBoard() {
   }
 
 
-  const isCheckedStickersInCurrentBoard = currentBoard
-    ? currentBoard.stickers.some(sticker => sticker.checked)
-    : false
-
-
-  useEffect(() => {
-    if (isCheckedStickersInCurrentBoard) {
-      const propertyToUpdate = { key: 'isThereCheckedSticker', value: true }
-      updateBoard(setBoards, currentBoardId, propertyToUpdate)
-    } else {
-      const propertyToUpdate = { key: 'isThereCheckedSticker', value: false }
-      updateBoard(setBoards, currentBoardId, propertyToUpdate)
-    }
-  }, [isCheckedStickersInCurrentBoard])
-
-
   const stickersToShowOnCheckedPanel = currentBoard
     ? currentBoard.stickers
       .filter(sticker => sticker.checked)
