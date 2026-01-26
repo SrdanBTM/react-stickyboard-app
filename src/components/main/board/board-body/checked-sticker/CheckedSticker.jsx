@@ -85,8 +85,6 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
       }}
 
       ref={stickerRef}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
       drag
       dragMomentum={false}
       onDragStart={handleDragStart}
