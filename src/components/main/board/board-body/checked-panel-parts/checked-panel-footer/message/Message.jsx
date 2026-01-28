@@ -8,7 +8,6 @@ import { MainContext } from '../../../.././../../../contexts/MainContext.jsx'
 export default function Message() {
 
   const { currentPageOnCheckedPanelBody, numberOfPagesOnCheckedPanelBody } = useContext(MainContext)
-  console.log(currentPageOnCheckedPanelBody);
   
 
   return (
