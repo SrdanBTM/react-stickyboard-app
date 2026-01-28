@@ -11,7 +11,7 @@ import { deleteBoard } from '../../../../../../../../helper-functions/HelperFunc
 
 export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
 
-  const { boards, setBoards, currentBoardId, setCurrentBoardId } = useContext(MainContext)
+  const { boards, setBoards, currentBoardId, setCurrentBoardId, setCurrentPageOnCheckedPanelBody } = useContext(MainContext)
   const { setOpenedAppModal, setBoardToDeleteId } = useContext(AppModalsContext)
 
 
@@ -36,6 +36,7 @@ export default function BoardListItemSpanButtonDelete({ mappedBoard }) {
     
     deleteBoard(setBoards, mappedBoard.boardId)
     setCurrentBoardId(nextBoardId)
+    setCurrentPageOnCheckedPanelBody(null)
   }
 
 

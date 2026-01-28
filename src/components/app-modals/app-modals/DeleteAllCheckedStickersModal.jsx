@@ -9,7 +9,7 @@ import { deleteAllCheckedStickers } from '../../../helper-functions/HelperFuncti
 
 export default function DeleteAllCheckedStickersModal() {
 
-  const { setBoards } = useContext(MainContext)
+  const { setBoards, setCurrentPageOnCheckedPanelBody } = useContext(MainContext)
   const { setOpenedAppModal } = useContext(AppModalsContext)
 
 
@@ -24,6 +24,7 @@ export default function DeleteAllCheckedStickersModal() {
   function handleDelete() {
     setOpenedAppModal(null)
     deleteAllCheckedStickers(setBoards)
+    setCurrentPageOnCheckedPanelBody(null)
   }
 
   function handleClose() {

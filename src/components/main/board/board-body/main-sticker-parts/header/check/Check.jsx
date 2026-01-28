@@ -12,19 +12,20 @@ import { IconCheckboxChecked } from '../../../../../../../icons/Icons.jsx'
 export default function Check({ mappedSticker, isHover }) {
 
   const [isChecked, setIsChecked] = useState(false)
-  const { setCheckedStickerId, boards, setBoards, currentBoardId, } = useContext(MainContext)
+  const { setCheckedStickerId, boards, setBoards, currentBoardId, setCurrentPageOnCheckedPanelBody } = useContext(MainContext)
 
 
   function handleClick() {
     setIsChecked(true)
     setCheckedStickerId(mappedSticker.stickerId)
+    setCurrentPageOnCheckedPanelBody(1)
   }
 
 
   useEffect(() => {
     const currentBoard = boards.find(board => board.boardId === currentBoardId)
-    const newValueCheckedOrderCounter = currentBoard.checkedOrderCounter + 1
-    
+    const newValueCheckedOrderCounter = currentBoard.checkedOrderCounter - 1
+
     const currentStickerId = mappedSticker.stickerId
     const propertyToUpdate1 = { key: 'checked', value: isChecked }
     const propertyToUpdate2 = { key: 'checkedOrder', value: newValueCheckedOrderCounter }

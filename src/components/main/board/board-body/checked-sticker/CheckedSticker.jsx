@@ -71,7 +71,8 @@ export default function CheckedPanelSticker({ topPosition, mappedSticker, setRan
       className={styles.container}
       style={{
         top: topPosition,
-        backgroundColor: mappedSticker.color
+        backgroundColor: mappedSticker.color,
+        zIndex: isDragged ? 1 : 0
       }}
       initial={{
         opacity: 0

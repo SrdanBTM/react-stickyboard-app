@@ -62,6 +62,8 @@ export default function MainProvider({ children }) {
   const [selectedFilterButton, setSelectedFilterButton] = useState(null)
   const [isBoardChanging, setIsBoardChanging] = useState(false)
   const [lastCreatedStickerId, setLastCreatedStickerId] = useState(null)
+  const [numberOfPagesOnCheckedPanelBody, setNumberOfPagesOnCheckedPanelBody] = useState(null)
+  const [currentPageOnCheckedPanelBody, setCurrentPageOnCheckedPanelBody] = useState(1)
 
 
   const boardRef = useRef(null)
@@ -82,7 +84,9 @@ export default function MainProvider({ children }) {
         datedNextDaysValue, setDatedNextDaysValue,
         selectedFilterButton, setSelectedFilterButton,
         isBoardChanging, setIsBoardChanging,
-        lastCreatedStickerId, setLastCreatedStickerId
+        lastCreatedStickerId, setLastCreatedStickerId,
+        numberOfPagesOnCheckedPanelBody, setNumberOfPagesOnCheckedPanelBody,
+        currentPageOnCheckedPanelBody, setCurrentPageOnCheckedPanelBody
       }}
     >
       {children}
