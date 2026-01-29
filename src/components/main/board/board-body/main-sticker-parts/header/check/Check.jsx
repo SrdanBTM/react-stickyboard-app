@@ -23,10 +23,7 @@ export default function Check({ mappedSticker, isHover }) {
 
 
   useEffect(() => {
-    if (!isChecked) return
-    if (!currentBoardId) return
-    
-    const currentBoard = boards.find(board => board.boardId === currentBoardId)
+    const currentBoard = boards.find(board => board.boardId === mappedSticker.boardId)
     const newValueCheckedOrderCounter = currentBoard.checkedOrderCounter - 1
 
     const currentStickerId = mappedSticker.stickerId
