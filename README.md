@@ -1,16 +1,23 @@
-# React + Vite
+# StickyBoard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+StickyBoard is a React-based sticky notes board application with a strong focus on UI/UX and interactive behavior.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+https://srdanbtm.github.io/react-stickyboard-app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- React (Hooks, Context API)
+- JavaScript (ES6+)
+- CSS Modules
+- Framer Motion
+- Vite (build tool)
+- localStorage
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+- Multiple boards with independent state
+- Draggable sticky notes with color customization
+- Date & time support with time-based filtering
+- Separate panel for completed (checked) notes
+- Show / hide completed notes panel with hover interaction
+- Light / Dark theme
+- Smooth UI animations
